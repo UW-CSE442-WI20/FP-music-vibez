@@ -52,6 +52,7 @@ def scrapeYearlySingles(url):
         print(e)
         return []
 
+# Scrapes all year singles and writes them to yearlySingles.csv
 def scrapeAllYearlySingles():
     urls =  ["https://en.wikipedia.org/wiki/Billboard_year-end_top_singles_of_" + str(year) for year in range(1946, 1949)]
     urls = urls + ["https://en.wikipedia.org/wiki/Billboard_year-end_top_30_singles_of_" + str(year) for year in range(1949, 1956)]
