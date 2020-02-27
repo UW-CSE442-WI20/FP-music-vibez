@@ -1,0 +1,58 @@
+{
+    "2019": {
+        "Exception": {
+            "artists": {
+                "Lil Nas X featuring Billy Ray Cyrus": {
+                    "occurances": 1
+                }
+            },
+            "explicit": false,
+            "occurances": 1
+        },
+        "a": {
+            "artists": {
+                "Post Malone and Swae Lee": {
+                    "occurances": 2
+                }
+            },
+            "explicit": false,
+            "occurances": 2
+        },
+        "is": {
+            "artists": {
+                "Post Malone and Swae Lee": {
+                    "occurances": 3
+                }
+            },
+            "explicit": false,
+            "occurances": 3
+        },
+        "range": {
+            "artists": {
+                "Lil Nas X featuring Billy Ray Cyrus": {
+                    "occurances": 1
+                }
+            },
+            "explicit": false,
+            "occurances": 1
+        },
+        "test": {
+            "artists": {
+                "Post Malone and Swae Lee": {
+                    "occurances": 1
+                }
+            },
+            "explicit": false,
+            "occurances": 1
+        },
+        "this": {
+            "artists": {
+                "Post Malone and Swae Lee": {
+                    "occurances": 4
+                }
+            },
+            "explicit": false,
+            "occurances": 4
+        }
+    }
+}
