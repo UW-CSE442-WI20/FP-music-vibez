@@ -5,6 +5,7 @@ import csv
 import urllib.request
 import requests
 from bs4 import BeautifulSoup
+import lyricsgenius
 
 headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36'}
  
@@ -46,17 +47,37 @@ def get_lyrics_genius(artist, song_title):
             a = a[:-3]
         return a
     except Exception as e:
-        return "Exception occurred \n" + str(e)
+        print(url)
+        print("Exception occurred \n" + str(e))
+        exit(1)
+
+# Uses the lyricsgenius package to do a search
+def get_lyrics_genius_package(artist, song_title):
+    genius = lyricsgenius.Genius("GRyKhAue4YGkDk7I6iX4F2H5MVe-1jZ-KUlPXr0wuVflbkuHQSxLhSYcr5G-TpR0")
+    song = genius.search_song(song_title, artist)
+    return song.lyrics
 
 def get_all_lyrics(filename):
+    already_read = {}
+    with open("lyrics.csv", "r") as out:
+        reader = csv.DictReader(out)
+        for row in reader:
+            already_read["{}.{}".format(row["Year"], row["Rank"])] = row
+
     with open("lyrics.csv", "w+") as out:
         writer = csv.DictWriter(out, fieldnames=["Year", "Rank", "Song Title", "Artist(s)", "Lyrics"], dialect=csv.unix_dialect)
+        writer.writeheader()
         with open(filename, "r") as f:
             reader = csv.DictReader(f, dialect=csv.unix_dialect)
             for row in reader:
                 if row["Year"] != "2019":
                     continue
-                lyrics = get_lyrics_genius(row["Artist(s)"], row["Song Title"])
+                if "{}.{}".format(row["Year"], row["Rank"]) in already_read:
+                    writer.writerow(already_read["{}.{}".format(row["Year"], row["Rank"])])
+                    continue
+
+                print("Starting {}.{} {} by {}".format(row["Year"], row["Rank"], row["Song Title"], row["Artist(s)"]))
+                lyrics = get_lyrics_genius_package(row["Artist(s)"], row["Song Title"])
                 lyrics = lyrics.replace("\n", "\\n")
                 lyrics = lyrics.replace("<br/>","\\n")
                 lyrics = lyrics.strip()
@@ -67,7 +88,6 @@ def get_all_lyrics(filename):
                 else:
                     row["Lyrics"] = lyrics
                     writer.writerow(row)
-                    print("Finished {}.{}".format(row["Year"], row["Rank"]))
 
 if __name__ == "__main__":
     get_all_lyrics("yearlySingles.csv")
