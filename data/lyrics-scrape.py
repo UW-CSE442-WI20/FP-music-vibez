@@ -1,7 +1,21 @@
 # Scrapes lyrics
 
 import re
+import json
+import sys
 import csv
+maxInt = sys.maxsize
+
+while True:
+    # decrease the maxInt value by factor 10 
+    # as long as the OverflowError occurs.
+
+    try:
+        csv.field_size_limit(maxInt)
+        break
+    except OverflowError:
+        maxInt = int(maxInt/10)
+
 import urllib.request
 import requests
 from bs4 import BeautifulSoup
@@ -51,21 +65,74 @@ def get_lyrics_genius(artist, song_title):
         print("Exception occurred \n" + str(e))
         exit(1)
 
+genius = lyricsgenius.Genius("GRyKhAue4YGkDk7I6iX4F2H5MVe-1jZ-KUlPXr0wuVflbkuHQSxLhSYcr5G-TpR0")
+genius.verbose = False
+genius.remove_section_headers = True
+genius.skip_non_songs = False
+
 # Uses the lyricsgenius package to do a search
 def get_lyrics_genius_package(artist, song_title):
-    genius = lyricsgenius.Genius("GRyKhAue4YGkDk7I6iX4F2H5MVe-1jZ-KUlPXr0wuVflbkuHQSxLhSYcr5G-TpR0")
-    song = genius.search_song(song_title, artist)
-    return song.lyrics
+    #genius_artist = genius.search_artist(artist)
+    #if genius_artist is None:
+    return genius.search_song(song_title, artist)
+    #return genius.search_song(song_title, genius_artist.name)
+
+def clean_lyrics_string(lyrics):
+    lyrics = lyrics.replace("<br/>","\\n")
+    lyrics = lyrics.strip()
+    lyrics = json.dumps(lyrics)
+    while lyrics.startswith("\""):
+        lyrics = lyrics[1:]
+    while lyrics.endswith("\""):
+        lyrics = lyrics[:-1]
+    return lyrics
+
+# Attempts to figure out if the genius url is actually the
+# lyrics for the given song
+def url_is_plausible(song, artist, url):
+    if not url.endswith("lyrics") and not url.endswith("annotated"):
+        return False
+    parsed_url = url.replace("https://genius.com/", "").lower().replace("-lyrics","").replace("-annotated", "").split("-")
+    parsed_artist = artist.lower().replace("'", "").replace("(", "").replace(")", "").split(" ")
+    parsed_song = song.lower().replace("'", "").replace("(", "").replace(")", "").split(" ")
+
+
+    count = 0
+    for s in parsed_song:
+        if s in parsed_url:
+            count += 1
+    
+    for s in parsed_artist:
+        if s in parsed_url:
+            count += 1
+
+    res = count / len(parsed_url) >= 0.6
+
+    if not res:
+        print("URL for {} is probably wrong: {}".format(song, url))
+        print("\t%={}".format(count / len(parsed_url)))
+        print("\tparsed_url = {}".format(parsed_url))
+        print("\tparsed_artist = {}".format(parsed_artist))
+        print("\tparsed_song = {}".format(parsed_song))
+
+    return count / len(parsed_url) > 0.5
+
 
 def get_all_lyrics(filename):
+
+    # See if we have already started scraping so we can pick up where we left off
     already_read = {}
-    with open("lyrics.csv", "r") as out:
-        reader = csv.DictReader(out)
-        for row in reader:
-            already_read["{}.{}".format(row["Year"], row["Rank"])] = row
+    try:
+        with open("lyrics.csv", "r") as out:
+            reader = csv.DictReader(out)
+            for row in reader:
+                already_read["{}.{}".format(row["Year"], row["Rank"])] = row
+    except FileNotFoundError as e:
+        print("Could not read lyrics.csv, starting from scratch")
+
 
     with open("lyrics.csv", "w+") as out:
-        writer = csv.DictWriter(out, fieldnames=["Year", "Rank", "Song Title", "Artist(s)", "Lyrics"], dialect=csv.unix_dialect)
+        writer = csv.DictWriter(out, fieldnames=["Year", "Rank", "Song Title", "Artist(s)", "Lyrics", "URL"], dialect=csv.unix_dialect)
         writer.writeheader()
         with open(filename, "r") as f:
             reader = csv.DictReader(f, dialect=csv.unix_dialect)
@@ -74,17 +141,21 @@ def get_all_lyrics(filename):
                     writer.writerow(already_read["{}.{}".format(row["Year"], row["Rank"])])
                     continue
 
-                print("Starting {}.{} {} by {}".format(row["Year"], row["Rank"], row["Song Title"], row["Artist(s)"]))
-                lyrics = get_lyrics_genius_package(row["Artist(s)"], row["Song Title"])
-                lyrics = lyrics.replace("\n", "\\n")
-                lyrics = lyrics.replace("<br/>","\\n")
-                lyrics = lyrics.strip()
-                if "HTTP Error 404: Not Found" in lyrics:
-                    print("404 ERROR ON {}.{} {} by {}".format(row["Year"], row["Rank"], row["Song Title"], row["Artist(s)"]))
-                elif "HTTP Error 403" in lyrics:
-                    print("403 ERROR ON {}.{} {} by {}".format(row["Year"], row["Rank"], row["Song Title"], row["Artist(s)"]))
+                song = get_lyrics_genius_package(row["Artist(s)"], row["Song Title"])
+                if song is None:
+                    writer.writerow(row)
+                    print("Could not find lyrics for {} {}!".format(row["Artist(s)"], row["Song Title"]))
+                    continue
+
+                lyrics = clean_lyrics_string(song.lyrics)
+
+                if not url_is_plausible(row["Song Title"], row["Artist(s)"], song.url):
+                    row["URL"] = song.url
+                    writer.writerow(row)
                 else:
+                    print("Finished {} - {} - {} - {}".format(row["Year"], row["Rank"], row["Artist(s)"], row["Song Title"]))
                     row["Lyrics"] = lyrics
+                    row["URL"] = song.url
                     writer.writerow(row)
 
 if __name__ == "__main__":
