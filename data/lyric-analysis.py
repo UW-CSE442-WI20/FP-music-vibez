@@ -46,6 +46,7 @@ def analyze_lyrics(file):
     is explicit, and artists who used that word and how much
 
     JSON format below:
+    
     {
         'some year': [
                 {
@@ -89,26 +90,7 @@ def analyze_lyrics(file):
         .
         .
     }
-         'some word': {
-             occurances: int,
-             explicit: boolean,
-             artists = {
-                'some artist':  {
-                    occurances: int
-                 }
-             }
-         },
-         'some other word': {
-         .
-         .
-         .
-         },
-      },
-      'some other year':
-      .
-      .
-      .
-    }
+
     '''
     data = {}
     with open(file, newline='') as csvfile:
