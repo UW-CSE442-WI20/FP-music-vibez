@@ -1,873 +1,1089 @@
 {
-    "2018": {
-        "I": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "In": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                },
-                "Lil Wayne": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 3
-        },
-        "Ten": {
-            "artists": {
-                "Drake": {
-                    "occurances": 1
-                },
-                "Lil Wayne": {
-                    "occurances": 3
-                }
-            },
-            "explicit": false,
-            "occurances": 4
-        },
-        "a": {
-            "artists": {
-                "City Girls": {
+    "2018": [
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
                     "occurances": 3
                 },
-                "Drake": {
-                    "occurances": 3
+                {
+                    "artist": "Drake",
+                    "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 6
+            "occurances": 4,
+            "text": "Ten"
         },
-        "about": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "act": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "as": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 2
-                },
-                "Drake": {
-                    "occurances": 2
-                }
-            },
-            "explicit": false,
-            "occurances": 4
-        },
-        "ass": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": true,
-            "occurances": 2
-        },
-        "bands": {
-            "artists": {
-                "Drake": {
-                    "occurances": 5
-                },
-                "Lil Wayne": {
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
                     "occurances": 9
-                }
-            },
-            "explicit": false,
-            "occurances": 14
-        },
-        "beat": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
                 },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "bitch": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 2
-                },
-                "Drake": {
-                    "occurances": 2
-                }
-            },
-            "explicit": true,
-            "occurances": 4
-        },
-        "clothes": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "cooking": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                },
-                "Lil Wayne": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 3
-        },
-        "could": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 2
-                },
-                "Drake": {
-                    "occurances": 2
-                }
-            },
-            "explicit": false,
-            "occurances": 4
-        },
-        "discuss": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 2
-                },
-                "Lil Wayne": {
-                    "occurances": 3
-                }
-            },
-            "explicit": false,
-            "occurances": 6
-        },
-        "down": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "earl": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "even": {
-            "artists": {
-                "Drake": {
-                    "occurances": 2
-                },
-                "Lil Wayne": {
-                    "occurances": 3
-                }
-            },
-            "explicit": false,
-            "occurances": 5
-        },
-        "ever": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "fake": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "fakes": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "fifty": {
-            "artists": {
-                "Drake": {
-                    "occurances": 2
-                },
-                "Lil Wayne": {
-                    "occurances": 3
-                }
-            },
-            "explicit": false,
-            "occurances": 5
-        },
-        "fuck": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 3
-                },
-                "Lil Wayne": {
-                    "occurances": 2
-                }
-            },
-            "explicit": false,
-            "occurances": 6
-        },
-        "fucking": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": true,
-            "occurances": 2
-        },
-        "get": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "give": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "group": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "hoes": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": true,
-            "occurances": 2
-        },
-        "hunded": {
-            "artists": {
-                "Drake": {
-                    "occurances": 2
-                },
-                "Lil Wayne": {
-                    "occurances": 3
-                }
-            },
-            "explicit": false,
-            "occurances": 5
-        },
-        "it": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
-                },
-                "Drake": {
-                    "occurances": 3
-                },
-                "Lil Wayne": {
+                {
+                    "artist": "Drake",
                     "occurances": 5
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 9
+            "occurances": 14,
+            "text": "bands"
         },
-        "let": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 3
                 },
-                "Drake": {
-                    "occurances": 1
+                {
+                    "artist": "Drake",
+                    "occurances": 2
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 5,
+            "text": "fifty"
         },
-        "lets": {
-            "artists": {
-                "Drake": {
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 3
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 5,
+            "text": "hunded"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
                     "occurances": 2
                 },
-                "Lil Wayne": {
+                {
+                    "artist": "Drake",
                     "occurances": 3
-                }
-            },
-            "explicit": false,
-            "occurances": 5
-        },
-        "man": {
-            "artists": {
-                "City Girls": {
+                },
+                {
+                    "artist": "City Girls",
                     "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 6,
+            "text": "fuck"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 5
                 },
-                "Drake": {
+                {
+                    "artist": "Drake",
                     "occurances": 3
                 },
-                "Lil Wayne": {
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 9,
+            "text": "it"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
                     "occurances": 6
-                }
-            },
-            "explicit": false,
-            "occurances": 10
-        },
-        "my": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
                 },
-                "Drake": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 2
-        },
-        "never": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 1
+                {
+                    "artist": "Drake",
+                    "occurances": 3
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 10,
+            "text": "man"
         },
-        "not": {
-            "artists": {
-                "Drake": {
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 3
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 5,
+            "text": "lets"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 3
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 5,
+            "text": "not"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 3
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 5,
+            "text": "even"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 3
+                },
+                {
+                    "artist": "Drake",
                     "occurances": 2
                 },
-                "Lil Wayne": {
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 6,
+            "text": "discuss"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 1
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 3,
+            "text": "In"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 2
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 4
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 4
+                }
+            ],
+            "explicit": false,
+            "occurances": 10,
+            "text": "the"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 1
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 3,
+            "text": "six"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 1
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 3,
+            "text": "cooking"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 1
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 3,
+            "text": "with"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Lil Wayne",
+                    "occurances": 1
+                },
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 3,
+            "text": "realest"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "I"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 4,
+            "text": "could"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "never"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "ever"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "let"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "streets"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "down"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "earl"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 4,
+            "text": "on"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "beat"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "real"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 4,
+            "text": "as"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 2
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 2
+                }
+            ],
+            "explicit": false,
+            "occurances": 4,
+            "text": "bitch"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "give"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 3
+                },
+                {
+                    "artist": "City Girls",
                     "occurances": 3
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 5
+            "occurances": 6,
+            "text": "a"
         },
-        "of": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "about"
         },
-        "on": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 2
-                },
-                "Drake": {
-                    "occurances": 2
-                }
-            },
-            "explicit": false,
-            "occurances": 4
-        },
-        "racks": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "racks"
         },
-        "real": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "my"
         },
-        "realest": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
-                    "occurances": 1
-                },
-                "Lil Wayne": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 3
+            "occurances": 2,
+            "text": "ass"
         },
-        "sign": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "fucking"
         },
-        "six": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
-                    "occurances": 1
-                },
-                "Lil Wayne": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 3
+            "occurances": 2,
+            "text": "sign"
         },
-        "smashed": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "group"
         },
-        "streets": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "of"
         },
-        "the": {
-            "artists": {
-                "City Girls": {
-                    "occurances": 4
-                },
-                "Drake": {
-                    "occurances": 4
-                },
-                "Lil Wayne": {
-                    "occurances": 2
-                }
-            },
-            "explicit": false,
-            "occurances": 10
-        },
-        "up": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "fake"
         },
-        "with": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
-                    "occurances": 1
-                },
-                "Lil Wayne": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 3
+            "occurances": 2,
+            "text": "hoes"
         },
-        "you": {
-            "artists": {
-                "City Girls": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 1
                 },
-                "Drake": {
+                {
+                    "artist": "City Girls",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 2
+            "occurances": 2,
+            "text": "fakes"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "clothes"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "act"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "you"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "get"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "smashed"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 1
+                },
+                {
+                    "artist": "City Girls",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 2,
+            "text": "up"
         }
-    },
-    "2019": {
-        "I": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "In": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "Ten": {
-            "artists": {
-                "Draco": {
-                    "occurances": 3
-                },
-                "Drake": {
+    ],
+    "2019": [
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 4
-                }
-            },
-            "explicit": false,
-            "occurances": 7
-        },
-        "bands": {
-            "artists": {
-                "Draco": {
-                    "occurances": 9
                 },
-                "Drake": {
+                {
+                    "artist": "Draco",
+                    "occurances": 3
+                }
+            ],
+            "explicit": false,
+            "occurances": 7,
+            "text": "Ten"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 12
-                }
-            },
-            "explicit": false,
-            "occurances": 21
-        },
-        "cooking": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "could": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "discuss": {
-            "artists": {
-                "Draco": {
-                    "occurances": 3
                 },
-                "Drake": {
+                {
+                    "artist": "Draco",
+                    "occurances": 9
+                }
+            ],
+            "explicit": false,
+            "occurances": 21,
+            "text": "bands"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 4
-                }
-            },
-            "explicit": false,
-            "occurances": 7
-        },
-        "down": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "even": {
-            "artists": {
-                "Draco": {
+                },
+                {
+                    "artist": "Draco",
                     "occurances": 3
-                },
-                "Drake": {
+                }
+            ],
+            "explicit": false,
+            "occurances": 7,
+            "text": "fifty"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 4
-                }
-            },
-            "explicit": false,
-            "occurances": 7
-        },
-        "ever": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "fifty": {
-            "artists": {
-                "Draco": {
+                },
+                {
+                    "artist": "Draco",
                     "occurances": 3
-                },
-                "Drake": {
-                    "occurances": 4
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 7
+            "occurances": 7,
+            "text": "hunded"
         },
-        "fuck": {
-            "artists": {
-                "Draco": {
-                    "occurances": 3
-                },
-                "Drake": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 4
-                }
-            },
-            "explicit": true,
-            "occurances": 7
-        },
-        "hunded": {
-            "artists": {
-                "Draco": {
-                    "occurances": 3
                 },
-                "Drake": {
-                    "occurances": 4
+                {
+                    "artist": "Draco",
+                    "occurances": 3
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 7
+            "occurances": 7,
+            "text": "fuck"
         },
-        "it": {
-            "artists": {
-                "Draco": {
-                    "occurances": 6
-                },
-                "Drake": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 8
-                }
-            },
-            "explicit": false,
-            "occurances": 14
-        },
-        "let": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "lets": {
-            "artists": {
-                "Draco": {
-                    "occurances": 3
                 },
-                "Drake": {
-                    "occurances": 4
-                }
-            },
-            "explicit": false,
-            "occurances": 7
-        },
-        "man": {
-            "artists": {
-                "Draco": {
+                {
+                    "artist": "Draco",
                     "occurances": 6
-                },
-                "Drake": {
+                }
+            ],
+            "explicit": false,
+            "occurances": 14,
+            "text": "it"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 8
-                }
-            },
-            "explicit": false,
-            "occurances": 14
-        },
-        "never": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "not": {
-            "artists": {
-                "Draco": {
-                    "occurances": 3
                 },
-                "Drake": {
+                {
+                    "artist": "Draco",
+                    "occurances": 6
+                }
+            ],
+            "explicit": false,
+            "occurances": 14,
+            "text": "man"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
                     "occurances": 4
-                }
-            },
-            "explicit": false,
-            "occurances": 7
-        },
-        "realest": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "six": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "streets": {
-            "artists": {
-                "Draco": {
-                    "occurances": 1
-                }
-            },
-            "explicit": false,
-            "occurances": 1
-        },
-        "the": {
-            "artists": {
-                "Draco": {
+                },
+                {
+                    "artist": "Draco",
                     "occurances": 3
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 3
+            "occurances": 7,
+            "text": "lets"
         },
-        "with": {
-            "artists": {
-                "Draco": {
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 4
+                },
+                {
+                    "artist": "Draco",
+                    "occurances": 3
+                }
+            ],
+            "explicit": false,
+            "occurances": 7,
+            "text": "not"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 4
+                },
+                {
+                    "artist": "Draco",
+                    "occurances": 3
+                }
+            ],
+            "explicit": false,
+            "occurances": 7,
+            "text": "even"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Drake",
+                    "occurances": 4
+                },
+                {
+                    "artist": "Draco",
+                    "occurances": 3
+                }
+            ],
+            "explicit": false,
+            "occurances": 7,
+            "text": "discuss"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
                     "occurances": 1
                 }
-            },
+            ],
             "explicit": false,
-            "occurances": 1
+            "occurances": 1,
+            "text": "In"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 3
+                }
+            ],
+            "explicit": false,
+            "occurances": 3,
+            "text": "the"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "six"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "cooking"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "with"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "realest"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "I"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "could"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "never"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "ever"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "let"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "streets"
+        },
+        {
+            "artists": [
+                {
+                    "artist": "Draco",
+                    "occurances": 1
+                }
+            ],
+            "explicit": false,
+            "occurances": 1,
+            "text": "down"
         }
-    }
+    ]
 }
