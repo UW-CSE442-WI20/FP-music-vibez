@@ -136,7 +136,11 @@ def get_all_lyrics(filename):
         writer.writeheader()
         with open(filename, "r") as f:
             reader = csv.DictReader(f, dialect=csv.unix_dialect)
+            count = 0
             for row in reader:
+                count += 1
+                if count % 10 == 0:
+                    out.flush()
                 if "{}.{}".format(row["Year"], row["Rank"]) in already_read:
                     writer.writerow(already_read["{}.{}".format(row["Year"], row["Rank"])])
                     continue
