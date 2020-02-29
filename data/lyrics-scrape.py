@@ -35,8 +35,8 @@ def get_lyrics_azlyrics(artist,song_title):
     url = "http://azlyrics.com/lyrics/"+artist+"/"+song_title+".html"
     
     try:
-        content = urllib.request.urlopen(url).read()
-        soup = BeautifulSoup(content, 'html.parser')
+        response = requests.get(url, headers=headers)
+        soup = BeautifulSoup(response.text, 'html.parser')
         lyrics = str(soup)
         # lyrics lies between up_partition and down_partition
         up_partition = '<!-- Usage of azlyrics.com content by any third-party lyrics provider is prohibited by our licensing agreement. Sorry about that. -->'
@@ -44,9 +44,9 @@ def get_lyrics_azlyrics(artist,song_title):
         lyrics = lyrics.split(up_partition)[1]
         lyrics = lyrics.split(down_partition)[0]
         lyrics = lyrics.replace('<br>','').replace('</br>','').replace('</div>','').strip()
-        return lyrics
+        return lyrics, url, response.status_code
     except Exception as e:
-        return "Exception occurred \n" + str(e)
+        return None, url, None
 
 def get_lyrics_genius(artist, song_title):
     url = "https://genius.com/{}-{}-lyrics".format(artist.replace(" ", "-").strip().lower(), song_title.replace(" ", "-".strip().lower()))
@@ -96,7 +96,6 @@ def url_is_plausible(song, artist, url):
     parsed_artist = artist.lower().replace("'", "").replace("(", "").replace(")", "").split(" ")
     parsed_song = song.lower().replace("'", "").replace("(", "").replace(")", "").split(" ")
 
-
     count = 0
     for s in parsed_song:
         if s in parsed_url:
@@ -117,6 +116,45 @@ def url_is_plausible(song, artist, url):
 
     return count / len(parsed_url) > 0.5
 
+
+def get_all_lyrics_azlyrics(filename):
+    
+    # See if we have already started scraping so we can pick up where we left off
+    already_read = {}
+    try:
+        with open("azlyrics.csv", "r") as out:
+            reader = csv.DictReader(out)
+            for row in reader:
+                already_read["{}.{}".format(row["Year"], row["Rank"])] = row
+    except FileNotFoundError as e:
+        print("Could not read azlyrics.csv, starting from scratch")
+
+
+    with open("azlyrics.csv", "w+") as out:
+        writer = csv.DictWriter(out, fieldnames=["Year", "Rank", "Song Title", "Artist(s)", "Lyrics", "URL"], dialect=csv.unix_dialect)
+        writer.writeheader()
+        with open(filename, "r") as f:
+            reader = csv.DictReader(f, dialect=csv.unix_dialect)
+            count = 0
+            for row in reader:
+                count += 1
+                if count % 10 == 0:
+                    out.flush()
+                if "{}.{}".format(row["Year"], row["Rank"]) in already_read:
+                    writer.writerow(already_read["{}.{}".format(row["Year"], row["Rank"])])
+                    continue
+               
+                lyrics, url, code = get_lyrics_azlyrics(row["Artist(s)"], row["Song Title"])
+
+                if lyrics is None:
+                    print("Could not find {} - {} - {} - {}".format(row["Year"], row["Rank"], row["Artist(s)"], row["Song Title"]))
+                elif code != 200:
+                    print("Status code is not 200 (was {}) for {} - {} - {} - {}".format(code, row["Year"], row["Rank"], row["Artist(s)"], row["Song Title"]))
+                else:
+                    print("Finished {} - {} - {} - {}".format(row["Year"], row["Rank"], row["Artist(s)"], row["Song Title"]))
+                    row["Lyrics"] = clean_lyrics_string(lyrics)
+                row["URL"] = url
+                writer.writerow(row)
 
 def get_all_lyrics(filename):
 
@@ -163,5 +201,16 @@ def get_all_lyrics(filename):
                     writer.writerow(row)
 
 if __name__ == "__main__":
-    get_all_lyrics("yearlySingles.csv")
+    argv = sys.argv
+
+    if len(argv) != 2:
+        print("Must specify either 'genius' or 'azlyrics'")
+        exit(1)
+    
+    if argv[1] == "genius":
+        get_all_lyrics("yearlySingles.csv")
+    elif argv[1] == "azlyrics":
+        get_all_lyrics_azlyrics("yearlySingles.csv")
+    else:
+        print("Must specify either 'genius' or 'azlyrics'")
     
