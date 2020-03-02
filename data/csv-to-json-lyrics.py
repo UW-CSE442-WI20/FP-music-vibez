@@ -98,8 +98,34 @@ def build_lyric_year_index():
 
 
     with open("lyric-year-index.json", "w+", encoding="utf-8") as f:
-        json.dump(output, f, sort_keys=True, indent=4, ensure_ascii=False)
+        json.dump(output, f, ensure_ascii=False)
+
+
+def build_lyric_index():
+    output = {}
+
+    with open("lyrics.csv", "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            counts = count_lyrics(tokenize_lyrics(row["Lyrics"]))
+            if len(counts) == 0:
+                continue
+            
+            for w, c in counts.items():
+                if w not in output:
+                    output[w] = {}
+                    output[w]["text"] = w
+                    output[w]["size"] = 0
+                output[w]["size"] = output[w]["size"] + c
+
+    res = []
+    for k, v in output.items():
+        res.append(v)
+
+    with open("lyric-index.json", "w+", encoding="utf-8") as f:
+        json.dump(res, f, ensure_ascii=False)
 
 if __name__ == "__main__":
     build_song_index()
     build_lyric_year_index()
+    build_lyric_index()
