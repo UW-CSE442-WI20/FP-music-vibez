@@ -10,36 +10,38 @@ myClassInstance.sayHi();
 
 import { getLyricCounts } from "./data.js";
 
+/*
 d3.csv("carbon-emissions.csv").then(data => {
   console.log("Dynamically loaded CSV data", data);
 });
+*/
 
 var color = d3
   .scaleLinear()
-  .domain([0, 1, 2, 3, 4, 5, 6, 10, 15, 20, 100])
+  .domain([0, 1, 3, 5, 10, 15, 20, 50, 100])//[0, 1, 2, 3, 4, 5, 6, 10, 15, 20, 100])
   .range([
-    "#ED3108",
-    "#7AD00C",
-    "#ED0827",
-    "#ED086D",
-    "#EA08ED",
-    "#9308ED",
-    "#084AED",
-    "#08C3ED",
-    "#08ED96",
-    "#58ED08",
-    "#EAED08",
-    "#0A0909"
+    "#045DE9",
+    "#09C6F9",
+    "#BA8CD7", 
+    "#48BF91",
+    "#00B300",
+    "#5B0A91",
+    "#4DB4D7",
+    "#400080", 
+    "#008080"
   ]);
 
+console.log(color)
+console.log(color(4), color(14));
+
 var layout = cloud()
-  .size([500, 500])
+  .size([1000, 700])
   .words(getLyricCounts())
   .padding(5)
   .rotate(function() {
     return ~~(Math.random() * 2) * 90;
   })
-  .font("Impact")
+  .font("Helvetica Neue")
   .fontSize(function(d) {
     return d.size;
   })
@@ -48,7 +50,7 @@ var layout = cloud()
 layout.start();
 
 function draw(words) {
-  d3.select("body")
+  d3.select("#word-map")
     .append("svg")
     .attr("width", layout.size()[0])
     .attr("height", layout.size()[1])
@@ -64,8 +66,9 @@ function draw(words) {
     .style("font-size", function(d) {
       return d.size + "px";
     })
-    .style("font-family", "Impact")
+    .style("font-family", "Helvetica Neue")
     .style("fill", function(d, i) {
+    	console.log(i, color(i));
       return color(i);
     })
     .attr("text-anchor", "middle")
@@ -116,21 +119,21 @@ var sliderRange = slider
   .default(yearsSelected)
   .fill("#045DE9")
   .on("onchange", val => {
-    d3.select("p#value-range").text(val.map(d3.format(".0f")).join(" - "));
+    d3.select("p#value-range").text("Years " + val.map(d3.format(".0f")).join(" - "));
     yearsSelected = val;
   });
 
 var gRange = d3
   .select("div#slider-range")
   .append("svg")
-  .attr("width", 500)
+  .attr("width", 400)
   .attr("height", 100)
   .append("g")
   .attr("transform", "translate(30,30)");
 
 gRange.call(sliderRange);
 
-d3.select("p#value-range").text(
+d3.select("p#value-range").text("Years " + 
   sliderRange
     .value()
     .map(d3.format(".0f"))

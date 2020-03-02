@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 	<title>My Title</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- icon credits 
 	find by ayex from the Noun Project
 	bar graph by Francisca Arévalo from the Noun Project
@@ -29,8 +29,16 @@
 	  	<p>Choose an interesting lyric to explore through interactive data visualizations.</p>
 	  </div>
 	</div>
-	<div><p id="value-range"></p></div>
-    <div id="slider-range"></div>
+
+	<div class="word-map-grid-container">
+		<div class="word-map-grid-item">
+			<div><p id="value-range"></p></div>
+	    	<div id="slider-range"></div>
+    	</div>
+    	<div class="word-map-grid-item" id="word-map">
+    	</div>
+	</div> 
+
 	<script src="./index.js"></script>
   </body>
 </html>

@@ -41,6 +41,13 @@ h1
  	border-radius: 25px;
 }
 
+.word-map-grid-container 
+{
+ 	display: grid;
+ 	grid-template-columns: auto auto;	
+}
+
+
 h3 
 {
 	margin-top: 0px;
