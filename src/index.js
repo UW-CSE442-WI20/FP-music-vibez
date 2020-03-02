@@ -54,8 +54,12 @@ function startWordMap() {
 }
 
 function draw(words) {
+  d3.select("#word-map-svg")
+  	.remove();
+
   d3.select("#word-map")
     .append("svg")
+    .attr("id", "word-map-svg")
     .attr("width", layout.size()[0])
     .attr("height", layout.size()[1])
     .append("g")
