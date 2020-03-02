@@ -60,6 +60,12 @@ h1
 	margin-bottom: 0px;
 }
 
+.analysis-grid-container 
+{
+ 	display: grid;
+ 	grid-template-columns: auto auto;	
+}
+
 .project-title 
 {
 	margin-top: 0px;
