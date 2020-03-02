@@ -32,6 +32,15 @@ lyric-year-index.json
     }
 }
 
+year-lyric-index.json 
+{
+    year: {
+        lyric1: count1, 
+        lyric2: count2, 
+        ... 
+    }
+}
+
 """
 
 chars_to_remove = "()?!,."
@@ -100,6 +109,45 @@ def build_lyric_year_index():
     with open("lyric-year-index.json", "w+", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False)
 
+def build_year_lyric_index():
+    output = {}
+
+    with open("lyrics.csv", "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            counts = count_lyrics(tokenize_lyrics(row["Lyrics"]))
+            if len(counts) == 0:
+                continue
+            
+            if row["Year"] not in output:
+                output[row["Year"]] = {}
+
+            for w, c in counts.items():
+                if w not in output[row["Year"]]:
+                    output[row["Year"]][w] = {}
+                    output[row["Year"]][w]["text"] = w
+                    output[row["Year"]][w]["size"] = 0
+
+                output[row["Year"]][w]["size"] = output[row["Year"]][w]["size"] + c
+
+                ''' {"text": "alone", "size": 1447}'''
+
+    '''print(output["1990"])'''
+    i = 0;
+    res = {}
+    for year, values in output.items():
+        res[year] = [];
+        if i < 2:
+            print(year)
+        for key, value in values.items():
+            res[year].append(value);
+            if i < 1:
+                print(key)
+                print(value)
+            i += 1
+
+    with open("year-lyric-index.json", "w+", encoding="utf-8") as f:
+        json.dump(res, f, ensure_ascii=False)
 
 def build_lyric_index():
     output = {}
@@ -127,5 +175,6 @@ def build_lyric_index():
 
 if __name__ == "__main__":
     build_song_index()
-    build_lyric_year_index()
-    build_lyric_index()
+    '''build_lyric_year_index()'''
+    build_year_lyric_index()
+    '''build_lyric_index()'''

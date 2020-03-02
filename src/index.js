@@ -16,6 +16,8 @@ d3.csv("carbon-emissions.csv").then(data => {
 });
 */
 
+var yearSelected = 2015; 
+
 var color = d3
   .scaleLinear()
   .domain([0, 1, 3, 5, 10, 15, 20, 50, 100])//[0, 1, 2, 3, 4, 5, 6, 10, 15, 20, 100])
@@ -31,20 +33,25 @@ var color = d3
     "#008080"
   ]);
 
-var layout = cloud()
-  .size([800, 500])
-  .words(getLyricCounts())
-  .padding(5)
-  .rotate(function() {
-    return ~~(Math.random() * 2) * 90;
-  })
-  .font("Helvetica Neue")
-  .fontSize(function(d) {
-    return d.size;
-  })
-  .on("end", draw);
 
-layout.start();
+var layout; 
+function startWordMap() {
+	layout = null;
+	layout = cloud()
+	  .size([800, 500])
+	  .words(getLyricCounts(yearSelected))
+	  .padding(5)
+	  .rotate(function() {
+	    return ~~(Math.random() * 2) * 90;
+	  })
+	  .font("Helvetica Neue")
+	  .fontSize(function(d) {
+	    return d.size;
+	  })
+	  .on("end", draw);
+
+	layout.start();
+}
 
 function draw(words) {
   d3.select("#word-map")
@@ -65,7 +72,6 @@ function draw(words) {
     })
     .style("font-family", "Helvetica Neue")
     .style("fill", function(d, i) {
-    	console.log(i, color(i));
       return color(i);
     })
     .attr("text-anchor", "middle")
@@ -102,6 +108,34 @@ for (var i = 1946; i < 2020; i++) {
   yearsData.push(i);
 }
 
+var sliderStep = slider.sliderBottom()
+					.min(d3.min(yearsData))
+					.max(d3.max(yearsData))
+					.width(300)
+					.tickFormat(d3.format('.0f'))
+					.ticks(10)
+					.step(1)
+					.default(yearSelected)
+					.on('onchange', val => {
+					  d3.select('p#value-time').text(d3.format('.0f')(val));
+					  yearSelected = val;
+					  console.log(yearSelected);
+					  startWordMap();
+					});
+
+var gStep = d3.select('div#slider-time')
+				.append('svg')
+				.attr('width', 500)
+				.attr('height', 100)
+				.append('g')
+				.attr('transform', 'translate(30,30)');
+
+  gStep.call(sliderStep);
+
+  d3.select('p#value-time').text(d3.format('.0f')(sliderStep.value()));
+
+
+/*
 var yearsSelected = [1960, 1995];
 
 // Range Slider
@@ -136,3 +170,4 @@ d3.select("p#value-range").text("Years " +
     .map(d3.format(".0f"))
     .join(" - ")
 );
+*/

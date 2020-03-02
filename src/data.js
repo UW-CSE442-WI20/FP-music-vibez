@@ -1,11 +1,15 @@
 import lyrics_index from "../data/lyric-index.json";
+import year_index from "../data/year-lyric-index.json";
 
-export function getLyricCounts(parameters) {
+export function getLyricCounts(year) {
   // [{"text":"study","size":40}]
   console.log("getLyricsCounts!");
+  console.log('parameters', year);
+  //console.log(year_index);
+  console.log(year_index[year]);
   let res = [];
-  for (let i = 0; i < 1000; i++) {
-    res.push(lyrics_index[i]);
+  for (let i = 0; i < 300; i++) {
+    res.push(year_index[year][i]);
   }
   //   let res = [
   //     // { text: "foo", size: 40 },
@@ -24,6 +28,6 @@ export function getLyricCounts(parameters) {
   //     }
   //   }
   console.log("done!");
-  console.log(res);
+  //console.log(res);
   return res;
 }
