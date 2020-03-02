@@ -31,11 +31,8 @@ var color = d3
     "#008080"
   ]);
 
-console.log(color)
-console.log(color(4), color(14));
-
 var layout = cloud()
-  .size([1000, 700])
+  .size([800, 500])
   .words(getLyricCounts())
   .padding(5)
   .rotate(function() {
@@ -95,7 +92,7 @@ function draw(words) {
         });
     })
     .on("click", function(d) {
-      alert(d.text); // instead we'll navigate to next page
+      alert(d.text + " " + d.size); // instead we'll navigate to next page
     });
 }
 

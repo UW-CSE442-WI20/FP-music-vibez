@@ -12,7 +12,7 @@
   </head>
   <body>
   	<div id="color-background">
-    	<h3>Music Vibez</h3>
+    	<h3 id="project-title">Music Vibez</h3>
     	<div id="statement">
 			<h1>Explore your favorite lyrics.</h1>
 		</div>
@@ -24,13 +24,17 @@
 	  	<p>View the most used lyrics, filtering by year, artist, genre, and more! </p>
 	  </div>
 	  <div class="grid-item">
-	  	<img src="../static/analyze_icon_blue.png" alt="Search" height=100px>
+	  	<img src="../static/analyze_icon_blue.png" alt="Analyze" height=100px>
 	  	<p><b>Analyze your favorite lyrics</b></p>
 	  	<p>Choose an interesting lyric to explore through interactive data visualizations.</p>
 	  </div>
 	</div>
 
 	<div class="word-map-grid-container">
+		<div class="word-map-grid-item header"> 
+			<h1 id="main-header">Explore lyrics</h1>
+			<h2>We present the top X most used words found in the top X songs. Change the year span and filters. </h2>
+		</div>
 		<div class="word-map-grid-item">
 			<div><p id="value-range"></p></div>
 	    	<div id="slider-range"></div>
