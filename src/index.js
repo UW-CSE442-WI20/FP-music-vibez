@@ -201,7 +201,14 @@ function loadLineChart(word) {
 		.attr("width", x.bandwidth());
 
 	chart.append("g")
-	  .call(xAxis);
+	  .call(xAxis)
+	  .selectAll("text")	
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", function(d) {
+            return "rotate(-90)" 
+        });
 
 	chart.append("g")
 	  .call(yAxis);
