@@ -70,6 +70,7 @@ h1
 {
 	grid-row: 2;
 	grid-column: 1;
+	text-align: center;
 }
 
 #bar-chart-container 

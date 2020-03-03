@@ -144,8 +144,10 @@ d3.select('p#value-time').text(d3.format('.0f')(sliderStep.value()));
 
 // Bar Chart
 function loadLineChart(word) {
-	d3.select('p#selected-word').text("Selected word: " + word);
+	d3.select('p#selected-word').text("Usage of \"" + word + "\" through time");
 	d3.select("#bar-chart").remove();
+
+	d3.select("#secondary-analysis-header").text("Analyze \"" + word + "\"");
 
 	var lyricCountData = getLyricCountsInYears(word);
 	//console.log(lyricCountData);
