@@ -55,7 +55,13 @@ def tokenize_lyrics(lyric):
     for c in chars_to_remove:
         lyric = lyric.replace(c, "")
 
-    return lyric.split() # Split into list on whitespace
+
+    lyrics = []
+    for l in lyric.split():
+        while l.endswith("\\"):
+            l = l[:-1]
+        lyrics.append(l)
+    return lyrics 
 
 # Takes a list of strings and returns a dict mapping
 # each string to the number of times it was in the list
@@ -75,7 +81,12 @@ def build_song_index():
         reader = csv.DictReader(f)
         for row in reader:
             t = {}
-            t["lyrics"] = count_lyrics(tokenize_lyrics(row["Lyrics"]))
+            try:
+                t["lyrics"] = count_lyrics(tokenize_lyrics(row["Lyrics"]))
+            except:
+                print("Couldn't tokenize!")
+                check(row["Song Title"])
+                exit(1)
             t["year"] = row["Year"]
             t["rank"] = row["Rank"]
             t["artists"] = row["Artist(s)"]
@@ -173,8 +184,18 @@ def build_lyric_index():
     with open("lyric-index.json", "w+", encoding="utf-8") as f:
         json.dump(res, f, ensure_ascii=False)
 
+def check(title):
+    with open("lyrics.csv", "r", encoding="utf-8") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row["Song Title"] == title:
+                print(str(row["Song Title"]) + ":\n\n")
+                print(str(row["Lyrics"] + "\n\n"))
+                print(tokenize_lyrics(str(row["Lyrics"])))
+
 if __name__ == "__main__":
     build_song_index()
-    '''build_lyric_year_index()'''
+    build_lyric_year_index()
     build_year_lyric_index()
-    '''build_lyric_index()'''
+    build_lyric_index()
+    check("That's My Desire")
