@@ -144,21 +144,24 @@ d3.select('p#value-time').text(d3.format('.0f')(sliderStep.value()));
 
 // Bar Chart
 function loadLineChart(word) {
+	d3.select('p#selected-word').text("Selected word: " + word);
+	d3.select("#bar-chart").remove();
+
 	var lyricCountData = getLyricCountsInYears(word);
 	//console.log(lyricCountData);
 
-	for (let [key, value] of Object.entries(lyricCountData)) {
+	/*for (let [key, value] of Object.entries(lyricCountData)) {
 		console.log(`${key}: ${value}`);
 	}
-	console.log("done with the loop");
+	console.log("done with the loop");*/
 
 	var padding = 20;
-    var width = 500;
-    var height = 100;
+    var width = 800;
+    var height = 500;
 
     var margin = ({top: 20, right: 0, bottom: 30, left: 40})
 
-/*
+
 	var x = d3.scaleBand()
 		    .domain(d3.range(lyricCountData.length))
 		    .range([margin.left, width - margin.right])
@@ -180,14 +183,15 @@ function loadLineChart(word) {
 				    .call(g => g.select(".domain").remove())
 
 
-	var chart = d3.select("div#bar-chart")
+	var chart = d3.select("#bar-chart-container")
     	.append("svg")
+    	.attr("id", "bar-chart")
 		.attr("viewBox", [0, 0, width, height]);
 
 	chart.append("g")
-	 	.attr("fill", "steelblue")
+	 	.attr("fill", "#045DE9")
 		.selectAll("rect")
-		.data(Object.entries(lyricCountData))
+		.data(lyricCountData)
 		.join("rect")
 		.attr("x", (d, i) => x(i))
 		.attr("y", d => y(d.value))
@@ -199,10 +203,5 @@ function loadLineChart(word) {
 
 	chart.append("g")
 	  .call(yAxis);
-
-*/
-
-
-
 	 
 }

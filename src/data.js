@@ -33,5 +33,12 @@ export function getLyricCounts(year) {
 }
 
 export function getLyricCountsInYears(word) {
-  return lyrics_index[word];
+  let res = [];
+  for (let [key, value] of Object.entries(lyrics_index[word])) {
+    //console.log(`${key}: ${value}`);
+    res.push({name: key, value:  value})
+  }
+  console.log(res);
+
+  return res;
 }

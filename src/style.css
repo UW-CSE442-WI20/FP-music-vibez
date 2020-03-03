@@ -66,6 +66,18 @@ h1
  	grid-template-columns: auto auto;	
 }
 
+#selected-word-label
+{
+	grid-row: 2;
+	grid-column: 1;
+}
+
+#bar-chart-container 
+{
+	grid-row: 3;
+	grid-column: 1;
+}
+
 .project-title 
 {
 	margin-top: 0px;
