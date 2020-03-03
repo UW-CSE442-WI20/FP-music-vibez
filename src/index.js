@@ -9,6 +9,7 @@ const myClassInstance = new MyClass();
 myClassInstance.sayHi();
 
 import { getLyricCounts } from "./data.js";
+import { getLyricCountsInYears } from "./data.js"
 
 /*
 d3.csv("carbon-emissions.csv").then(data => {
@@ -104,7 +105,8 @@ function draw(words) {
         });
     })
     .on("click", function(d) {
-      alert(d.text + " " + d.size); // instead we'll navigate to next page
+      //alert(d.text + " " + d.size); // instead we'll navigate to next page
+      loadLineChart(d.text);
     });
 }
 
@@ -138,3 +140,69 @@ var gStep = d3.select('div#slider-time')
 gStep.call(sliderStep);
 
 d3.select('p#value-time').text(d3.format('.0f')(sliderStep.value()));
+
+
+// Bar Chart
+function loadLineChart(word) {
+	var lyricCountData = getLyricCountsInYears(word);
+	//console.log(lyricCountData);
+
+	for (let [key, value] of Object.entries(lyricCountData)) {
+		console.log(`${key}: ${value}`);
+	}
+	console.log("done with the loop");
+
+	var padding = 20;
+    var width = 500;
+    var height = 100;
+
+    var margin = ({top: 20, right: 0, bottom: 30, left: 40})
+
+/*
+	var x = d3.scaleBand()
+		    .domain(d3.range(lyricCountData.length))
+		    .range([margin.left, width - margin.right])
+		    .padding(0.1);
+
+
+    var y = d3.scaleLinear()
+		    .domain([0, d3.max(lyricCountData, d => d.value)]).nice()
+		    .range([height - margin.bottom, margin.top]);
+
+
+	var xAxis = g => g
+				    .attr("transform", `translate(0,${height - margin.bottom})`)
+				    .call(d3.axisBottom(x).tickFormat(i => lyricCountData[i].name).tickSizeOuter(0))
+
+    var yAxis = g => g
+				    .attr("transform", `translate(${margin.left},0)`)
+				    .call(d3.axisLeft(y))
+				    .call(g => g.select(".domain").remove())
+
+
+	var chart = d3.select("div#bar-chart")
+    	.append("svg")
+		.attr("viewBox", [0, 0, width, height]);
+
+	chart.append("g")
+	 	.attr("fill", "steelblue")
+		.selectAll("rect")
+		.data(Object.entries(lyricCountData))
+		.join("rect")
+		.attr("x", (d, i) => x(i))
+		.attr("y", d => y(d.value))
+		.attr("height", d => y(0) - y(d.value))
+		.attr("width", x.bandwidth());
+
+	chart.append("g")
+	  .call(xAxis);
+
+	chart.append("g")
+	  .call(yAxis);
+
+*/
+
+
+
+	 
+}

@@ -1,4 +1,4 @@
-import lyrics_index from "../data/lyric-index.json";
+import lyrics_index from "../data/lyric-year-index.json";
 import year_index from "../data/year-lyric-index.json";
 
 export function getLyricCounts(year) {
@@ -30,4 +30,8 @@ export function getLyricCounts(year) {
   console.log("done!");
   //console.log(res);
   return res;
+}
+
+export function getLyricCountsInYears(word) {
+  return lyrics_index[word];
 }
