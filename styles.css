@@ -1,0 +1,23 @@
+#gaga-theme {
+    color: rgb(194, 140, 149);
+}
+
+#beatles-theme {
+    color: rgb(245, 185, 20);
+}
+
+#queen-theme {
+    color: rgb(99, 8, 134);
+}
+
+#kanye-theme {
+    color: rgb(14, 14, 179);
+}
+
+#mj-theme {
+    color: rgb(175, 2, 2);
+}
+
+.step {
+    border: none;
+}

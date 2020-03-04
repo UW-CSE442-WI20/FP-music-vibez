@@ -1,15 +1,23 @@
-# This is our webpage!
+[meta title:"What is popularity?" description:"Exploring popular music from popular artists" /]
 
-[var name:"currentValue" value:"" /]
+[FullWidth]
+[Header
+      title:"What Makes Them Popular?"
+      subtitle:"Exploring popular music from popular artists"/]
+[/FullWidth]
+
+[var name:"currentValue" value:"start" /]
+[var name:"showChart" value:false /]
 
 [div]
-    Explore...
+    ##Explore...
     [Inline]
-    [action onClick:`currentValue = "gaga"`]lady gaga[/action], 
-    [action onClick:`currentValue = "queen"`]queen[/action],
-    [action onClick:`currentValue = "beatles"`]the beatles[/action],
-    [action onClick:`currentValue = "kanye"`]kanye west[/action],
-    or [action onClick:`currentValue = "michael"`]michael jackson[/action]
+    [action id:"gaga-theme" onClick:`currentValue = "gaga"`]lady gaga[/action], 
+    [action id:"queen-theme" onClick:`currentValue = "queen"`]queen[/action],
+    [action id:"beatles-theme" onClick:`currentValue = "beatles"`]the beatles[/action],
+    [action id:"kanye-theme" onClick:`currentValue = "kanye"`]kanye west[/action],
+    or 
+    [action id:"mj-theme" onClick:`currentValue = "michael"`]michael jackson[/action]
     [/Inline]
 [/div]
 
@@ -78,37 +86,26 @@
   [/Case]
   [Case test:"beatles"]
     ##The Beatles
-    [Scroller fullWidth:true currentStep:scrollerIndex]
-
-    [Step]## 1963
-        [img src:"static/images/beatles/PleasePleaseMe.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/WithTheBeatles.jpg" style:`{width: 400}` /]
-    [/Step]
-    [Step]## 1964
-        [img src:"static/images/beatles/AHardDaysNight.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/BeatlesforSale.jpg" style:`{width: 400}` /]
-    [/Step]
-    [Step]## 1965
-        [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
-    [/Step]
-    [Step]## 1966
-        [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
-    [/Step]
-    [Step]## 1967
-        [img src:"static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" style:`{width: 400}` /]
-    [/Step]
-    [Step]## 1968
-        [img src:"static/images/beatles/WhiteAlbum.jpg" style:`{width: 400}` /]
-    [/Step]
-    [Step]## 1969
-        [img src:"static/images/beatles/AbbeyRoad.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/YellowSubmarine.jpg" style:`{width: 400}` /]
-    [/Step]
-    [Step]## 1970
-        [img src:"static/images/beatles/LetItBe.jpg" style:`{width: 400}` /]
-    [/Step]
-    [/Scroller]
+    ### 1963
+    [img src:"static/images/beatles/PleasePleaseMe.jpg" style:`{width: 400}` /]
+    [img src:"static/images/beatles/WithTheBeatles.jpg" style:`{width: 400}` /]
+    ### 1964
+    [img src:"static/images/beatles/AHardDaysNight.jpg" style:`{width: 400}` /]
+    [img src:"static/images/beatles/BeatlesforSale.jpg" style:`{width: 400}` /]
+    ### 1965
+    [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
+    [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
+    ## 1966
+    [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
+    ## 1967
+    [img src:"static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" style:`{width: 400}` /]
+    ## 1968
+    [img src:"static/images/beatles/WhiteAlbum.jpg" style:`{width: 400}` /]
+    ## 1969
+    [img src:"static/images/beatles/AbbeyRoad.jpg" style:`{width: 400}` /]
+    [img src:"static/images/beatles/YellowSubmarine.jpg" style:`{width: 400}` /]
+    ## 1970
+    [img src:"static/images/beatles/LetItBe.jpg" style:`{width: 400}` /]
   [/Case]
   [Case test:"kanye"]
     ##Kanye West
@@ -119,6 +116,9 @@
   [Default][/Default]
 [/Switch]
 
-[Fixed]
-    ## We can put the data analysis here, and it will stay while we scroll
+[Fixed onEnterViewFully:`showChart = !showChart`]
+    [Conditional if:`showChart && currentValue != "start"`]
+        ## We can put the data analysis here, and it will stay while we scrol
+        figure out how to not have it overlap with the title?
+    [/Conditional]
 [/Fixed]
