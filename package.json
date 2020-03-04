@@ -1,8 +1,12 @@
 {
   "name": "uw-cse442-fp-submission",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "idyll": {
+    "theme": "default",
+    "layout": "blog",
+    "css": "styles.css",
+    "authorView": false
+  },
   "scripts": {
     "start": "idyll",
     "build": "idyll build",
