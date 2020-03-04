@@ -120,5 +120,6 @@
     [Conditional if:`showChart && currentValue != "start"`]
         ## We can put the data analysis here, and it will stay while we scrol
         figure out how to not have it overlap with the title?
+        [Chart /]
     [/Conditional]
 [/Fixed]
