@@ -25,61 +25,50 @@
   [Case test:"gaga"]
     ##Lady Gaga
 
-    I just put some images here obv we need to change it.
+    ### 2008
 
     [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
 
-
-    ## Woah dude
-    Nulla quis elementum elit. Vestibulum feugiat, justo id faucibus dictum, nisl
-    feo eleifend lorem, vel suscipit quam tortor sit amet dui. Donec dictum arcu
-    id velit efficitur mattis. Praesent luctus augue a ornare fringilla. Duis
-    ultricies odio id placerat faucibus. Maecenas mauris lorem, posuere eu viverra
-    del, dapibus id odio. Sed enim dolor, venenatis ut turpis vitae, feugiat
-    facilisis lectus. Donec tristique, ex non pellentesque pharetra, nisl lacus
-    cursus nisl, ac sollicitudin sapien est ut lacus. Cras molestie vitae ante quis aliquet.
-
+    ### 2009
     [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
 
+    ### 2010
     [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
 
-    ## Another section
-    Maecenas lobortis pulvinar diam a scelerisque. Sed tincidunt, velit a efficitur 
-    molestie, sapien dolor condimentum libero, vel bibendum orci lorem vel tellus. 
-    Etiam mattis magna massa, ut consectetur tellus euismod eu. Vivamus sapien nunc, 
-    blandit in nulla sed, maximus interdum magna. Interdum et malesuada fames ac ante 
-    ipsum primis in faucibus. Nulla euismod condimentum purus eu sodales. Vivamus nec 
-    ultricies libero, consectetur tincidunt sapien. Sed sit amet tellus turpis.
-
-    ## They have prebuilt components!
-    [button]This button doesn't do anything rn[/button]
-
-    ### This is a custom component
-    It was written in react so if we want to insert react we can do that too!
-    [CustomComponent/]
-
-    ## Another Section
-    Proin ultrices auctor eros, at dapibus dolor iaculis a. Sed ut arcu tristique, 
-    tincidunt quam quis, interdum purus. Aenean accumsan diam enim, at lacinia nunc 
-    accumsan a. Duis accumsan eleifend nisi eget condimentum. Etiam eu lobortis leo. 
-    Phasellus tristique consequat nunc sed malesuada. Curabitur rutrum porta sapien at 
-    ullamcorper. Curabitur tellus ligula, pretium non imperdiet vitae, porttitor nec arcu. 
-    Vestibulum a augue libero. Maecenas finibus et sapien nec egestas. Suspendisse auctor
-    convallis ipsum, quis fringilla urna tristique sed. Etiam eget scelerisque velit.
+    ### 2011
 
     [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
 
     [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
 
+    ### 2012
+
+    ### 2013
+
     [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
+
+    ### 2014
 
     [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
 
+    ### 2015
+
+    ### 2016
+
     [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
+
+    ### 2017
+
+    ### 2018
 
     [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
 
+    ### 2019
+
+    ### 2020
+
     [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
+
   [/Case]
   [Case test:"queen"]
     ##Queen
