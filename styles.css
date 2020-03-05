@@ -1,5 +1,5 @@
 #gaga-theme {
-  color: rgb(194, 140, 149);
+  color: #fc849d;
 }
 
 #beatles-theme {
@@ -26,7 +26,7 @@
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  border: 5px solid rgb(194, 140, 149);
+  border: 5px solid #fc849d;
   transition-duration: scale 2000;
   cursor: pointer;
 }
