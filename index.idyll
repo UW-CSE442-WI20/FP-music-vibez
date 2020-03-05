@@ -185,7 +185,86 @@
         ##Kanye West
       [/Case]
       [Case test:"michael"]
-        ##Michael Jackson
+        [Step]
+            ##Michael Jackson
+            ## August 29, 1958: born 
+        [/Step]
+
+        [Step]
+            ## 1972
+            [img src:"static/images/michael-jackson/got-to-be-there.jpg" style:`{width: 400}` /]
+
+            [img src:"static/images/michael-jackson/ben.jpg" style:`{width: 400}` /]
+        [/Step]
+
+        [Step]
+            ## 1973
+            [img src:"static/images/michael-jackson/music-and-me.jpg" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 1975
+            [img src:"static/images/michael-jackson/forever-michael.jpeg" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 1979
+            [img src:"static/images/michael-jackson/off-the-wall.jpg" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 1982
+            [img src:"static/images/michael-jackson/thriller.png" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 1983 - First Moonwalk
+        [/Step]
+
+        [Step]
+            ## 1987
+            [img src:"static/images/michael-jackson/bad.png" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 1991
+            [img src:"static/images/michael-jackson/dangerous.jpg" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 1995
+            [img src:"static/images/michael-jackson/HIStory.jpg" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 2001
+            [img src:"static/images/michael-jackson/invincible.jpg" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 2009 - died (age 50)
+
+        [/Step]
+
+        [Step]
+            ## 2010
+            [img src:"static/images/michael-jackson/michael.jpg" style:`{width: 400}` /]
+
+        [/Step]
+
+        [Step]
+            ## 2014
+            [img src:"static/images/michael-jackson/xscape.png" style:`{width: 400}` /]
+
+        [/Step]
       [/Case]
       [Default][/Default]
     [/Switch]
