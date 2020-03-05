@@ -9,20 +9,20 @@
 [var name:"showChart" value:false /]
 
 
-[var name:"Lady-Gaga" value:"Lady Gaga" /]
-[var name:"Lady-Gaga-Photo" value:"./static/images/iconic-photos/lady-gaga.jpg"/]
+[var name:"The-Beatles" value:"The Beatles" /]
+[var name:"The-Beatles-Photo" value:"./static/images/iconic-photos/the-beatles.jpg"/]
 
 [var name:"Queen" value:"Queen" /]
 [var name:"Queen-Photo" value:"./static/images/iconic-photos/queen.jpg"/]
 
-[var name:"The-Beatles" value:"The Beatles" /]
-[var name:"The-Beatles-Photo" value:"./static/images/iconic-photos/the-beatles.jpg"/]
+[var name:"Michael-Jackson" value:"Michael Jackson" /]
+[var name:"Michael-Jackson-Photo" value:"./static/images/iconic-photos/michael-jackson.jpg"/]
 
 [var name:"Kanye-West" value:"Kanye West" /]
 [var name:"Kanye-West-Photo" value:"./static/images/iconic-photos/kanye-west.jpg"/]
 
-[var name:"Michael-Jackson" value:"Michael Jackson" /]
-[var name:"Michael-Jackson-Photo" value:"./static/images/iconic-photos/michael-jackson.jpg"/]
+[var name:"Lady-Gaga" value:"Lady Gaga" /]
+[var name:"Lady-Gaga-Photo" value:"./static/images/iconic-photos/lady-gaga.jpg"/]
 
 [Header title:title subtitle:subtitle/]
 
@@ -46,137 +46,152 @@
 [/FullWidth]
 
 
+[var name:"circleStep" value:0 /]
+[Scroller currentStep:circleStep]
 
+    [Graphic]
+        [ImgComponent id:"chart-test" artistName:The-Beatles iconicImage:The-Beatles-Photo/]
+    [/Graphic]
 
-[Switch value:currentValue]
-  [Case test:"gaga"]
-    ##Lady Gaga
+    [Step]
+    [Switch value:currentValue]
+      [Case test:"gaga"]
+        ##Lady Gaga
 
-    ### 2008
+        [Step]
+        ### 2008
 
-    [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
+        [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
+        [/Step]
 
-    ### 2009
-    [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
+        [Step]
+        ### 2009
+        [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
+        [/Step]
 
-    ### 2010
-    [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
+        [Step]
+        ### 2010
+        [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
+        [/Step]
 
-    ### 2011
+        [Step]
+        ### 2011
+        
+        [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
 
-    [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
+        [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
+        [/Step]
 
-    [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
+        [Step]
+        ### 2012
 
-    ### 2012
+        ### 2013
 
-    ### 2013
+        [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
+        [/Step]
 
-    [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
+        [Step]
+        ### 2014
 
-    ### 2014
+        [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
 
-    [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
+        ### 2015
 
-    ### 2015
+        ### 2016
 
-    ### 2016
+        [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
 
-    [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
+        ### 2017
 
-    ### 2017
+        ### 2018
 
-    ### 2018
+        [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
 
-    [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
+        ### 2019
 
-    ### 2019
+        ### 2020
 
-    ### 2020
+        [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
+        [/Step]
+      [/Case]
+      [Case test:"queen"]
+        ##Queen
+        ### 1973
+        [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
+        ### 1974
+        [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
 
-    [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
+        [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
+        ### 1975
+        [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
+        ### 1976
+        [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
+        ### 1977
+        [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
+        ### 1978
+        [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
+        ### 1979
+        ### 1980
+        [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
 
-  [/Case]
-  [Case test:"queen"]
-    ##Queen
-    ### 1973
-    [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
-    ### 1974
-    [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
+        [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
+        ### 1981
+        ### 1982
+        [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
+        ### 1983
+        ### 1984
+        [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
+        ### 1985
+        ### 1986
+        [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
+        ### 1987
+        ### 1988
+        ### 1989
+        [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
+        ### 1990
+        ### 1991
+        [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
+        ### 1992
+        ### 1993
+        ### 1994
+        ### 1995
+        [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
 
-    [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
-    ### 1975
-    [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
-    ### 1976
-    [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
-    ### 1977
-    [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
-    ### 1978
-    [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
-    ### 1979
-    ### 1980
-    [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
+      [/Case]
+      [Case test:"beatles"]
+        ##The Beatles
+        ### 1963
+        [img src:"static/images/beatles/PleasePleaseMe.jpg" style:`{width: 400}` /]
+        [img src:"static/images/beatles/WithTheBeatles.jpg" style:`{width: 400}` /]
+        ### 1964
+        [img src:"static/images/beatles/AHardDaysNight.jpg" style:`{width: 400}` /]
+        [img src:"static/images/beatles/BeatlesforSale.jpg" style:`{width: 400}` /]
+        ### 1965
+        [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
+        [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
+        ## 1966
+        [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
+        ## 1967
+        [img src:"static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" style:`{width: 400}` /]
+        ## 1968
+        [img src:"static/images/beatles/WhiteAlbum.jpg" style:`{width: 400}` /]
+        ## 1969
+        [img src:"static/images/beatles/AbbeyRoad.jpg" style:`{width: 400}` /]
+        [img src:"static/images/beatles/YellowSubmarine.jpg" style:`{width: 400}` /]
+        ## 1970
+        [img src:"static/images/beatles/LetItBe.jpg" style:`{width: 400}` /]
+      [/Case]
+      [Case test:"kanye"]
+        ##Kanye West
+      [/Case]
+      [Case test:"michael"]
+        ##Michael Jackson
+      [/Case]
+      [Default][/Default]
+    [/Switch]
+    [/Step]
+    [Step]
+     ### More text
+    [/Step]
+[/Scroller]
 
-    [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
-    ### 1981
-    ### 1982
-    [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
-    ### 1983
-    ### 1984
-    [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
-    ### 1985
-    ### 1986
-    [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
-    ### 1987
-    ### 1988
-    ### 1989
-    [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
-    ### 1990
-    ### 1991
-    [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
-    ### 1992
-    ### 1993
-    ### 1994
-    ### 1995
-    [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
-
-  [/Case]
-  [Case test:"beatles"]
-    ##The Beatles
-    ### 1963
-    [img src:"static/images/beatles/PleasePleaseMe.jpg" style:`{width: 400}` /]
-    [img src:"static/images/beatles/WithTheBeatles.jpg" style:`{width: 400}` /]
-    ### 1964
-    [img src:"static/images/beatles/AHardDaysNight.jpg" style:`{width: 400}` /]
-    [img src:"static/images/beatles/BeatlesforSale.jpg" style:`{width: 400}` /]
-    ### 1965
-    [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
-    [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
-    ## 1966
-    [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
-    ## 1967
-    [img src:"static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" style:`{width: 400}` /]
-    ## 1968
-    [img src:"static/images/beatles/WhiteAlbum.jpg" style:`{width: 400}` /]
-    ## 1969
-    [img src:"static/images/beatles/AbbeyRoad.jpg" style:`{width: 400}` /]
-    [img src:"static/images/beatles/YellowSubmarine.jpg" style:`{width: 400}` /]
-    ## 1970
-    [img src:"static/images/beatles/LetItBe.jpg" style:`{width: 400}` /]
-  [/Case]
-  [Case test:"kanye"]
-    ##Kanye West
-  [/Case]
-  [Case test:"michael"]
-    ##Michael Jackson
-  [/Case]
-  [Default][/Default]
-[/Switch]
-
-[Fixed onEnterViewFully:`showChart = !showChart`]
-    [Conditional if:`showChart && currentValue != "start"`]
-        ## We can put the data analysis here, and it will stay while we scrol
-        figure out how to not have it overlap with the title?
-        [Chart /]
-    [/Conditional]
-[/Fixed]

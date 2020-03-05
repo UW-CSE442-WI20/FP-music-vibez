@@ -27,7 +27,7 @@
   width: 12vw;
   height: 12vw;
   border: 5px solid #fc849d;
-  transition-duration: scale 2000;
+  transition: 100ms linear all;
   cursor: pointer;
 }
 
@@ -61,4 +61,36 @@ h2.dek {
   padding-bottom: 15vw;
   padding-left: 20px;
   padding-right: 20px;
+}
+
+#chart-test {
+  margin-left: 75vw;
+  background: transparent;  
+  height: 10vh;
+}
+
+.idyll-step {
+	margin-top: 0px;
+	border-width: 0px
+}
+
+.idyll-scroll {
+  margin-top: 0; 
+  width: 100vw;
+}
+
+.idyll-root {
+  box-sizing: border-box;
+  margin: 0 0;
+  padding: 0;
+  margin-bottom: 60px;
+}
+
+.idyll-scroll-text .idyll-step {
+  max-width: 45vw;
+  position: relative;
+  top: -150vh;
+  padding: 4vw;
+  border-style: none;
+  box-shadow: none;
 }
