@@ -26,7 +26,7 @@
   border-radius: 50%;
   width: 12vw;
   height: 12vw;
-  border: 5px solid #fc849d;
+  border: 5px solid;
   transition: 100ms linear all;
   cursor: pointer;
 }

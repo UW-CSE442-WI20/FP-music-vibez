@@ -190,8 +190,5 @@
       [Default][/Default]
     [/Switch]
     [/Step]
-    [Step]
-     ### More text
-    [/Step]
 [/Scroller]
 

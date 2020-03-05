@@ -9,9 +9,6 @@ class ImgComponent extends React.Component {
 
   render() {
     const { hasError, idyll, updateProps, ...props } = this.props;
-    //console.log(this.props.artistName);
-    //console.log(this.props.iconicImage);
-    // <p>{this.props.artistName}</p>
 
     return (
       <div {...props}>
