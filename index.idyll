@@ -1,7 +1,7 @@
 [var name:"title" value:"Pop Trajectories" /]
 [var name:"subtitle" value:"Exploring the careers of iconic musicians" /]
 
-[meta title:title description:subtitle /]
+[meta title:"Pop Trajectories" description:"Exploring the careers of iconic musicians" /]
 
 [FullWidth id:"landing-page"]
 
