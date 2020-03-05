@@ -9,17 +9,40 @@
 [var name:"currentValue" value:"start" /]
 [var name:"showChart" value:false /]
 
-[div]
-    ##Explore...
-    [Inline]
-    [action id:"gaga-theme" onClick:`currentValue = "gaga"`]lady gaga[/action], 
-    [action id:"queen-theme" onClick:`currentValue = "queen"`]queen[/action],
-    [action id:"beatles-theme" onClick:`currentValue = "beatles"`]the beatles[/action],
-    [action id:"kanye-theme" onClick:`currentValue = "kanye"`]kanye west[/action],
-    or 
-    [action id:"mj-theme" onClick:`currentValue = "michael"`]michael jackson[/action]
-    [/Inline]
+
+[var name:"Lady-Gaga" value:"Lady Gaga" /]
+[var name:"Lady-Gaga-Photo" value:"../static/images/lady-gaga/the-fame.jpg"/]
+
+[var name:"Queen" value:"Queen" /]
+[var name:"Queen-Photo" value:"../static/images/iconic-photos/queen.jpg"/]
+
+[var name:"The-Beatles" value:"The Beatles" /]
+[var name:"The-Beatles-Photo" value:"../static/images/iconic-photos/the-beatles.jpg"/]
+
+[var name:"Kanye-West" value:"Kanye West" /]
+[var name:"Kanye-West-Photo" value:"../static/images/iconic-photos/kanye-west.jpg"/]
+
+[var name:"Michael-Jackson" value:"Michael Jackson" /]
+[var name:"Michael-Jackson-Photo" value:"../static/images/iconic-photos/michael-jackson.jpg"/]
+
+[div class:"flex-box"]
+    [action id:"gaga-theme" onClick:`currentValue = "gaga"`]
+        [ImgComponent artistName:Lady-Gaga iconicImage:Lady-Gaga-Photo /]
+    [/action]
+    [action id:"queen-theme" onClick:`currentValue = "queen"`]
+        [ImgComponent artistName:Queen iconicImage:Queen-Photo/]
+    [/action]
+    [action id:"beatles-theme" onClick:`currentValue = "beatles"`]
+        [ImgComponent artistName:The-Beatles iconicImage:The-Beatles-Photo/]
+    [/action]
+    [action id:"kanye-theme" onClick:`currentValue = "kanye"`]
+        [ImgComponent artistName:Kanye-West iconicImage:Kanye-West-Photo/]
+    [/action]
+    [action id:"mj-theme" onClick:`currentValue = "michael"`]
+        [ImgComponent artistName:Michael-Jackson iconicImage:Michael-Jackson-Photo/]
+    [/action]
 [/div]
+
 
 [Switch value:currentValue]
   [Case test:"gaga"]

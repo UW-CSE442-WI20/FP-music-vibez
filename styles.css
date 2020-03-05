@@ -21,3 +21,22 @@
 .step {
     border: none;
 }
+
+.img-button {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border:5px solid rgb(194, 140, 149);
+  transition-duration: scale 2000;
+}
+
+
+.img-button:hover {
+  transform: scale(1.2);
+}
+
+.flex-box {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+}
