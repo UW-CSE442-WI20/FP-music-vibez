@@ -11,7 +11,7 @@
 
 
 [var name:"Lady-Gaga" value:"Lady Gaga" /]
-[var name:"Lady-Gaga-Photo" value:"../static/images/lady-gaga/the-fame.jpg"/]
+[var name:"Lady-Gaga-Photo" value:"../static/images/iconic-photos/lady-gaga.jpg"/]
 
 [var name:"Queen" value:"Queen" /]
 [var name:"Queen-Photo" value:"../static/images/iconic-photos/queen.jpg"/]
