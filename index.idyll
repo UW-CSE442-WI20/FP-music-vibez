@@ -95,6 +95,47 @@
   [/Case]
   [Case test:"queen"]
     ##Queen
+    ### 1973
+    [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
+    ### 1974
+    [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
+
+    [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
+    ### 1975
+    [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
+    ### 1976
+    [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
+    ### 1977
+    [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
+    ### 1978
+    [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
+    ### 1979
+    ### 1980
+    [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
+
+    [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
+    ### 1981
+    ### 1982
+    [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
+    ### 1983
+    ### 1984
+    [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
+    ### 1985
+    ### 1986
+    [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
+    ### 1987
+    ### 1988
+    ### 1989
+    [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
+    ### 1990
+    ### 1991
+    [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
+    ### 1992
+    ### 1993
+    ### 1994
+    ### 1995
+    [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
+
   [/Case]
   [Case test:"beatles"]
     ##The Beatles
