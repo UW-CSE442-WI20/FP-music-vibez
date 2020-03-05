@@ -1,42 +1,42 @@
 #gaga-theme {
-    color: rgb(194, 140, 149);
+  color: rgb(194, 140, 149);
 }
 
 #beatles-theme {
-    color: rgb(245, 185, 20);
+  color: rgb(245, 185, 20);
 }
 
 #queen-theme {
-    color: rgb(99, 8, 134);
+  color: rgb(99, 8, 134);
 }
 
 #kanye-theme {
-    color: rgb(14, 14, 179);
+  color: rgb(14, 14, 179);
 }
 
 #mj-theme {
-    color: rgb(175, 2, 2);
+  color: rgb(175, 2, 2);
 }
 
 .step {
-    border: none;
+  border: none;
 }
 
 .img-button {
   border-radius: 50%;
   width: 120px;
   height: 120px;
-  border:5px solid rgb(194, 140, 149);
+  border: 5px solid rgb(194, 140, 149);
   transition-duration: scale 2000;
+  cursor: pointer;
 }
-
 
 .img-button:hover {
   transform: scale(1.2);
 }
 
 .flex-box {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-evenly;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
 }
