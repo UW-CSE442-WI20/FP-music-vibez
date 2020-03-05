@@ -24,8 +24,8 @@
 
 .img-button {
   border-radius: 50%;
-  width: 120px;
-  height: 120px;
+  width: 12vw;
+  height: 12vw;
   border: 5px solid #fc849d;
   transition-duration: scale 2000;
   cursor: pointer;
@@ -39,4 +39,26 @@
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.article-header {
+  background-color: black;
+  text-align: center;
+  padding-top: 20px;
+  margin-top: 0px;
+}
+
+h1.hed {
+  font-size: 5vw;
+}
+
+h2.dek {
+  font-size: 3vw;
+}
+
+#landing-page {
+  background-color: black;
+  padding-bottom: 15vw;
+  padding-left: 20px;
+  padding-right: 20px;
 }
