@@ -117,20 +117,45 @@
     [/Case]
      [Case test:"queen"]
         [Scroller currentStep:currStep]
+            [Graphic]
+                [SalesChart /]
 
+                [SalesChart /]
+            [/Graphic]
+
+            [Step ]
             ##Queen
             ### 1973
             [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
             ### 1974
             [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
 
             [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
             ### 1975
             [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
             ### 1976
             [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
             ### 1977
             [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
             ### 1978
             [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
             ### 1979
@@ -138,6 +163,9 @@
             [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
 
             [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
+            [/Step]
+            [Step ]
+
             ### 1981
             ### 1982
             [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
@@ -159,42 +187,86 @@
             ### 1994
             ### 1995
             [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
+            [/Step]
         [/Scroller]
 
     [/Case]
     [Case test:"beatles"]
         [Scroller currentStep:currStep]
+            [Graphic]
+                [SalesChart /]
 
+                [SalesChart /]
+            [/Graphic]
+
+            [Step]
             ##The Beatles
             ### 1963
             [img src:"static/images/beatles/PleasePleaseMe.jpg" style:`{width: 400}` /]
             [img src:"static/images/beatles/WithTheBeatles.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1964
             [img src:"static/images/beatles/AHardDaysNight.jpg" style:`{width: 400}` /]
             [img src:"static/images/beatles/BeatlesforSale.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1965
             [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
             [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
+            [/Step]
+            
+            [Step]
             ## 1966
             [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ## 1967
             [img src:"static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ## 1968
             [img src:"static/images/beatles/WhiteAlbum.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ## 1969
             [img src:"static/images/beatles/AbbeyRoad.jpg" style:`{width: 400}` /]
             [img src:"static/images/beatles/YellowSubmarine.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ## 1970
             [img src:"static/images/beatles/LetItBe.jpg" style:`{width: 400}` /]
+            [/Step]
+
         [/Scroller]
       [/Case]
       [Case test:"kanye"]
             [Scroller currentStep:currStep]
+                [Graphic]
+                    [SalesChart /]
+
+                    [SalesChart /]
+                [/Graphic]
+
+                [Step]
                 ##Kanye West
+                [/Step]
             [/Scroller]
       [/Case]
       [Case test:"michael"]
             [Scroller currentStep:currStep]
+                [Graphic]
+                    [SalesChart /]
+
+                    [SalesChart /]
+                [/Graphic]
+
                 [Step]
                     ##Michael Jackson
                     ## August 29, 1958: born 
