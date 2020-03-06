@@ -51,8 +51,8 @@
     [Case test:"gaga"]
         [Scroller currentStep:currStep]
             [Graphic]
-                [ImgComponent id:"chart-test" artistName:The-Beatles iconicImage:The-Beatles-Photo/]
                 [HorizontalBarChart artist:artist to:currStep /]
+                [Chart /]
             [/Graphic]
 
             [Step ]
