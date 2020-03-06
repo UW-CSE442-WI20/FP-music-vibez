@@ -2,21 +2,65 @@ const React = require("react");
 const D3Component = require("idyll-d3-component");
 const d3 = require("d3");
 
-const size = 600;
+const allData = {
+  gaga: [
+    {
+      "album-name": "The Fame",
+      "release-date": "2008-10-28",
+      "worldwide-sales": 15000000
+    },
+    {
+      "album-name": "Born This Way",
+      "release-date": "2011-05-18",
+      "worldwide-sales": 6000000
+    },
+    {
+      "album-name": "ARTPOP",
+      "release-date": "2013-11-11",
+      "worldwide-sales": 2500000
+    },
+    {
+      "album-name": "Cheek to Cheek",
+      "release-date": "2014-09-23",
+      "worldwide-sales": 1000000
+    },
+    {
+      "album-name": "Joanne",
+      "release-date": "2016-10-21",
+      "worldwide-sales": 1000000
+    },
+    {
+      "album-name": "A Star Is Born",
+      "release-date": "2018-10-05",
+      "worldwide-sales": 1148000
+    }
+  ]
+};
 
 class HorizontalBarChart extends D3Component {
-  initialize(node, props) {
-    const data = [
-      { name: "Album 1", sales: 1000000 },
-      { name: "Album 2", sales: 2000000 },
-      { name: "Album 3", sales: 3000000 },
-      { name: "Album 4", sales: 4000000 },
-      { name: "Album 5", sales: 5000000 },
-      { name: "Album 6", sales: 6000000 },
-      { name: "Album 7", sales: 7000000 },
-      { name: "Album 8", sales: 8000000 }
-    ];
+  getData(artist, to) {
+    console.log("getData called with", artist, to);
+    if (!(artist in allData)) {
+      return [];
+    }
+    return allData[artist].slice(0, to);
+  }
 
+  initialize(node, props) {
+    this.svg = d3
+      .select(node)
+      .append("svg")
+      .attr("font-family", "sans-serif");
+    return this.svg.node();
+  }
+
+  update(props) {
+    console.log("update", props);
+    const { artist, to } = props;
+    if (artist === "start") {
+      return this.svg.node();
+    }
+    const data = this.getData(artist, to);
     const margin = { top: 30, right: 40, bottom: 10, left: 50 };
     const barHeight = 25;
     const width = 600;
@@ -47,13 +91,6 @@ class HorizontalBarChart extends D3Component {
       .domain(d3.range(data.length))
       .range([margin.top, height - margin.bottom]);
 
-    this.svg = d3
-      .select(node)
-      .append("svg")
-      .attr("width", width)
-      .attr("height", height)
-      .attr("font-family", "sans-serif");
-
     const bar = this.svg
       .selectAll("g")
       .data(data)
@@ -62,18 +99,10 @@ class HorizontalBarChart extends D3Component {
 
     bar
       .append("rect")
-      .attr("fill", "steelblue")
+      .attr("fill", "black")
       .attr("x", x(0))
       .attr("width", d => x(d.sales) - x(0))
       .attr("height", y.bandwidth() - 1);
-
-    // bar
-    //   .append("text")
-    //   .attr("fill", "black")
-    //   .attr("x", d => x(d.sales) + 3)
-    //   .attr("y", y.bandwidth() / 2)
-    //   .attr("dy", "0.35em")
-    //   .text(d => d.sales);
 
     this.svg.append("g").call(yAxis);
     this.svg.append("g").call(xAxis);

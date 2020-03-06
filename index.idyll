@@ -5,7 +5,7 @@
 
 [FullWidth id:"landing-page"]
 
-[var name:"currentValue" value:"start" /]
+[var name:"artist" value:"start" /]
 [var name:"showChart" value:false /]
 
 
@@ -27,38 +27,40 @@
 [Header title:title subtitle:subtitle/]
 
 [div class:"flex-box"]
-    [action id:"beatles-theme" onClick:`currentValue = "beatles"`]
+    [action id:"beatles-theme" onClick:`artist = "beatles"`]
         [ImgComponent artistName:The-Beatles iconicImage:The-Beatles-Photo/]
     [/action]
-    [action id:"queen-theme" onClick:`currentValue = "queen"`]
+    [action id:"queen-theme" onClick:`artist = "queen"`]
         [ImgComponent artistName:Queen iconicImage:Queen-Photo/]
     [/action]
-    [action id:"mj-theme" onClick:`currentValue = "michael"`]
+    [action id:"mj-theme" onClick:`artist = "michael"`]
         [ImgComponent artistName:Michael-Jackson iconicImage:Michael-Jackson-Photo/]
     [/action]
-    [action id:"kanye-theme" onClick:`currentValue = "kanye"`]
+    [action id:"kanye-theme" onClick:`artist = "kanye"`]
         [ImgComponent artistName:Kanye-West iconicImage:Kanye-West-Photo/]
     [/action]
-    [action id:"gaga-theme" onClick:`currentValue = "gaga"`]
+    [action id:"gaga-theme" onClick:`artist = "gaga"`]
         [ImgComponent artistName:Lady-Gaga iconicImage:Lady-Gaga-Photo /]
     [/action]
 [/div]
 [/FullWidth]
 
 
-[var name:"circleStep" value:0 /]
-[Scroller currentStep:circleStep]
+[var name:"currStep" value:0 /]
+[Scroller currentStep:currStep]
 
     [Graphic]
         [ImgComponent id:"chart-test" artistName:The-Beatles iconicImage:The-Beatles-Photo/]
+        [HorizontalBarChart artist:artist to:currStep /]
     [/Graphic]
 
     [Step]
-    [Switch value:currentValue]
+    [Switch value:artist]
       [Case test:"gaga"]
+
+        [Step ]
         ##Lady Gaga
 
-        [Step]
         ### 2008
 
         [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
