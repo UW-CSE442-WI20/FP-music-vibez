@@ -51,8 +51,9 @@
     [Case test:"gaga"]
         [Scroller currentStep:currStep]
             [Graphic]
-                [HorizontalBarChart artist:artist to:currStep /]
-                [Chart /]
+                [SalesChart /]
+
+                [SalesChart /]
             [/Graphic]
 
             [Step ]

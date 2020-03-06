@@ -96,7 +96,6 @@ h2.dek {
 }
 
 .idyll-scroll-graphic {
-	width: 45vw !important;
- 	position: absolute;
- 	left: 40vw !important;
+	max-width: 45vw !important;
+ 	left: 300px !important;
 }
