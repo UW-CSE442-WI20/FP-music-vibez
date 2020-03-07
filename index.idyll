@@ -5,7 +5,7 @@
 
 [FullWidth id:"landing-page"]
 
-[var name:"currentValue" value:"start" /]
+[var name:"artist" value:"start" /]
 [var name:"showChart" value:false /]
 
 
@@ -27,247 +27,328 @@
 [Header title:title subtitle:subtitle/]
 
 [div class:"flex-box"]
-    [action id:"beatles-theme" onClick:`currentValue = "beatles"`]
+    [action id:"beatles-theme" onClick:`artist = "beatles"`]
         [ImgComponent artistName:The-Beatles iconicImage:The-Beatles-Photo/]
     [/action]
-    [action id:"queen-theme" onClick:`currentValue = "queen"`]
+    [action id:"queen-theme" onClick:`artist = "queen"`]
         [ImgComponent artistName:Queen iconicImage:Queen-Photo/]
     [/action]
-    [action id:"mj-theme" onClick:`currentValue = "michael"`]
+    [action id:"mj-theme" onClick:`artist = "michael"`]
         [ImgComponent artistName:Michael-Jackson iconicImage:Michael-Jackson-Photo/]
     [/action]
-    [action id:"kanye-theme" onClick:`currentValue = "kanye"`]
+    [action id:"kanye-theme" onClick:`artist = "kanye"`]
         [ImgComponent artistName:Kanye-West iconicImage:Kanye-West-Photo/]
     [/action]
-    [action id:"gaga-theme" onClick:`currentValue = "gaga"`]
+    [action id:"gaga-theme" onClick:`artist = "gaga"`]
         [ImgComponent artistName:Lady-Gaga iconicImage:Lady-Gaga-Photo /]
     [/action]
 [/div]
 [/FullWidth]
 
 
-[var name:"circleStep" value:0 /]
-[Scroller currentStep:circleStep]
+[var name:"currStep" value:0 /]
+[Switch value:artist]
+    [Case test:"gaga"]
+        [Scroller currentStep:currStep]
+            [Graphic]
+                [SalesChart /]
 
-    [Graphic]
-        [ImgComponent id:"chart-test" artistName:The-Beatles iconicImage:The-Beatles-Photo/]
-    [/Graphic]
+                [SalesChart /]
+            [/Graphic]
 
-    [Step]
-    [Switch value:currentValue]
-      [Case test:"gaga"]
-        ##Lady Gaga
+            [Step ]
+            ##Lady Gaga
 
-        [Step]
-        ### 2008
+            ### 2008
 
-        [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
-        [/Step]
+            [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
+            [/Step]
 
-        [Step]
-        ### 2009
-        [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
-        [/Step]
+            [Step]
+            ### 2009
+            [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
+            [/Step]
 
-        [Step]
-        ### 2010
-        [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
-        [/Step]
+            [Step]
+            ### 2010
+            [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
+            [/Step]
 
-        [Step]
-        ### 2011
-        
-        [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
+            [Step]
+            ### 2011
+            
+            [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
 
-        [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
-        [/Step]
+            [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
+            [/Step]
 
-        [Step]
-        ### 2012
+            [Step]
+            ### 2012
 
-        ### 2013
+            ### 2013
 
-        [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
-        [/Step]
+            [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
+            [/Step]
 
-        [Step]
-        ### 2014
+            [Step]
+            ### 2014
 
-        [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
+            [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
 
-        ### 2015
+            ### 2015
 
-        ### 2016
+            ### 2016
 
-        [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
+            [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
 
-        ### 2017
+            ### 2017
 
-        ### 2018
+            ### 2018
 
-        [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
+            [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
 
-        ### 2019
+            ### 2019
 
-        ### 2020
+            ### 2020
 
-        [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
-        [/Step]
-      [/Case]
-      [Case test:"queen"]
-        ##Queen
-        ### 1973
-        [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
-        ### 1974
-        [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
+            [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
+            [/Step]
+        [/Scroller]
+    [/Case]
+     [Case test:"queen"]
+        [Scroller currentStep:currStep]
+            [Graphic]
+                [SalesChart /]
 
-        [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
-        ### 1975
-        [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
-        ### 1976
-        [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
-        ### 1977
-        [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
-        ### 1978
-        [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
-        ### 1979
-        ### 1980
-        [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
+                [SalesChart /]
+            [/Graphic]
 
-        [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
-        ### 1981
-        ### 1982
-        [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
-        ### 1983
-        ### 1984
-        [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
-        ### 1985
-        ### 1986
-        [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
-        ### 1987
-        ### 1988
-        ### 1989
-        [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
-        ### 1990
-        ### 1991
-        [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
-        ### 1992
-        ### 1993
-        ### 1994
-        ### 1995
-        [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
+            [Step ]
+            ##Queen
+            ### 1973
+            [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
+            [/Step]
 
-      [/Case]
-      [Case test:"beatles"]
-        ##The Beatles
-        ### 1963
-        [img src:"static/images/beatles/PleasePleaseMe.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/WithTheBeatles.jpg" style:`{width: 400}` /]
-        ### 1964
-        [img src:"static/images/beatles/AHardDaysNight.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/BeatlesforSale.jpg" style:`{width: 400}` /]
-        ### 1965
-        [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
-        ## 1966
-        [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
-        ## 1967
-        [img src:"static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" style:`{width: 400}` /]
-        ## 1968
-        [img src:"static/images/beatles/WhiteAlbum.jpg" style:`{width: 400}` /]
-        ## 1969
-        [img src:"static/images/beatles/AbbeyRoad.jpg" style:`{width: 400}` /]
-        [img src:"static/images/beatles/YellowSubmarine.jpg" style:`{width: 400}` /]
-        ## 1970
-        [img src:"static/images/beatles/LetItBe.jpg" style:`{width: 400}` /]
+            [Step ]
+            ### 1974
+            [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
+
+            [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
+            ### 1975
+            [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
+            ### 1976
+            [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
+            ### 1977
+            [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step ]
+
+            ### 1978
+            [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
+            ### 1979
+            ### 1980
+            [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
+
+            [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
+            [/Step]
+            [Step ]
+
+            ### 1981
+            ### 1982
+            [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
+            ### 1983
+            ### 1984
+            [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
+            ### 1985
+            ### 1986
+            [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
+            ### 1987
+            ### 1988
+            ### 1989
+            [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
+            ### 1990
+            ### 1991
+            [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
+            ### 1992
+            ### 1993
+            ### 1994
+            ### 1995
+            [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
+            [/Step]
+        [/Scroller]
+
+    [/Case]
+    [Case test:"beatles"]
+        [Scroller currentStep:currStep]
+            [Graphic]
+                [SalesChart /]
+
+                [SalesChart /]
+            [/Graphic]
+
+            [Step]
+            ##The Beatles
+            ### 1963
+            [img src:"static/images/beatles/PleasePleaseMe.jpg" style:`{width: 400}` /]
+            [img src:"static/images/beatles/WithTheBeatles.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 1964
+            [img src:"static/images/beatles/AHardDaysNight.jpg" style:`{width: 400}` /]
+            [img src:"static/images/beatles/BeatlesforSale.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 1965
+            [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
+            [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
+            [/Step]
+            
+            [Step]
+            ## 1966
+            [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ## 1967
+            [img src:"static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ## 1968
+            [img src:"static/images/beatles/WhiteAlbum.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ## 1969
+            [img src:"static/images/beatles/AbbeyRoad.jpg" style:`{width: 400}` /]
+            [img src:"static/images/beatles/YellowSubmarine.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ## 1970
+            [img src:"static/images/beatles/LetItBe.jpg" style:`{width: 400}` /]
+            [/Step]
+
+        [/Scroller]
       [/Case]
       [Case test:"kanye"]
-        ##Kanye West
+            [Scroller currentStep:currStep]
+                [Graphic]
+                    [SalesChart /]
+
+                    [SalesChart /]
+                [/Graphic]
+
+                [Step]
+                ##Kanye West
+                [/Step]
+            [/Scroller]
       [/Case]
       [Case test:"michael"]
-        [Step]
-            ##Michael Jackson
-            ## August 29, 1958: born 
-        [/Step]
+            [Scroller currentStep:currStep]
+                [Graphic]
+                    [SalesChart /]
 
-        [Step]
-            ## 1972
-            [img src:"static/images/michael-jackson/got-to-be-there.jpg" style:`{width: 400}` /]
+                    [SalesChart /]
+                [/Graphic]
 
-            [img src:"static/images/michael-jackson/ben.jpg" style:`{width: 400}` /]
-        [/Step]
+                [Step]
+                    ##Michael Jackson
+                    ## August 29, 1958: born 
+                [/Step]
 
-        [Step]
-            ## 1973
-            [img src:"static/images/michael-jackson/music-and-me.jpg" style:`{width: 400}` /]
+                [Step]
+                    ## 1972
+                    [img src:"static/images/michael-jackson/got-to-be-there.jpg" style:`{width: 400}` /]
 
-        [/Step]
+                    [img src:"static/images/michael-jackson/ben.jpg" style:`{width: 400}` /]
+                [/Step]
 
-        [Step]
-            ## 1975
-            [img src:"static/images/michael-jackson/forever-michael.jpeg" style:`{width: 400}` /]
+                [Step]
+                    ## 1973
+                    [img src:"static/images/michael-jackson/music-and-me.jpg" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 1979
-            [img src:"static/images/michael-jackson/off-the-wall.jpg" style:`{width: 400}` /]
+                [Step]
+                    ## 1975
+                    [img src:"static/images/michael-jackson/forever-michael.jpeg" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 1982
-            [img src:"static/images/michael-jackson/thriller.png" style:`{width: 400}` /]
+                [Step]
+                    ## 1979
+                    [img src:"static/images/michael-jackson/off-the-wall.jpg" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 1983 - First Moonwalk
-        [/Step]
+                [Step]
+                    ## 1982
+                    [img src:"static/images/michael-jackson/thriller.png" style:`{width: 400}` /]
 
-        [Step]
-            ## 1987
-            [img src:"static/images/michael-jackson/bad.png" style:`{width: 400}` /]
+                [/Step]
 
-        [/Step]
+                [Step]
+                    ## 1983 - First Moonwalk
+                [/Step]
 
-        [Step]
-            ## 1991
-            [img src:"static/images/michael-jackson/dangerous.jpg" style:`{width: 400}` /]
+                [Step]
+                    ## 1987
+                    [img src:"static/images/michael-jackson/bad.png" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 1995
-            [img src:"static/images/michael-jackson/HIStory.jpg" style:`{width: 400}` /]
+                [Step]
+                    ## 1991
+                    [img src:"static/images/michael-jackson/dangerous.jpg" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 2001
-            [img src:"static/images/michael-jackson/invincible.jpg" style:`{width: 400}` /]
+                [Step]
+                    ## 1995
+                    [img src:"static/images/michael-jackson/HIStory.jpg" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 2009 - died (age 50)
+                [Step]
+                    ## 2001
+                    [img src:"static/images/michael-jackson/invincible.jpg" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 2010
-            [img src:"static/images/michael-jackson/michael.jpg" style:`{width: 400}` /]
+                [Step]
+                    ## 2009 - died (age 50)
 
-        [/Step]
+                [/Step]
 
-        [Step]
-            ## 2014
-            [img src:"static/images/michael-jackson/xscape.png" style:`{width: 400}` /]
+                [Step]
+                    ## 2010
+                    [img src:"static/images/michael-jackson/michael.jpg" style:`{width: 400}` /]
 
-        [/Step]
+                [/Step]
+
+                [Step]
+                    ## 2014
+                    [img src:"static/images/michael-jackson/xscape.png" style:`{width: 400}` /]
+
+                [/Step]
+            [/Scroller]
       [/Case]
       [Default][/Default]
-    [/Switch]
-    [/Step]
-[/Scroller]
+[/Switch]
 

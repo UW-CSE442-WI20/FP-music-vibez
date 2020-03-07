@@ -88,9 +88,14 @@ h2.dek {
 
 .idyll-scroll-text .idyll-step {
   max-width: 45vw;
+  top: -210vh;
   position: relative;
-  top: -150vh;
   padding: 4vw;
   border-style: none;
   box-shadow: none;
+}
+
+.idyll-scroll-graphic {
+	max-width: 45vw !important;
+ 	left: 300px !important;
 }
