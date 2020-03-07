@@ -1138,23 +1138,23 @@ img {
 }
 
 
-#gaga-theme {
+.gaga-theme {
   color: #fc849d;
 }
 
-#beatles-theme {
+.beatles-theme {
   color: rgb(245, 185, 20);
 }
 
-#queen-theme {
+.queen-theme {
   color: rgb(99, 8, 134);
 }
 
-#kanye-theme {
+.kanye-theme {
   color: rgb(14, 14, 179);
 }
 
-#mj-theme {
+.mj-theme {
   color: rgb(175, 2, 2);
 }
 

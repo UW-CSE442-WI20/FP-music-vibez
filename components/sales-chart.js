@@ -23,8 +23,7 @@ class SalesChart extends D3Component {
         });
         // console.log(data);
 
-        const margin = { top: 30, right: 40, bottom: 10, left: 50 };
-        const barHeight = 25;
+        const margin = { top: 30, right: 40, bottom: 20, left: 50 };
         const width = 600;
         const height = 500;
 
@@ -42,12 +41,14 @@ class SalesChart extends D3Component {
           .range([ 0, width ]);
         this.svg.append("g")
           .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(x));
+          .call(d3.axisBottom(x)
+            .ticks(7)
+            .tickFormat(d3.timeFormat("%Y")));
 
-        // Add Y axis
+        // Add Y axis -- need to double check this logic
         var y = d3.scaleLinear()
           .domain([100, 1])
-          .range([ height, 0]);
+          .range([ height, 0]); 
         this.svg.append("g")
           .call(d3.axisLeft(y));
 
