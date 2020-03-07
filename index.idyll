@@ -256,9 +256,11 @@
             [/Scroller]
       [/Case]
       [Case test:"michael"]
-            [Scroller currentStep:currStep]
+            [var name:"years" value:`[1958, 1972, 1973, 1975, 1982, 1979, 1982, 1983, 1987, 1979, 1982, 1987, 1991, 1987, 1991, 1995, 2001, 2009, 2010, 2014]` /]
+            [var name:"curStep" value:0 /]
+            [Scroller currentStep:curStep]
                 [Graphic]
-                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" /]
+                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`years.slice(0, curStep + 1)` /]
 
                 [/Graphic]
 

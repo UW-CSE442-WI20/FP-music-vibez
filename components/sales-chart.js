@@ -10,6 +10,26 @@ var data = undefined;
 
 class SalesChart extends D3Component {
 
+  componentDidUpdate(nextProps) {
+     const { show } = props
+     if (nextProps.show !== show) {
+      if (show) {
+        console.log(props);
+      }
+     }
+    }
+
+/*
+  getDerivedStateFromProps() {
+    console.log("hiiii");
+    console.log(this.props);
+  }
+*/
+
+  update(props) {
+    console.log(props.years);
+  }
+
   initialize(node, props) {
 
       fetch(props.src)
