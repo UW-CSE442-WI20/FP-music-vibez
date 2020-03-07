@@ -3,26 +3,68 @@ const D3Component = require("idyll-d3-component");
 const d3 = require("d3");
 
 const size = 600;
+const startYear = 10/30/1971;
+const endYear = 12/27/2003;
+var data = undefined; 
+
 
 class SalesChart extends D3Component {
+
   initialize(node, props) {
-    const data = [
-      { name: "Album 1", sales: 1000000 },
-      { name: "Album 2", sales: 2000000 },
-      { name: "Album 3", sales: 3000000 },
-      { name: "Album 4", sales: 4000000 },
-      { name: "Album 5", sales: 5000000 },
-      { name: "Album 6", sales: 6000000 },
-      { name: "Album 7", sales: 7000000 },
-      { name: "Album 8", sales: 8000000 }
-    ];
 
-    const margin = { top: 30, right: 40, bottom: 10, left: 50 };
+      fetch(props.src)
+        .then((response) => {
+        return response.text();
+      }).then((text) => {
+        data = d3.csvParse(text);
+
+        data.forEach(function(d) {
+          d.Year = Date.parse(d.Year);
+        });
+        console.log(data);
+      })
+
+  }
+
+}
+
+  //initialize(node, props) {
+
+
+//weekly-charts/michael-jackson-weekly-charts.csv
+    
+  /*  const myDataLocation = require("../michael.csv");
+    console.log(myDataLocation); // prints out a string, not parsed data
+
+    d3.csv(myDataLocation).then((error, data) => {
+        if (error) { console.log("got an error!"); 
+          throw error;
+        } else {
+          console.log("found the data?");
+        }
+      console.log(data);
+    })*/
+/*
+    d3.csv("../data/yearlySingles.csv", function(error, data) {
+        if (error) { console.log("got an error!"); 
+          throw error;
+        } else {
+          console.log("found the data?");
+        }
+
+        data.forEach(function(d) {
+          //d.date = parseDate(d.date);
+          //d.close = +d.close;
+          console.log(d);
+      });
+    });
+*/
+   /* const margin = { top: 30, right: 40, bottom: 10, left: 50 };
     const barHeight = 25;
-    const width = 600;
-    const height =
-      Math.ceil((data.length + 0.1) * barHeight) + margin.top + margin.bottom;
-
+    const width = 600;*/
+   // const height =
+    //  Math.ceil((data.length + 0.1) * barHeight) + margin.top + margin.bottom;
+/*
     const yAxis = g =>
       g.attr("transform", `translate(${margin.left},0)`).call(
         d3
@@ -79,7 +121,9 @@ class SalesChart extends D3Component {
     this.svg.append("g").call(xAxis);
 
     return this.svg.node();
-  }
-}
+
+    */
+ // }
+//}
 
 module.exports = SalesChart;

@@ -51,9 +51,8 @@
     [Case test:"gaga"]
         [Scroller currentStep:currStep]
             [Graphic]
-                [SalesChart /]
+                [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" /]
 
-                [SalesChart /]
             [/Graphic]
 
             [Step ]
@@ -118,9 +117,8 @@
      [Case test:"queen"]
         [Scroller currentStep:currStep]
             [Graphic]
-                [SalesChart /]
+                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" /]
 
-                [SalesChart /]
             [/Graphic]
 
             [Step ]
@@ -194,9 +192,8 @@
     [Case test:"beatles"]
         [Scroller currentStep:currStep]
             [Graphic]
-                [SalesChart /]
+                [SalesChart value:myData src:"./static/weekly-charts/the-beatles-weekly-charts.csv" /]
 
-                [SalesChart /]
             [/Graphic]
 
             [Step]
@@ -249,9 +246,8 @@
       [Case test:"kanye"]
             [Scroller currentStep:currStep]
                 [Graphic]
-                    [SalesChart /]
+                    [SalesChart value:myData src:"./static/weekly-charts/kanye-west-weekly-charts.csv" /]
 
-                    [SalesChart /]
                 [/Graphic]
 
                 [Step]
@@ -262,9 +258,8 @@
       [Case test:"michael"]
             [Scroller currentStep:currStep]
                 [Graphic]
-                    [SalesChart /]
+                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" /]
 
-                    [SalesChart /]
                 [/Graphic]
 
                 [Step]
