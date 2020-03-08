@@ -92,11 +92,11 @@ var SalesChart = function (_D3Component) {
         data = d3.csvParse(text);
         data.forEach(function (d) {
           d.Year = Date.parse(d.Year);
-          //console.log(d['Song Title']);
         });
 
         _this2.svg = d3.select(node).append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
+        // add X axis 
         var x = d3.scaleLinear().domain([d3.min(data, function (d) {
           return d.Year;
         }), d3.max(data, function (d) {
@@ -104,23 +104,24 @@ var SalesChart = function (_D3Component) {
         })]).range([0, width]);
         _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat("%Y")));
 
-        // Add Y axis -- need to double check this logic
+        // add Y axis
         var y = d3.scaleLinear().domain([100, 1]).range([height, 0]);
         _this2.svg.append("g").call(d3.axisLeft(y).tickValues([1, 25, 50, 75, 100]).tickFormat(function (x) {
           return "#" + x;
         }));
 
+        // initialize tooltip 
         tooltipDiv = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
 
-        // Add dots
+        // add dots
         dots = _this2.svg.append('g').selectAll("dot").data(data).enter().append("circle").attr("cx", function (d) {
           return x(d.Year);
         }).attr("cy", function (d) {
           return y(d.Rank);
-        }).attr("r", dotRadius).style("fill", dotColor).on('mouseenter', function (d, i) {
-          _this2.handleMouseEnter(d, i);
-        }).on('mouseout', function (d, i) {
-          _this2.handleMouseOut(d, i);
+        }).attr("r", dotRadius).style("fill", dotColor).on('mouseenter', function (d, i, nodes) {
+          _this2.handleMouseEnter(d, i, nodes);
+        }).on('mouseout', function (d, i, nodes) {
+          _this2.handleMouseOut(d, i, nodes);
         });
 
         return _this2.svg.node();
@@ -159,10 +160,10 @@ var SalesChart = function (_D3Component) {
         var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat("%Y"));
         _this3.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
-        dots.data(filteredData).enter().append("circle").attr("r", dotRadius).on('mouseenter', function (d, i) {
-          _this3.handleMouseEnter(d, i);
-        }).on('mouseout', function (d, i) {
-          _this3.handleMouseOut(d, i);
+        dots.data(filteredData).enter().append("circle").attr("r", dotRadius).on('mouseenter', function (d, i, nodes) {
+          _this3.handleMouseEnter(d, i, nodes);
+        }).on('mouseout', function (d, i, nodes) {
+          _this3.handleMouseOut(d, i, nodes);
         });
 
         dots.transition().duration(500).attr("cx", function (d) {
@@ -178,16 +179,28 @@ var SalesChart = function (_D3Component) {
     }
   }, {
     key: "handleMouseEnter",
-    value: function handleMouseEnter(d, i) {
-      console.log("yay in");
+    value: function handleMouseEnter(d, i, nodes) {
+      d3.select(nodes[i]).attr('r', function (d) {
+        return dotRadius * 2.5;
+      });
+
       tooltipDiv.transition().duration(100).style("opacity", .95);
-      tooltipDiv.html("<b>" + d['Song Title'] + "</b><br/>Date: " + new Date(d.Year).toLocaleDateString() + "<br/>Rank: " + d.Rank).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px").style("display", "inline-block");
+
+      tooltipDiv.html("<b>" + d['Song Title'] + "</b><br/>Date: " + new Date(d.Year).toLocaleDateString() + "<br/>Rank: #" + d.Rank).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px").style("display", "inline-block");
     }
   }, {
     key: "handleMouseOut",
-    value: function handleMouseOut(d, i) {
-      console.log("yay out");
+    value: function handleMouseOut(d, i, nodes) {
+      d3.select(nodes[i]).attr('r', function (d) {
+        return dotRadius;
+      });
+
       tooltipDiv.transition().duration(300).style("opacity", 0);
+
+      /*d3.select(this).attr({
+        fill: dotColor,
+        r: dotRadius
+      });*/
     }
   }]);
 
