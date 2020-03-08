@@ -327,17 +327,18 @@
             [/Scroller]
       [/Case]
       [Case test:"michael"]
-            [var name:"years" value:`["01/01/1958", "01/01/1972", "01/01/1973", "01/01/1975", "01/01/1979", "01/01/1982", "01/01/1983", "01/01/1987", "01/01/1991", "01/01/1995", "01/01/2001", "01/01/2009", "01/01/2010", "01/01/2014"]` /]
+            [var name:"years" value:`["08/29/1958", "01/01/1972", "01/01/1973", "01/01/1975", "01/01/1979", "01/01/1982", "01/01/1983", "01/01/1987", "01/01/1991", "01/01/1995", "01/01/2001", "01/01/2009", "01/01/2010", "01/01/2014"]` /]
             [var name:"curStep" value:0 /]
             [Scroller currentStep:curStep]
+
                 [Graphic]
-                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`years.slice(0, curStep + 1)` /]
+                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`years.slice(0, curStep + 2)` /]
 
                 [/Graphic]
 
                 [Step]
                     ##Michael Jackson
-                    ## August 29, 1958: born 
+                    ## born August 29, 1958
                 [/Step]
 
                 [Step]
