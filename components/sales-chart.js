@@ -4,6 +4,7 @@ const d3 = require("d3");
 
 var data = []; 
 var dots;
+var tooltipDiv; 
 
 var dotRadius = 2;
 var dotColor = "#696969";
@@ -14,9 +15,6 @@ const height = 500;
 
 class SalesChart extends D3Component {
 
-  handleMouseEnter(d, i) {
-    console.log("yay");
-  }
 
   initialize(node, props) {
 
@@ -56,6 +54,10 @@ class SalesChart extends D3Component {
             .tickValues([1, 25, 50, 75, 100])
             .tickFormat(x => `#${x}`));
 
+        tooltipDiv = d3.select("body").append("div") 
+          .attr("class", "tooltip")       
+          .style("opacity", 0);
+
         // Add dots
         dots = this.svg.append('g')
           .selectAll("dot")
@@ -68,6 +70,9 @@ class SalesChart extends D3Component {
             .style("fill", dotColor)
             .on('mouseenter', (d, i) => {
               this.handleMouseEnter(d, i);
+            })
+            .on('mouseout', (d, i) => {
+              this.handleMouseOut(d, i);
             });
 
         return this.svg.node();
@@ -112,6 +117,9 @@ class SalesChart extends D3Component {
                         .attr("r", dotRadius)
                         .on('mouseenter', (d, i) => {
                           this.handleMouseEnter(d, i);
+                        })
+                        .on('mouseout', (d, i) => {
+                          this.handleMouseOut(d, i);
                         });
 
         dots.transition()
@@ -127,6 +135,23 @@ class SalesChart extends D3Component {
 
       })
 
+  }
+
+  handleMouseEnter(d, i) {
+    console.log("yay in");
+    tooltipDiv.transition()    
+                .duration(100)    
+                .style("opacity", .9);    
+    tooltipDiv.html((new Date(d.Year).toLocaleDateString()) + "<br/>"  + d.Rank)  
+        .style("left", (d3.event.pageX) + "px")   
+        .style("top", (d3.event.pageY - 28) + "px");  
+  }
+
+  handleMouseOut(d, i) {
+    console.log("yay out");
+    tooltipDiv.transition()    
+                .duration(300)    
+                .style("opacity", 0); 
   }
 
 }

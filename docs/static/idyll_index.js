@@ -63,6 +63,7 @@ var d3 = require("d3");
 
 var data = [];
 var dots;
+var tooltipDiv;
 
 var dotRadius = 2;
 var dotColor = "#696969";
@@ -81,11 +82,6 @@ var SalesChart = function (_D3Component) {
   }
 
   _createClass(SalesChart, [{
-    key: "handleMouseEnter",
-    value: function handleMouseEnter(d, i) {
-      console.log("yay");
-    }
-  }, {
     key: "initialize",
     value: function initialize(node, props) {
       var _this2 = this;
@@ -113,6 +109,8 @@ var SalesChart = function (_D3Component) {
           return "#" + x;
         }));
 
+        tooltipDiv = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
+
         // Add dots
         dots = _this2.svg.append('g').selectAll("dot").data(data).enter().append("circle").attr("cx", function (d) {
           return x(d.Year);
@@ -120,6 +118,8 @@ var SalesChart = function (_D3Component) {
           return y(d.Rank);
         }).attr("r", dotRadius).style("fill", dotColor).on('mouseenter', function (d, i) {
           _this2.handleMouseEnter(d, i);
+        }).on('mouseout', function (d, i) {
+          _this2.handleMouseOut(d, i);
         });
 
         return _this2.svg.node();
@@ -160,6 +160,8 @@ var SalesChart = function (_D3Component) {
 
         dots.data(filteredData).enter().append("circle").attr("r", dotRadius).on('mouseenter', function (d, i) {
           _this3.handleMouseEnter(d, i);
+        }).on('mouseout', function (d, i) {
+          _this3.handleMouseOut(d, i);
         });
 
         dots.transition().duration(500).attr("cx", function (d) {
@@ -172,6 +174,19 @@ var SalesChart = function (_D3Component) {
 
         return _this3.svg.node();
       });
+    }
+  }, {
+    key: "handleMouseEnter",
+    value: function handleMouseEnter(d, i) {
+      console.log("yay in");
+      tooltipDiv.transition().duration(100).style("opacity", .9);
+      tooltipDiv.html(new Date(d.Year).toLocaleDateString() + "<br/>" + d.Rank).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
+    }
+  }, {
+    key: "handleMouseOut",
+    value: function handleMouseOut(d, i) {
+      console.log("yay out");
+      tooltipDiv.transition().duration(300).style("opacity", 0);
     }
   }]);
 
