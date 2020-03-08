@@ -3,7 +3,7 @@ const D3Component = require("idyll-d3-component");
 const d3 = require("d3");
 
 var data = []; 
-var dots; 
+var dots;
 
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 600;
@@ -53,6 +53,7 @@ class SalesChart extends D3Component {
           .domain([d3.min(data, d => d.Year), d3.max(data, d => d.Year)])
           .range([ 0, width ]);
         this.svg.append("g")
+          .attr("class", "x-axis")
           .attr("transform", "translate(0," + height + ")")
           .call(d3.axisBottom(x)
             .ticks(7)
@@ -111,6 +112,10 @@ class SalesChart extends D3Component {
           .domain([100, 1])
           .range([ height, 0]); 
 
+        var xAxis = d3.axisBottom(x).ticks(7)
+            .tickFormat(d3.timeFormat("%Y"));
+        this.svg.select(".x-axis").transition().duration(500).call(xAxis);
+
         dots.data(filteredData).enter().append("circle")
                         .attr("r",1.5);
 
@@ -120,6 +125,7 @@ class SalesChart extends D3Component {
             .attr("cy", function (d) { return y(d.Rank); } )
             .attr("r", 1.5)
             .style("fill", "#69b3a2");
+
 
         dots.exit().remove();
 
