@@ -64,6 +64,9 @@ var d3 = require("d3");
 var data = [];
 var dots;
 
+var dotRadius = 2;
+var dotColor = "#696969";
+
 var margin = { top: 30, right: 40, bottom: 20, left: 50 };
 var width = 600;
 var height = 500;
@@ -78,18 +81,6 @@ var SalesChart = function (_D3Component) {
   }
 
   _createClass(SalesChart, [{
-    key: "componentDidUpdate",
-    value: function componentDidUpdate(nextProps) {
-      var _props = props,
-          show = _props.show;
-
-      if (nextProps.show !== show) {
-        if (show) {
-          console.log(props);
-        }
-      }
-    }
-  }, {
     key: "initialize",
     value: function initialize(node, props) {
       var _this2 = this;
@@ -113,7 +104,7 @@ var SalesChart = function (_D3Component) {
 
         // Add Y axis -- need to double check this logic
         var y = d3.scaleLinear().domain([100, 1]).range([height, 0]);
-        _this2.svg.append("g").call(d3.axisLeft(y).tickValues([1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100]).tickFormat(function (x) {
+        _this2.svg.append("g").call(d3.axisLeft(y).tickValues([1, 25, 50, 75, 100]).tickFormat(function (x) {
           return "#" + x;
         }));
 
@@ -122,7 +113,7 @@ var SalesChart = function (_D3Component) {
           return x(d.Year);
         }).attr("cy", function (d) {
           return y(d.Rank);
-        }).attr("r", 1.5).style("fill", "#69b3a2");
+        }).attr("r", dotRadius).style("fill", dotColor);
         return _this2.svg.node();
       });
     }
@@ -159,13 +150,13 @@ var SalesChart = function (_D3Component) {
         var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat("%Y"));
         _this3.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
-        dots.data(filteredData).enter().append("circle").attr("r", 1.5);
+        dots.data(filteredData).enter().append("circle").attr("r", dotRadius);
 
         dots.transition().duration(500).attr("cx", function (d) {
           return x(d.Year);
         }).attr("cy", function (d) {
           return y(d.Rank);
-        }).attr("r", 1.5).style("fill", "#69b3a2");
+        }).attr("r", dotRadius).style("fill", dotColor);
 
         dots.exit().remove();
 

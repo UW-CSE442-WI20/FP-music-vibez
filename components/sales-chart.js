@@ -5,20 +5,14 @@ const d3 = require("d3");
 var data = []; 
 var dots;
 
+var dotRadius = 2;
+var dotColor = "#696969";
+
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 600;
 const height = 500;
 
 class SalesChart extends D3Component {
-
-  componentDidUpdate(nextProps) {
-     const { show } = props
-     if (nextProps.show !== show) {
-      if (show) {
-        console.log(props);
-      }
-     }
-    }
 
   initialize(node, props) {
 
@@ -55,7 +49,7 @@ class SalesChart extends D3Component {
           .range([ height, 0]); 
         this.svg.append("g")
           .call(d3.axisLeft(y)
-            .tickValues([1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+            .tickValues([1, 25, 50, 75, 100])
             .tickFormat(x => `#${x}`));
 
         // Add dots
@@ -66,8 +60,8 @@ class SalesChart extends D3Component {
           .append("circle")
             .attr("cx", function (d) { return x(d.Year); } )
             .attr("cy", function (d) { return y(d.Rank); } )
-            .attr("r", 1.5)
-            .style("fill", "#69b3a2");
+            .attr("r", dotRadius)
+            .style("fill", dotColor);
         return this.svg.node();
       })
   
@@ -105,14 +99,14 @@ class SalesChart extends D3Component {
         this.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
         dots.data(filteredData).enter().append("circle")
-                        .attr("r",1.5);
+                        .attr("r", dotRadius);
 
         dots.transition()
             .duration(500)
             .attr("cx", function (d) { return x(d.Year); } )
             .attr("cy", function (d) { return y(d.Rank); } )
-            .attr("r", 1.5)
-            .style("fill", "#69b3a2");
+            .attr("r", dotRadius)
+            .style("fill", dotColor);
 
         dots.exit().remove();
 
