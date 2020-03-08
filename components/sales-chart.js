@@ -50,7 +50,10 @@ class SalesChart extends D3Component {
         this.svg.append("g")
           .call(d3.axisLeft(y)
             .tickValues([1, 25, 50, 75, 100])
-            .tickFormat(x => `#${x}`));
+            .tickFormat(x => `#${x}`))
+          .on("mouseover",function(d) {
+            this.handleClick(); // my react method
+        }.bind(this) );
 
         // Add dots
         dots = this.svg.append('g')
@@ -61,10 +64,37 @@ class SalesChart extends D3Component {
             .attr("cx", function (d) { return x(d.Year); } )
             .attr("cy", function (d) { return y(d.Rank); } )
             .attr("r", dotRadius)
-            .style("fill", dotColor);
+            .style("fill", dotColor)
+            .on('mouseenter', (d, i) => {
+              console.log('mouseenter');
+            });
+
+        /*console.log(dots);
+        dots
+          .on("mouseover",function(d) {
+            console.log("hey");
+            this.handleClick(); // my react method
+        }.bind(this) )
+          .on("click",function(d) {
+            console.log("hey");
+            this.handleClick(); // my react method
+        }.bind(this) )
+
+        this.svg.on("mouseover",function(d) {
+            console.log("hey");
+            this.handleClick(); // my react method
+        }.bind(this) )
+        .on("click", function() {
+          console.log("plase")
+        });*/
+
         return this.svg.node();
       })
   
+  }
+
+  handleClick() {
+    console.log("please");
   }
 
   update(props) {
@@ -99,7 +129,11 @@ class SalesChart extends D3Component {
         this.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
         dots.data(filteredData).enter().append("circle")
-                        .attr("r", dotRadius);
+                        .attr("r", dotRadius)
+                        .on('mouseenter', (d, i, nodes) => {
+
+              console.log('mouseenter');
+              });
 
         dots.transition()
             .duration(500)
