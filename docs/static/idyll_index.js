@@ -81,6 +81,11 @@ var SalesChart = function (_D3Component) {
   }
 
   _createClass(SalesChart, [{
+    key: "handleMouseEnter",
+    value: function handleMouseEnter(d, i) {
+      console.log("yay");
+    }
+  }, {
     key: "initialize",
     value: function initialize(node, props) {
       var _this2 = this;
@@ -106,9 +111,7 @@ var SalesChart = function (_D3Component) {
         var y = d3.scaleLinear().domain([100, 1]).range([height, 0]);
         _this2.svg.append("g").call(d3.axisLeft(y).tickValues([1, 25, 50, 75, 100]).tickFormat(function (x) {
           return "#" + x;
-        })).on("mouseover", function (d) {
-          this.handleClick(); // my react method
-        }.bind(_this2));
+        }));
 
         // Add dots
         dots = _this2.svg.append('g').selectAll("dot").data(data).enter().append("circle").attr("cx", function (d) {
@@ -116,34 +119,11 @@ var SalesChart = function (_D3Component) {
         }).attr("cy", function (d) {
           return y(d.Rank);
         }).attr("r", dotRadius).style("fill", dotColor).on('mouseenter', function (d, i) {
-          console.log('mouseenter');
+          _this2.handleMouseEnter(d, i);
         });
-
-        /*console.log(dots);
-        dots
-          .on("mouseover",function(d) {
-            console.log("hey");
-            this.handleClick(); // my react method
-        }.bind(this) )
-          .on("click",function(d) {
-            console.log("hey");
-            this.handleClick(); // my react method
-        }.bind(this) )
-         this.svg.on("mouseover",function(d) {
-            console.log("hey");
-            this.handleClick(); // my react method
-        }.bind(this) )
-        .on("click", function() {
-          console.log("plase")
-        });*/
 
         return _this2.svg.node();
       });
-    }
-  }, {
-    key: "handleClick",
-    value: function handleClick() {
-      console.log("please");
     }
   }, {
     key: "update",
@@ -178,9 +158,8 @@ var SalesChart = function (_D3Component) {
         var xAxis = d3.axisBottom(x).ticks(7).tickFormat(d3.timeFormat("%Y"));
         _this3.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
-        dots.data(filteredData).enter().append("circle").attr("r", dotRadius).on('mouseenter', function (d, i, nodes) {
-
-          console.log('mouseenter');
+        dots.data(filteredData).enter().append("circle").attr("r", dotRadius).on('mouseenter', function (d, i) {
+          _this3.handleMouseEnter(d, i);
         });
 
         dots.transition().duration(500).attr("cx", function (d) {

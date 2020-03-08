@@ -14,6 +14,10 @@ const height = 500;
 
 class SalesChart extends D3Component {
 
+  handleMouseEnter(d, i) {
+    console.log("yay");
+  }
+
   initialize(node, props) {
 
     fetch(props.src)
@@ -50,10 +54,7 @@ class SalesChart extends D3Component {
         this.svg.append("g")
           .call(d3.axisLeft(y)
             .tickValues([1, 25, 50, 75, 100])
-            .tickFormat(x => `#${x}`))
-          .on("mouseover",function(d) {
-            this.handleClick(); // my react method
-        }.bind(this) );
+            .tickFormat(x => `#${x}`));
 
         // Add dots
         dots = this.svg.append('g')
@@ -66,36 +67,15 @@ class SalesChart extends D3Component {
             .attr("r", dotRadius)
             .style("fill", dotColor)
             .on('mouseenter', (d, i) => {
-              console.log('mouseenter');
+              this.handleMouseEnter(d, i);
             });
-
-        /*console.log(dots);
-        dots
-          .on("mouseover",function(d) {
-            console.log("hey");
-            this.handleClick(); // my react method
-        }.bind(this) )
-          .on("click",function(d) {
-            console.log("hey");
-            this.handleClick(); // my react method
-        }.bind(this) )
-
-        this.svg.on("mouseover",function(d) {
-            console.log("hey");
-            this.handleClick(); // my react method
-        }.bind(this) )
-        .on("click", function() {
-          console.log("plase")
-        });*/
 
         return this.svg.node();
       })
   
   }
 
-  handleClick() {
-    console.log("please");
-  }
+
 
   update(props) {
       fetch(props.src)
@@ -130,10 +110,9 @@ class SalesChart extends D3Component {
 
         dots.data(filteredData).enter().append("circle")
                         .attr("r", dotRadius)
-                        .on('mouseenter', (d, i, nodes) => {
-
-              console.log('mouseenter');
-              });
+                        .on('mouseenter', (d, i) => {
+                          this.handleMouseEnter(d, i);
+                        });
 
         dots.transition()
             .duration(500)

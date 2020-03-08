@@ -1238,4 +1238,5 @@ h2.dek {
 .idyll-scroll-graphic {
 	max-width: 45vw !important;
  	left: 300px !important;
+ 	z-index: 1 !important;
 }
