@@ -20,13 +20,6 @@ class SalesChart extends D3Component {
      }
     }
 
-/*
-  getDerivedStateFromProps() {
-    console.log("hiiii");
-    console.log(this.props);
-  }
-*/
-
   initialize(node, props) {
 
     fetch(props.src)
@@ -37,10 +30,7 @@ class SalesChart extends D3Component {
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
         });
-        // console.log(data);
-       // const margin = { top: 30, right: 40, bottom: 20, left: 50 };
-       // const width = 600;
-       // const height = 500;
+
         this.svg = d3.select(node)
           .append("svg")
             .attr("width", width + margin.left + margin.right)
@@ -64,7 +54,9 @@ class SalesChart extends D3Component {
           .domain([100, 1])
           .range([ height, 0]); 
         this.svg.append("g")
-          .call(d3.axisLeft(y));
+          .call(d3.axisLeft(y)
+            .tickValues([1, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100])
+            .tickFormat(x => `#${x}`));
 
         // Add dots
         dots = this.svg.append('g')
@@ -81,21 +73,17 @@ class SalesChart extends D3Component {
   
   }
 
-  // need to only add new points!! (or remove axes at least)
   update(props) {
-    //console.log(props.years);
-    console.log("in update");
       fetch(props.src)
         .then((response) => {
         return response.text();
       }).then((text) => {
         data = d3.csvParse(text);
 
-
         var filterStart = Date.parse(props.years[0]);
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
-        console.log("start ",filterStart, props.years[0]);
-        console.log("end ", filterEnd);
+        console.log("start ", props.years[0]);
+        console.log("end ", props.years[props.years.length - 1]);
         var filteredData = [];
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
@@ -126,21 +114,11 @@ class SalesChart extends D3Component {
             .attr("r", 1.5)
             .style("fill", "#69b3a2");
 
-
         dots.exit().remove();
-
-
-        //console.log(dots);
-
-       // dots.exit().remove();//remove unneeded circles
-       // dots.enter().append("circle")
-        //                .attr("r",1.5);
-
 
         return this.svg.node();
 
       })
-
 
   }
 
