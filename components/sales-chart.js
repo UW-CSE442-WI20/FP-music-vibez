@@ -25,6 +25,7 @@ class SalesChart extends D3Component {
         data = d3.csvParse(text);
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
+          //console.log(d['Song Title']);
         });
 
         this.svg = d3.select(node)
@@ -141,10 +142,12 @@ class SalesChart extends D3Component {
     console.log("yay in");
     tooltipDiv.transition()    
                 .duration(100)    
-                .style("opacity", .9);    
-    tooltipDiv.html((new Date(d.Year).toLocaleDateString()) + "<br/>"  + d.Rank)  
+                .style("opacity", .95);    
+    tooltipDiv.html("<b>" + d['Song Title'] +  "</b><br/>Date: " 
+     + (new Date(d.Year).toLocaleDateString()) + "<br/>Rank: "  + d.Rank)  
         .style("left", (d3.event.pageX) + "px")   
-        .style("top", (d3.event.pageY - 28) + "px");  
+        .style("top", (d3.event.pageY - 28) + "px")
+        .style("display", "inline-block");  
   }
 
   handleMouseOut(d, i) {

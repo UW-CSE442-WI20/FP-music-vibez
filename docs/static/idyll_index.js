@@ -92,6 +92,7 @@ var SalesChart = function (_D3Component) {
         data = d3.csvParse(text);
         data.forEach(function (d) {
           d.Year = Date.parse(d.Year);
+          //console.log(d['Song Title']);
         });
 
         _this2.svg = d3.select(node).append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -179,8 +180,8 @@ var SalesChart = function (_D3Component) {
     key: "handleMouseEnter",
     value: function handleMouseEnter(d, i) {
       console.log("yay in");
-      tooltipDiv.transition().duration(100).style("opacity", .9);
-      tooltipDiv.html(new Date(d.Year).toLocaleDateString() + "<br/>" + d.Rank).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px");
+      tooltipDiv.transition().duration(100).style("opacity", .95);
+      tooltipDiv.html("<b>" + d['Song Title'] + "</b><br/>Date: " + new Date(d.Year).toLocaleDateString() + "<br/>Rank: " + d.Rank).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px").style("display", "inline-block");
     }
   }, {
     key: "handleMouseOut",

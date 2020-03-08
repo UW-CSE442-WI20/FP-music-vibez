@@ -1243,12 +1243,14 @@ h2.dek {
 
 div.tooltip {	
     position: absolute;			
-    text-align: center;			
-    width: 90px;					
-    height: 40px;					
+    display: flex;
+    flex-wrap: wrap;	
+    flex-direction: column;
+    justify-content: center;	
+    text-align: center;					
     padding: 2px;				
     font: 12px sans-serif;		
-    background: rgb(169,169,169);	
+    background: rgb(211,211,211);	
     border: 0px;		
     border-radius: 8px;			
     pointer-events: none;			
