@@ -117,74 +117,146 @@
         [Scroller currentStep:currStep]
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" /]
+                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" /]
 
             [/Graphic]
 
-            [Step ]
-            ##Queen
-            ### 1973
-            [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
-            [/Step]
+            [Step]
+        ##Queen
+        ##1970
+        ##The band formed
+        [img src:"static/images/Queen/Queen-logo.png" style:`{width: 400}` /]
+        [/Step]
 
-            [Step ]
-            ### 1974
-            [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
+        [Step]
+        ##Queen
+        ##1971
+        ##John Deacon joined the band
+        ##The band recorded their first songs
+        [img src:"static/images/Queen/Queen_1971.jpg" style:`{width: 400}` /]
+        [/Step]
 
-            [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
-            [/Step]
+        [Step]
+        ##Queen
+        ##1972
+        ##The band formed
+        [img src:"static/images/Queen/Queen-logo.png" style:`{width: 400}` /]
+        [/Step]
 
-            [Step ]
+        [Step]
+        ### 1973
+        [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
+        [/Step]
 
-            ### 1975
-            [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
-            [/Step]
+        [Step]
+        ### 1974
+        [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
 
-            [Step ]
+        [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
+        [/Step]
 
-            ### 1976
-            [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
-            [/Step]
+        [Step]
+        ### 1975
+        [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
+        [/Step]
 
-            [Step ]
+        [Step]
+        ### 1976
+        [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
+        [/Step]
 
-            ### 1977
-            [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
-            [/Step]
+        [Step]
+        ### 1977
+        [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
+        [/Step]
 
-            [Step ]
+        [Step]
+        ### 1978
+        [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
+        [/Step]
 
-            ### 1978
-            [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
-            ### 1979
-            ### 1980
-            [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
+        [Step]
+        ### 1979
+        [/Step]
 
-            [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
-            [/Step]
-            [Step ]
+        [Step]
+        ### 1980
+        [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
 
-            ### 1981
-            ### 1982
-            [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
-            ### 1983
-            ### 1984
-            [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
-            ### 1985
-            ### 1986
-            [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
-            ### 1987
-            ### 1988
-            ### 1989
-            [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
-            ### 1990
-            ### 1991
-            [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
-            ### 1992
-            ### 1993
-            ### 1994
-            ### 1995
-            [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
-            [/Step]
+        [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
+        [/Step]
+
+        [Step]
+        ### 1981
+        [/Step]
+
+        [Step]
+        ### 1982
+        [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
+        [/Step]
+
+        [Step]
+        ### 1983
+        [/Step]
+
+        [Step]
+        ### 1984
+        [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
+        [/Step]
+
+        [Step]
+        ### 1985
+        ## Performed at Live aid in front of the biggest-ever TV audience
+        [img src:"static/images/Queen/Queen_live_aid.jpg" style:`{width: 400}` /]
+        [/Step]
+
+        [Step]
+        ### 1986
+        [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
+        [/Step]
+
+        [Step]
+        ### 1987
+        ### Mercury was diagnosed as HIV positive
+        [/Step]
+
+        [Step]
+        ### 1988
+        [/Step]
+
+        [Step]
+        ### 1989
+        [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
+        [/Step]
+
+        [Step]
+        ### 1990
+        [/Step]
+
+        [Step]
+        ### 1991
+        [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
+
+        ### On 23 November 1991, in a prepared statement made on his deathbed, Mercury confirmed that he had AIDS
+        ### Within 24 hours of the statement, he died of bronchial pneumonia, which was brought on as a complication of AIDS
+        [/Step]
+
+        [Step]
+        ### 1992
+        [/Step]
+
+        [Step]
+        ### 1993
+        [/Step]
+
+        [Step]
+        ### 1994
+        [/Step]
+
+        [Step]
+        ### 1995
+        [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
+        [/Step]
         [/Scroller]
 
     [/Case]
