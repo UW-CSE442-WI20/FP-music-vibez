@@ -12,8 +12,8 @@ var dotRadius = 2;
 var dotColor = "#696969";
 
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
-const width = 600;
-const height = 500;
+const width = 600 - margin.left - margin.right;
+const height = 500 - margin.top - margin.bottom;
 
 class SalesChart extends D3Component {
 
@@ -31,8 +31,9 @@ class SalesChart extends D3Component {
 
         this.svg = d3.select(node)
           .append("svg")
-            .attr("width", width + margin.left + margin.right)
-            .attr("height", height + margin.top + margin.bottom)
+            .attr("width", width + margin.left + margin.right - 10)
+            .attr("height", height + margin.top + margin.bottom + 20)
+            .attr("class", "singles-chart")
           .append("g")
             .attr("transform",
                   "translate(" + margin.left + "," + margin.top + ")");
@@ -48,6 +49,14 @@ class SalesChart extends D3Component {
             .ticks(7)
             .tickFormat(d3.timeFormat("%Y")));
 
+        // X axis label
+        this.svg.append("text")             
+          .attr("transform",
+                "translate(" + (width / 2) + " ," + 
+                               (height + margin.top) + ")")
+          .style("text-anchor", "middle")
+          .text("Time");
+
         // add Y axis
         yScale = d3.scaleLinear()
           .domain([100, 1])
@@ -56,6 +65,23 @@ class SalesChart extends D3Component {
           .call(d3.axisLeft(yScale)
             .tickValues([1, 25, 50, 75, 100])
             .tickFormat(x => `#${x}`));
+
+        // Y axis label
+        this.svg.append("text")
+          .attr("transform", "rotate(-90)")
+          .attr("y", 0 - margin.left)
+          .attr("x",0 - (height / 2))
+          .attr("dy", "1em")
+          .style("text-anchor", "middle")
+          .text("Rank");   
+
+        // add title
+        this.svg.append("text")
+          .attr("x", (width / 2))             
+          .attr("y", 0 - (margin.top / 2))
+          .attr("text-anchor", "middle")  
+          .style("font-size", "16px") 
+          .text(props.name + "'s Singles Rank through Time"); 
 
         // initialize tooltip 
         tooltipDiv = d3.select("body").append("div") 
@@ -100,11 +126,10 @@ class SalesChart extends D3Component {
         var filteredData = [];
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
-          if (filterStart <= d.Year && d.Year <= filterEnd) {
+          if (filterStart <= d.Year && d.Year < filterEnd) {
             filteredData.push(d);
           } 
         });
-        //console.log(filteredData);
 
         xScale = d3.scaleLinear()
           .domain([d3.min(filteredData, d => d.Year), d3.max(filteredData, d => d.Year)])
