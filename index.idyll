@@ -114,10 +114,11 @@
         [/Scroller]
     [/Case]
      [Case test:"queen"]
-        [Scroller currentStep:currStep]
+        [var name:"queenYears" value:`["01/01/1970", "01/01/1971", "01/01/1972", "01/01/1973", "01/01/1974", "01/01/1975", "01/01/1976", "01/01/1977", "01/01/1978", "01/01/1979", "01/01/1980", "01/01/1981", "01/01/1982", "01/01/1983", "01/01/1984", "01/01/1985", "01/01/1986", "01/01/1987", "01/01/1988", "01/01/1989", "01/01/1990", "01/01/1991", "01/01/1992", "01/01/1993", "01/01/1994", "01/01/1995"]` /]
+        [var name:"queenCurStep" value:0 /]
+        [Scroller currentStep:queenCurStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" /]
-                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" /]
+                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
 
             [/Graphic]
 
@@ -327,12 +328,12 @@
             [/Scroller]
       [/Case]
       [Case test:"michael"]
-            [var name:"years" value:`["08/29/1958", "01/01/1972", "01/01/1973", "01/01/1975", "01/01/1979", "01/01/1982", "01/01/1983", "01/01/1987", "01/01/1991", "01/01/1995", "01/01/2001", "01/01/2009", "01/01/2010", "01/01/2014"]` /]
-            [var name:"curStep" value:0 /]
-            [Scroller currentStep:curStep]
+            [var name:"michaelYears" value:`["08/29/1958", "01/01/1972", "01/01/1973", "01/01/1975", "01/01/1979", "01/01/1982", "01/01/1983", "01/01/1987", "01/01/1991", "01/01/1995", "01/01/2001", "01/01/2009", "01/01/2010", "01/01/2014"]` /]
+            [var name:"michaelCurStep" value:0 /]
+            [Scroller currentStep:michaelCurStep]
 
                 [Graphic]
-                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`years.slice(0, curStep + 2)` /]
+                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelYears.slice(0, michaelCurStep + 2)` name:"Michael Jackson" /]
 
                 [/Graphic]
 
