@@ -118,7 +118,7 @@
         [var name:"queenCurStep" value:0 /]
         [Scroller currentStep:queenCurStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)`/]
+                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
 
             [/Graphic]
 
@@ -333,7 +333,7 @@
             [Scroller currentStep:michaelCurStep]
 
                 [Graphic]
-                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelYears.slice(0, michaelCurStep + 2)` /]
+                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelYears.slice(0, michaelCurStep + 2)` name:"Michael Jackson" /]
 
                 [/Graphic]
 

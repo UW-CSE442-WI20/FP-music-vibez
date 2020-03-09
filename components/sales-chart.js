@@ -75,6 +75,14 @@ class SalesChart extends D3Component {
           .style("text-anchor", "middle")
           .text("Rank");   
 
+        // add title
+        this.svg.append("text")
+          .attr("x", (width / 2))             
+          .attr("y", 0 - (margin.top / 2))
+          .attr("text-anchor", "middle")  
+          .style("font-size", "16px") 
+          .text(props.name + "'s Singles Rank through Time"); 
+
         // initialize tooltip 
         tooltipDiv = d3.select("body").append("div") 
           .attr("class", "tooltip")       
@@ -122,8 +130,7 @@ class SalesChart extends D3Component {
             filteredData.push(d);
           } 
         });
-        //console.log(filteredData);
-        //console.log("max year", (new Date(d3.max(filteredData, d => d.Year)).toLocaleDateString()));
+
         xScale = d3.scaleLinear()
           .domain([d3.min(filteredData, d => d.Year), d3.max(filteredData, d => d.Year)])
           .range([ 0, width ]);
