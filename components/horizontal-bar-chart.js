@@ -37,49 +37,78 @@ const allData = {
   ]
 };
 
-class HorizontalBarChart extends D3Component {
-  getData(artist, to) {
-    console.log("getData called with", artist, to);
-    if (!(artist in allData)) {
-      return [];
-    }
-    return allData[artist].slice(0, to);
-  }
+const margin = { top: 30, right: 40, bottom: 20, left: 50 };
+const width = 600;
+const height = 500;
 
+var yScale;
+var xScale;
+
+class HorizontalBarChart extends D3Component {
   initialize(node, props) {
+    const data = this.getData("gaga", 4);
+
     this.svg = d3
       .select(node)
       .append("svg")
-      .attr("font-family", "sans-serif");
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // y-axis
+    yScale = d3
+      .scaleOrdinal()
+      .range(this.getAlbumNames(data))
+      .domain([0, data.length]);
+
+    this.svg
+      .append("g")
+      .attr("class", "y-axis")
+      .attr("transform", `translate(0,${height})`)
+      .call(d3.axisLeft(yScale).ticks(data.length));
+
+    // x-axis
+    xScale = d3
+      .scaleLinear()
+      .domain([0, this.getMaxSales(data)])
+      .range([0, width]);
+
+    this.svg.append("g").call(d3.axisBottom(xScale));
+
+    // add bars
+    const bar = this.svg
+      .selectAll("g")
+      .data(data)
+      .join("g")
+      .attr("transform", (d, i) => `translate(0,${i})`);
+
+    bar
+      .append("rect")
+      .attr("fill", "black")
+      .attr("x", xScale(0))
+      .attr("width", d => {
+        console.log(
+          "width",
+          d,
+          xScale(d["worldwide-sales"]) - xScale(0),
+          xScale(0),
+          xScale(d["worldwide-sales"])
+        );
+        xScale(d["worldwide-sales"]) - xScale(0);
+      });
+    //.attr("height", height);
+
     return this.svg.node();
   }
 
   update(props) {
     console.log("update", props);
+    return;
     const { artist, to } = props;
-    if (artist === "start") {
-      return this.svg.node();
-    }
     const data = this.getData(artist, to);
-    const margin = { top: 30, right: 40, bottom: 10, left: 50 };
-    const barHeight = 25;
-    const width = 600;
-    const height =
-      Math.ceil((data.length + 0.1) * barHeight) + margin.top + margin.bottom;
 
-    const yAxis = g =>
-      g.attr("transform", `translate(${margin.left},0)`).call(
-        d3
-          .axisLeft(y)
-          .tickFormat(i => data[i].name)
-          .tickSizeOuter(0)
-      );
-
-    const xAxis = g =>
-      g
-        .attr("transform", `translate(0,${margin.top})`)
-        .call(d3.axisTop(x).ticks(width / 80))
-        .call(g => g.select(".domain").remove());
+    yScale = d3.scaleOrdinal().range(this.getAlbumNames(data));
 
     const x = d3
       .scaleLinear()
@@ -91,23 +120,49 @@ class HorizontalBarChart extends D3Component {
       .domain(d3.range(data.length))
       .range([margin.top, height - margin.bottom]);
 
-    const bar = this.svg
-      .selectAll("g")
-      .data(data)
-      .join("g")
-      .attr("transform", (d, i) => `translate(0,${y(i)})`);
-
-    bar
-      .append("rect")
-      .attr("fill", "black")
-      .attr("x", x(0))
-      .attr("width", d => x(d.sales) - x(0))
-      .attr("height", y.bandwidth() - 1);
-
     this.svg.append("g").call(yAxis);
     this.svg.append("g").call(xAxis);
 
     return this.svg.node();
+  }
+
+  // Utilities
+
+  // Returns a json object with the data for the seleted artist
+  // up to but not including the ith entry
+  getData(artist, i) {
+    console.log("getData called with", artist, i);
+    if (!(artist in allData)) {
+      return [];
+    }
+    return allData[artist].slice(0, i);
+  }
+
+  // Returns the maximum sales for the given data
+  getMaxSales(data) {
+    return Math.max(...this.getSales(data));
+  }
+
+  // Returns a list of album names from the data
+  // Preserves the ordering
+  getAlbumNames(data) {
+    return this.extractData(data, "album-name");
+  }
+
+  // Returns a list of worldwide-sales from the data
+  // Preserves the ordering of the original data
+  getSales(data) {
+    return this.extractData(data, "worldwide-sales");
+  }
+
+  // Returns a list of the given attribute from a json dictionary
+  extractData(data, key) {
+    let res = [];
+    for (let i = 0; i < data.length; i++) {
+      res.push(data[i][key]);
+    }
+    console.log("extractData(" + key + ")", data, res);
+    return res;
   }
 }
 
