@@ -52,6 +52,7 @@
         [Scroller currentStep:currStep]
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" /]
+                [HorizontalBarChart artist:artist to:currStep/]
             [/Graphic]
 
             [Step ]
@@ -95,16 +96,18 @@
 
             ### 2015
 
+            [Step]
             ### 2016
-
-            [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
+                [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
+            [/Step]
 
             ### 2017
 
             ### 2018
 
-            [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
-
+            [Step]
+                [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
+            [/Step]
             ### 2019
 
             ### 2020
