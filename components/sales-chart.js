@@ -71,10 +71,10 @@ class SalesChart extends D3Component {
             .attr("r", dotRadius)
             .style("fill", dotColor)
             .on('mouseenter', (d, i, nodes) => {
-              this.handleMouseEnter(d, i, nodes);
+              this.handleMouseEnter(d, i, nodes, data);
             })
             .on('mouseout', (d, i, nodes) => {
-              this.handleMouseOut(d, i, nodes);
+              this.handleMouseOut(d, i, nodes, data);
             });
 
         return this.svg.node();
@@ -118,10 +118,10 @@ class SalesChart extends D3Component {
         dots.data(filteredData).enter().append("circle")
                         .attr("r", dotRadius)
                         .on('mouseenter', (d, i, nodes) => {
-                          this.handleMouseEnter(d, i, nodes);
+                          this.handleMouseEnter(d, i, nodes, filteredData);
                         })
                         .on('mouseout', (d, i, nodes) => {
-                          this.handleMouseOut(d, i, nodes);
+                          this.handleMouseOut(d, i, nodes, filteredData);
                         });
 
         dots.transition()
@@ -139,11 +139,14 @@ class SalesChart extends D3Component {
 
   }
 
-  handleMouseEnter(d, i, nodes) {
+  handleMouseEnter(d, i, nodes, data) {
+    //console.log(nodes[i]);
     d3.select(nodes[i])
     .attr('r', (d) => {
       return dotRadius * 2.5;
     });
+
+    this.resizeSongPoints(nodes, d['Song Title'], data, 2.5);
 
     tooltipDiv.transition()    
                 .duration(100)    
@@ -151,26 +154,34 @@ class SalesChart extends D3Component {
 
     tooltipDiv.html("<b>" + d['Song Title'] +  "</b><br/>Date: " 
      + (new Date(d.Year).toLocaleDateString()) + "<br/>Rank: #"  + d.Rank)  
-        .style("left", (d3.event.pageX) + "px")   
-        .style("top", (d3.event.pageY - 28) + "px")
+        .style("left", (d3.event.pageX + 7) + "px")   
+        .style("top", (d3.event.pageY - 37) + "px")
         .style("display", "inline-block");  
 
   }
 
-  handleMouseOut(d, i, nodes) {
+  handleMouseOut(d, i, nodes, data) {
     d3.select(nodes[i])
     .attr('r', (d) => {
       return dotRadius;
     });
 
+    this.resizeSongPoints(nodes, d['Song Title'], data, 1);
+
     tooltipDiv.transition()    
                 .duration(300)    
                 .style("opacity", 0); 
+  }
 
-    /*d3.select(this).attr({
-      fill: dotColor,
-      r: dotRadius
-    });*/
+  resizeSongPoints(nodes, song, data, scaleFactor) {
+    for (var i = 0; i < data.length; i++) {
+      if (data[i]['Song Title'] === song) {
+        d3.select(nodes[i])
+          .attr('r', (d) => {
+            return dotRadius * scaleFactor;
+          });
+      }
+    }
   }
 
 }

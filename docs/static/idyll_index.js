@@ -119,9 +119,9 @@ var SalesChart = function (_D3Component) {
         }).attr("cy", function (d) {
           return y(d.Rank);
         }).attr("r", dotRadius).style("fill", dotColor).on('mouseenter', function (d, i, nodes) {
-          _this2.handleMouseEnter(d, i, nodes);
+          _this2.handleMouseEnter(d, i, nodes, data);
         }).on('mouseout', function (d, i, nodes) {
-          _this2.handleMouseOut(d, i, nodes);
+          _this2.handleMouseOut(d, i, nodes, data);
         });
 
         return _this2.svg.node();
@@ -161,9 +161,9 @@ var SalesChart = function (_D3Component) {
         _this3.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
         dots.data(filteredData).enter().append("circle").attr("r", dotRadius).on('mouseenter', function (d, i, nodes) {
-          _this3.handleMouseEnter(d, i, nodes);
+          _this3.handleMouseEnter(d, i, nodes, filteredData);
         }).on('mouseout', function (d, i, nodes) {
-          _this3.handleMouseOut(d, i, nodes);
+          _this3.handleMouseOut(d, i, nodes, filteredData);
         });
 
         dots.transition().duration(500).attr("cx", function (d) {
@@ -179,28 +179,39 @@ var SalesChart = function (_D3Component) {
     }
   }, {
     key: "handleMouseEnter",
-    value: function handleMouseEnter(d, i, nodes) {
+    value: function handleMouseEnter(d, i, nodes, data) {
+      //console.log(nodes[i]);
       d3.select(nodes[i]).attr('r', function (d) {
         return dotRadius * 2.5;
       });
 
+      this.resizeSongPoints(nodes, d['Song Title'], data, 2.5);
+
       tooltipDiv.transition().duration(100).style("opacity", .95);
 
-      tooltipDiv.html("<b>" + d['Song Title'] + "</b><br/>Date: " + new Date(d.Year).toLocaleDateString() + "<br/>Rank: #" + d.Rank).style("left", d3.event.pageX + "px").style("top", d3.event.pageY - 28 + "px").style("display", "inline-block");
+      tooltipDiv.html("<b>" + d['Song Title'] + "</b><br/>Date: " + new Date(d.Year).toLocaleDateString() + "<br/>Rank: #" + d.Rank).style("left", d3.event.pageX + 7 + "px").style("top", d3.event.pageY - 37 + "px").style("display", "inline-block");
     }
   }, {
     key: "handleMouseOut",
-    value: function handleMouseOut(d, i, nodes) {
+    value: function handleMouseOut(d, i, nodes, data) {
       d3.select(nodes[i]).attr('r', function (d) {
         return dotRadius;
       });
 
-      tooltipDiv.transition().duration(300).style("opacity", 0);
+      this.resizeSongPoints(nodes, d['Song Title'], data, 1);
 
-      /*d3.select(this).attr({
-        fill: dotColor,
-        r: dotRadius
-      });*/
+      tooltipDiv.transition().duration(300).style("opacity", 0);
+    }
+  }, {
+    key: "resizeSongPoints",
+    value: function resizeSongPoints(nodes, song, data, scaleFactor) {
+      for (var i = 0; i < data.length; i++) {
+        if (data[i]['Song Title'] === song) {
+          d3.select(nodes[i]).attr('r', function (d) {
+            return dotRadius * scaleFactor;
+          });
+        }
+      }
     }
   }]);
 
