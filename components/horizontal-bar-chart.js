@@ -41,8 +41,8 @@ const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 600;
 const height = 500;
 
-var yScale;
-var xScale;
+var y;
+var x;
 
 class HorizontalBarChart extends D3Component {
   initialize(node, props) {
@@ -56,48 +56,47 @@ class HorizontalBarChart extends D3Component {
       .append("g")
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-    // y-axis
-    yScale = d3
-      .scaleOrdinal()
-      .range(this.getAlbumNames(data))
-      .domain([0, data.length]);
+    // Y axis scale
+    y = d3
+      .scaleBand()
+      .range([height, 0])
+      .padding(0.5)
+      .domain(this.getAlbumNames(data));
 
+    // X axis scale
+    x = d3
+      .scaleLinear()
+      .range([0, width])
+      .domain([0, this.getMaxSales(data)]);
+
+    // add bars
+
+    this.svg
+      .selectAll(".bar")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("class", "bar")
+      .attr("width", function(d) {
+        return x(d["worldwide-sales"]);
+      })
+      .attr("y", function(d) {
+        return y(d["album-name"]);
+      })
+      .attr("height", y.bandwidth());
+
+    // Append the y-axis
     this.svg
       .append("g")
       .attr("class", "y-axis")
-      .attr("transform", `translate(0,${height})`)
-      .call(d3.axisLeft(yScale).ticks(data.length));
+      //.attr("transform", `translate(0,${height})`)
+      .call(d3.axisLeft(y).ticks(data.length));
 
-    // x-axis
-    xScale = d3
-      .scaleLinear()
-      .domain([0, this.getMaxSales(data)])
-      .range([0, width]);
-
-    this.svg.append("g").call(d3.axisBottom(xScale));
-
-    // add bars
-    const bar = this.svg
-      .selectAll("g")
-      .data(data)
-      .join("g")
-      .attr("transform", (d, i) => `translate(0,${i})`);
-
-    bar
-      .append("rect")
-      .attr("fill", "black")
-      .attr("x", xScale(0))
-      .attr("width", d => {
-        console.log(
-          "width",
-          d,
-          xScale(d["worldwide-sales"]) - xScale(0),
-          xScale(0),
-          xScale(d["worldwide-sales"])
-        );
-        xScale(d["worldwide-sales"]) - xScale(0);
-      });
-    //.attr("height", height);
+    // Append the x-axis
+    this.svg
+      .append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
 
     return this.svg.node();
   }
