@@ -6,6 +6,8 @@ var data = [];
 var dots;
 var tooltipDiv; 
 
+var xScale, yScale;
+
 var dotRadius = 2;
 var dotColor = "#696969";
 
@@ -36,22 +38,22 @@ class SalesChart extends D3Component {
                   "translate(" + margin.left + "," + margin.top + ")");
 
         // add X axis 
-        var x = d3.scaleLinear()
+        xScale = d3.scaleLinear()
           .domain([d3.min(data, d => d.Year), d3.max(data, d => d.Year)])
           .range([ 0, width ]);
         this.svg.append("g")
           .attr("class", "x-axis")
           .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(x)
+          .call(d3.axisBottom(xScale)
             .ticks(7)
             .tickFormat(d3.timeFormat("%Y")));
 
         // add Y axis
-        var y = d3.scaleLinear()
+        yScale = d3.scaleLinear()
           .domain([100, 1])
           .range([ height, 0]); 
         this.svg.append("g")
-          .call(d3.axisLeft(y)
+          .call(d3.axisLeft(yScale)
             .tickValues([1, 25, 50, 75, 100])
             .tickFormat(x => `#${x}`));
 
@@ -66,8 +68,8 @@ class SalesChart extends D3Component {
           .data(data)
           .enter()
           .append("circle")
-            .attr("cx", function (d) { return x(d.Year); } )
-            .attr("cy", function (d) { return y(d.Rank); } )
+            .attr("cx", function (d) { return xScale(d.Year); } )
+            .attr("cy", function (d) { return yScale(d.Rank); } )
             .attr("r", dotRadius)
             .style("fill", dotColor)
             .on('mouseenter', (d, i, nodes) => {
@@ -104,14 +106,14 @@ class SalesChart extends D3Component {
         });
         //console.log(filteredData);
 
-        var x = d3.scaleLinear()
+        xScale = d3.scaleLinear()
           .domain([d3.min(filteredData, d => d.Year), d3.max(filteredData, d => d.Year)])
           .range([ 0, width ]);
-        var y = d3.scaleLinear()
+        yScale = d3.scaleLinear()
           .domain([100, 1])
           .range([ height, 0]); 
 
-        var xAxis = d3.axisBottom(x).ticks(7)
+        var xAxis = d3.axisBottom(xScale).ticks(7)
             .tickFormat(d3.timeFormat("%Y"));
         this.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
@@ -126,8 +128,8 @@ class SalesChart extends D3Component {
 
         dots.transition()
             .duration(500)
-            .attr("cx", function (d) { return x(d.Year); } )
-            .attr("cy", function (d) { return y(d.Rank); } )
+            .attr("cx", function (d) { return xScale(d.Year); } )
+            .attr("cy", function (d) { return yScale(d.Rank); } )
             .attr("r", dotRadius)
             .style("fill", dotColor);
 
@@ -140,13 +142,13 @@ class SalesChart extends D3Component {
   }
 
   handleMouseEnter(d, i, nodes, data) {
-    //console.log(nodes[i]);
     d3.select(nodes[i])
     .attr('r', (d) => {
       return dotRadius * 2.5;
     });
 
-    this.resizeSongPoints(nodes, d['Song Title'], data, 2.5);
+    var resizedData = this.resizeSongPoints(nodes, d['Song Title'], data, 2.5);
+    this.connectSongPoints(resizedData);
 
     tooltipDiv.transition()    
                 .duration(100)    
@@ -167,6 +169,7 @@ class SalesChart extends D3Component {
     });
 
     this.resizeSongPoints(nodes, d['Song Title'], data, 1);
+    d3.select("path.line").remove();
 
     tooltipDiv.transition()    
                 .duration(300)    
@@ -174,14 +177,31 @@ class SalesChart extends D3Component {
   }
 
   resizeSongPoints(nodes, song, data, scaleFactor) {
+    var resizedData = []
     for (var i = 0; i < data.length; i++) {
       if (data[i]['Song Title'] === song) {
+        resizedData.push(data[i]);
         d3.select(nodes[i])
           .attr('r', (d) => {
             return dotRadius * scaleFactor;
           });
       }
     }
+    return resizedData;
+
+  }
+
+  connectSongPoints(songData) {
+    var line = d3.line()
+        .x(function(d, i) { return xScale(d.Year); }) 
+        .y(function(d) { return yScale(d.Rank); });
+
+    this.svg.append("path")
+      .datum(songData) 
+      .attr("class", "line")  
+      .attr("d", line)
+      .lower();
+
   }
 
 }
