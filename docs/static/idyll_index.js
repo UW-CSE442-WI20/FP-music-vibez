@@ -71,8 +71,8 @@ var dotRadius = 2;
 var dotColor = "#696969";
 
 var margin = { top: 30, right: 40, bottom: 20, left: 50 };
-var width = 600;
-var height = 500;
+var width = 600 - margin.left - margin.right;
+var height = 500 - margin.top - margin.bottom;
 
 var SalesChart = function (_D3Component) {
   _inherits(SalesChart, _D3Component);
@@ -96,7 +96,7 @@ var SalesChart = function (_D3Component) {
           d.Year = Date.parse(d.Year);
         });
 
-        _this2.svg = d3.select(node).append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+        _this2.svg = d3.select(node).append("svg").attr("width", width + margin.left + margin.right - 10).attr("height", height + margin.top + margin.bottom + 20).attr("class", "singles-chart").append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // add X axis 
         xScale = d3.scaleLinear().domain([d3.min(data, function (d) {
@@ -106,11 +106,17 @@ var SalesChart = function (_D3Component) {
         })]).range([0, width]);
         _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xScale).ticks(7).tickFormat(d3.timeFormat("%Y")));
 
+        // X axis label
+        _this2.svg.append("text").attr("transform", "translate(" + width / 2 + " ," + (height + margin.top) + ")").style("text-anchor", "middle").text("Time");
+
         // add Y axis
         yScale = d3.scaleLinear().domain([100, 1]).range([height, 0]);
         _this2.svg.append("g").call(d3.axisLeft(yScale).tickValues([1, 25, 50, 75, 100]).tickFormat(function (x) {
           return "#" + x;
         }));
+
+        // Y axis label
+        _this2.svg.append("text").attr("transform", "rotate(-90)").attr("y", 0 - margin.left).attr("x", 0 - height / 2).attr("dy", "1em").style("text-anchor", "middle").text("Rank");
 
         // initialize tooltip 
         tooltipDiv = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
@@ -146,12 +152,14 @@ var SalesChart = function (_D3Component) {
         var filteredData = [];
         data.forEach(function (d) {
           d.Year = Date.parse(d.Year);
-          if (filterStart <= d.Year && d.Year <= filterEnd) {
+          if (filterStart <= d.Year && d.Year < filterEnd) {
             filteredData.push(d);
           }
         });
         //console.log(filteredData);
-
+        console.log("max year", new Date(d3.max(filteredData, function (d) {
+          return d.Year;
+        })).toLocaleDateString());
         xScale = d3.scaleLinear().domain([d3.min(filteredData, function (d) {
           return d.Year;
         }), d3.max(filteredData, function (d) {
