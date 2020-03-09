@@ -4,6 +4,9 @@ const d3 = require("d3");
 
 var data = []; 
 var dots;
+var tooltipDiv; 
+
+var xScale, yScale;
 
 var dotRadius = 2;
 var dotColor = "#696969";
@@ -13,6 +16,7 @@ const width = 600;
 const height = 500;
 
 class SalesChart extends D3Component {
+
 
   initialize(node, props) {
 
@@ -33,39 +37,54 @@ class SalesChart extends D3Component {
             .attr("transform",
                   "translate(" + margin.left + "," + margin.top + ")");
 
-        var x = d3.scaleLinear()
+        // add X axis 
+        xScale = d3.scaleLinear()
           .domain([d3.min(data, d => d.Year), d3.max(data, d => d.Year)])
           .range([ 0, width ]);
         this.svg.append("g")
           .attr("class", "x-axis")
           .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(x)
+          .call(d3.axisBottom(xScale)
             .ticks(7)
             .tickFormat(d3.timeFormat("%Y")));
 
-        // Add Y axis -- need to double check this logic
-        var y = d3.scaleLinear()
+        // add Y axis
+        yScale = d3.scaleLinear()
           .domain([100, 1])
           .range([ height, 0]); 
         this.svg.append("g")
-          .call(d3.axisLeft(y)
+          .call(d3.axisLeft(yScale)
             .tickValues([1, 25, 50, 75, 100])
             .tickFormat(x => `#${x}`));
 
-        // Add dots
+        // initialize tooltip 
+        tooltipDiv = d3.select("body").append("div") 
+          .attr("class", "tooltip")       
+          .style("opacity", 0);
+
+        // add dots
         dots = this.svg.append('g')
           .selectAll("dot")
           .data(data)
           .enter()
           .append("circle")
-            .attr("cx", function (d) { return x(d.Year); } )
-            .attr("cy", function (d) { return y(d.Rank); } )
+            .attr("cx", function (d) { return xScale(d.Year); } )
+            .attr("cy", function (d) { return yScale(d.Rank); } )
             .attr("r", dotRadius)
-            .style("fill", dotColor);
+            .style("fill", dotColor)
+            .on('mouseenter', (d, i, nodes) => {
+              this.handleMouseEnter(d, i, nodes, data);
+            })
+            .on('mouseout', (d, i, nodes) => {
+              this.handleMouseOut(d, i, nodes, data);
+            });
+
         return this.svg.node();
       })
   
   }
+
+
 
   update(props) {
       fetch(props.src)
@@ -87,24 +106,30 @@ class SalesChart extends D3Component {
         });
         //console.log(filteredData);
 
-        var x = d3.scaleLinear()
+        xScale = d3.scaleLinear()
           .domain([d3.min(filteredData, d => d.Year), d3.max(filteredData, d => d.Year)])
           .range([ 0, width ]);
-        var y = d3.scaleLinear()
+        yScale = d3.scaleLinear()
           .domain([100, 1])
           .range([ height, 0]); 
 
-        var xAxis = d3.axisBottom(x).ticks(7)
+        var xAxis = d3.axisBottom(xScale).ticks(7)
             .tickFormat(d3.timeFormat("%Y"));
         this.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
         dots.data(filteredData).enter().append("circle")
-                        .attr("r", dotRadius);
+                        .attr("r", dotRadius)
+                        .on('mouseenter', (d, i, nodes) => {
+                          this.handleMouseEnter(d, i, nodes, filteredData);
+                        })
+                        .on('mouseout', (d, i, nodes) => {
+                          this.handleMouseOut(d, i, nodes, filteredData);
+                        });
 
         dots.transition()
             .duration(500)
-            .attr("cx", function (d) { return x(d.Year); } )
-            .attr("cy", function (d) { return y(d.Rank); } )
+            .attr("cx", function (d) { return xScale(d.Year); } )
+            .attr("cy", function (d) { return yScale(d.Rank); } )
             .attr("r", dotRadius)
             .style("fill", dotColor);
 
@@ -113,6 +138,69 @@ class SalesChart extends D3Component {
         return this.svg.node();
 
       })
+
+  }
+
+  handleMouseEnter(d, i, nodes, data) {
+    d3.select(nodes[i])
+    .attr('r', (d) => {
+      return dotRadius * 2.5;
+    });
+
+    var resizedData = this.resizeSongPoints(nodes, d['Song Title'], data, 2.5);
+    this.connectSongPoints(resizedData);
+
+    tooltipDiv.transition()    
+                .duration(100)    
+                .style("opacity", .95); 
+
+    tooltipDiv.html("<b>" + d['Song Title'] +  "</b><br/>Date: " 
+     + (new Date(d.Year).toLocaleDateString()) + "<br/>Rank: #"  + d.Rank)  
+        .style("left", (d3.event.pageX + 7) + "px")   
+        .style("top", (d3.event.pageY - 37) + "px")
+        .style("display", "inline-block");  
+
+  }
+
+  handleMouseOut(d, i, nodes, data) {
+    d3.select(nodes[i])
+    .attr('r', (d) => {
+      return dotRadius;
+    });
+
+    this.resizeSongPoints(nodes, d['Song Title'], data, 1);
+    d3.select("path.line").remove();
+
+    tooltipDiv.transition()    
+                .duration(300)    
+                .style("opacity", 0); 
+  }
+
+  resizeSongPoints(nodes, song, data, scaleFactor) {
+    var resizedData = []
+    for (var i = 0; i < data.length; i++) {
+      if (data[i]['Song Title'] === song) {
+        resizedData.push(data[i]);
+        d3.select(nodes[i])
+          .attr('r', (d) => {
+            return dotRadius * scaleFactor;
+          });
+      }
+    }
+    return resizedData;
+
+  }
+
+  connectSongPoints(songData) {
+    var line = d3.line()
+        .x(function(d, i) { return xScale(d.Year); }) 
+        .y(function(d) { return yScale(d.Rank); });
+
+    this.svg.append("path")
+      .datum(songData) 
+      .attr("class", "line")  
+      .attr("d", line)
+      .lower();
 
   }
 

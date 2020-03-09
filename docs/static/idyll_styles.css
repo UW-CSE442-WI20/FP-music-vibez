@@ -1238,4 +1238,26 @@ h2.dek {
 .idyll-scroll-graphic {
 	max-width: 45vw !important;
  	left: 300px !important;
+ 	z-index: 1 !important;
+}
+
+div.tooltip {	
+    position: absolute;			
+    display: flex;
+    flex-wrap: wrap;	
+    flex-direction: column;
+    justify-content: center;	
+    text-align: center;					
+    padding: 2px;				
+    font: 12px sans-serif;		
+    background: rgb(211,211,211);	
+    border: 0px;		
+    border-radius: 8px;			
+    pointer-events: none;			
+}
+
+.line {
+    fill: none;
+    stroke: #696969;
+    stroke-width: 3;
 }
