@@ -32,21 +32,22 @@ const allData = {
     {
       "album-name": "A Star Is Born",
       "release-date": "2018-10-05",
-      "worldwide-sales": 1148000
+      "worldwide-sales": 114800000
     }
   ]
 };
 
-const margin = { top: 30, right: 40, bottom: 20, left: 50 };
+const margin = { top: 30, right: 40, bottom: 20, left: 100 };
 const width = 600;
-const height = 500;
+const height = 300;
 
 var y;
 var x;
 
 class HorizontalBarChart extends D3Component {
   initialize(node, props) {
-    const data = this.getData("gaga", 4);
+    const { artist, to } = props;
+    const data = this.getData(artist, to + 1);
 
     this.svg = d3
       .select(node)
@@ -59,7 +60,7 @@ class HorizontalBarChart extends D3Component {
     // Y axis scale
     y = d3
       .scaleBand()
-      .range([height, 0])
+      .range([0, height])
       .padding(0.5)
       .domain(this.getAlbumNames(data));
 
@@ -89,12 +90,12 @@ class HorizontalBarChart extends D3Component {
     this.svg
       .append("g")
       .attr("class", "y-axis")
-      //.attr("transform", `translate(0,${height})`)
       .call(d3.axisLeft(y).ticks(data.length));
 
     // Append the x-axis
     this.svg
       .append("g")
+      .attr("class", "x-axis")
       .attr("transform", "translate(0," + height + ")")
       .call(d3.axisBottom(x));
 
@@ -102,26 +103,65 @@ class HorizontalBarChart extends D3Component {
   }
 
   update(props) {
-    console.log("update", props);
-    return;
     const { artist, to } = props;
     const data = this.getData(artist, to);
+    console.log("update", props, data);
 
-    yScale = d3.scaleOrdinal().range(this.getAlbumNames(data));
+    // Update the axis scales
+    y.range([0, height])
+      .padding(0.5)
+      .domain(this.getAlbumNames(data));
 
-    const x = d3
-      .scaleLinear()
-      .domain([0, d3.max(data, d => d.sales)])
-      .range([margin.left, width - margin.right]);
+    x.range([0, width]).domain([0, this.getMaxSales(data)]);
 
-    const y = d3
-      .scaleBand()
-      .domain(d3.range(data.length))
-      .range([margin.top, height - margin.bottom]);
+    this.svg
+      .select(".y-axis")
+      .transition()
+      .duration(500)
+      .call(d3.axisLeft(y).ticks(data.length));
 
-    this.svg.append("g").call(yAxis);
-    this.svg.append("g").call(xAxis);
+    this.svg
+      .select(".x-axis")
+      .call(d3.axisBottom(x))
+      .transition()
+      .duration(500);
 
+    this.svg
+      .selectAll(".bar")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("class", "bar");
+
+    this.svg
+      .selectAll(".bar")
+      .transition()
+      .duration(500)
+      .attr("height", y.bandwidth())
+      .attr("width", function(d) {
+        return x(d["worldwide-sales"]);
+      })
+      .attr("y", function(d) {
+        return y(d["album-name"]);
+      });
+
+    this.svg
+      .selectAll(".bar")
+      .data(data)
+      .exit()
+      .remove();
+
+    // Append the y-axis
+    this.svg
+      .append("g")
+      .attr("class", "y-axis")
+      .call(d3.axisLeft(y).ticks(data.length));
+
+    // Append the x-axis
+    this.svg
+      .append("g")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(x));
     return this.svg.node();
   }
 
