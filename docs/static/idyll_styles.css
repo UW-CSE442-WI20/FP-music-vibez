@@ -1167,7 +1167,7 @@ img {
   width: 12vw;
   height: 12vw;
   border: 5px solid;
-  transition: 100ms linear all;
+  transition: 100ms ease all;
   cursor: pointer;
 }
 
@@ -1175,10 +1175,28 @@ img {
   transform: scale(1.2);
 }
 
+.img-button:hover + .artist-name {
+  visibility: visible;
+}
+
 .flex-box {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
+}
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.artist-name {
+  visibility: hidden;
+  color: #FFF;
+  padding-top: 20px;
+  transition: 100ms ease all;
 }
 
 .article-header {

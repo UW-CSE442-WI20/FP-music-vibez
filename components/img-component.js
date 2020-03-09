@@ -11,8 +11,9 @@ class ImgComponent extends React.Component {
     const { hasError, idyll, updateProps, ...props } = this.props;
 
     return (
-      <div {...props}>
+      <div {...props} class="flex-col">
         <img src={this.props.iconicImage} alt="Artist" class="img-button" />
+        <h3 class="artist-name">{this.props.artistName}</h3>
       </div>
     );
   }
