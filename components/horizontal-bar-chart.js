@@ -52,47 +52,56 @@ const allData = {
     {
       "album-name": "The College Dropout",
       "release-date": "02/10/2004",
-      "worldwide-sales": "4000000"
+      "worldwide-sales": "4000000",
+      year: 2004
     },
     {
       "album-name": "Late Registration",
       "release-date": "08/30/2005",
-      "worldwide-sales": "3100000"
+      "worldwide-sales": "3100000",
+      year: 2005
     },
     {
       "album-name": "Graduation",
       "release-date": "09/11/2007",
-      "worldwide-sales": "2700000"
+      "worldwide-sales": "2700000",
+      year: 2007
     },
     {
       "album-name": "808s & Heartbreaks",
       "release-date": "11/24/2008",
-      "worldwide-sales": "1700000"
+      "worldwide-sales": "1700000",
+      year: 2008
     },
     {
       "album-name": "My Beautiful Dark Twisted Fantasy",
       "release-date": "11/22/2010",
-      "worldwide-sales": "2000000"
+      "worldwide-sales": "2000000",
+      year: 2010
     },
     {
       "album-name": "Yeezus",
       "release-date": "06/18/2013",
-      "worldwide-sales":"1000000"
+      "worldwide-sales": "1000000",
+      year: 2013
     },
     {
       "album-name": "The Life Of Pablo",
       "release-date": "02/14/2016",
-      "worldwide-sales":"2000000"
+      "worldwide-sales": "2000000",
+      year: 2016
     },
     {
       "album-name": "Ye",
       "release-date": "06/01/2018",
-      "worldwide-sales": "500000"
+      "worldwide-sales": "500000",
+      year: 2018
     },
     {
       "album-name": "Jesus Is King",
       "release-date": "10/25/2019",
-      "worldwide-sales": "300000"
+      "worldwide-sales": "300000",
+      year: 2019
     }
   ]
 };
