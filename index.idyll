@@ -57,7 +57,7 @@
         [Scroller currentStep:gagaCurStep]
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga" /]
-                [HorizontalBarChart artist:artist to:gagaCurStep/]
+                [HorizontalBarChart artist:artist step:gagaCurStep years:gagaYears/]
             [/Graphic]
 
             [Step ]
