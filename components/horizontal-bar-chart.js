@@ -239,7 +239,7 @@ class HorizontalBarChart extends D3Component {
     }
     let res = [];
     for (let i = 0; i < allData[artist].length; i++) {
-      if (allData[artist][i]["year"] >= years[step]) {
+      if (allData[artist][i]["year"] <= years[step]) {
         res.push(allData[artist][i]);
       }
     }
