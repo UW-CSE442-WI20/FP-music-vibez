@@ -1232,20 +1232,41 @@ h2.dek {
 
 .album {
   width: 20vw;
-  height: 40vh;
+  max-width: 20vw;
+  height: 35vh;
+  max-height: 35vh;
   border: 5px solid;
 }
 
-.container-content {
-  float: left;
-  margin-left: -7vw;
-  margin-top: 10vw;
-}
 .date-class {
-  color: var(--black);
-  margin-left: 10vw;
-  text-align: left;
+  margin-left: 8vw;
+  text-align: center;
+  font-style: italic;
+  max-width: 21vw;
+  margin-top: 0px;
+  border-radius: 25px;
+}
+
+.desc-class {
+  margin-left: 8vw;
+  text-align: center;
   font-weight: bold;
+  max-width: 21vw;
+  margin-bottom: 0px;
+  border-radius: 25px;
+}
+
+.content-class {
+  margin-left: 8vw;
+  text-align: center;
+  max-width: 21vw;
+  margin-bottom: 0px;
+  border-radius: 25px;
+}
+
+.playlist-class {
+  margin-top: 1vw;
+  margin-left: 8vw;
 }
 
 .year-class {
@@ -1257,17 +1278,6 @@ h2.dek {
   line-height: 10vh;
   font-weight: bold;
   border: 5px solid var(--black);
-}
-
-.content-class {
-  margin-left: 7vw;
-  max-width: 22vw;
-  text-align: center;
-}
-
-.playlist-class {
-  margin-top: 1vw;
-  margin-left: 8vw;
 }
 
 #landing-page {
@@ -1313,10 +1323,6 @@ h2.dek {
 
 .idyll-scroll-graphic {
 	max-width: 45vw !important;
-<<<<<<< HEAD
- 	left: 25vw !important;
-}
-=======
  	left: 300px !important;
  	z-index: 1 !important;
 }
@@ -1341,4 +1347,3 @@ div.tooltip {
     stroke: #696969;
     stroke-width: 3;
 }
->>>>>>> 30d1f2be2497c5fbe5e010aa39f5183bca4d2a1f

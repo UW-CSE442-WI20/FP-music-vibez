@@ -1,6 +1,6 @@
 const React = require("react");
 
-class DateComponent extends React.PureComponent {
+class DescComponent extends React.PureComponent {
   constructor(props) {
     super(props);
   }
@@ -10,10 +10,10 @@ class DateComponent extends React.PureComponent {
 
     return (
       <div {...props}>
-        <h5> Released {this.props.date} </h5>
+        <h3> {this.props.desc} </h3>
       </div>
     );
   }
 }
 
-module.exports = DateComponent;
+module.exports = DescComponent;
