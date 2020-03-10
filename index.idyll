@@ -479,11 +479,6 @@
         [/Graphic]
 
         [Step]
-            [YearComponent className:"year-class michael-bg-theme" year:"1958" /]
-            [ContentComponent className:"content-class michael-bg-theme" desc:"born August 29, 1958" /]
-        [/Step]
-
-        [Step]
             [YearComponent className:"year-class michael-bg-theme" year:"1972" /]
             [DescComponent className:"desc-class michael-bg-theme" desc:"Got To Be There" /]
             [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/got-to-be-there.jpg"/]
