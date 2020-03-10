@@ -76,7 +76,7 @@
 
             [Step]
             ### 2011
-            
+
             [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
 
             [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
@@ -290,7 +290,7 @@
             [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
             [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
             [/Step]
-            
+
             [Step]
             ## 1966
             [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
@@ -328,7 +328,50 @@
 
                 [Step]
                 ##Kanye West
+                ### 2004
+                [img src:"static/images/kanye-west/the-college-dropout.jpg" style:`{width: 400}` /]
                 [/Step]
+
+                [Step]
+                ### 2005
+                [img src:"static/images/kanye-west/late-registration.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2007
+                [img src:"static/images/kanye-west/graduation.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2008
+                [img src:"static/images/kanye-west/808s-and-heartbreak.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2010
+                [img src:"static/images/kanye-west/my-beautiful-dark-twisted-fantasy.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2013
+                [img src:"static/images/kanye-west/yeezus.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2016
+                [img src:"static/images/kanye-west/the-life-of-pablo.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2018
+                [img src:"static/images/kanye-west/ye.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2019
+                [img src:"static/images/kanye-west/jesus-is-king.jpg" style:`{width: 400}` /]
+                [/Step]
+                
             [/Scroller]
       [/Case]
       [Case test:"michael"]
@@ -423,4 +466,3 @@
       [/Case]
       [Default][/Default]
 [/Switch]
-
