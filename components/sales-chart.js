@@ -12,8 +12,10 @@ var dotRadius = 2;
 var dotColor = "#696969";
 
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
-const width = 600 - margin.left - margin.right;
-const height = 500 - margin.top - margin.bottom;
+const width = 800 - margin.left - margin.right;
+const height = 300 - margin.top - margin.bottom;
+
+var dataToNodeMap = new Map();
 
 class SalesChart extends D3Component {
 
@@ -203,7 +205,7 @@ class SalesChart extends D3Component {
 
   resizeSongPoints(nodes, song, data, scaleFactor) {
     var resizedData = []
-    for (var i = 0; i < data.length; i++) {
+    /*for (var i = 0; i < data.length; i++) {
       if (data[i]['Song Title'] === song) {
         resizedData.push(data[i]);
         d3.select(nodes[i])
@@ -211,7 +213,17 @@ class SalesChart extends D3Component {
             return dotRadius * scaleFactor;
           });
       }
-    }
+    }*/
+
+    this.svg.selectAll('circle').style("r", function(d) {
+      var dIsInSubset = d['Song Title'] === song;
+      if(dIsInSubset) {
+        resizedData.push(d);
+        return dotRadius * scaleFactor;
+      } else {
+        return dotRadius;
+      }
+    })
     return resizedData;
 
   }

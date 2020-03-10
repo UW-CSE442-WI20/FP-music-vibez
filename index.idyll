@@ -302,7 +302,7 @@
             [img src:"static/images/beatles/Help!.jpg" style:`{width: 400}` /]
             [img src:"static/images/beatles/RubberSoul.jpg" style:`{width: 400}` /]
             [/Step]
-            
+
             [Step]
             ## 1966
             [img src:"static/images/beatles/Revolver.jpg" style:`{width: 400}` /]
@@ -340,23 +340,64 @@
 
                 [Step]
                 ##Kanye West
+                ### 2004
+                [img src:"static/images/kanye-west/the-college-dropout.jpg" style:`{width: 400}` /]
                 [/Step]
+
+                [Step]
+                ### 2005
+                [img src:"static/images/kanye-west/late-registration.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2007
+                [img src:"static/images/kanye-west/graduation.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2008
+                [img src:"static/images/kanye-west/808s-and-heartbreak.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2010
+                [img src:"static/images/kanye-west/my-beautiful-dark-twisted-fantasy.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2013
+                [img src:"static/images/kanye-west/yeezus.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2016
+                [img src:"static/images/kanye-west/the-life-of-pablo.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2018
+                [img src:"static/images/kanye-west/ye.jpg" style:`{width: 400}` /]
+                [/Step]
+
+                [Step]
+                ### 2019
+                [img src:"static/images/kanye-west/jesus-is-king.jpg" style:`{width: 400}` /]
+                [/Step]
+                
             [/Scroller]
       [/Case]
       [Case test:"michael"]
-            [var name:"michaelYears" value:`["08/29/1958", "01/01/1972", "01/01/1973", "01/01/1975", "01/01/1979", "01/01/1982", "01/01/1983", "01/01/1987", "01/01/1991", "01/01/1995", "01/01/2001", "01/01/2009", "01/01/2010", "01/01/2014"]` /]
+            [var name:"michaelDates" value:`["10/07/1971", "04/13/1973", "01/16/1975", "08/10/1979", "11/30/1982", "03/25/1983", "09/01/1987", "10/26/1991", "06/20/1995", "10/30/2001", "06/25/2009", "12/10/2010", "05/09/2014"]` /]
+            [var name:"michaelYears" value:`["1972", "1973", "1975", "1979", "1982", "1983", "1987", "1991", "1995", "2001", "2009", "2010", "2014"]` /]
+
             [var name:"michaelCurStep" value:0 /]
             [Scroller currentStep:michaelCurStep]
 
                 [Graphic]
-                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelYears.slice(0, michaelCurStep + 2)` name:"Michael Jackson" /]
+                    [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelDates.slice(0, michaelCurStep + 2)` name:"Michael Jackson" /]
 
                 [/Graphic]
 
-                [Step]
-                    ##Michael Jackson
-                    ## born August 29, 1958
-                [/Step]
 
                 [Step]
                     ## 1972
@@ -437,4 +478,3 @@
       [/Case]
       [Default][/Default]
 [/Switch]
-
