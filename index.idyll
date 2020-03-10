@@ -52,135 +52,205 @@
         ##Lady Gaga
         [Scroller currentStep:currStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" /]
+                [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv"/]
+                [HorizontalBarChart artist:artist to:currStep/]
             [/Graphic]
 
             [Step ]
-            [YearComponent className:"year-class gaga-bg-theme" year:"2008" /]
-            [AlbumComponent className:"gaga-theme" artistName:Lady-Gaga albumArt:"static/images/lady-gaga/the-fame.jpg"/]
-            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/58WSd6SDPOcbnnJ2tq0Ph8" /]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2008" /]
+                [AlbumComponent className:"gaga-theme" artistName:Lady-Gaga albumArt:"static/images/lady-gaga/the-fame.jpg"/]
+                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/58WSd6SDPOcbnnJ2tq0Ph8" /]
             [/Step]
 
             [Step]
-            [YearComponent className:"year-class gaga-bg-theme" year:"2009" /]
-            [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2009" /]
+                [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            [YearComponent className:"year-class gaga-bg-theme" year:"2010" /]
-            [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2010" /]
+                [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            [YearComponent className:"year-class gaga-bg-theme" year:"2011" /]
-            
-            [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
-
-            [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
+            [   YearComponent className:"year-class gaga-bg-theme" year:"2011" /]
+                [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
+                [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
             [/Step]
 
-            [Step]
             [YearComponent className:"year-class gaga-bg-theme" year:"2012" /]
 
-            [YearComponent className:"year-class gaga-bg-theme" year:"2013" /]
-
-            [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
+            [Step]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2013" /]
+                [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            [YearComponent className:"year-class gaga-bg-theme" year:"2014" /]
-
-            [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2014" /]
+                [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
+            [/Step]
 
             [YearComponent className:"year-class gaga-bg-theme" year:"2015" /]
 
-            [YearComponent className:"year-class gaga-bg-theme" year:"2016" /]
-
-            [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
+            [Step]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2016" /]
+                [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
+            [/Step]
 
             [YearComponent className:"year-class gaga-bg-theme" year:"2017" /]
 
             [YearComponent className:"year-class gaga-bg-theme" year:"2018" /]
 
-            [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
+            [Step]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2019" /]
+                [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
+            [/Step]
 
-            [YearComponent className:"year-class gaga-bg-theme" year:"2019" /]
-
-            [YearComponent className:"year-class gaga-bg-theme" year:"2020" /]
-
-            [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
+            [Step]
+                [YearComponent className:"year-class gaga-bg-theme" year:"2020" /]
+                [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
             [/Step]
         [/Scroller]
     [/Case]
-    [Case test:"queen"]
+     [Case test:"queen"]
         ##Queen
-        [Scroller currentStep:currStep]
+        [var name:"queenYears" value:`["01/01/1970", "01/01/1971", "01/01/1972", "01/01/1973", "01/01/1974", "01/01/1975", "01/01/1976", "01/01/1977", "01/01/1978", "01/01/1979", "01/01/1980", "01/01/1981", "01/01/1982", "01/01/1983", "01/01/1984", "01/01/1985", "01/01/1986", "01/01/1987", "01/01/1988", "01/01/1989", "01/01/1990", "01/01/1991", "01/01/1992", "01/01/1993", "01/01/1994", "01/01/1995"]` /]
+        [var name:"queenCurStep" value:0 /]
+        [Scroller currentStep:queenCurStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" /]
+                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
 
             [/Graphic]
+            [Step]
+            ##1970
+            ##The band formed
+            [img src:"static/images/Queen/Queen-logo.png" style:`{width: 400}` /]
+            [/Step]
 
-            [Step ]
+            [Step]
+            ##1971
+            ##John Deacon joined the band
+            ##The band recorded their first songs
+            [img src:"static/images/Queen/Queen_1971.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ##1972
+            ##The band formed
+            [img src:"static/images/Queen/Queen-logo.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             [YearComponent className:"year-class queen-bg-theme" year:"1973" /]
             [img src:"static/images/Queen/Queen.png" style:`{width: 400}` /]
             [/Step]
 
-            [Step ]
+            [Step]
             ### 1974
             [img src:"static/images/Queen/Queen_II.jpg" style:`{width: 400}` /]
 
             [img src:"static/images/Queen/Sheer_Heart_Attack.png" style:`{width: 400}` /]
             [/Step]
 
-            [Step ]
-
+            [Step]
             ### 1975
             [img src:"static/images/Queen/A_Night_At_The_Opera.png" style:`{width: 400}` /]
             [/Step]
 
-            [Step ]
-
+            [Step]
             ### 1976
             [img src:"static/images/Queen/A_Day_at_the_Races.jpg" style:`{width: 400}` /]
             [/Step]
 
-            [Step ]
-
+            [Step]
             ### 1977
             [img src:"static/images/Queen/News_Of_The_World.png" style:`{width: 400}` /]
             [/Step]
 
-            [Step ]
-
+            [Step]
             ### 1978
             [img src:"static/images/Queen/Jazz.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1979
+            [/Step]
+
+            [Step]
             ### 1980
             [img src:"static/images/Queen/The_Game.png" style:`{width: 400}` /]
 
             [img src:"static/images/Queen/Flash_Gordon.png" style:`{width: 400}` /]
             [/Step]
-            [Step ]
 
+            [Step]
             ### 1981
+            [/Step]
+
+            [Step]
             ### 1982
             [img src:"static/images/Queen/Hot_Space.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1983
+            [/Step]
+
+            [Step]
             ### 1984
             [img src:"static/images/Queen/The_Works.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1985
+            ## Performed at Live aid in front of the biggest-ever TV audience
+            [img src:"static/images/Queen/Queen_live_aid.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1986
             [img src:"static/images/Queen/A_Kind_Of_Magic.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1987
+            ### Mercury was diagnosed as HIV positive
+            [/Step]
+
+            [Step]
             ### 1988
+            [/Step]
+
+            [Step]
             ### 1989
             [img src:"static/images/Queen/The_Miracle.png" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
             ### 1990
+            [/Step]
+
+            [Step]
             ### 1991
             [img src:"static/images/Queen/Innuendo.png" style:`{width: 400}` /]
+
+            ### On 23 November 1991, in a prepared statement made on his deathbed, Mercury confirmed that he had AIDS
+            ### Within 24 hours of the statement, he died of bronchial pneumonia, which was brought on as a complication of AIDS
+            [/Step]
+
+            [Step]
             ### 1992
+            [/Step]
+
+            [Step]
             ### 1993
+            [/Step]
+
+            [Step]
             ### 1994
+            [/Step]
+
+            [Step]
             ### 1995
             [img src:"static/images/Queen/Madeinheaven.jpg" style:`{width: 400}` /]
             [/Step]
@@ -242,7 +312,7 @@
                 [AlbumComponent className:"beatles-theme" artistName:The-Beatles albumArt:"static/images/beatles/RubberSoul.jpg" /]
                 [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/50o7kf2wLwVmOTVYJOTplm" /]
             [/Step]
-            
+
             [Step]
                 [YearComponent className:"year-class beatles-bg-theme" year:"1966" /]
                 [DateComponent className:"date-class" date:"August 5, 1966" /]
@@ -285,9 +355,8 @@
                 [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/0jTGHV5xqHPvEcwL8f6YU5" /]
             [/Step]
         [/Scroller]
-    [/Case]
-    [Case test:"kanye"]
-        ##Kanye West
+      [/Case]
+      [Case test:"kanye"]
         [Scroller currentStep:currStep]
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/kanye-west-weekly-charts.csv" /]
@@ -295,114 +364,158 @@
             [/Graphic]
 
             [Step]
-            [YearComponent className:"year-class kanye-bg-theme" year:"2004" /]
+            ##Kanye West
+            ### 2004
+            [img src:"static/images/kanye-west/the-college-dropout.jpg" style:`{width: 400}` /]
             [/Step]
+
+            [Step]
+            ### 2005
+            [img src:"static/images/kanye-west/late-registration.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 2007
+            [img src:"static/images/kanye-west/graduation.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 2008
+            [img src:"static/images/kanye-west/808s-and-heartbreak.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 2010
+            [img src:"static/images/kanye-west/my-beautiful-dark-twisted-fantasy.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 2013
+            [img src:"static/images/kanye-west/yeezus.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 2016
+            [img src:"static/images/kanye-west/the-life-of-pablo.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 2018
+            [img src:"static/images/kanye-west/ye.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+            ### 2019
+            [img src:"static/images/kanye-west/jesus-is-king.jpg" style:`{width: 400}` /]
+            [/Step]
+            
         [/Scroller]
     [/Case]
     [Case test:"michael"]
-        ##Michael Jackson
-        [var name:"years" value:`["08/29/1958", "01/01/1972", "01/01/1973", "01/01/1975", "01/01/1979", "01/01/1982", "01/01/1983", "01/01/1987", "01/01/1991", "01/01/1995", "01/01/2001", "01/01/2009", "01/01/2010", "01/01/2014"]` /]
-        [var name:"curStep" value:0 /]
-        [Scroller currentStep:curStep]
-            [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`years.slice(0, curStep + 2)` /]
-            [/Graphic]
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1958" /]
-                [ContentComponent className:"content-class michael-bg-theme" desc:"born August 29, 1958" /]
-            [/Step]
+        [var name:"michaelDates" value:`["10/07/1971", "04/13/1973", "01/16/1975", "08/10/1979", "11/30/1982", "03/25/1983", "09/01/1987", "10/26/1991", "06/20/1995", "10/30/2001", "06/25/2009", "12/10/2010", "05/09/2014"]` /]
+        [var name:"michaelYears" value:`["1972", "1973", "1975", "1979", "1982", "1983", "1987", "1991", "1995", "2001", "2009", "2010", "2014"]` /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1972" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/got-to-be-there.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/5cKwhK6ChXbJE77TKnOx30" /]
+        [var name:"michaelCurStep" value:0 /]
+        [Scroller currentStep:michaelCurStep]
 
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/ben.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/3xo2soey9XEBI5DlmT4KlQ" /]
-            [/Step]
+        [Graphic]
+                [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelDates.slice(0, michaelCurStep + 2)` name:"Michael Jackson" /]
+        [/Graphic]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1973" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/music-and-me.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/19vhLDr0Fw8Lja1I8xVV09" /]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1958" /]
+            [ContentComponent className:"content-class michael-bg-theme" desc:"born August 29, 1958" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1972" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/got-to-be-there.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/5cKwhK6ChXbJE77TKnOx30" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1975" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/forever-michael.jpeg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/6leeBdAohG7zhybC3Cmu8W" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/ben.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/3xo2soey9XEBI5DlmT4KlQ" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1973" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/music-and-me.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/19vhLDr0Fw8Lja1I8xVV09" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1979" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/off-the-wall.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/2ZytN2cY4Zjrr9ukb2rqTP" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1975" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/forever-michael.jpeg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/6leeBdAohG7zhybC3Cmu8W" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1982" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/thriller.png"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/2X8UOIkZQdcz2Hi5Ynt2uk" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1979" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/off-the-wall.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/2ZytN2cY4Zjrr9ukb2rqTP" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1983" /]
-                [ContentComponent className:"content-class michael-bg-theme" desc:"First Moonwalk" /]
-            [/Step]
+        [/Step]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1987" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/bad.png"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/24TAupSNVWSAHL0R7n71vm" /]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1982" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/thriller.png"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/2X8UOIkZQdcz2Hi5Ynt2uk" /]
 
-            [/Step]
+        [/Step]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1991" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/dangerous.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/0oX4SealMgNXrvRDhqqOKg" /]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1983" /]
+            [ContentComponent className:"content-class michael-bg-theme" desc:"First Moonwalk" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1987" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/bad.png"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/24TAupSNVWSAHL0R7n71vm" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"1995" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/HIStory.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/3OBhnTLrvkoEEETjFA3Qfk" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1991" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/dangerous.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/0oX4SealMgNXrvRDhqqOKg" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"2001" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/invincible.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/52E4RP7XDzalpIrOgSTgiQ" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"1995" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/HIStory.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/3OBhnTLrvkoEEETjFA3Qfk" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"2009" /] 
-                [ContentComponent className:"content-class michael-bg-theme" desc:"died (age 50)" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"2001" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/invincible.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/52E4RP7XDzalpIrOgSTgiQ" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"2010" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/michael.jpg"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/0yYWeLqonFk11pmb0RiMbP" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"2009" /] 
+            [ContentComponent className:"content-class michael-bg-theme" desc:"died (age 50)" /]
 
-            [Step]
-                [YearComponent className:"year-class michael-bg-theme" year:"2014" /]
-                [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/xscape.png"/]
-                [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/7pomP86PUhoJpY3fsC0WDQ" /]
+        [/Step]
 
-            [/Step]
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"2010" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/michael.jpg"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/0yYWeLqonFk11pmb0RiMbP" /]
+
+        [/Step]
+
+        [Step]
+            [YearComponent className:"year-class michael-bg-theme" year:"2014" /]
+            [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/xscape.png"/]
+            [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/7pomP86PUhoJpY3fsC0WDQ" /]
+        [/Step]
         [/Scroller]
     [/Case]
     [Default][/Default]
 [/Switch]
-

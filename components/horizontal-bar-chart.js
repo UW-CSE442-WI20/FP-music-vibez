@@ -32,82 +32,170 @@ const allData = {
     {
       "album-name": "A Star Is Born",
       "release-date": "2018-10-05",
-      "worldwide-sales": 1148000
+      "worldwide-sales": 114800000
     }
   ]
 };
 
-class HorizontalBarChart extends D3Component {
-  getData(artist, to) {
-    console.log("getData called with", artist, to);
-    if (!(artist in allData)) {
-      return [];
-    }
-    return allData[artist].slice(0, to);
-  }
+const margin = { top: 30, right: 40, bottom: 20, left: 100 };
+const width = 600;
+const height = 300;
 
+var yScale;
+var xScale;
+
+class HorizontalBarChart extends D3Component {
   initialize(node, props) {
+    const { artist, to } = props;
+    const data = this.getData(artist, to + 1);
+
     this.svg = d3
       .select(node)
       .append("svg")
-      .attr("font-family", "sans-serif");
+      .attr("width", width + margin.left + margin.right)
+      .attr("height", height + margin.top + margin.bottom)
+      .append("g")
+      .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+    // Y axis scale
+    yScale = d3
+      .scaleBand()
+      .range([0, height])
+      .padding(0.5)
+      .domain(this.getAlbumNames(data));
+
+    // X axis scale
+    xScale = d3
+      .scaleLinear()
+      .range([0, width])
+      .domain([0, this.getMaxSales(data)]);
+
+    // add bars
+
+    this.svg
+      .selectAll(".bar")
+      .data(data)
+      .enter()
+      .append("rect")
+      .attr("class", "bar")
+      .attr("width", function(d) {
+        return xScale(d["worldwide-sales"]);
+      })
+      .attr("y", function(d) {
+        return yScale(d["album-name"]);
+      })
+      .attr("height", yScale.bandwidth());
+
+    // Append the y-axis
+    this.svg
+      .append("g")
+      .attr("class", "y-axis")
+      .call(d3.axisLeft(yScale).ticks(data.length));
+
+    // Append the x-axis
+    this.svg
+      .append("g")
+      .attr("class", "x-axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(d3.axisBottom(xScale));
+
     return this.svg.node();
   }
 
   update(props) {
-    console.log("update", props);
     const { artist, to } = props;
-    if (artist === "start") {
-      return this.svg.node();
-    }
     const data = this.getData(artist, to);
-    const margin = { top: 30, right: 40, bottom: 10, left: 50 };
-    const barHeight = 25;
-    const width = 600;
-    const height =
-      Math.ceil((data.length + 0.1) * barHeight) + margin.top + margin.bottom;
+    console.log("update", props, data);
 
-    const yAxis = g =>
-      g.attr("transform", `translate(${margin.left},0)`).call(
-        d3
-          .axisLeft(y)
-          .tickFormat(i => data[i].name)
-          .tickSizeOuter(0)
-      );
+    // update yScale, yAxis
+    yScale = d3
+          .scaleBand()
+          .range([0, height])
+          .padding(0.5)
+          .domain(this.getAlbumNames(data));
+    var yAxis = d3.axisLeft(yScale).ticks(data.length);
+    this.svg
+      .select(".y-axis")
+      .transition()
+      .duration(500)
+      .call(yAxis);
 
-    const xAxis = g =>
-      g
-        .attr("transform", `translate(0,${margin.top})`)
-        .call(d3.axisTop(x).ticks(width / 80))
-        .call(g => g.select(".domain").remove());
+    // update xScale, xAxis
+    xScale = d3.scaleLinear()
+          .domain([0, this.getMaxSales(data)])
+          .range([ 0, width ]);
+    var xAxis = d3.axisBottom(xScale);
+    this.svg
+      .select(".x-axis")
+      .transition()
+      .duration(500)
+      .call(xAxis);
 
-    const x = d3
-      .scaleLinear()
-      .domain([0, d3.max(data, d => d.sales)])
-      .range([margin.left, width - margin.right]);
-
-    const y = d3
-      .scaleBand()
-      .domain(d3.range(data.length))
-      .range([margin.top, height - margin.bottom]);
-
-    const bar = this.svg
-      .selectAll("g")
+    this.svg
+      .selectAll(".bar")
       .data(data)
-      .join("g")
-      .attr("transform", (d, i) => `translate(0,${y(i)})`);
-
-    bar
+      .enter()
       .append("rect")
-      .attr("fill", "black")
-      .attr("x", x(0))
-      .attr("width", d => x(d.sales) - x(0))
-      .attr("height", y.bandwidth() - 1);
+      .attr("class", "bar");
 
-    this.svg.append("g").call(yAxis);
-    this.svg.append("g").call(xAxis);
+    this.svg
+      .selectAll(".bar")
+      .transition()
+      .duration(500)
+      .attr("height", yScale.bandwidth())
+      .attr("width", function(d) {
+        return xScale(d["worldwide-sales"]);
+      })
+      .attr("y", function(d) {
+        return yScale(d["album-name"]);
+      });
+
+    this.svg
+      .selectAll(".bar")
+      .data(data)
+      .exit()
+      .remove();
 
     return this.svg.node();
+  }
+
+  // Utilities
+
+  // Returns a json object with the data for the seleted artist
+  // up to but not including the ith entry
+  getData(artist, i) {
+    console.log("getData called with", artist, i);
+    if (!(artist in allData)) {
+      return [];
+    }
+    return allData[artist].slice(0, i);
+  }
+
+  // Returns the maximum sales for the given data
+  getMaxSales(data) {
+    return Math.max(...this.getSales(data));
+  }
+
+  // Returns a list of album names from the data
+  // Preserves the ordering
+  getAlbumNames(data) {
+    return this.extractData(data, "album-name");
+  }
+
+  // Returns a list of worldwide-sales from the data
+  // Preserves the ordering of the original data
+  getSales(data) {
+    return this.extractData(data, "worldwide-sales");
+  }
+
+  // Returns a list of the given attribute from a json dictionary
+  extractData(data, key) {
+    let res = [];
+    for (let i = 0; i < data.length; i++) {
+      res.push(data[i][key]);
+    }
+    console.log("extractData(" + key + ")", data, res);
+    return res;
   }
 }
 
