@@ -50,68 +50,82 @@
 [Switch value:artist]
     [Case test:"gaga"]
         [Scroller currentStep:currStep]
+            [var name:"gagaAlbums" value:`["The Fame",   "The Fame Monster", "The Remix",  "Born this Way", "Born This Way: The Remix", "A Very Gaga Holiday", "ARTPOP",     "Cheek to Cheek", "Joanne",     "A Star Is Born", "Chromatica"]`/]
+            [var name:"gagaDates" value:`[ "10/28/2008", "18/11/2009",       "03/03/2010", "05/23/2011",    "11/18/2011",               "11/22/2011",          "11/11/2013", "09/23/2014",     "10/21/2016", "10/5/2018",      "04/10/2020"]`/]
+            [var name:"gagaYears" value:`[ "2008",       "2009",             "2010",       "2011",          "2011",                     "2011",                "2013",       "2014",           "2016",       "2018",           "2020"]`/]
             [Graphic]
+                [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaYears.slice(0, currStep + 2)` name:"Lady Gaga" /]
                 [HorizontalBarChart artist:artist to:currStep/]
             [/Graphic]
 
-            [Step ]
-            ##Lady Gaga
-
-            ### 2008
-
-            [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
+            [Step]
+                ##Lady Gaga
+                ### 2008
+                [img src:"static/images/lady-gaga/the-fame.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            ### 2009
-            [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
+                ### 2009
+                [img src:"static/images/lady-gaga/the-fame-monster.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            ### 2010
-            [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
+                ### 2010
+                [img src:"static/images/lady-gaga/the-remix.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            ### 2011
-            
-            [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
-
-            [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
+                ### 2011
+                [img src:"static/images/lady-gaga/born-this-way.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            ### 2012
-
-            ### 2013
-
-            [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
+                [img src:"static/images/lady-gaga/born-this-way-remix.jpg" style:`{width: 400}` /]
             [/Step]
 
             [Step]
-            ### 2014
-
-            [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
-
-            ### 2015
+                [img src:"static/images/lady-gaga/a-very-gaga-holiday.jpg" style:`{width: 400}` /]
+            [/Step]
 
             [Step]
-            ### 2016
+                ### 2012
+            [/Step]
+
+            [Step]
+                ### 2013
+                [img src:"static/images/lady-gaga/artpop.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+                ### 2014
+                [img src:"static/images/lady-gaga/cheek-to-cheek.jpg" style:`{width: 400}` /]
+            [/Step]
+
+            [Step]
+                ### 2015
+            [/Step]
+
+            [Step]
+                ### 2016
                 [img src:"static/images/lady-gaga/joanne.jpg" style:`{width: 400}` /]
             [/Step]
 
-            ### 2017
-
-            ### 2018
+            [Step]
+                ### 2017
+            [/Step]
 
             [Step]
+                ### 2018
                 [img src:"static/images/lady-gaga/a-star-is-born.jpg" style:`{width: 400}` /]
             [/Step]
-            ### 2019
 
-            ### 2020
-
-            [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
+            [Step]
+                ### 2019
+            [/Step]
+            
+            [Step]
+                ### 2020
+                [img src:"static/images/lady-gaga/stupid-love.jpg" style:`{width: 400}` /]
             [/Step]
         [/Scroller]
     [/Case]
