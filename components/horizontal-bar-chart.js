@@ -46,6 +46,54 @@ const allData = {
       "worldwide-sales": 0,
       year: 2020
     }
+  ],
+
+  kanye: [
+    {
+      "album-name": "The College Dropout",
+      "release-date": "02/10/2004",
+      "worldwide-sales": "4000000"
+    },
+    {
+      "album-name": "Late Registration",
+      "release-date": "08/30/2005",
+      "worldwide-sales": "3100000"
+    },
+    {
+      "album-name": "Graduation",
+      "release-date": "09/11/2007",
+      "worldwide-sales": "2700000"
+    },
+    {
+      "album-name": "808s & Heartbreaks",
+      "release-date": "11/24/2008",
+      "worldwide-sales": "1700000"
+    },
+    {
+      "album-name": "My Beautiful Dark Twisted Fantasy",
+      "release-date": "11/22/2010",
+      "worldwide-sales": "2000000"
+    },
+    {
+      "album-name": "Yeezus",
+      "release-date": "06/18/2013",
+      "worldwide-sales":"1000000"
+    },
+    {
+      "album-name": "The Life Of Pablo",
+      "release-date": "02/14/2016",
+      "worldwide-sales":"2000000"
+    },
+    {
+      "album-name": "Ye",
+      "release-date": "06/01/2018",
+      "worldwide-sales": "500000"
+    },
+    {
+      "album-name": "Jesus Is King",
+      "release-date": "10/25/2019",
+      "worldwide-sales": "300000"
+    }
   ]
 };
 
