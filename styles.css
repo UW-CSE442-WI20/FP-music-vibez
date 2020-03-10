@@ -1,21 +1,55 @@
+:root {
+  --gaga: rgb(252, 132, 157);
+  --beatles: rgb(245, 185, 20);
+  --queen: rgb(99, 8, 134);
+  --kanye: rgb(40, 82, 133);
+  --michael: rgb(175, 2, 2);
+  --black: #262626;
+}
+
 .gaga-theme {
-  color: #fc849d;
+  color: var(--gaga);
 }
 
 .beatles-theme {
-  color: rgb(245, 185, 20);
+  color: var(--beatles);
 }
 
 .queen-theme {
-  color: rgb(99, 8, 134);
+  color: var(--queen);
 }
 
 .kanye-theme {
-  color: rgb(14, 14, 179);
+  color: var(--kanye);
 }
 
-.mj-theme {
-  color: rgb(175, 2, 2);
+.michael-theme {
+  color: var(--michael);
+}
+
+.gaga-bg-theme {
+  color: var(--black);
+  background-color: var(--gaga);
+}
+
+.beatles-bg-theme {
+  color: var(--black);
+  background-color: var(--beatles);
+}
+
+.queen-bg-theme {
+  color: white;
+  background-color: var(--queen);
+}
+
+.kanye-bg-theme {
+  color: white;
+  background-color: var(--kanye);
+}
+
+.michael-bg-theme {
+  color: white;
+  background-color: var(--michael);
 }
 
 .step {
@@ -42,7 +76,7 @@
 }
 
 .article-header {
-  background-color: black;
+  background-color: var(--black);
   text-align: center;
   padding-top: 20px;
   margin-top: 0px;
@@ -56,27 +90,68 @@ h2.dek {
   font-size: 3vw;
 }
 
+.album {
+  width: 20vw;
+  height: 40vh;
+  border: 5px solid;
+}
+
+.container-content {
+  float: left;
+  margin-left: -7vw;
+  margin-top: 10vw;
+}
+.date-class {
+  color: var(--black);
+  margin-left: 10vw;
+  text-align: left;
+  font-weight: bold;
+}
+
+.year-class {
+  text-align: center;
+  margin-left: 3vw;
+  width: 6vw;
+  height: 11vh;
+  border-radius: 50%;
+  line-height: 10vh;
+  font-weight: bold;
+  border: 5px solid var(--black);
+}
+
+.content-class {
+  margin-left: 7vw;
+  max-width: 22vw;
+  text-align: center;
+}
+
+.playlist-class {
+  margin-top: 1vw;
+  margin-left: 8vw;
+}
+
 #landing-page {
-  background-color: black;
+  background-color: var(--black);
   padding-bottom: 15vw;
   padding-left: 20px;
   padding-right: 20px;
 }
 
 #chart-test {
-  margin-left: 75vw;
+  margin-left: 70vw;
   background: transparent;  
   height: 10vh;
 }
 
 .idyll-step {
 	margin-top: 0px;
-	border-width: 0px
+  border-width: 0px;
 }
 
 .idyll-scroll {
   margin-top: 0; 
-  width: 100vw;
+  width: 75vw;
+  border-left: 6px solid var(--black);
 }
 
 .idyll-root {
@@ -90,12 +165,13 @@ h2.dek {
   max-width: 45vw;
   top: -210vh;
   position: relative;
-  padding: 4vw;
   border-style: none;
   box-shadow: none;
+  margin-left: -14vw;
+  background: transparent;
 }
 
 .idyll-scroll-graphic {
 	max-width: 45vw !important;
- 	left: 300px !important;
+ 	left: 25vw !important;
 }

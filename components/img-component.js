@@ -3,8 +3,6 @@ const React = require("react");
 class ImgComponent extends React.Component {
   constructor(props) {
     super(props);
-
-    //this.changePropsColor = this.changePropsColor.bind(this);
   }
 
   render() {
