@@ -51,7 +51,6 @@
     [Case test:"gaga"]
         [Scroller currentStep:currStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" /]
                 [HorizontalBarChart artist:artist to:currStep/]
             [/Graphic]
 

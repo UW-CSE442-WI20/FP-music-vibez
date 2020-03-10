@@ -41,8 +41,8 @@ const margin = { top: 30, right: 40, bottom: 20, left: 100 };
 const width = 600;
 const height = 300;
 
-var y;
-var x;
+var yScale;
+var xScale;
 
 class HorizontalBarChart extends D3Component {
   initialize(node, props) {
@@ -58,14 +58,14 @@ class HorizontalBarChart extends D3Component {
       .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
     // Y axis scale
-    y = d3
+    yScale = d3
       .scaleBand()
       .range([0, height])
       .padding(0.5)
       .domain(this.getAlbumNames(data));
 
     // X axis scale
-    x = d3
+    xScale = d3
       .scaleLinear()
       .range([0, width])
       .domain([0, this.getMaxSales(data)]);
@@ -79,25 +79,25 @@ class HorizontalBarChart extends D3Component {
       .append("rect")
       .attr("class", "bar")
       .attr("width", function(d) {
-        return x(d["worldwide-sales"]);
+        return xScale(d["worldwide-sales"]);
       })
       .attr("y", function(d) {
-        return y(d["album-name"]);
+        return yScale(d["album-name"]);
       })
-      .attr("height", y.bandwidth());
+      .attr("height", yScale.bandwidth());
 
     // Append the y-axis
     this.svg
       .append("g")
       .attr("class", "y-axis")
-      .call(d3.axisLeft(y).ticks(data.length));
+      .call(d3.axisLeft(yScale).ticks(data.length));
 
     // Append the x-axis
     this.svg
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
+      .call(d3.axisBottom(xScale));
 
     return this.svg.node();
   }
@@ -107,24 +107,29 @@ class HorizontalBarChart extends D3Component {
     const data = this.getData(artist, to);
     console.log("update", props, data);
 
-    // Update the axis scales
-    y.range([0, height])
-      .padding(0.5)
-      .domain(this.getAlbumNames(data));
-
-    x.range([0, width]).domain([0, this.getMaxSales(data)]);
-
+    // update yScale, yAxis
+    yScale = d3
+          .scaleBand()
+          .range([0, height])
+          .padding(0.5)
+          .domain(this.getAlbumNames(data));
+    var yAxis = d3.axisLeft(yScale).ticks(data.length);
     this.svg
       .select(".y-axis")
       .transition()
       .duration(500)
-      .call(d3.axisLeft(y).ticks(data.length));
+      .call(yAxis);
 
+    // update xScale, xAxis
+    xScale = d3.scaleLinear()
+          .domain([0, this.getMaxSales(data)])
+          .range([ 0, width ]);
+    var xAxis = d3.axisBottom(xScale);
     this.svg
       .select(".x-axis")
-      .call(d3.axisBottom(x))
       .transition()
-      .duration(500);
+      .duration(500)
+      .call(xAxis);
 
     this.svg
       .selectAll(".bar")
@@ -137,12 +142,12 @@ class HorizontalBarChart extends D3Component {
       .selectAll(".bar")
       .transition()
       .duration(500)
-      .attr("height", y.bandwidth())
+      .attr("height", yScale.bandwidth())
       .attr("width", function(d) {
-        return x(d["worldwide-sales"]);
+        return xScale(d["worldwide-sales"]);
       })
       .attr("y", function(d) {
-        return y(d["album-name"]);
+        return yScale(d["album-name"]);
       });
 
     this.svg
@@ -151,17 +156,6 @@ class HorizontalBarChart extends D3Component {
       .exit()
       .remove();
 
-    // Append the y-axis
-    this.svg
-      .append("g")
-      .attr("class", "y-axis")
-      .call(d3.axisLeft(y).ticks(data.length));
-
-    // Append the x-axis
-    this.svg
-      .append("g")
-      .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(x));
     return this.svg.node();
   }
 
