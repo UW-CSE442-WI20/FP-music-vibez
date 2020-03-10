@@ -6,33 +6,38 @@ const allData = {
   gaga: [
     {
       "album-name": "The Fame",
-      "release-date": "2008-10-28",
+      "release-date": "10/28/2008",
       "worldwide-sales": 15000000
     },
     {
       "album-name": "Born This Way",
-      "release-date": "2011-05-18",
+      "release-date": "05/23/2011",
       "worldwide-sales": 6000000
     },
     {
       "album-name": "ARTPOP",
-      "release-date": "2013-11-11",
+      "release-date": "11/11/2013",
       "worldwide-sales": 2500000
     },
     {
       "album-name": "Cheek to Cheek",
-      "release-date": "2014-09-23",
+      "release-date": "09/23/2014",
       "worldwide-sales": 1000000
     },
     {
       "album-name": "Joanne",
-      "release-date": "2016-10-21",
+      "release-date": "10/21/2016",
       "worldwide-sales": 1000000
     },
     {
       "album-name": "A Star Is Born",
-      "release-date": "2018-10-05",
+      "release-date": "10/5/2018",
       "worldwide-sales": 114800000
+    },
+    {
+      "album-name": "Chromatica",
+      "release-date": "04/10/2020",
+      "worldwide-sales": 0
     }
   ]
 };
@@ -109,10 +114,10 @@ class HorizontalBarChart extends D3Component {
 
     // update yScale, yAxis
     yScale = d3
-          .scaleBand()
-          .range([0, height])
-          .padding(0.5)
-          .domain(this.getAlbumNames(data));
+      .scaleBand()
+      .range([0, height])
+      .padding(0.5)
+      .domain(this.getAlbumNames(data));
     var yAxis = d3.axisLeft(yScale).ticks(data.length);
     this.svg
       .select(".y-axis")
@@ -121,9 +126,10 @@ class HorizontalBarChart extends D3Component {
       .call(yAxis);
 
     // update xScale, xAxis
-    xScale = d3.scaleLinear()
-          .domain([0, this.getMaxSales(data)])
-          .range([ 0, width ]);
+    xScale = d3
+      .scaleLinear()
+      .domain([0, this.getMaxSales(data)])
+      .range([0, width]);
     var xAxis = d3.axisBottom(xScale);
     this.svg
       .select(".x-axis")
