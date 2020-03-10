@@ -25,14 +25,9 @@ class SalesChart extends D3Component {
         return response.text();
       }).then((text) => {
         var data = d3.csvParse(text);
-        /*data.forEach(function(d) {
-          d.Year = Date.parse(d.Year);
-        });*/
 
         var filterStart = Date.parse(props.years[0]);
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
-        console.log("start ", props.years[0]);
-        console.log("end ", props.years[props.years.length - 1]);
         var filteredData = [];
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
@@ -40,12 +35,6 @@ class SalesChart extends D3Component {
             filteredData.push(d);
           } 
         });
-
-        if (filteredData.length === 0) {
-          console.log("no data yet");
-        } else {
-          console.log("has data");
-        }
 
         this.svg = d3.select(node)
           .append("svg")
@@ -58,14 +47,26 @@ class SalesChart extends D3Component {
 
         // add X axis 
         xScale = d3.scaleLinear()
-          .domain([d3.min(filteredData, d => d.Year), d3.max(filteredData, d => d.Year)])
+          .domain([d3.min(props.years, d =>  Date.parse(d)), d3.max(props.years, d =>  Date.parse(d))])
           .range([ 0, width ]);
-        this.svg.append("g")
+
+        var maxYear = d3.max(props.years, d => Date.parse(d)); 
+        var minYear = d3.min(props.years, d => Date.parse(d));
+        if ((new Date(maxYear).getFullYear() - new Date(minYear).getFullYear()) < 5) {
+                  this.svg.append("g")
           .attr("class", "x-axis")
           .attr("transform", "translate(0," + height + ")")
           .call(d3.axisBottom(xScale)
-            .ticks(7)
+            .ticks(5)
+            .tickFormat(d3.timeFormat("%b %Y")));
+        } else {
+          this.svg.append("g")
+          .attr("class", "x-axis")
+          .attr("transform", "translate(0," + height + ")")
+          .call(d3.axisBottom(xScale)
+            .ticks(5)
             .tickFormat(d3.timeFormat("%Y")));
+        }
 
         // X axis label
         this.svg.append("text")             
@@ -149,42 +150,24 @@ class SalesChart extends D3Component {
           } 
         });
 
-        if (filteredData.length === 0) {
-          console.log("no data yet");
-        } else {
-          console.log("has data");
-          console.log(filteredData);
-        }
-
+        var maxYear = d3.max(props.years, d => Date.parse(d)); 
+        var minYear = d3.min(props.years, d => Date.parse(d));
         xScale = d3.scaleLinear()
-          .domain([d3.min(filteredData, d => d.Year), d3.max(filteredData, d => d.Year)])
-          .range([ 0, width ]);
+            .domain([minYear, maxYear])
+            .range([ 0, width ]);
+        var xAxis; 
+        if ((new Date(maxYear).getFullYear() - new Date(minYear).getFullYear()) < 5) {
+          xAxis = d3.axisBottom(xScale).ticks(5)
+            .tickFormat(d3.timeFormat("%b %Y"));
+        } else {
+          xAxis = d3.axisBottom(xScale).ticks(5)
+            .tickFormat(d3.timeFormat("%Y"));
+        }
+        this.svg.select(".x-axis").transition().duration(500).call(xAxis);
+
         yScale = d3.scaleLinear()
           .domain([100, 1])
           .range([ height, 0]); 
-
-        var xAxis = d3.axisBottom(xScale).ticks(7)
-            .tickFormat(d3.timeFormat("%Y"));
-        this.svg.select(".x-axis").transition().duration(500).call(xAxis);
-
-        /*console.log(dots);
-        dots.data(filteredData).enter().append("circle")
-                        .attr("r", dotRadius)
-                        .on('mouseenter', (d, i, nodes) => {
-                          this.handleMouseEnter(d, i, nodes);
-                        })
-                        .on('mouseout', (d, i, nodes) => {
-                          this.handleMouseOut(d, i, nodes);
-                        });
-
-        dots.transition()
-            .duration(500)
-            .attr("cx", function (d) { return xScale(d.Year); } )
-            .attr("cy", function (d) { return yScale(d.Rank); } )
-            .attr("r", dotRadius)
-            .style("fill", dotColor);
-
-        dots.exit().remove();*/
 
         this.svg
           .selectAll(".singles-circles")
@@ -209,14 +192,7 @@ class SalesChart extends D3Component {
           .duration(500)
           .attr("cx", function (d) { return xScale(d.Year); } )
           .attr("cy", function (d) { return yScale(d.Rank); } );
-          //.attr("height", yScale.bandwidth())
-          /*.attr("width", function(d) {
-            return xScale(d["worldwide-sales"]);
-          })
-          .attr("y", function(d) {
-            return yScale(d["album-name"]);
-          });*/
-
+ 
         this.svg
           .selectAll(".singles-circles")
           .data(filteredData)

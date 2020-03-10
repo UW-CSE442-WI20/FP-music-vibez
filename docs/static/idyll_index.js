@@ -529,14 +529,9 @@ var SalesChart = function (_D3Component) {
         return response.text();
       }).then(function (text) {
         var data = d3.csvParse(text);
-        /*data.forEach(function(d) {
-          d.Year = Date.parse(d.Year);
-        });*/
 
         var filterStart = Date.parse(props.years[0]);
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
-        console.log("start ", props.years[0]);
-        console.log("end ", props.years[props.years.length - 1]);
         var filteredData = [];
         data.forEach(function (d) {
           d.Year = Date.parse(d.Year);
@@ -545,21 +540,26 @@ var SalesChart = function (_D3Component) {
           }
         });
 
-        if (filteredData.length === 0) {
-          console.log("no data yet");
-        } else {
-          console.log("has data");
-        }
-
         _this2.svg = d3.select(node).append("svg").attr("width", width + margin.left + margin.right - 10).attr("height", height + margin.top + margin.bottom + 20).attr("class", "singles-chart").append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
         // add X axis 
-        xScale = d3.scaleLinear().domain([d3.min(filteredData, function (d) {
-          return d.Year;
-        }), d3.max(filteredData, function (d) {
-          return d.Year;
+        xScale = d3.scaleLinear().domain([d3.min(props.years, function (d) {
+          return Date.parse(d);
+        }), d3.max(props.years, function (d) {
+          return Date.parse(d);
         })]).range([0, width]);
-        _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xScale).ticks(7).tickFormat(d3.timeFormat("%Y")));
+
+        var maxYear = d3.max(props.years, function (d) {
+          return Date.parse(d);
+        });
+        var minYear = d3.min(props.years, function (d) {
+          return Date.parse(d);
+        });
+        if (new Date(maxYear).getFullYear() - new Date(minYear).getFullYear() < 5) {
+          _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%b %Y")));
+        } else {
+          _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%Y")));
+        }
 
         // X axis label
         _this2.svg.append("text").attr("transform", "translate(" + width / 2 + " ," + (height + margin.top) + ")").style("text-anchor", "middle").text("Time");
@@ -614,39 +614,22 @@ var SalesChart = function (_D3Component) {
           }
         });
 
-        if (filteredData.length === 0) {
-          console.log("no data yet");
+        var maxYear = d3.max(props.years, function (d) {
+          return Date.parse(d);
+        });
+        var minYear = d3.min(props.years, function (d) {
+          return Date.parse(d);
+        });
+        xScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, width]);
+        var xAxis;
+        if (new Date(maxYear).getFullYear() - new Date(minYear).getFullYear() < 5) {
+          xAxis = d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%b %Y"));
         } else {
-          console.log("has data");
-          console.log(filteredData);
+          xAxis = d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%Y"));
         }
-
-        xScale = d3.scaleLinear().domain([d3.min(filteredData, function (d) {
-          return d.Year;
-        }), d3.max(filteredData, function (d) {
-          return d.Year;
-        })]).range([0, width]);
-        yScale = d3.scaleLinear().domain([100, 1]).range([height, 0]);
-
-        var xAxis = d3.axisBottom(xScale).ticks(7).tickFormat(d3.timeFormat("%Y"));
         _this3.svg.select(".x-axis").transition().duration(500).call(xAxis);
 
-        /*console.log(dots);
-        dots.data(filteredData).enter().append("circle")
-                        .attr("r", dotRadius)
-                        .on('mouseenter', (d, i, nodes) => {
-                          this.handleMouseEnter(d, i, nodes);
-                        })
-                        .on('mouseout', (d, i, nodes) => {
-                          this.handleMouseOut(d, i, nodes);
-                        });
-         dots.transition()
-            .duration(500)
-            .attr("cx", function (d) { return xScale(d.Year); } )
-            .attr("cy", function (d) { return yScale(d.Rank); } )
-            .attr("r", dotRadius)
-            .style("fill", dotColor);
-         dots.exit().remove();*/
+        yScale = d3.scaleLinear().domain([100, 1]).range([height, 0]);
 
         _this3.svg.selectAll(".singles-circles").data(filteredData).enter().append("circle").attr("class", "singles-circles").style("fill", dotColor).attr("r", dotRadius).attr("class", "singles-circles").style("fill", dotColor).on('mouseenter', function (d, i, nodes) {
           _this3.handleMouseEnter(d, i, nodes);
@@ -659,13 +642,6 @@ var SalesChart = function (_D3Component) {
         }).attr("cy", function (d) {
           return yScale(d.Rank);
         });
-        //.attr("height", yScale.bandwidth())
-        /*.attr("width", function(d) {
-          return xScale(d["worldwide-sales"]);
-        })
-        .attr("y", function(d) {
-          return yScale(d["album-name"]);
-        });*/
 
         _this3.svg.selectAll(".singles-circles").data(filteredData).exit().remove();
 
