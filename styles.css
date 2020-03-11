@@ -61,12 +61,30 @@
   width: 12vw;
   height: 12vw;
   border: 5px solid;
-  transition: 100ms linear all;
+  transition: 100ms ease all;
   cursor: pointer;
 }
 
 .img-button:hover {
   transform: scale(1.2);
+}
+
+.img-button:hover + #artist-label{
+  opacity: 1;
+}
+
+.img-component {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+#artist-label {
+  color: #FFF;
+  transition: 100ms ease all;
+  padding-top: 15px;
+  opacity: 0;
 }
 
 .flex-box {
@@ -145,6 +163,7 @@ h2.dek {
   padding-bottom: 15vw;
   padding-left: 20px;
   padding-right: 20px;
+  height: 100vh;
 }
 
 #chart-test {
