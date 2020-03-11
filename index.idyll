@@ -24,6 +24,8 @@
 [var name:"Lady-Gaga" value:"Lady Gaga" /]
 [var name:"Lady-Gaga-Photo" value:"./static/images/iconic-photos/lady-gaga.jpg"/]
 
+[data name:"awards" source:"queen_awards.csv" /]
+
 [Header title:title subtitle:subtitle/]
 
 [div class:"flex-box"]
@@ -153,6 +155,22 @@
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
                 [HorizontalBarChart artist:artist step:queenCurStep years:queenStepYears/]
+                [IdyllVegaLite data:awards spec:`{
+                    mark: "line",
+                    encoding: {
+                        x: {
+                        field: "time",
+                        type: "temporal",
+                        axis: {title: "Year", format:"%Y"}
+                        },
+                        y: {
+                        field: "value",
+                        type: "quantitative",
+                        axis: {title: "Water level"},
+                        scale: { domain: [100, 700] }
+                        }
+                    }
+                }` /]
             [/Graphic]
             [Step]
                 [YearComponent className:"year-class queen-bg-theme" year:"1970" /]

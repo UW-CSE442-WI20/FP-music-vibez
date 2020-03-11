@@ -15,8 +15,11 @@
   },
   "author": "",
   "dependencies": {
+    "core-js": "^3.6.4",
+    "d3": "^5.15.0",
     "idyll": "^4.0.0",
     "idyll-d3-component": "^2.0.0",
-    "d3": "^5.15.0"
+    "idyll-vega-lite": "^2.0.3",
+    "vega-loader": "^4.2.0"
   }
 }
