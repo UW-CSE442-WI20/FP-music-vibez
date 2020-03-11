@@ -23,10 +23,11 @@ class SalesChart extends D3Component {
 
   initialize(node, props) {
 
+    console.log(this.props.albums);
     // create color scale
     var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     var i = 0;
-    props.albums.forEach(function(d) {
+    this.props.albums.forEach(function(d) {
       albumToColorMap.set(d, colorScale(i));
       i += 1;
     })

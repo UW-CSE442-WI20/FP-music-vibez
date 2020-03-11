@@ -54,12 +54,14 @@
                 
         [var name:"gagaStepDates" value:`[ "10/28/2008", "03/03/2010", "11/22/2011", "11/11/2013", "09/23/2014","10/21/2016", "10/5/2018","04/10/2020"]`/]
         [var name:"gagaYears" value:`[ "2009","2010","2011","2013","2014", "2016","2018","2020"]`/]
+        [var name:"gagaAlbums" value:`["The Fame Monster (Deluxe Edition)", "Born This Way", "ARTPOP", "Cheek to Cheek", "Joanne (Deluxe)", "A Star Is Born Soundtrack", "Chromatica"]` /]
+
         #The Trajectory of Lady Gaga
         [var name:"gagaCurStep" value:0 /]
         [Scroller currentStep:gagaCurStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga" /]
-                [HorizontalBarChart artist:artist step:gagaCurStep years:gagaYears/]
+                [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga" albums:gagaAlbums /]
+                [HorizontalBarChart artist:artist step:gagaCurStep years:gagaYears /]
             [/Graphic]
 
             [Step ]
@@ -148,10 +150,11 @@
         #The Trajectory of Queen
         [var name:"queenYears" value:`["01/01/1970", "01/01/1971", "01/01/1972", "01/01/1973", "01/01/1974", "01/01/1975", "01/01/1976", "01/01/1977", "01/01/1978", "01/01/1979", "01/01/1980", "01/01/1981", "01/01/1982", "01/01/1983", "01/01/1984", "01/01/1985", "01/01/1986", "01/01/1987", "01/01/1988", "01/01/1989", "01/01/1990", "01/01/1991", "01/01/1992", "01/01/1993", "01/01/1994", "01/01/1995"]` /]
         [var name:"queenStepYears" value:`["1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1979", "1980", "1981", "1982", "1983", "1984", "1985", "1986", "1987", "1988", "1989", "01/01/1990", "1991", "1992", "1993", "1994", "1995"]` /]
+        [var name:"queenAlbums" value:`["Queen", "Queen II", "Sheer Heart Attack", "A Night At The Opera", "A Day At The Races", "News Of The World", "Jazz", "The Game", "Flash Gordon", "Hot Space"]` /]
         [var name:"queenCurStep" value:0 /]
         [Scroller currentStep:queenCurStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
+                [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen" albums:queenAlbums/]
                 [HorizontalBarChart artist:artist step:queenCurStep years:queenStepYears/]
             [/Graphic]
             [Step]
@@ -313,6 +316,7 @@
                                          "08/05/1966", "05/26/1967", "11/22/1968", 
                                          "09/26/1969", "01/13/1969", "05/08/1970" ]` /]
         [var name:"beatlesStepYears" value:`["1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970" ]` /]
+        [var name:"beatlesAlbums" value:`["Please Please Me (Remastered)", "With The Beatles", "A Hard Day's Night (Remastered)", "Beatles for Sale", "Help! (Remastered)", "Rubber Soul", "Revolver (Remastered)", "Sgt. Pepper's Lonely Hearts and Club Band", "The Beatles", "Abbey Road", "Yellow Submarine", "Let It Be... (Remastered)"]` /]
         [var name:"beatlesCurStep" value:0 /]
         #The Trajectory of The Beatles
         [Scroller currentStep:beatlesCurStep]
@@ -321,7 +325,7 @@
                     value:myData 
                     src:"./static/weekly-charts/the-beatles-weekly-charts.csv" 
                     years:`beatlesDates.slice(0, beatlesCurStep + 2)`
-                    name:"The Beatles"/]
+                    name:"The Beatles" albums:beatlesAlbums/]
                 [HorizontalBarChart artist:artist step:beatlesCurStep years:beatlesStepYears/]
             [/Graphic]
 
@@ -414,11 +418,13 @@
     [Case test:"kanye"]
         [var name:"kanyeDates" value:`["02/10/2004", "01/01/2005", "01/01/2007", "01/01/2008", "01/01/2010", "01/01/2013", "01/01/2016", "01/01/2018", "01/01/2019"]` /]
         [var name:"kanyeStepYears" value:`["2004", "2005", "2007", "2008", "2010", "2013", "2016", "2018", "2019"]` /]
+        [var name:"kanyeAlbums" value:`["The College Dropout", "Late Registration", "Graduation", "808s & Heartbreak", "My Beautiful Dark Twisted Fantasy", "Yeezus", "The Life Of Pablo", "ye", "JESUS IS KING"]` /]
+
         #The Trajectory of Kanye West
         [var name:"kanyeCurStep" value:0 /]
         [Scroller currentStep:kanyeCurStep]
             [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/kanye-west-weekly-charts.csv" years:`kanyeDates.slice(0, kanyeCurStep + 2)` name:"Kanye West" /]
+                [SalesChart value:myData src:"./static/weekly-charts/kanye-west-weekly-charts.csv" years:`kanyeDates.slice(0, kanyeCurStep + 2)` name:"Kanye West" albums:kanyeAlbums /]
                 [HorizontalBarChart artist:artist step:kanyeCurStep years:kanyeStepYears /]
             [/Graphic]
 
