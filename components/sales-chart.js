@@ -15,10 +15,14 @@ const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 800 - margin.left - margin.right;
 const height = 300 - margin.top - margin.bottom;
 
+var albumToColorMap = [];
+
 class SalesChart extends D3Component {
 
 
   initialize(node, props) {
+
+    
 
     fetch(props.src)
         .then((response) => {

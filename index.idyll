@@ -475,13 +475,14 @@
     [Case test:"michael"]
         #The Trajectory of Michael Jackson
         [var name:"michaelDates" value:`["10/01/1971", "01/24/1972", "04/13/1973", "01/16/1975", "08/10/1979", "11/30/1982", "03/25/1983", "09/01/1987", "10/26/1991", "06/20/1995", "10/30/2001", "06/25/2009", "12/10/2010", "05/09/2014"]` /]
+        [var name:"michaelAlbums" value:`["Got to Be There", "Ben", "Music & Me", "Forever, Michael", "Off the Wall", "Thriller", "Bad", "Dangerous", "HIStory: Past, Present and Future, Book I", "Invincible", "Michael", "Xscape"]` /]
         [var name:"michaelYears" value:`["1972", "1973", "1975", "1979", "1982", "1983", "1987", "1991", "1995", "2001", "2009", "2010", "2014"]` /]
 
         [var name:"michaelCurStep" value:0 /]
         [Scroller currentStep:michaelCurStep]
 
         [Graphic]
-                [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelDates.slice(0, michaelCurStep + 2)` name:"Michael Jackson" /]
+                [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelDates.slice(0, michaelCurStep + 2)` name:"Michael Jackson" albums:michaelAlbums /]
         [/Graphic]
 
         [Step]
