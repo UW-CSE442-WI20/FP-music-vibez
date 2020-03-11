@@ -1,6 +1,7 @@
 const React = require("react");
 const D3Component = require("idyll-d3-component");
 const d3 = require("d3");
+const chromatic = require("d3-scale-chromatic");
 
 //var data = []; 
 //var dots;
@@ -15,14 +16,21 @@ const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 800 - margin.left - margin.right;
 const height = 300 - margin.top - margin.bottom;
 
-var albumToColorMap = [];
+var albumToColorMap = new Map();
 
 class SalesChart extends D3Component {
 
 
   initialize(node, props) {
 
-    
+    // create color scale
+    var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    var i = 0;
+    props.albums.forEach(function(d) {
+      albumToColorMap.set(d, colorScale(i));
+      i += 1;
+    })
+
 
     fetch(props.src)
         .then((response) => {
@@ -121,7 +129,8 @@ class SalesChart extends D3Component {
             .attr("cy", function (d) { return yScale(d.Rank); } )
             .attr("r", dotRadius)
             .attr("class", "singles-circles")
-            .style("fill", dotColor)
+            .style("fill", function(d) { 
+              return albumToColorMap.get(d.Album) })
             .on('mouseenter', (d, i, nodes) => {
               this.handleMouseEnter(d, i, nodes);
             })
@@ -182,7 +191,8 @@ class SalesChart extends D3Component {
           .style("fill", dotColor)
           .attr("r", dotRadius)
             .attr("class", "singles-circles")
-            .style("fill", dotColor)
+            .style("fill", function(d) { 
+              return albumToColorMap.get(d.Album) })
             .on('mouseenter', (d, i, nodes) => {
               this.handleMouseEnter(d, i, nodes);
             })
@@ -215,8 +225,9 @@ class SalesChart extends D3Component {
       return dotRadius * 2.5;
     });
 
+
     var resizedData = this.resizeSongPoints(nodes, d['Song Title'], 2.5);
-    this.connectSongPoints(resizedData);
+    this.connectSongPoints(resizedData, d.Album);
 
     tooltipDiv.transition()    
                 .duration(100)    
@@ -260,15 +271,22 @@ class SalesChart extends D3Component {
 
   }
 
-  connectSongPoints(songData) {
+  connectSongPoints(songData, album) {
     var line = d3.line()
         .x(function(d, i) { return xScale(d.Year); }) 
         .y(function(d) { return yScale(d.Rank); });
+
+        console.log(albumToColorMap.get(album));
 
     this.svg.append("path")
       .datum(songData) 
       .attr("class", "line")  
       .attr("d", line)
+      .style("fill", "none")
+      .style("stroke", function(d) { if (albumToColorMap.get(album) != null)
+              { return albumToColorMap.get(album)}
+              else {return "#000"}})
+      .style("stroke-width", 3)
       .lower();
 
   }

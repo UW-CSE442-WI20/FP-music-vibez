@@ -1361,8 +1361,3 @@ div.tooltip {
     pointer-events: none;			
 }
 
-.line {
-    fill: none;
-    stroke: #696969;
-    stroke-width: 3;
-}

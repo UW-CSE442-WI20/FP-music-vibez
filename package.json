@@ -15,8 +15,9 @@
   },
   "author": "",
   "dependencies": {
+    "d3": "^5.15.0",
+    "d3-scale-chromatic": "^1.5.0",
     "idyll": "^4.0.0",
-    "idyll-d3-component": "^2.0.0",
-    "d3": "^5.15.0"
+    "idyll-d3-component": "^2.0.0"
   }
 }
