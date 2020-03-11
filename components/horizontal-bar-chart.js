@@ -100,7 +100,8 @@ const allData = {
     {
       "album-name": "Jesus Is King",
       "release-date": "10/25/2019",
-      "worldwide-sales": "300000"
+      "worldwide-sales": "300000",
+      year: 2019
     }
   ],
   michael: [
@@ -127,42 +128,50 @@ const allData = {
     {
       "album-name": "Off the Wall",
       "release-date": "08/10/1979",
-      "worldwide-sales": 20000000
+      "worldwide-sales": 20000000,
+      year: 1979
     },
     {
       "album-name": "Thriller",
       "release-date": "11/30/1982",
-      "worldwide-sales": 66000000
+      "worldwide-sales": 66000000,
+      year: 1982
     },
     {
       "album-name": "Bad",
       "release-date": "09/01/1987",
-      "worldwide-sales": 35000000
+      "worldwide-sales": 35000000,
+      year: 1987
     },
     {
       "album-name": "Dangerous",
       "release-date": "11/26/1991",
-      "worldwide-sales": 32000000
+      "worldwide-sales": 32000000,
+      year: 1991
     },
     {
       "album-name": "HIStory: Past, Present and Future, Book I",
       "release-date": "06/20/1995",
-      "worldwide-sales": 22000000
+      "worldwide-sales": 22000000,
+      year: 1995
     },
     {
       "album-name": "Invincible",
       "release-date": "10/30/2001",
-      "worldwide-sales": 6000000
+      "worldwide-sales": 6000000,
+      year: 2001
     },
     {
       "album-name": "Michael",
       "release-date": "06/25/2009",
-      "worldwide-sales": 541000
+      "worldwide-sales": 541000,
+      year: 2009
     },
     {
       "album-name": "Xscape",
       "release-date": "12/10/2010",
-      "worldwide-sales": 1700000
+      "worldwide-sales": 1700000,
+      year: 2010
     }
   ]
 };
@@ -187,7 +196,7 @@ class HorizontalBarChart extends D3Component {
     this.getAlbumNames(this.getAllData(artist)).forEach(function(d) {
       albumToColorMap.set(d, colorScale(i));
       i += 1;
-    })
+    });
 
     this.svg = d3
       .select(node)
@@ -225,8 +234,8 @@ class HorizontalBarChart extends D3Component {
         return yScale(d["album-name"]);
       })
       .attr("height", yScale.bandwidth())
-      .attr("fill", function(d) { 
-        return albumToColorMap.get(d["album-name"])
+      .attr("fill", function(d) {
+        return albumToColorMap.get(d["album-name"]);
       });
 
     // Append the y-axis
@@ -291,8 +300,9 @@ class HorizontalBarChart extends D3Component {
       })
       .attr("y", function(d) {
         return yScale(d["album-name"]);
-      }).attr("fill", function(d) { 
-        return albumToColorMap.get(d["album-name"])
+      })
+      .attr("fill", function(d) {
+        return albumToColorMap.get(d["album-name"]);
       });
 
     this.svg
@@ -335,7 +345,7 @@ class HorizontalBarChart extends D3Component {
     }
 
     return res;
-  }  
+  }
 
   // Returns the maximum sales for the given data
   getMaxSales(data) {
