@@ -114,23 +114,30 @@ h2.dek {
   height: 35vh;
   max-height: 35vh;
   border: 5px solid;
+  margin-left: 20px;
 }
 
 .date-class {
   font-style: italic;
+  font-size: small;
+  margin-bottom: 10px;
 }
 
 .desc-class {
-  margin-left: 8vw;
+  margin-left: 20px;
   text-align: center;
   font-weight: bold;
   max-width: 21vw;
-  margin-bottom: 0px;
   border-radius: 25px;
+  font-size: large;
+}
+
+p {
+  margin-bottom: 0;
 }
 
 .content-class {
-  margin-left: 8vw;
+  margin-left: 20px;
   text-align: center;
   max-width: 21vw;
   margin-top: 10px;
@@ -141,17 +148,23 @@ h2.dek {
   padding-left: 10px;
 }
 
+.charts {
+  margin-right: 100%;
+}
+
 .playlist-class {
-  margin-top: 1vw;
-  margin-left: 8vw;
+  margin-top: 1vh;
+  margin-left: 20px;
+  padding-bottom: 2vh;
 }
 
 .year-class {
   text-align: center;
+  margin-left: -40px;
   width: 75px;
   height: 75px;
   border-radius: 50%;
-  line-height: 71px;
+  line-height: 68px;
   font-weight: bold;
   border: 5px solid var(--black);
 }
@@ -171,14 +184,14 @@ h2.dek {
 }
 
 .idyll-step {
-	margin-top: 0px;
+  margin-top: 0px;
   border-width: 0px;
+  border-left: 6px solid var(--black);
 }
 
 .idyll-scroll {
   margin-top: 0; 
   width: 75vw;
-  border-left: 6px solid var(--black);
 }
 
 .idyll-root {
