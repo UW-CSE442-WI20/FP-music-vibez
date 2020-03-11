@@ -37,7 +37,7 @@ const allData = {
     {
       "album-name": "A Star Is Born",
       "release-date": "10/5/2018",
-      "worldwide-sales": 114800000,
+      "worldwide-sales": 1148000,
       year: 2018
     },
     {
@@ -101,7 +101,7 @@ const allData = {
       "album-name": "Jesus Is King",
       "release-date": "10/25/2019",
       "worldwide-sales": "300000"
-    }, 
+    }
   ],
   michael: [
     {
@@ -114,7 +114,7 @@ const allData = {
       "release-date": "08/04/1972",
       "worldwide-sales": null
     },
-        {
+    {
       "album-name": "Music & Me",
       "release-date": "04/13/1973",
       "worldwide-sales": null
@@ -129,7 +129,7 @@ const allData = {
       "release-date": "08/10/1979",
       "worldwide-sales": 20000000
     },
-        {
+    {
       "album-name": "Thriller",
       "release-date": "11/30/1982",
       "worldwide-sales": 66000000
