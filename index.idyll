@@ -497,7 +497,7 @@
 
         [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelDates.slice(0, michaelCurStep + 2)` name:"Michael Jackson" albums:michaelAlbums /]
-                [HorizontalBarChart artist:artist step:michaelCurStep years:michaelYears /]
+                [HorizontalBarChart artist:"michael" step:michaelCurStep years:michaelYears /]
         [/Graphic]
 
         [Step]

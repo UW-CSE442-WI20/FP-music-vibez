@@ -68,7 +68,7 @@ const allData = {
       year: 2007
     },
     {
-      "album-name": "808s & Heartbreaks",
+      "album-name": "808s & Heartbreak",
       "release-date": "11/24/2008",
       "worldwide-sales": "1700000",
       year: 2008
@@ -174,10 +174,20 @@ const height = 300;
 var yScale;
 var xScale;
 
+var albumToColorMap = new Map();
+
 class HorizontalBarChart extends D3Component {
   initialize(node, props) {
     const { artist, step, years } = props;
     const data = this.getData(artist, step, years);
+
+    // create color scale
+    var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    var i = 0;
+    this.getAlbumNames(this.getAllData(artist)).forEach(function(d) {
+      albumToColorMap.set(d, colorScale(i));
+      i += 1;
+    })
 
     this.svg = d3
       .select(node)
@@ -214,7 +224,10 @@ class HorizontalBarChart extends D3Component {
       .attr("y", function(d) {
         return yScale(d["album-name"]);
       })
-      .attr("height", yScale.bandwidth());
+      .attr("height", yScale.bandwidth())
+      .attr("fill", function(d) { 
+        return albumToColorMap.get(d["album-name"])
+      });
 
     // Append the y-axis
     this.svg
@@ -278,6 +291,8 @@ class HorizontalBarChart extends D3Component {
       })
       .attr("y", function(d) {
         return yScale(d["album-name"]);
+      }).attr("fill", function(d) { 
+        return albumToColorMap.get(d["album-name"])
       });
 
     this.svg
@@ -308,6 +323,20 @@ class HorizontalBarChart extends D3Component {
     return res;
   }
 
+  // Returns a json object with the data for the seleted artist
+  getAllData(artist) {
+    console.log("getAllData called with", artist);
+    if (!(artist in allData)) {
+      return [];
+    }
+    let res = [];
+    for (let i = 0; i < allData[artist].length; i++) {
+      res.push(allData[artist][i]);
+    }
+
+    return res;
+  }  
+
   // Returns the maximum sales for the given data
   getMaxSales(data) {
     return Math.max(...this.getSales(data));
@@ -318,6 +347,10 @@ class HorizontalBarChart extends D3Component {
   getAlbumNames(data) {
     return this.extractData(data, "album-name");
   }
+
+  /*getAllAlbumNames(data) {
+    return this.
+  }*/
 
   // Returns a list of worldwide-sales from the data
   // Preserves the ordering of the original data
