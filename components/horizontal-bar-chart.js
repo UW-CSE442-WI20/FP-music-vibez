@@ -7,37 +7,44 @@ const allData = {
     {
       "album-name": "The Fame",
       "release-date": "10/28/2008",
-      "worldwide-sales": 15000000
+      "worldwide-sales": 15000000,
+      year: 2008
     },
     {
       "album-name": "Born This Way",
       "release-date": "05/23/2011",
-      "worldwide-sales": 6000000
+      "worldwide-sales": 6000000,
+      year: 2011
     },
     {
       "album-name": "ARTPOP",
       "release-date": "11/11/2013",
-      "worldwide-sales": 2500000
+      "worldwide-sales": 2500000,
+      year: 2013
     },
     {
       "album-name": "Cheek to Cheek",
       "release-date": "09/23/2014",
-      "worldwide-sales": 1000000
+      "worldwide-sales": 1000000,
+      year: 2014
     },
     {
       "album-name": "Joanne",
       "release-date": "10/21/2016",
-      "worldwide-sales": 1000000
+      "worldwide-sales": 1000000,
+      year: 2016
     },
     {
       "album-name": "A Star Is Born",
       "release-date": "10/5/2018",
-      "worldwide-sales": 114800000
+      "worldwide-sales": 114800000,
+      year: 2018
     },
     {
       "album-name": "Chromatica",
       "release-date": "04/10/2020",
-      "worldwide-sales": 0
+      "worldwide-sales": 0,
+      year: 2020
     }
   ],
 
@@ -45,42 +52,50 @@ const allData = {
     {
       "album-name": "The College Dropout",
       "release-date": "02/10/2004",
-      "worldwide-sales": "4000000"
+      "worldwide-sales": "4000000",
+      year: 2004
     },
     {
       "album-name": "Late Registration",
       "release-date": "08/30/2005",
-      "worldwide-sales": "3100000"
+      "worldwide-sales": "3100000",
+      year: 2005
     },
     {
       "album-name": "Graduation",
       "release-date": "09/11/2007",
-      "worldwide-sales": "2700000"
+      "worldwide-sales": "2700000",
+      year: 2007
     },
     {
       "album-name": "808s & Heartbreaks",
       "release-date": "11/24/2008",
-      "worldwide-sales": "1700000"
+      "worldwide-sales": "1700000",
+      year: 2008
     },
     {
       "album-name": "My Beautiful Dark Twisted Fantasy",
       "release-date": "11/22/2010",
-      "worldwide-sales": "2000000"
+      "worldwide-sales": "2000000",
+      year: 2010
     },
     {
       "album-name": "Yeezus",
       "release-date": "06/18/2013",
-      "worldwide-sales":"1000000"
+      "worldwide-sales": "1000000",
+      year: 2013
     },
     {
       "album-name": "The Life Of Pablo",
       "release-date": "02/14/2016",
-      "worldwide-sales":"2000000"
+      "worldwide-sales": "2000000",
+      year: 2016
     },
     {
       "album-name": "Ye",
       "release-date": "06/01/2018",
-      "worldwide-sales": "500000"
+      "worldwide-sales": "500000",
+      year: 2018
     },
     {
       "album-name": "Jesus Is King",
@@ -161,8 +176,8 @@ var xScale;
 
 class HorizontalBarChart extends D3Component {
   initialize(node, props) {
-    const { artist, to } = props;
-    const data = this.getData(artist, to + 1);
+    const { artist, step, years } = props;
+    const data = this.getData(artist, step, years);
 
     this.svg = d3
       .select(node)
@@ -218,9 +233,8 @@ class HorizontalBarChart extends D3Component {
   }
 
   update(props) {
-    const { artist, to } = props;
-    const data = this.getData(artist, to);
-    console.log("update", props, data);
+    const { artist, step, years } = props;
+    const data = this.getData(artist, step, years);
 
     // update yScale, yAxis
     yScale = d3
@@ -279,12 +293,19 @@ class HorizontalBarChart extends D3Component {
 
   // Returns a json object with the data for the seleted artist
   // up to but not including the ith entry
-  getData(artist, i) {
-    console.log("getData called with", artist, i);
+  getData(artist, step, years) {
+    console.log("getData called with", artist, step, years);
     if (!(artist in allData)) {
       return [];
     }
-    return allData[artist].slice(0, i);
+    let res = [];
+    for (let i = 0; i < allData[artist].length; i++) {
+      if (allData[artist][i]["year"] <= years[step]) {
+        res.push(allData[artist][i]);
+      }
+    }
+
+    return res;
   }
 
   // Returns the maximum sales for the given data
