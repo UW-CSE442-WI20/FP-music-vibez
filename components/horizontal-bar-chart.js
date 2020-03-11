@@ -100,8 +100,69 @@ const allData = {
     {
       "album-name": "Jesus Is King",
       "release-date": "10/25/2019",
-      "worldwide-sales": "300000",
-      year: 2019
+      "worldwide-sales": "300000"
+    }, 
+  ],
+  michael: [
+    {
+      "album-name": "Got To Be There",
+      "release-date": "01/24/1972",
+      "worldwide-sales": null
+    },
+    {
+      "album-name": "Ben",
+      "release-date": "08/04/1972",
+      "worldwide-sales": null
+    },
+        {
+      "album-name": "Music & Me",
+      "release-date": "04/13/1973",
+      "worldwide-sales": null
+    },
+    {
+      "album-name": "Forever, Michael",
+      "release-date": "01/16/1975",
+      "worldwide-sales": null
+    },
+    {
+      "album-name": "Off the Wall",
+      "release-date": "08/10/1979",
+      "worldwide-sales": 20000000
+    },
+        {
+      "album-name": "Thriller",
+      "release-date": "11/30/1982",
+      "worldwide-sales": 66000000
+    },
+    {
+      "album-name": "Bad",
+      "release-date": "09/01/1987",
+      "worldwide-sales": 35000000
+    },
+    {
+      "album-name": "Dangerous",
+      "release-date": "11/26/1991",
+      "worldwide-sales": 32000000
+    },
+    {
+      "album-name": "HIStory: Past, Present and Future, Book I",
+      "release-date": "06/20/1995",
+      "worldwide-sales": 22000000
+    },
+    {
+      "album-name": "Invincible",
+      "release-date": "10/30/2001",
+      "worldwide-sales": 6000000
+    },
+    {
+      "album-name": "Michael",
+      "release-date": "06/25/2009",
+      "worldwide-sales": 541000
+    },
+    {
+      "album-name": "Xscape",
+      "release-date": "12/10/2010",
+      "worldwide-sales": 1700000
     }
   ]
 };
