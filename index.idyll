@@ -54,7 +54,7 @@
                 
         [var name:"gagaStepDates" value:`[ "10/28/2008", "03/03/2010", "11/22/2011", "11/11/2013", "09/23/2014","10/21/2016", "10/5/2018","04/10/2020"]`/]
         [var name:"gagaYears" value:`[ "2009","2010","2011","2013","2014", "2016","2018","2020"]`/]
-        [var name:"gagaAlbums" value:`["The Fame Monster (Deluxe Edition)", "Born This Way", "ARTPOP", "Cheek to Cheek", "Joanne (Deluxe)", "A Star Is Born Soundtrack", "Chromatica"]` /]
+        [var name:"gagaAlbums" value:`["The Fame Monster", "Born This Way", "Artpop", "Cheek to Cheek", "Joanne", "A Star Is Born Soundtrack", "Chromatica"]` /]
 
         #The Trajectory of Lady Gaga
         [var name:"gagaCurStep" value:0 /]
@@ -316,7 +316,7 @@
                                          "08/05/1966", "05/26/1967", "11/22/1968", 
                                          "09/26/1969", "01/13/1969", "05/08/1970" ]` /]
         [var name:"beatlesStepYears" value:`["1963", "1964", "1965", "1966", "1967", "1968", "1969", "1970" ]` /]
-        [var name:"beatlesAlbums" value:`["Please Please Me (Remastered)", "With The Beatles", "A Hard Day's Night (Remastered)", "Beatles for Sale", "Help! (Remastered)", "Rubber Soul", "Revolver (Remastered)", "Sgt. Pepper's Lonely Hearts and Club Band", "The Beatles", "Abbey Road", "Yellow Submarine", "Let It Be... (Remastered)"]` /]
+        [var name:"beatlesAlbums" value:`["Please Please Me", "With The Beatles", "A Hard Day's Night", "Beatles For Sale", "Help!", "Rubber Soul", "Revolver", "Sgt. Pepper's Lonely Hearts and Club Band", "The Beatles", "Abbey Road", "Yellow Submarine", "Let It Be"]` /]
         [var name:"beatlesCurStep" value:0 /]
         #The Trajectory of The Beatles
         [Scroller currentStep:beatlesCurStep]
@@ -418,7 +418,7 @@
     [Case test:"kanye"]
         [var name:"kanyeDates" value:`["02/10/2004", "01/01/2005", "01/01/2007", "01/01/2008", "01/01/2010", "01/01/2013", "01/01/2016", "01/01/2018", "01/01/2019"]` /]
         [var name:"kanyeStepYears" value:`["2004", "2005", "2007", "2008", "2010", "2013", "2016", "2018", "2019"]` /]
-        [var name:"kanyeAlbums" value:`["The College Dropout", "Late Registration", "Graduation", "808s & Heartbreak", "My Beautiful Dark Twisted Fantasy", "Yeezus", "The Life Of Pablo", "ye", "JESUS IS KING"]` /]
+        [var name:"kanyeAlbums" value:`["The College Dropout", "Late Registration", "Graduation", "808s & Heartbreak", "My Beautiful Dark Twisted Fantasy", "Yeezus", "The Life Of Pablo", "Ye", "Jesus Is King"]` /]
 
         #The Trajectory of Kanye West
         [var name:"kanyeCurStep" value:0 /]
@@ -489,7 +489,7 @@
     [Case test:"michael"]
         #The Trajectory of Michael Jackson
         [var name:"michaelDates" value:`["10/01/1971", "01/24/1972", "04/13/1973", "01/16/1975", "08/10/1979", "11/30/1982", "03/25/1983", "09/01/1987", "10/26/1991", "06/20/1995", "10/30/2001", "06/25/2009", "12/10/2010", "05/09/2014"]` /]
-        [var name:"michaelAlbums" value:`["Got To Be There", "Ben", "Music and Me", "Forever, Michael", "Off the Wall", "Thriller", "Bad 25th Anniversary", "Dangerous", "HIStory - PAST, PRESENT AND FUTURE - BOOK I", "Invincible", "Michael", "XSCAPE"]` /]
+        [var name:"michaelAlbums" value:`["Got To Be There", "Ben", "Music and Me", "Forever, Michael", "Off The Wall", "Thriller 25 Super Deluxe Edition", "Bad 25th Anniversary", "Dangerous", "HIStory - PAST, PRESENT AND FUTURE", "Invincible", "Michael", "Xscape"]` /]
         [var name:"michaelYears" value:`["1972", "1973", "1975", "1979", "1982", "1983", "1987", "1991", "1995", "2001", "2009", "2010", "2014"]` /]
 
         [var name:"michaelCurStep" value:0 /]

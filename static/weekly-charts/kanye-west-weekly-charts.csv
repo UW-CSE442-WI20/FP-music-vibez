@@ -1,968 +1,969 @@
-"11/29/2003","94","Through The Wire","Kanye West","The College Dropout"
-"12/06/2003","62","Slow Jamz","Kanye West","The College Dropout"
-"12/06/2003","89","Through The Wire","Kanye West","The College Dropout"
-"12/13/2003","46","Slow Jamz","Kanye West","The College Dropout"
-"12/13/2003","74","Through The Wire","Kanye West","The College Dropout"
-"12/20/2003","26","Slow Jamz","Kanye West","The College Dropout"
-"12/20/2003","52","Through The Wire","Kanye West","The College Dropout"
-"12/27/2003","18","Slow Jamz","Kanye West","The College Dropout"
-"12/27/2003","39","Through The Wire","Kanye West","The College Dropout"
-"01/03/2004","9","Slow Jamz","Kanye West","The College Dropout"
-"01/03/2004","33","Through The Wire","Kanye West","The College Dropout"
-"01/10/2004","9","Slow Jamz","Kanye West","The College Dropout"
-"01/10/2004","31","Through The Wire","Kanye West","The College Dropout"
-"01/17/2004","8","Slow Jamz","Kanye West","The College Dropout"
-"01/17/2004","31","Through The Wire","Kanye West","The College Dropout"
-"01/24/2004","5","Slow Jamz","Kanye West","The College Dropout"
-"01/24/2004","26","Through The Wire","Kanye West","The College Dropout"
-"01/31/2004","4","Slow Jamz","Kanye West","The College Dropout"
-"01/31/2004","19","Through The Wire","Kanye West","The College Dropout"
-"02/07/2004","3","Slow Jamz","Kanye West","The College Dropout"
-"02/07/2004","16","Through The Wire","Kanye West","The College Dropout"
-"02/14/2004","2","Slow Jamz","Kanye West","The College Dropout"
-"02/14/2004","15","Through The Wire","Kanye West","The College Dropout"
-"02/21/2004","1","Slow Jamz","Kanye West","The College Dropout"
-"02/21/2004","15","Through The Wire","Kanye West","The College Dropout"
-"02/28/2004","2","Slow Jamz","Kanye West","The College Dropout"
-"02/28/2004","15","Through The Wire","Kanye West","The College Dropout"
-"03/06/2004","2","Slow Jamz","Kanye West","The College Dropout"
-"03/06/2004","15","Through The Wire","Kanye West","The College Dropout"
-"03/13/2004","3","Slow Jamz","Kanye West","The College Dropout"
-"03/13/2004","15","Through The Wire","Kanye West","The College Dropout"
-"03/13/2004","75","All Falls Down","Kanye West","The College Dropout"
-"03/20/2004","3","Slow Jamz","Kanye West","The College Dropout"
-"03/20/2004","20","Through The Wire","Kanye West","The College Dropout"
-"03/20/2004","60","All Falls Down","Kanye West","The College Dropout"
-"03/27/2004","5","Slow Jamz","Kanye West","The College Dropout"
-"03/27/2004","26","Through The Wire","Kanye West","The College Dropout"
-"03/27/2004","46","All Falls Down","Kanye West","The College Dropout"
-"04/03/2004","12","Slow Jamz","Kanye West","The College Dropout"
-"04/03/2004","31","All Falls Down","Kanye West","The College Dropout"
-"04/03/2004","38","Through The Wire","Kanye West","The College Dropout"
-"04/10/2004","16","Slow Jamz","Kanye West","The College Dropout"
-"04/10/2004","18","All Falls Down","Kanye West","The College Dropout"
-"04/10/2004","42","Through The Wire","Kanye West","The College Dropout"
-"04/17/2004","14","All Falls Down","Kanye West","The College Dropout"
-"04/17/2004","28","Slow Jamz","Kanye West","The College Dropout"
-"04/17/2004","47","Through The Wire","Kanye West","The College Dropout"
-"04/24/2004","11","All Falls Down","Kanye West","The College Dropout"
-"04/24/2004","37","Slow Jamz","Kanye West","The College Dropout"
-"05/01/2004","9","All Falls Down","Kanye West","The College Dropout"
-"05/01/2004","45","Slow Jamz","Kanye West","The College Dropout"
-"05/08/2004","10","All Falls Down","Kanye West","The College Dropout"
-"05/08/2004","68","Jesus Walks","Kanye West","The College Dropout"
-"05/15/2004","11","All Falls Down","Kanye West","The College Dropout"
-"05/15/2004","62","Jesus Walks","Kanye West","The College Dropout"
-"05/15/2004","88","Talk About Our Love","Kanye West","Afrodisiac"
-"05/22/2004","7","All Falls Down","Kanye West","The College Dropout"
-"05/22/2004","52","Jesus Walks","Kanye West","The College Dropout"
-"05/22/2004","67","Talk About Our Love","Kanye West","Afrodisiac"
-"05/22/2004","99","Selfish","Kanye West","Detroit Deli"
-"05/29/2004","9","All Falls Down","Kanye West","The College Dropout"
-"05/29/2004","34","Jesus Walks","Kanye West","The College Dropout"
-"05/29/2004","64","Talk About Our Love","Kanye West","Afrodisiac"
-"05/29/2004","78","This Way","Kanye West","Neighborhood Watch"
-"05/29/2004","98","Selfish","Kanye West","Detroit Deli"
-"06/05/2004","11","All Falls Down","Kanye West","The College Dropout"
-"06/05/2004","29","Jesus Walks","Kanye West","The College Dropout"
-"06/05/2004","56","Talk About Our Love","Kanye West","Afrodisiac"
-"06/05/2004","84","This Way","Kanye West","Neighborhood Watch"
-"06/05/2004","91","Selfish","Kanye West","Detroit Deli"
-"06/12/2004","12","All Falls Down","Kanye West","The College Dropout"
-"06/12/2004","22","Jesus Walks","Kanye West","The College Dropout"
-"06/12/2004","36","Talk About Our Love","Kanye West","Afrodisiac"
-"06/12/2004","83","This Way","Kanye West","Neighborhood Watch"
-"06/12/2004","91","Selfish","Kanye West","Detroit Deli"
-"06/19/2004","12","All Falls Down","Kanye West","The College Dropout"
-"06/19/2004","18","Jesus Walks","Kanye West","The College Dropout"
-"06/19/2004","47","Talk About Our Love","Kanye West","Afrodisiac"
-"06/19/2004","80","Selfish","Kanye West","Detroit Deli"
-"06/19/2004","83","This Way","Kanye West","Neighborhood Watch"
-"06/26/2004","15","All Falls Down","Kanye West","The College Dropout"
-"06/26/2004","16","Jesus Walks","Kanye West","The College Dropout"
-"06/26/2004","39","Talk About Our Love","Kanye West","Afrodisiac"
-"06/26/2004","80","Selfish","Kanye West","Detroit Deli"
-"06/26/2004","100","This Way","Kanye West","Neighborhood Watch"
-"07/03/2004","16","Jesus Walks","Kanye West","The College Dropout"
-"07/03/2004","23","All Falls Down","Kanye West","The College Dropout"
-"07/03/2004","52","Talk About Our Love","Kanye West","Afrodisiac"
-"07/03/2004","67","Selfish","Kanye West","Detroit Deli"
-"07/10/2004","16","Jesus Walks","Kanye West","The College Dropout"
-"07/10/2004","44","All Falls Down","Kanye West","The College Dropout"
-"07/10/2004","50","Talk About Our Love","Kanye West","Afrodisiac"
-"07/10/2004","67","Selfish","Kanye West","Detroit Deli"
-"07/17/2004","16","Jesus Walks","Kanye West","The College Dropout"
-"07/17/2004","54","All Falls Down","Kanye West","The College Dropout"
-"07/17/2004","59","Talk About Our Love","Kanye West","Afrodisiac"
-"07/17/2004","69","Selfish","Kanye West","Detroit Deli"
-"07/24/2004","14","Jesus Walks","Kanye West","The College Dropout"
-"07/24/2004","49","All Falls Down","Kanye West","The College Dropout"
-"07/24/2004","65","Selfish","Kanye West","Detroit Deli"
-"07/24/2004","79","Talk About Our Love","Kanye West","Afrodisiac"
-"07/31/2004","11","Jesus Walks","Kanye West","The College Dropout"
-"07/31/2004","64","Selfish","Kanye West","Detroit Deli"
-"07/31/2004","87","Talk About Our Love","Kanye West","Afrodisiac"
-"08/07/2004","11","Jesus Walks","Kanye West","The College Dropout"
-"08/07/2004","59","Selfish","Kanye West","Detroit Deli"
-"08/07/2004","100","Talk About Our Love","Kanye West","Afrodisiac"
-"08/14/2004","14","Jesus Walks","Kanye West","The College Dropout"
-"08/14/2004","55","Selfish","Kanye West","Detroit Deli"
-"08/14/2004","94","Talk About Our Love","Kanye West","Afrodisiac"
-"08/21/2004","14","Jesus Walks","Kanye West","The College Dropout"
-"08/21/2004","60","Selfish","Kanye West","Detroit Deli"
-"08/28/2004","18","Jesus Walks","Kanye West","The College Dropout"
-"08/28/2004","65","Selfish","Kanye West","Detroit Deli"
-"09/04/2004","20","Jesus Walks","Kanye West","The College Dropout"
-"09/04/2004","82","Selfish","Kanye West","Detroit Deli"
-"09/11/2004","24","Jesus Walks","Kanye West","The College Dropout"
-"09/11/2004","96","Selfish","Kanye West","Detroit Deli"
-"09/18/2004","27","Jesus Walks","Kanye West","The College Dropout"
-"09/25/2004","28","Jesus Walks","Kanye West","The College Dropout"
-"10/02/2004","34","Jesus Walks","Kanye West","The College Dropout"
-"10/09/2004","39","Jesus Walks","Kanye West","The College Dropout"
-"10/16/2004","47","Jesus Walks","Kanye West","The College Dropout"
-"10/23/2004","50","Jesus Walks","Kanye West","The College Dropout"
-"02/19/2005","94","Down And Out","Kanye West","Purple Haze"
-"05/21/2005","94","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"05/28/2005","86","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"06/04/2005","83","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"06/11/2005","94","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"06/18/2005","58","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"06/25/2005","63","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"07/02/2005","63","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"07/09/2005","64","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"07/16/2005","62","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"07/23/2005","66","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"07/30/2005","69","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"07/30/2005","92","Gold Digger","Kanye West","Late Registration"
-"08/06/2005","43","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"08/06/2005","75","Gold Digger","Kanye West","Late Registration"
-"08/13/2005","50","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"08/13/2005","62","Gold Digger","Kanye West","Late Registration"
-"08/20/2005","47","Gold Digger","Kanye West","Late Registration"
-"08/20/2005","73","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"08/27/2005","30","Gold Digger","Kanye West","Late Registration"
-"08/27/2005","86","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"09/03/2005","27","Gold Digger","Kanye West","Late Registration"
-"09/03/2005","85","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"09/10/2005","19","Gold Digger","Kanye West","Late Registration"
-"09/10/2005","91","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"09/17/2005","1","Gold Digger","Kanye West","Late Registration"
-"09/17/2005","51","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"09/24/2005","1","Gold Digger","Kanye West","Late Registration"
-"09/24/2005","73","Diamonds From Sierra Leone","Kanye West","Late Registration"
-"10/01/2005","1","Gold Digger","Kanye West","Late Registration"
-"10/08/2005","1","Gold Digger","Kanye West","Late Registration"
-"10/15/2005","1","Gold Digger","Kanye West","Late Registration"
-"10/22/2005","1","Gold Digger","Kanye West","Late Registration"
-"10/29/2005","1","Gold Digger","Kanye West","Late Registration"
-"10/29/2005","100","Heard 'Em Say","Kanye West","Late Registration"
-"11/05/2005","1","Gold Digger","Kanye West","Late Registration"
-"11/05/2005","67","Heard 'Em Say","Kanye West","Late Registration"
-"11/12/2005","1","Gold Digger","Kanye West","Late Registration"
-"11/12/2005","56","Heard 'Em Say","Kanye West","Late Registration"
-"11/19/2005","1","Gold Digger","Kanye West","Late Registration"
-"11/19/2005","47","Heard 'Em Say","Kanye West","Late Registration"
-"11/26/2005","2","Gold Digger","Kanye West","Late Registration"
-"11/26/2005","43","Heard 'Em Say","Kanye West","Late Registration"
-"12/03/2005","2","Gold Digger","Kanye West","Late Registration"
-"12/03/2005","38","Heard 'Em Say","Kanye West","Late Registration"
-"12/10/2005","2","Gold Digger","Kanye West","Late Registration"
-"12/10/2005","35","Heard 'Em Say","Kanye West","Late Registration"
-"12/17/2005","3","Gold Digger","Kanye West","Late Registration"
-"12/17/2005","26","Heard 'Em Say","Kanye West","Late Registration"
-"12/24/2005","6","Gold Digger","Kanye West","Late Registration"
-"12/24/2005","26","Heard 'Em Say","Kanye West","Late Registration"
-"12/31/2005","7","Gold Digger","Kanye West","Late Registration"
-"12/31/2005","28","Heard 'Em Say","Kanye West","Late Registration"
-"01/07/2006","8","Gold Digger","Kanye West","Late Registration"
-"01/07/2006","35","Heard 'Em Say","Kanye West","Late Registration"
-"01/14/2006","4","Gold Digger","Kanye West","Late Registration"
-"01/14/2006","40","Heard 'Em Say","Kanye West","Late Registration"
-"01/21/2006","7","Gold Digger","Kanye West","Late Registration"
-"01/21/2006","45","Heard 'Em Say","Kanye West","Late Registration"
-"01/28/2006","12","Gold Digger","Kanye West","Late Registration"
-"01/28/2006","58","Heard 'Em Say","Kanye West","Late Registration"
-"02/04/2006","17","Gold Digger","Kanye West","Late Registration"
-"02/04/2006","71","Heard 'Em Say","Kanye West","Late Registration"
-"02/11/2006","22","Gold Digger","Kanye West","Late Registration"
-"02/11/2006","91","Heard 'Em Say","Kanye West","Late Registration"
-"02/18/2006","22","Gold Digger","Kanye West","Late Registration"
-"02/25/2006","18","Gold Digger","Kanye West","Late Registration"
-"02/25/2006","90","Touch The Sky","Kanye West","Late Registration"
-"03/04/2006","21","Gold Digger","Kanye West","Late Registration"
-"03/04/2006","70","Touch The Sky","Kanye West","Late Registration"
-"03/11/2006","23","Gold Digger","Kanye West","Late Registration"
-"03/11/2006","52","Touch The Sky","Kanye West","Late Registration"
-"03/18/2006","29","Gold Digger","Kanye West","Late Registration"
-"03/18/2006","47","Touch The Sky","Kanye West","Late Registration"
-"03/25/2006","34","Gold Digger","Kanye West","Late Registration"
-"03/25/2006","42","Touch The Sky","Kanye West","Late Registration"
-"04/01/2006","39","Gold Digger","Kanye West","Late Registration"
-"04/01/2006","47","Touch The Sky","Kanye West","Late Registration"
-"04/08/2006","43","Gold Digger","Kanye West","Late Registration"
-"04/08/2006","52","Touch The Sky","Kanye West","Late Registration"
-"04/15/2006","44","Gold Digger","Kanye West","Late Registration"
-"04/15/2006","69","Touch The Sky","Kanye West","Late Registration"
-"04/22/2006","50","Gold Digger","Kanye West","Late Registration"
-"04/22/2006","87","Touch The Sky","Kanye West","Late Registration"
-"08/05/2006","97","Number One","Kanye West","In My Mind"
-"08/12/2006","57","Number One","Kanye West","In My Mind"
-"08/19/2006","88","Number One","Kanye West","In My Mind"
-"02/17/2007","92","Wouldn't Get Far","Kanye West","None"
-"02/24/2007","73","Wouldn't Get Far","Kanye West","None"
-"03/03/2007","72","Wouldn't Get Far","Kanye West","None"
-"03/10/2007","70","Wouldn't Get Far","Kanye West","None"
-"03/17/2007","68","Wouldn't Get Far","Kanye West","None"
-"03/24/2007","68","Wouldn't Get Far","Kanye West","None"
-"03/31/2007","64","Wouldn't Get Far","Kanye West","None"
-"04/07/2007","82","Wouldn't Get Far","Kanye West","None"
-"04/14/2007","93","Wouldn't Get Far","Kanye West","None"
-"06/16/2007","80","Can't Tell Me Nothing","Kanye West","Graduation"
-"06/23/2007","96","Can't Tell Me Nothing","Kanye West","Graduation"
-"08/04/2007","96","Can't Tell Me Nothing","Kanye West","Graduation"
-"08/11/2007","47","Stronger","Kanye West","Graduation"
-"08/11/2007","94","Can't Tell Me Nothing","Kanye West","Graduation"
-"08/18/2007","6","Stronger","Kanye West","Graduation"
-"08/18/2007","91","Can't Tell Me Nothing","Kanye West","Graduation"
-"08/25/2007","6","Stronger","Kanye West","Graduation"
-"08/25/2007","85","Can't Tell Me Nothing","Kanye West","Graduation"
-"09/01/2007","5","Stronger","Kanye West","Graduation"
-"09/01/2007","88","Can't Tell Me Nothing","Kanye West","Graduation"
-"09/08/2007","3","Stronger","Kanye West","Graduation"
-"09/08/2007","79","Can't Tell Me Nothing","Kanye West","Graduation"
-"09/15/2007","2","Stronger","Kanye West","Graduation"
-"09/15/2007","62","Can't Tell Me Nothing","Kanye West","Graduation"
-"09/22/2007","2","Stronger","Kanye West","Graduation"
-"09/22/2007","57","Can't Tell Me Nothing","Kanye West","Graduation"
-"09/29/2007","1","Stronger","Kanye West","Graduation"
-"09/29/2007","14","Good Life","Kanye West","Graduation"
-"09/29/2007","41","Can't Tell Me Nothing","Kanye West","Graduation"
-"10/06/2007","2","Stronger","Kanye West","Graduation"
-"10/06/2007","13","Good Life","Kanye West","Graduation"
-"10/06/2007","54","Can't Tell Me Nothing","Kanye West","Graduation"
-"10/13/2007","2","Stronger","Kanye West","Graduation"
-"10/13/2007","18","Good Life","Kanye West","Graduation"
-"10/13/2007","72","Can't Tell Me Nothing","Kanye West","Graduation"
-"10/20/2007","2","Stronger","Kanye West","Graduation"
-"10/20/2007","10","Good Life","Kanye West","Graduation"
-"10/20/2007","79","Can't Tell Me Nothing","Kanye West","Graduation"
-"10/27/2007","2","Stronger","Kanye West","Graduation"
-"10/27/2007","10","Good Life","Kanye West","Graduation"
-"10/27/2007","85","Can't Tell Me Nothing","Kanye West","Graduation"
-"11/03/2007","6","Stronger","Kanye West","Graduation"
-"11/03/2007","8","Good Life","Kanye West","Graduation"
-"11/03/2007","86","Can't Tell Me Nothing","Kanye West","Graduation"
-"11/10/2007","6","Stronger","Kanye West","Graduation"
-"11/10/2007","7","Good Life","Kanye West","Graduation"
-"11/10/2007","88","Can't Tell Me Nothing","Kanye West","Graduation"
-"11/17/2007","6","Stronger","Kanye West","Graduation"
-"11/17/2007","8","Good Life","Kanye West","Graduation"
-"11/17/2007","92","Can't Tell Me Nothing","Kanye West","Graduation"
-"11/24/2007","7","Good Life","Kanye West","Graduation"
-"11/24/2007","9","Stronger","Kanye West","Graduation"
-"11/24/2007","97","Can't Tell Me Nothing","Kanye West","Graduation"
-"12/01/2007","7","Good Life","Kanye West","Graduation"
-"12/01/2007","10","Stronger","Kanye West","Graduation"
-"12/08/2007","8","Good Life","Kanye West","Graduation"
-"12/08/2007","13","Stronger","Kanye West","Graduation"
-"12/08/2007","75","Flashing Lights","Kanye West","Graduation"
-"12/15/2007","7","Good Life","Kanye West","Graduation"
-"12/15/2007","13","Stronger","Kanye West","Graduation"
-"12/15/2007","57","Flashing Lights","Kanye West","Graduation"
-"12/22/2007","9","Good Life","Kanye West","Graduation"
-"12/22/2007","13","Stronger","Kanye West","Graduation"
-"12/22/2007","50","Flashing Lights","Kanye West","Graduation"
-"12/29/2007","10","Good Life","Kanye West","Graduation"
-"12/29/2007","17","Stronger","Kanye West","Graduation"
-"12/29/2007","39","Flashing Lights","Kanye West","Graduation"
-"01/05/2008","14","Good Life","Kanye West","Graduation"
-"01/05/2008","20","Stronger","Kanye West","Graduation"
-"01/05/2008","36","Flashing Lights","Kanye West","Graduation"
-"01/12/2008","14","Stronger","Kanye West","Graduation"
-"01/12/2008","16","Good Life","Kanye West","Graduation"
-"01/12/2008","49","Flashing Lights","Kanye West","Graduation"
-"01/19/2008","19","Good Life","Kanye West","Graduation"
-"01/19/2008","22","Stronger","Kanye West","Graduation"
-"01/19/2008","35","Flashing Lights","Kanye West","Graduation"
-"01/26/2008","25","Good Life","Kanye West","Graduation"
-"01/26/2008","30","Flashing Lights","Kanye West","Graduation"
-"01/26/2008","34","Stronger","Kanye West","Graduation"
-"02/02/2008","29","Flashing Lights","Kanye West","Graduation"
-"02/02/2008","32","Good Life","Kanye West","Graduation"
-"02/02/2008","38","Stronger","Kanye West","Graduation"
-"02/09/2008","30","Flashing Lights","Kanye West","Graduation"
-"02/09/2008","37","Good Life","Kanye West","Graduation"
-"02/09/2008","46","Stronger","Kanye West","Graduation"
-"02/16/2008","33","Flashing Lights","Kanye West","Graduation"
-"02/16/2008","50","Good Life","Kanye West","Graduation"
-"02/23/2008","36","Flashing Lights","Kanye West","Graduation"
-"03/01/2008","33","Flashing Lights","Kanye West","Graduation"
-"03/08/2008","38","Flashing Lights","Kanye West","Graduation"
-"03/15/2008","37","Flashing Lights","Kanye West","Graduation"
-"03/22/2008","46","Flashing Lights","Kanye West","Graduation"
-"03/29/2008","54","Flashing Lights","Kanye West","Graduation"
-"04/05/2008","62","Flashing Lights","Kanye West","Graduation"
-"04/12/2008","62","Flashing Lights","Kanye West","Graduation"
-"04/19/2008","64","Flashing Lights","Kanye West","Graduation"
-"05/03/2008","98","American Boy","Kanye West","Shine"
-"05/10/2008","93","American Boy","Kanye West","Shine"
-"05/17/2008","71","American Boy","Kanye West","Shine"
-"05/24/2008","64","American Boy","Kanye West","Shine"
-"05/31/2008","63","American Boy","Kanye West","Shine"
-"06/07/2008","65","American Boy","Kanye West","Shine"
-"06/07/2008","96","Homecoming","Kanye West","Graduation"
-"06/14/2008","54","American Boy","Kanye West","Shine"
-"06/14/2008","83","Homecoming","Kanye West","Graduation"
-"06/21/2008","36","Put On","Kanye West","The Recession"
-"06/21/2008","52","American Boy","Kanye West","Shine"
-"06/21/2008","71","Homecoming","Kanye West","Graduation"
-"06/28/2008","35","American Boy","Kanye West","Shine"
-"06/28/2008","48","Put On","Kanye West","The Recession"
-"06/28/2008","69","Homecoming","Kanye West","Graduation"
-"07/05/2008","37","American Boy","Kanye West","Shine"
-"07/05/2008","58","Put On","Kanye West","The Recession"
-"07/05/2008","73","Homecoming","Kanye West","Graduation"
-"07/12/2008","41","American Boy","Kanye West","Shine"
-"07/12/2008","47","Put On","Kanye West","The Recession"
-"07/12/2008","78","Homecoming","Kanye West","Graduation"
-"07/19/2008","40","American Boy","Kanye West","Shine"
-"07/19/2008","42","Put On","Kanye West","The Recession"
-"07/19/2008","100","Homecoming","Kanye West","Graduation"
-"07/26/2008","31","American Boy","Kanye West","Shine"
-"07/26/2008","35","Put On","Kanye West","The Recession"
-"08/02/2008","26","American Boy","Kanye West","Shine"
-"08/02/2008","28","Put On","Kanye West","The Recession"
-"08/09/2008","16","American Boy","Kanye West","Shine"
-"08/09/2008","24","Put On","Kanye West","The Recession"
-"08/16/2008","12","American Boy","Kanye West","Shine"
-"08/16/2008","22","Put On","Kanye West","The Recession"
-"08/23/2008","12","American Boy","Kanye West","Shine"
-"08/23/2008","18","Put On","Kanye West","The Recession"
-"08/30/2008","11","American Boy","Kanye West","Shine"
-"08/30/2008","13","Put On","Kanye West","The Recession"
-"09/06/2008","12","Put On","Kanye West","The Recession"
-"09/06/2008","37","American Boy","Kanye West","Shine"
-"09/13/2008","12","Put On","Kanye West","The Recession"
-"09/13/2008","57","American Boy","Kanye West","Shine"
-"09/20/2008","18","Put On","Kanye West","The Recession"
-"09/20/2008","53","American Boy","Kanye West","Shine"
-"09/27/2008","5","Swagga Like Us","Kanye West","Paper Trail"
-"09/27/2008","9","American Boy","Kanye West","Shine"
-"09/27/2008","24","Put On","Kanye West","The Recession"
-"10/04/2008","3","Love Lockdown","Kanye West","808s & Heartbreak"
-"10/04/2008","10","American Boy","Kanye West","Shine"
-"10/04/2008","22","Swagga Like Us","Kanye West","Paper Trail"
-"10/04/2008","28","Put On","Kanye West","The Recession"
-"10/04/2008","69","Go Hard","Kanye West","We Global"
-"10/11/2008","3","Love Lockdown","Kanye West","808s & Heartbreak"
-"10/11/2008","10","American Boy","Kanye West","Shine"
-"10/11/2008","26","Swagga Like Us","Kanye West","Paper Trail"
-"10/11/2008","33","Put On","Kanye West","The Recession"
-"10/18/2008","15","Love Lockdown","Kanye West","808s & Heartbreak"
-"10/18/2008","24","American Boy","Kanye West","Shine"
-"10/18/2008","31","Swagga Like Us","Kanye West","Paper Trail"
-"10/18/2008","45","Put On","Kanye West","The Recession"
-"10/25/2008","12","Love Lockdown","Kanye West","808s & Heartbreak"
-"10/25/2008","28","American Boy","Kanye West","Shine"
-"10/25/2008","32","Swagga Like Us","Kanye West","Paper Trail"
-"10/25/2008","51","Put On","Kanye West","The Recession"
-"11/01/2008","12","Love Lockdown","Kanye West","808s & Heartbreak"
-"11/01/2008","31","American Boy","Kanye West","Shine"
-"11/01/2008","32","Swagga Like Us","Kanye West","Paper Trail"
-"11/01/2008","53","Put On","Kanye West","The Recession"
-"11/08/2008","12","Love Lockdown","Kanye West","808s & Heartbreak"
-"11/08/2008","30","Swagga Like Us","Kanye West","Paper Trail"
-"11/08/2008","35","American Boy","Kanye West","Shine"
-"11/15/2008","14","Love Lockdown","Kanye West","808s & Heartbreak"
-"11/15/2008","30","Swagga Like Us","Kanye West","Paper Trail"
-"11/15/2008","40","American Boy","Kanye West","Shine"
-"11/22/2008","4","Heartless","Kanye West","808s & Heartbreak"
-"11/22/2008","13","Love Lockdown","Kanye West","808s & Heartbreak"
-"11/22/2008","28","Swagga Like Us","Kanye West","Paper Trail"
-"11/22/2008","48","American Boy","Kanye West","Shine"
-"11/29/2008","9","Love Lockdown","Kanye West","808s & Heartbreak"
-"11/29/2008","12","Heartless","Kanye West","808s & Heartbreak"
-"11/29/2008","30","Swagga Like Us","Kanye West","Paper Trail"
-"12/06/2008","6","Love Lockdown","Kanye West","808s & Heartbreak"
-"12/06/2008","21","Heartless","Kanye West","808s & Heartbreak"
-"12/06/2008","32","Swagga Like Us","Kanye West","Paper Trail"
-"12/13/2008","13","Love Lockdown","Kanye West","808s & Heartbreak"
-"12/13/2008","19","Heartless","Kanye West","808s & Heartbreak"
-"12/13/2008","21","See You In My Nightmares","Kanye West","808s & Heartbreak"
-"12/13/2008","37","Swagga Like Us","Kanye West","Paper Trail"
-"12/13/2008","89","Amazing","Kanye West","808s & Heartbreak"
-"12/20/2008","8","Love Lockdown","Kanye West","808s & Heartbreak"
-"12/20/2008","16","Heartless","Kanye West","808s & Heartbreak"
-"12/20/2008","42","Swagga Like Us","Kanye West","Paper Trail"
-"12/20/2008","69","See You In My Nightmares","Kanye West","808s & Heartbreak"
-"12/27/2008","7","Heartless","Kanye West","808s & Heartbreak"
-"12/27/2008","10","Love Lockdown","Kanye West","808s & Heartbreak"
-"12/27/2008","52","Swagga Like Us","Kanye West","Paper Trail"
-"12/27/2008","98","See You In My Nightmares","Kanye West","808s & Heartbreak"
-"01/03/2009","4","Heartless","Kanye West","808s & Heartbreak"
-"01/03/2009","8","Love Lockdown","Kanye West","808s & Heartbreak"
-"01/03/2009","51","Swagga Like Us","Kanye West","Paper Trail"
-"01/10/2009","4","Heartless","Kanye West","808s & Heartbreak"
-"01/10/2009","8","Love Lockdown","Kanye West","808s & Heartbreak"
-"01/10/2009","47","Swagga Like Us","Kanye West","Paper Trail"
-"01/10/2009","92","See You In My Nightmares","Kanye West","808s & Heartbreak"
-"01/17/2009","5","Heartless","Kanye West","808s & Heartbreak"
-"01/17/2009","10","Love Lockdown","Kanye West","808s & Heartbreak"
-"01/17/2009","50","Swagga Like Us","Kanye West","Paper Trail"
-"01/24/2009","3","Heartless","Kanye West","808s & Heartbreak"
-"01/24/2009","12","Love Lockdown","Kanye West","808s & Heartbreak"
-"01/24/2009","70","Swagga Like Us","Kanye West","Paper Trail"
-"01/24/2009","100","Go Hard","Kanye West","We Global"
-"01/31/2009","3","Heartless","Kanye West","808s & Heartbreak"
-"01/31/2009","13","Love Lockdown","Kanye West","808s & Heartbreak"
-"01/31/2009","80","Swagga Like Us","Kanye West","Paper Trail"
-"02/07/2009","4","Heartless","Kanye West","808s & Heartbreak"
-"02/07/2009","21","Love Lockdown","Kanye West","808s & Heartbreak"
-"02/07/2009","100","Swagga Like Us","Kanye West","Paper Trail"
-"02/14/2009","3","Heartless","Kanye West","808s & Heartbreak"
-"02/14/2009","25","Love Lockdown","Kanye West","808s & Heartbreak"
-"02/21/2009","2","Heartless","Kanye West","808s & Heartbreak"
-"02/21/2009","33","Love Lockdown","Kanye West","808s & Heartbreak"
-"02/28/2009","4","Heartless","Kanye West","808s & Heartbreak"
-"02/28/2009","38","Love Lockdown","Kanye West","808s & Heartbreak"
-"03/07/2009","3","Heartless","Kanye West","808s & Heartbreak"
-"03/07/2009","42","Love Lockdown","Kanye West","808s & Heartbreak"
-"03/14/2009","6","Heartless","Kanye West","808s & Heartbreak"
-"03/21/2009","8","Heartless","Kanye West","808s & Heartbreak"
-"03/28/2009","7","Heartless","Kanye West","808s & Heartbreak"
-"04/04/2009","8","Heartless","Kanye West","808s & Heartbreak"
-"04/11/2009","16","Heartless","Kanye West","808s & Heartbreak"
-"04/11/2009","65","Knock You Down","Kanye West","In A Perfect World..."
-"04/18/2009","19","Heartless","Kanye West","808s & Heartbreak"
-"04/18/2009","54","Knock You Down","Kanye West","In A Perfect World..."
-"04/25/2009","19","Heartless","Kanye West","808s & Heartbreak"
-"04/25/2009","46","Knock You Down","Kanye West","In A Perfect World..."
-"05/02/2009","32","Heartless","Kanye West","808s & Heartbreak"
-"05/02/2009","39","Knock You Down","Kanye West","In A Perfect World..."
-"05/09/2009","26","Knock You Down","Kanye West","In A Perfect World..."
-"05/09/2009","33","Heartless","Kanye West","808s & Heartbreak"
-"05/16/2009","22","Knock You Down","Kanye West","In A Perfect World..."
-"05/16/2009","33","Heartless","Kanye West","808s & Heartbreak"
-"05/23/2009","17","Knock You Down","Kanye West","In A Perfect World..."
-"05/23/2009","45","Heartless","Kanye West","808s & Heartbreak"
-"05/23/2009","81","Amazing","Kanye West","808s & Heartbreak"
-"05/30/2009","14","Knock You Down","Kanye West","In A Perfect World..."
-"05/30/2009","35","Heartless","Kanye West","808s & Heartbreak"
-"05/30/2009","82","Amazing","Kanye West","808s & Heartbreak"
-"06/06/2009","13","Knock You Down","Kanye West","In A Perfect World..."
-"06/06/2009","48","Heartless","Kanye West","808s & Heartbreak"
-"06/06/2009","99","Amazing","Kanye West","808s & Heartbreak"
-"06/13/2009","7","Knock You Down","Kanye West","In A Perfect World..."
-"06/13/2009","51","Heartless","Kanye West","808s & Heartbreak"
-"06/13/2009","86","Amazing","Kanye West","808s & Heartbreak"
-"06/13/2009","100","Walkin' On The Moon","Kanye West","Love Vs Money"
-"06/20/2009","3","Knock You Down","Kanye West","In A Perfect World..."
-"06/20/2009","93","Walkin' On The Moon","Kanye West","Love Vs Money"
-"06/27/2009","3","Knock You Down","Kanye West","In A Perfect World..."
-"06/27/2009","51","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"06/27/2009","87","Walkin' On The Moon","Kanye West","Love Vs Money"
-"07/04/2009","4","Knock You Down","Kanye West","In A Perfect World..."
-"07/04/2009","80","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"07/04/2009","92","Walkin' On The Moon","Kanye West","Love Vs Money"
-"07/11/2009","4","Knock You Down","Kanye West","In A Perfect World..."
-"07/11/2009","89","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"07/11/2009","91","Walkin' On The Moon","Kanye West","Love Vs Money"
-"07/18/2009","4","Knock You Down","Kanye West","In A Perfect World..."
-"07/18/2009","87","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"07/18/2009","100","Walkin' On The Moon","Kanye West","Love Vs Money"
-"07/25/2009","4","Knock You Down","Kanye West","In A Perfect World..."
-"07/25/2009","91","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"07/25/2009","98","Walkin' On The Moon","Kanye West","Love Vs Money"
-"08/01/2009","4","Knock You Down","Kanye West","In A Perfect World..."
-"08/01/2009","75","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"08/01/2009","100","Walkin' On The Moon","Kanye West","Love Vs Money"
-"08/08/2009","3","Knock You Down","Kanye West","In A Perfect World..."
-"08/08/2009","51","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"08/08/2009","91","Walkin' On The Moon","Kanye West","Love Vs Money"
-"08/15/2009","4","Knock You Down","Kanye West","In A Perfect World..."
-"08/15/2009","50","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"08/22/2009","4","Knock You Down","Kanye West","In A Perfect World..."
-"08/22/2009","43","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"08/29/2009","8","Knock You Down","Kanye West","In A Perfect World..."
-"08/29/2009","47","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"09/05/2009","8","Knock You Down","Kanye West","In A Perfect World..."
-"09/05/2009","47","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"09/12/2009","8","Knock You Down","Kanye West","In A Perfect World..."
-"09/12/2009","51","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"09/19/2009","11","Knock You Down","Kanye West","In A Perfect World..."
-"09/19/2009","59","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"09/26/2009","12","Knock You Down","Kanye West","In A Perfect World..."
-"09/26/2009","68","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"10/03/2009","15","Knock You Down","Kanye West","In A Perfect World..."
-"10/03/2009","93","Make Her Say","Kanye West","Man On The Moon: The End Of Day"
-"10/10/2009","19","Knock You Down","Kanye West","In A Perfect World..."
-"10/17/2009","25","Knock You Down","Kanye West","In A Perfect World..."
-"10/24/2009","36","Knock You Down","Kanye West","In A Perfect World..."
-"10/31/2009","39","Knock You Down","Kanye West","In A Perfect World..."
-"11/07/2009","47","Knock You Down","Kanye West","In A Perfect World..."
-"07/17/2010","22","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"07/24/2010","29","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"07/31/2010","60","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"08/07/2010","72","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"08/14/2010","71","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"08/21/2010","65","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"08/28/2010","57","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"09/04/2010","42","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"09/04/2010","64","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"09/11/2010","22","Erase Me","Kanye West","Man On The Moon Ii: The Legend Of Mr. Rager"
-"09/11/2010","76","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"09/18/2010","62","Erase Me","Kanye West","Man On The Moon Ii: The Legend Of Mr. Rager"
-"09/18/2010","79","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"09/25/2010","69","Erase Me","Kanye West","Man On The Moon Ii: The Legend Of Mr. Rager"
-"09/25/2010","70","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"10/02/2010","67","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"10/02/2010","78","Erase Me","Kanye West","Man On The Moon Ii: The Legend Of Mr. Rager"
-"10/09/2010","97","Erase Me","Kanye West","Man On The Moon Ii: The Legend Of Mr. Rager"
-"10/09/2010","100","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"10/16/2010","91","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"10/23/2010","12","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"10/23/2010","97","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"10/30/2010","38","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"10/30/2010","98","POWER","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/06/2010","54","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/06/2010","79","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/13/2010","18","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/13/2010","51","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/20/2010","49","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/20/2010","50","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/27/2010","51","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"11/27/2010","79","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/04/2010","50","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/04/2010","77","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/11/2010","42","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/11/2010","60","Dark Fantasy","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/11/2010","92","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/18/2010","52","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/18/2010","98","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/25/2010","73","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"12/25/2010","93","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/01/2011","84","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/08/2011","76","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/08/2011","100","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/15/2011","75","Runaway","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/15/2011","92","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/22/2011","88","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/22/2011","97","Monster","Kanye West","My Beautiful Dark Twisted Fantasy"
-"01/29/2011","23","H*A*M","Kanye West","Watch The Throne"
-"01/29/2011","74","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"02/05/2011","49","H*A*M","Kanye West","Watch The Throne"
-"02/05/2011","60","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"02/12/2011","55","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"02/12/2011","81","H*A*M","Kanye West","Watch The Throne"
-"02/19/2011","58","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"02/19/2011","86","H*A*M","Kanye West","Watch The Throne"
-"02/26/2011","59","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"02/26/2011","93","H*A*M","Kanye West","Watch The Throne"
-"03/05/2011","28","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"03/05/2011","54","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"03/05/2011","93","H*A*M","Kanye West","Watch The Throne"
-"03/12/2011","8","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"03/12/2011","31","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"03/12/2011","95","H*A*M","Kanye West","Watch The Throne"
-"03/19/2011","8","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"03/19/2011","29","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"03/26/2011","3","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"03/26/2011","28","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"04/02/2011","2","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"04/02/2011","25","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"04/09/2011","1","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"04/09/2011","25","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"04/16/2011","1","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"04/16/2011","26","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"04/23/2011","1","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"04/23/2011","23","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"04/30/2011","2","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"04/30/2011","19","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"05/07/2011","1","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"05/07/2011","20","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"05/14/2011","1","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"05/14/2011","18","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"05/21/2011","2","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"05/21/2011","20","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"05/28/2011","2","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"05/28/2011","23","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"06/04/2011","2","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"06/04/2011","27","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"06/11/2011","3","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"06/11/2011","32","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"06/18/2011","3","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"06/18/2011","32","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"06/25/2011","4","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"06/25/2011","38","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"07/02/2011","5","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"07/02/2011","47","All Of The Lights","Kanye West","My Beautiful Dark Twisted Fantasy"
-"07/09/2011","7","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"07/16/2011","7","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"07/23/2011","10","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"07/30/2011","12","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"08/06/2011","14","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"08/06/2011","47","Otis","Kanye West","Watch The Throne"
-"08/06/2011","88","Marvin & Chardonnay","Kanye West","Finally Famous"
-"08/13/2011","12","Otis","Kanye West","Watch The Throne"
-"08/13/2011","20","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"08/13/2011","77","Marvin & Chardonnay","Kanye West","Finally Famous"
-"08/20/2011","20","Otis","Kanye West","Watch The Throne"
-"08/20/2011","23","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"08/20/2011","61","Marvin & Chardonnay","Kanye West","Finally Famous"
-"08/27/2011","32","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"08/27/2011","36","Otis","Kanye West","Watch The Throne"
-"08/27/2011","44","Who Gon Stop Me","Kanye West","Watch The Throne"
-"08/27/2011","56","Marvin & Chardonnay","Kanye West","Finally Famous"
-"08/27/2011","75","Ni**as in Paris","Kanye West","Watch The Throne"
-"09/03/2011","27","Otis","Kanye West","Watch The Throne"
-"09/03/2011","37","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"09/03/2011","53","Marvin & Chardonnay","Kanye West","Finally Famous"
-"09/03/2011","79","Who Gon Stop Me","Kanye West","Watch The Throne"
-"09/03/2011","82","Ni**as in Paris","Kanye West","Watch The Throne"
-"09/10/2011","25","Otis","Kanye West","Watch The Throne"
-"09/10/2011","42","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"09/10/2011","46","Marvin & Chardonnay","Kanye West","Finally Famous"
-"09/10/2011","78","Ni**as in Paris","Kanye West","Watch The Throne"
-"09/17/2011","22","Otis","Kanye West","Watch The Throne"
-"09/17/2011","47","E.T.","Kanye West","Katy Perry - Teenage Dream: The Complete Confection"
-"09/17/2011","49","Marvin & Chardonnay","Kanye West","Finally Famous"
-"09/17/2011","81","Ni**as in Paris","Kanye West","Watch The Throne"
-"09/24/2011","26","Otis","Kanye West","Watch The Throne"
-"09/24/2011","42","Marvin & Chardonnay","Kanye West","Finally Famous"
-"09/24/2011","67","Ni**as in Paris","Kanye West","Watch The Throne"
-"10/01/2011","33","Otis","Kanye West","Watch The Throne"
-"10/01/2011","38","Marvin & Chardonnay","Kanye West","Finally Famous"
-"10/01/2011","50","Ni**as in Paris","Kanye West","Watch The Throne"
-"10/08/2011","32","Marvin & Chardonnay","Kanye West","Finally Famous"
-"10/08/2011","40","Otis","Kanye West","Watch The Throne"
-"10/08/2011","45","Ni**as in Paris","Kanye West","Watch The Throne"
-"10/15/2011","35","Ni**as in Paris","Kanye West","Watch The Throne"
-"10/15/2011","36","Marvin & Chardonnay","Kanye West","Finally Famous"
-"10/15/2011","47","Otis","Kanye West","Watch The Throne"
-"10/22/2011","32","Ni**as in Paris","Kanye West","Watch The Throne"
-"10/22/2011","35","Marvin & Chardonnay","Kanye West","Finally Famous"
-"10/22/2011","56","Otis","Kanye West","Watch The Throne"
-"10/29/2011","27","Ni**as in Paris","Kanye West","Watch The Throne"
-"10/29/2011","36","Marvin & Chardonnay","Kanye West","Finally Famous"
-"10/29/2011","62","Otis","Kanye West","Watch The Throne"
-"11/05/2011","21","Ni**as in Paris","Kanye West","Watch The Throne"
-"11/05/2011","41","Marvin & Chardonnay","Kanye West","Finally Famous"
-"11/05/2011","65","Otis","Kanye West","Watch The Throne"
-"11/12/2011","17","Ni**as in Paris","Kanye West","Watch The Throne"
-"11/12/2011","43","Marvin & Chardonnay","Kanye West","Finally Famous"
-"11/12/2011","67","Otis","Kanye West","Watch The Throne"
-"11/19/2011","16","Ni**as in Paris","Kanye West","Watch The Throne"
-"11/19/2011","52","Marvin & Chardonnay","Kanye West","Finally Famous"
-"11/19/2011","69","Otis","Kanye West","Watch The Throne"
-"11/26/2011","17","Ni**as in Paris","Kanye West","Watch The Throne"
-"11/26/2011","62","Marvin & Chardonnay","Kanye West","Finally Famous"
-"11/26/2011","77","Otis","Kanye West","Watch The Throne"
-"12/03/2011","17","Ni**as in Paris","Kanye West","Watch The Throne"
-"12/03/2011","65","Marvin & Chardonnay","Kanye West","Finally Famous"
-"12/03/2011","88","Otis","Kanye West","Watch The Throne"
-"12/10/2011","15","Ni**as in Paris","Kanye West","Watch The Throne"
-"12/10/2011","71","Marvin & Chardonnay","Kanye West","Finally Famous"
-"12/10/2011","97","Otis","Kanye West","Watch The Throne"
-"12/17/2011","8","Ni**as in Paris","Kanye West","Watch The Throne"
-"12/17/2011","76","Marvin & Chardonnay","Kanye West","Finally Famous"
-"12/17/2011","98","Otis","Kanye West","Watch The Throne"
-"12/24/2011","6","Ni**as in Paris","Kanye West","Watch The Throne"
-"12/31/2011","6","Ni**as in Paris","Kanye West","Watch The Throne"
-"01/07/2012","5","Ni**as in Paris","Kanye West","Watch The Throne"
-"01/14/2012","7","Ni**as in Paris","Kanye West","Watch The Throne"
-"01/21/2012","7","Ni**as in Paris","Kanye West","Watch The Throne"
-"01/21/2012","98","Gotta Have It","Kanye West","Watch The Throne"
-"01/28/2012","7","Ni**as in Paris","Kanye West","Watch The Throne"
-"01/28/2012","84","Gotta Have It","Kanye West","Watch The Throne"
-"02/04/2012","9","Ni**as in Paris","Kanye West","Watch The Throne"
-"02/04/2012","79","Gotta Have It","Kanye West","Watch The Throne"
-"02/04/2012","100","No Church In The Wild","Kanye West","Watch The Throne"
-"02/11/2012","11","Ni**as in Paris","Kanye West","Watch The Throne"
-"02/11/2012","74","Gotta Have It","Kanye West","Watch The Throne"
-"02/11/2012","86","No Church In The Wild","Kanye West","Watch The Throne"
-"02/18/2012","11","Ni**as in Paris","Kanye West","Watch The Throne"
-"02/18/2012","72","Gotta Have It","Kanye West","Watch The Throne"
-"02/18/2012","96","No Church In The Wild","Kanye West","Watch The Throne"
-"02/25/2012","20","Ni**as in Paris","Kanye West","Watch The Throne"
-"02/25/2012","69","Gotta Have It","Kanye West","Watch The Throne"
-"02/25/2012","72","No Church In The Wild","Kanye West","Watch The Throne"
-"03/03/2012","24","Ni**as in Paris","Kanye West","Watch The Throne"
-"03/03/2012","78","Gotta Have It","Kanye West","Watch The Throne"
-"03/03/2012","98","No Church In The Wild","Kanye West","Watch The Throne"
-"03/10/2012","25","Ni**as in Paris","Kanye West","Watch The Throne"
-"03/10/2012","84","Gotta Have It","Kanye West","Watch The Throne"
-"03/17/2012","30","Ni**as in Paris","Kanye West","Watch The Throne"
-"03/17/2012","84","Gotta Have It","Kanye West","Watch The Throne"
-"03/24/2012","23","Ni**as in Paris","Kanye West","Watch The Throne"
-"03/24/2012","85","Gotta Have It","Kanye West","Watch The Throne"
-"03/31/2012","26","Ni**as in Paris","Kanye West","Watch The Throne"
-"03/31/2012","94","Gotta Have It","Kanye West","Watch The Throne"
-"04/07/2012","28","Ni**as in Paris","Kanye West","Watch The Throne"
-"04/14/2012","37","Ni**as in Paris","Kanye West","Watch The Throne"
-"04/21/2012","45","Ni**as in Paris","Kanye West","Watch The Throne"
-"04/28/2012","45","Ni**as in Paris","Kanye West","Watch The Throne"
-"05/05/2012","86","Way Too Cold","Kanye West","Rap Instrumentals"
-"07/21/2012","78","I Wish You Would","Kanye West","Kiss The Ring"
-"08/11/2012","89","New God Flow","Kanye West","Kanye West Presents Good Music Cruel Summer"
-"08/11/2012","91","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"09/01/2012","100","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"09/08/2012","91","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"09/08/2012","99","I Wish You Would","Kanye West","Kiss The Ring"
-"09/15/2012","79","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"09/22/2012","70","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"09/29/2012","65","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"10/06/2012","57","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"10/13/2012","56","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"10/20/2012","56","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"10/27/2012","52","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"11/03/2012","49","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"11/10/2012","47","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"11/17/2012","48","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"11/24/2012","53","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"12/01/2012","55","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"12/08/2012","61","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"12/15/2012","60","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"12/22/2012","60","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"12/29/2012","62","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"01/05/2013","59","Birthday Song","Kanye West","Based On A T.r.u. Story"
-"07/06/2013","56","New Slaves","Kanye West","Yeezus"
-"07/06/2013","69","Black Skinhead","Kanye West","Yeezus"
-"07/06/2013","91","Blood On The Leaves","Kanye West","Yeezus"
-"07/13/2013","86","Black Skinhead","Kanye West","Yeezus"
-"07/13/2013","90","New Slaves","Kanye West","Yeezus"
-"07/20/2013","97","Black Skinhead","Kanye West","Yeezus"
-"07/27/2013","92","Black Skinhead","Kanye West","Yeezus"
-"09/14/2013","89","Blood On The Leaves","Kanye West","Yeezus"
-"10/19/2013","18","Gone","Kanye West","Late Registration"
-"12/07/2013","73","Bound 2","Kanye West","Yeezus"
-"12/14/2013","12","Bound 2","Kanye West","Yeezus"
-"12/21/2013","60","Bound 2","Kanye West","Yeezus"
-"12/28/2013","76","Bound 2","Kanye West","Yeezus"
-"01/04/2014","87","Bound 2","Kanye West","Yeezus"
-"01/11/2014","99","Bound 2","Kanye West","Yeezus"
-"03/22/2014","78","Sanctified","Kanye West","Mastermind"
-"05/10/2014","100","I Won","Kanye West","Graduation"
-"05/31/2014","100","I Won","Kanye West","Graduation"
-"06/14/2014","98","I Won","Kanye West","Graduation"
-"01/17/2015","35","Only One","Kanye West","I Am Kanye West"
-"01/24/2015","54","Only One","Kanye West","I Am Kanye West"
-"01/31/2015","85","Only One","Kanye West","I Am Kanye West"
-"02/07/2015","54","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"02/14/2015","15","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"02/14/2015","68","Only One","Kanye West","I Am Kanye West"
-"02/21/2015","6","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"02/21/2015","69","Only One","Kanye West","I Am Kanye West"
-"02/28/2015","4","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"02/28/2015","45","Only One","Kanye West","I Am Kanye West"
-"03/07/2015","6","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"03/07/2015","74","Only One","Kanye West","I Am Kanye West"
-"03/14/2015","5","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"03/14/2015","80","All Your Fault","Kanye West","Dark Sky Paradise"
-"03/14/2015","92","Only One","Kanye West","I Am Kanye West"
-"03/14/2015","97","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"03/21/2015","5","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"03/21/2015","15","All Day","Kanye West","Karaoke Pro"
-"03/28/2015","5","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"03/28/2015","51","All Day","Kanye West","Karaoke Pro"
-"04/04/2015","5","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"04/04/2015","53","All Day","Kanye West","Karaoke Pro"
-"04/11/2015","8","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"04/11/2015","62","All Day","Kanye West","Karaoke Pro"
-"04/18/2015","9","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"04/18/2015","69","All Day","Kanye West","Karaoke Pro"
-"04/25/2015","13","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"04/25/2015","52","All Day","Kanye West","Karaoke Pro"
-"05/02/2015","16","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"05/02/2015","61","All Day","Kanye West","Karaoke Pro"
-"05/09/2015","26","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"05/09/2015","55","All Day","Kanye West","Karaoke Pro"
-"05/16/2015","36","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"05/16/2015","58","All Day","Kanye West","Karaoke Pro"
-"05/23/2015","45","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"05/23/2015","59","All Day","Kanye West","Karaoke Pro"
-"05/30/2015","55","All Day","Kanye West","Karaoke Pro"
-"05/30/2015","56","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"06/06/2015","60","All Day","Kanye West","Karaoke Pro"
-"06/06/2015","66","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"06/13/2015","75","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"06/13/2015","79","All Day","Kanye West","Karaoke Pro"
-"06/20/2015","76","FourFiveSeconds","Kanye West","8-bit Versions Of Kanye West"
-"06/20/2015","91","All Day","Kanye West","Karaoke Pro"
-"06/27/2015","93","All Day","Kanye West","Karaoke Pro"
-"08/01/2015","100","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"08/08/2015","97","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"08/15/2015","100","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"08/22/2015","96","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"08/29/2015","92","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"09/05/2015","92","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"09/12/2015","90","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"09/19/2015","82","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"09/26/2015","94","One Man Can Change The World","Kanye West","Dark Sky Paradise"
-"04/23/2016","34","Famous","Kanye West","The Life Of Pablo"
-"04/23/2016","37","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"04/23/2016","54","Pt. 2","Kanye West","The Life Of Pablo"
-"04/23/2016","67","Ultralight Beam","Kanye West","The Life Of Pablo"
-"04/23/2016","71","Waves","Kanye West","The Life Of Pablo"
-"04/23/2016","84","FML","Kanye West","The Life Of Pablo"
-"04/23/2016","92","Real Friends","Kanye West","The Life Of Pablo"
-"04/23/2016","99","Feedback","Kanye West","The Life Of Pablo"
-"04/30/2016","49","Famous","Kanye West","The Life Of Pablo"
-"04/30/2016","54","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"04/30/2016","73","Pt. 2","Kanye West","The Life Of Pablo"
-"04/30/2016","86","Waves","Kanye West","The Life Of Pablo"
-"04/30/2016","90","Ultralight Beam","Kanye West","The Life Of Pablo"
-"05/07/2016","62","Famous","Kanye West","The Life Of Pablo"
-"05/07/2016","64","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"05/07/2016","97","Pt. 2","Kanye West","The Life Of Pablo"
-"05/14/2016","82","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"05/14/2016","83","Famous","Kanye West","The Life Of Pablo"
-"05/21/2016","95","Famous","Kanye West","The Life Of Pablo"
-"05/21/2016","98","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"05/28/2016","88","Famous","Kanye West","The Life Of Pablo"
-"05/28/2016","94","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"06/04/2016","92","THat Part","Kanye West","Blank Face Lp"
-"06/25/2016","97","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"07/02/2016","76","THat Part","Kanye West","Blank Face Lp"
-"07/02/2016","97","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"07/09/2016","69","THat Part","Kanye West","Blank Face Lp"
-"07/09/2016","98","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"07/16/2016","64","THat Part","Kanye West","Blank Face Lp"
-"07/16/2016","71","Famous","Kanye West","The Life Of Pablo"
-"07/16/2016","95","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"07/23/2016","64","THat Part","Kanye West","Blank Face Lp"
-"07/23/2016","75","Famous","Kanye West","The Life Of Pablo"
-"07/30/2016","43","THat Part","Kanye West","Blank Face Lp"
-"07/30/2016","88","Famous","Kanye West","The Life Of Pablo"
-"07/30/2016","100","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"08/06/2016","42","THat Part","Kanye West","Blank Face Lp"
-"08/06/2016","71","Famous","Kanye West","The Life Of Pablo"
-"08/13/2016","40","THat Part","Kanye West","Blank Face Lp"
-"08/13/2016","74","Famous","Kanye West","The Life Of Pablo"
-"08/13/2016","89","P**** Print","Kanye West","Everybody Looking"
-"08/13/2016","94","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"08/20/2016","51","THat Part","Kanye West","Blank Face Lp"
-"08/20/2016","83","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"08/20/2016","89","Famous","Kanye West","The Life Of Pablo"
-"08/27/2016","51","THat Part","Kanye West","Blank Face Lp"
-"08/27/2016","83","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"09/03/2016","54","THat Part","Kanye West","Blank Face Lp"
-"09/03/2016","74","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"09/10/2016","56","THat Part","Kanye West","Blank Face Lp"
-"09/10/2016","71","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"09/17/2016","59","THat Part","Kanye West","Blank Face Lp"
-"09/17/2016","69","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"09/17/2016","90","Famous","Kanye West","The Life Of Pablo"
-"09/24/2016","59","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"09/24/2016","61","THat Part","Kanye West","Blank Face Lp"
-"09/24/2016","98","Fade","Kanye West","The Life Of Pablo"
-"09/24/2016","100","Famous","Kanye West","The Life Of Pablo"
-"10/01/2016","47","Fade","Kanye West","The Life Of Pablo"
-"10/01/2016","56","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"10/01/2016","66","THat Part","Kanye West","Blank Face Lp"
-"10/08/2016","56","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"10/08/2016","62","Fade","Kanye West","The Life Of Pablo"
-"10/08/2016","78","THat Part","Kanye West","Blank Face Lp"
-"10/15/2016","57","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"10/15/2016","58","Fade","Kanye West","The Life Of Pablo"
-"10/15/2016","83","THat Part","Kanye West","Blank Face Lp"
-"10/22/2016","54","Fade","Kanye West","The Life Of Pablo"
-"10/22/2016","56","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"10/22/2016","88","THat Part","Kanye West","Blank Face Lp"
-"10/29/2016","60","Father Stretch My Hands Pt. 1","Kanye West","The Life Of Pablo"
-"10/29/2016","64","Fade","Kanye West","The Life Of Pablo"
-"10/29/2016","92","THat Part","Kanye West","Blank Face Lp"
-"11/05/2016","64","Fade","Kanye West","The Life Of Pablo"
-"11/05/2016","86","THat Part","Kanye West","Blank Face Lp"
-"11/12/2016","65","Fade","Kanye West","The Life Of Pablo"
-"11/19/2016","64","Fade","Kanye West","The Life Of Pablo"
-"11/26/2016","67","Fade","Kanye West","The Life Of Pablo"
-"12/03/2016","66","Fade","Kanye West","The Life Of Pablo"
-"12/10/2016","71","Fade","Kanye West","The Life Of Pablo"
-"12/17/2016","96","Fade","Kanye West","The Life Of Pablo"
-"04/08/2017","54","Glow","Kanye West","More Life"
-"04/15/2017","89","Glow","Kanye West","More Life"
-"05/12/2018","85","Ye vs The People","Kanye West","None"
-"05/19/2018","16","Watch","Kanye West","Watch The Throne"
-"05/26/2018","42","Watch","Kanye West","Watch The Throne"
-"06/02/2018","60","Watch","Kanye West","Watch The Throne"
-"06/09/2018","75","What Would Meek Do?","Kanye West","Daytona"
-"06/09/2018","84","Watch","Kanye West","Watch The Throne"
-"06/16/2018","8","Yikes","Kanye West","Ye"
-"06/16/2018","11","All Mine","Kanye West","Ye"
-"06/16/2018","16","Ghost Town","Kanye West","Ye"
-"06/16/2018","24","Wouldn't Leave","Kanye West","Ye"
-"06/16/2018","27","Violent Crimes","Kanye West","Ye"
-"06/16/2018","28","I Thought About Killing You","Kanye West","Ye"
-"06/16/2018","36","No Mistakes","Kanye West","Ye"
-"06/16/2018","87","Watch","Kanye West","Watch The Throne"
-"06/23/2018","31","All Mine","Kanye West","Ye"
-"06/23/2018","40","Yikes","Kanye West","Ye"
-"06/23/2018","60","Ghost Town","Kanye West","Ye"
-"06/23/2018","85","Violent Crimes","Kanye West","Ye"
-"06/23/2018","92","Wouldn't Leave","Kanye West","Ye"
-"06/30/2018","48","All Mine","Kanye West","Ye"
-"06/30/2018","67","Yikes","Kanye West","Ye"
-"06/30/2018","96","Cop Shot The Kid","Kanye West","Nasir"
-"07/07/2018","54","All Mine","Kanye West","Ye"
-"07/07/2018","77","Yikes","Kanye West","Ye"
-"07/14/2018","83","All Mine","Kanye West","Ye"
-"07/14/2018","92","Yikes","Kanye West","Ye"
-"07/21/2018","85","All Mine","Kanye West","Ye"
-"07/28/2018","77","All Mine","Kanye West","Ye"
-"08/04/2018","91","All Mine","Kanye West","Ye"
-"08/11/2018","96","All Mine","Kanye West","Ye"
-"09/22/2018","6","I Love It","Kanye West","Harverd Dropout"
-"09/29/2018","7","I Love It","Kanye West","Harverd Dropout"
-"10/06/2018","9","I Love It","Kanye West","Harverd Dropout"
-"10/13/2018","18","I Love It","Kanye West","Harverd Dropout"
-"10/20/2018","17","I Love It","Kanye West","Harverd Dropout"
-"10/27/2018","26","I Love It","Kanye West","Harverd Dropout"
-"11/03/2018","35","I Love It","Kanye West","Harverd Dropout"
-"11/10/2018","47","I Love It","Kanye West","Harverd Dropout"
-"11/17/2018","60","I Love It","Kanye West","Harverd Dropout"
-"11/24/2018","71","I Love It","Kanye West","Harverd Dropout"
-"12/01/2018","75","I Love It","Kanye West","Harverd Dropout"
-"12/08/2018","58","MAMA","Kanye West","Dummy Boy"
-"12/08/2018","97","I Love It","Kanye West","Harverd Dropout"
-"12/15/2018","43","MAMA","Kanye West","Dummy Boy"
-"12/22/2018","62","One Minute","Kanye West","Skins"
-"12/22/2018","75","MAMA","Kanye West","Dummy Boy"
-"12/29/2018","100","MAMA","Kanye West","Dummy Boy"
-"02/02/2019","71","Mixed Personalities","Kanye West","We All Shine"
-"02/09/2019","73","Mixed Personalities","Kanye West","We All Shine"
-"02/16/2019","86","Mixed Personalities","Kanye West","We All Shine"
-"02/23/2019","93","Mixed Personalities","Kanye West","We All Shine"
-"03/02/2019","60","Mixed Personalities","Kanye West","We All Shine"
-"03/09/2019","56","Mixed Personalities","Kanye West","We All Shine"
-"03/16/2019","50","Mixed Personalities","Kanye West","We All Shine"
-"03/23/2019","46","Mixed Personalities","Kanye West","We All Shine"
-"03/30/2019","43","Mixed Personalities","Kanye West","We All Shine"
-"04/06/2019","42","Mixed Personalities","Kanye West","We All Shine"
-"04/13/2019","54","Mixed Personalities","Kanye West","We All Shine"
-"04/20/2019","56","Mixed Personalities","Kanye West","We All Shine"
-"04/27/2019","59","Mixed Personalities","Kanye West","We All Shine"
-"05/04/2019","63","Mixed Personalities","Kanye West","We All Shine"
-"05/11/2019","76","Mixed Personalities","Kanye West","We All Shine"
-"05/18/2019","78","Mixed Personalities","Kanye West","We All Shine"
-"05/25/2019","82","Mixed Personalities","Kanye West","We All Shine"
-"06/08/2019","98","Mixed Personalities","Kanye West","We All Shine"
-"11/09/2019","7","Follow God","Kanye West","Jesus Is King"
-"11/09/2019","17","Closed On Sunday","Kanye West","Jesus Is King"
-"11/09/2019","19","Selah","Kanye West","Jesus Is King"
-"11/09/2019","23","On God","Kanye West","Jesus Is King"
-"11/09/2019","33","Everything We Need","Kanye West","Jesus Is King"
-"11/09/2019","36","God Is","Kanye West","Jesus Is King"
-"11/09/2019","37","Use This Gospel","Kanye West","Jesus Is King"
-"11/09/2019","45","Every Hour","Kanye West","Jesus Is King"
-"11/09/2019","51","Water","Kanye West","Jesus Is King"
-"11/09/2019","60","Hands On","Kanye West","Jesus Is King"
-"11/09/2019","63","Jesus Is Lord","Kanye West","Jesus Is King"
-"11/16/2019","37","Follow God","Kanye West","Jesus Is King"
-"11/16/2019","84","Closed On Sunday","Kanye West","Jesus Is King"
-"11/16/2019","92","Selah","Kanye West","Jesus Is King"
-"11/16/2019","96","On God","Kanye West","Jesus Is King"
-"11/23/2019","38","Follow God","Kanye West","Jesus Is King"
-"11/30/2019","52","Follow God","Kanye West","Jesus Is King"
-"12/07/2019","79","Follow God","Kanye West","Jesus Is King"
-"12/14/2019","91","Follow God","Kanye West","Jesus Is King"
+Year,Rank,Song Title,Artist,Album
+11/29/03,94,Through The Wire,Kanye West,The College Dropout
+12/6/03,62,Slow Jamz,Kanye West,The College Dropout
+12/6/03,89,Through The Wire,Kanye West,The College Dropout
+12/13/03,46,Slow Jamz,Kanye West,The College Dropout
+12/13/03,74,Through The Wire,Kanye West,The College Dropout
+12/20/03,26,Slow Jamz,Kanye West,The College Dropout
+12/20/03,52,Through The Wire,Kanye West,The College Dropout
+12/27/03,18,Slow Jamz,Kanye West,The College Dropout
+12/27/03,39,Through The Wire,Kanye West,The College Dropout
+1/3/04,9,Slow Jamz,Kanye West,The College Dropout
+1/3/04,33,Through The Wire,Kanye West,The College Dropout
+1/10/04,9,Slow Jamz,Kanye West,The College Dropout
+1/10/04,31,Through The Wire,Kanye West,The College Dropout
+1/17/04,8,Slow Jamz,Kanye West,The College Dropout
+1/17/04,31,Through The Wire,Kanye West,The College Dropout
+1/24/04,5,Slow Jamz,Kanye West,The College Dropout
+1/24/04,26,Through The Wire,Kanye West,The College Dropout
+1/31/04,4,Slow Jamz,Kanye West,The College Dropout
+1/31/04,19,Through The Wire,Kanye West,The College Dropout
+2/7/04,3,Slow Jamz,Kanye West,The College Dropout
+2/7/04,16,Through The Wire,Kanye West,The College Dropout
+2/14/04,2,Slow Jamz,Kanye West,The College Dropout
+2/14/04,15,Through The Wire,Kanye West,The College Dropout
+2/21/04,1,Slow Jamz,Kanye West,The College Dropout
+2/21/04,15,Through The Wire,Kanye West,The College Dropout
+2/28/04,2,Slow Jamz,Kanye West,The College Dropout
+2/28/04,15,Through The Wire,Kanye West,The College Dropout
+3/6/04,2,Slow Jamz,Kanye West,The College Dropout
+3/6/04,15,Through The Wire,Kanye West,The College Dropout
+3/13/04,3,Slow Jamz,Kanye West,The College Dropout
+3/13/04,15,Through The Wire,Kanye West,The College Dropout
+3/13/04,75,All Falls Down,Kanye West,The College Dropout
+3/20/04,3,Slow Jamz,Kanye West,The College Dropout
+3/20/04,20,Through The Wire,Kanye West,The College Dropout
+3/20/04,60,All Falls Down,Kanye West,The College Dropout
+3/27/04,5,Slow Jamz,Kanye West,The College Dropout
+3/27/04,26,Through The Wire,Kanye West,The College Dropout
+3/27/04,46,All Falls Down,Kanye West,The College Dropout
+4/3/04,12,Slow Jamz,Kanye West,The College Dropout
+4/3/04,31,All Falls Down,Kanye West,The College Dropout
+4/3/04,38,Through The Wire,Kanye West,The College Dropout
+4/10/04,16,Slow Jamz,Kanye West,The College Dropout
+4/10/04,18,All Falls Down,Kanye West,The College Dropout
+4/10/04,42,Through The Wire,Kanye West,The College Dropout
+4/17/04,14,All Falls Down,Kanye West,The College Dropout
+4/17/04,28,Slow Jamz,Kanye West,The College Dropout
+4/17/04,47,Through The Wire,Kanye West,The College Dropout
+4/24/04,11,All Falls Down,Kanye West,The College Dropout
+4/24/04,37,Slow Jamz,Kanye West,The College Dropout
+5/1/04,9,All Falls Down,Kanye West,The College Dropout
+5/1/04,45,Slow Jamz,Kanye West,The College Dropout
+5/8/04,10,All Falls Down,Kanye West,The College Dropout
+5/8/04,68,Jesus Walks,Kanye West,The College Dropout
+5/15/04,11,All Falls Down,Kanye West,The College Dropout
+5/15/04,62,Jesus Walks,Kanye West,The College Dropout
+5/15/04,88,Talk About Our Love,Kanye West,Afrodisiac
+5/22/04,7,All Falls Down,Kanye West,The College Dropout
+5/22/04,52,Jesus Walks,Kanye West,The College Dropout
+5/22/04,67,Talk About Our Love,Kanye West,Afrodisiac
+5/22/04,99,Selfish,Kanye West,Detroit Deli
+5/29/04,9,All Falls Down,Kanye West,The College Dropout
+5/29/04,34,Jesus Walks,Kanye West,The College Dropout
+5/29/04,64,Talk About Our Love,Kanye West,Afrodisiac
+5/29/04,78,This Way,Kanye West,Neighborhood Watch
+5/29/04,98,Selfish,Kanye West,Detroit Deli
+6/5/04,11,All Falls Down,Kanye West,The College Dropout
+6/5/04,29,Jesus Walks,Kanye West,The College Dropout
+6/5/04,56,Talk About Our Love,Kanye West,Afrodisiac
+6/5/04,84,This Way,Kanye West,Neighborhood Watch
+6/5/04,91,Selfish,Kanye West,Detroit Deli
+6/12/04,12,All Falls Down,Kanye West,The College Dropout
+6/12/04,22,Jesus Walks,Kanye West,The College Dropout
+6/12/04,36,Talk About Our Love,Kanye West,Afrodisiac
+6/12/04,83,This Way,Kanye West,Neighborhood Watch
+6/12/04,91,Selfish,Kanye West,Detroit Deli
+6/19/04,12,All Falls Down,Kanye West,The College Dropout
+6/19/04,18,Jesus Walks,Kanye West,The College Dropout
+6/19/04,47,Talk About Our Love,Kanye West,Afrodisiac
+6/19/04,80,Selfish,Kanye West,Detroit Deli
+6/19/04,83,This Way,Kanye West,Neighborhood Watch
+6/26/04,15,All Falls Down,Kanye West,The College Dropout
+6/26/04,16,Jesus Walks,Kanye West,The College Dropout
+6/26/04,39,Talk About Our Love,Kanye West,Afrodisiac
+6/26/04,80,Selfish,Kanye West,Detroit Deli
+6/26/04,100,This Way,Kanye West,Neighborhood Watch
+7/3/04,16,Jesus Walks,Kanye West,The College Dropout
+7/3/04,23,All Falls Down,Kanye West,The College Dropout
+7/3/04,52,Talk About Our Love,Kanye West,Afrodisiac
+7/3/04,67,Selfish,Kanye West,Detroit Deli
+7/10/04,16,Jesus Walks,Kanye West,The College Dropout
+7/10/04,44,All Falls Down,Kanye West,The College Dropout
+7/10/04,50,Talk About Our Love,Kanye West,Afrodisiac
+7/10/04,67,Selfish,Kanye West,Detroit Deli
+7/17/04,16,Jesus Walks,Kanye West,The College Dropout
+7/17/04,54,All Falls Down,Kanye West,The College Dropout
+7/17/04,59,Talk About Our Love,Kanye West,Afrodisiac
+7/17/04,69,Selfish,Kanye West,Detroit Deli
+7/24/04,14,Jesus Walks,Kanye West,The College Dropout
+7/24/04,49,All Falls Down,Kanye West,The College Dropout
+7/24/04,65,Selfish,Kanye West,Detroit Deli
+7/24/04,79,Talk About Our Love,Kanye West,Afrodisiac
+7/31/04,11,Jesus Walks,Kanye West,The College Dropout
+7/31/04,64,Selfish,Kanye West,Detroit Deli
+7/31/04,87,Talk About Our Love,Kanye West,Afrodisiac
+8/7/04,11,Jesus Walks,Kanye West,The College Dropout
+8/7/04,59,Selfish,Kanye West,Detroit Deli
+8/7/04,100,Talk About Our Love,Kanye West,Afrodisiac
+8/14/04,14,Jesus Walks,Kanye West,The College Dropout
+8/14/04,55,Selfish,Kanye West,Detroit Deli
+8/14/04,94,Talk About Our Love,Kanye West,Afrodisiac
+8/21/04,14,Jesus Walks,Kanye West,The College Dropout
+8/21/04,60,Selfish,Kanye West,Detroit Deli
+8/28/04,18,Jesus Walks,Kanye West,The College Dropout
+8/28/04,65,Selfish,Kanye West,Detroit Deli
+9/4/04,20,Jesus Walks,Kanye West,The College Dropout
+9/4/04,82,Selfish,Kanye West,Detroit Deli
+9/11/04,24,Jesus Walks,Kanye West,The College Dropout
+9/11/04,96,Selfish,Kanye West,Detroit Deli
+9/18/04,27,Jesus Walks,Kanye West,The College Dropout
+9/25/04,28,Jesus Walks,Kanye West,The College Dropout
+10/2/04,34,Jesus Walks,Kanye West,The College Dropout
+10/9/04,39,Jesus Walks,Kanye West,The College Dropout
+10/16/04,47,Jesus Walks,Kanye West,The College Dropout
+10/23/04,50,Jesus Walks,Kanye West,The College Dropout
+2/19/05,94,Down And Out,Kanye West,Purple Haze
+5/21/05,94,Diamonds From Sierra Leone,Kanye West,Late Registration
+5/28/05,86,Diamonds From Sierra Leone,Kanye West,Late Registration
+6/4/05,83,Diamonds From Sierra Leone,Kanye West,Late Registration
+6/11/05,94,Diamonds From Sierra Leone,Kanye West,Late Registration
+6/18/05,58,Diamonds From Sierra Leone,Kanye West,Late Registration
+6/25/05,63,Diamonds From Sierra Leone,Kanye West,Late Registration
+7/2/05,63,Diamonds From Sierra Leone,Kanye West,Late Registration
+7/9/05,64,Diamonds From Sierra Leone,Kanye West,Late Registration
+7/16/05,62,Diamonds From Sierra Leone,Kanye West,Late Registration
+7/23/05,66,Diamonds From Sierra Leone,Kanye West,Late Registration
+7/30/05,69,Diamonds From Sierra Leone,Kanye West,Late Registration
+7/30/05,92,Gold Digger,Kanye West,Late Registration
+8/6/05,43,Diamonds From Sierra Leone,Kanye West,Late Registration
+8/6/05,75,Gold Digger,Kanye West,Late Registration
+8/13/05,50,Diamonds From Sierra Leone,Kanye West,Late Registration
+8/13/05,62,Gold Digger,Kanye West,Late Registration
+8/20/05,47,Gold Digger,Kanye West,Late Registration
+8/20/05,73,Diamonds From Sierra Leone,Kanye West,Late Registration
+8/27/05,30,Gold Digger,Kanye West,Late Registration
+8/27/05,86,Diamonds From Sierra Leone,Kanye West,Late Registration
+9/3/05,27,Gold Digger,Kanye West,Late Registration
+9/3/05,85,Diamonds From Sierra Leone,Kanye West,Late Registration
+9/10/05,19,Gold Digger,Kanye West,Late Registration
+9/10/05,91,Diamonds From Sierra Leone,Kanye West,Late Registration
+9/17/05,1,Gold Digger,Kanye West,Late Registration
+9/17/05,51,Diamonds From Sierra Leone,Kanye West,Late Registration
+9/24/05,1,Gold Digger,Kanye West,Late Registration
+9/24/05,73,Diamonds From Sierra Leone,Kanye West,Late Registration
+10/1/05,1,Gold Digger,Kanye West,Late Registration
+10/8/05,1,Gold Digger,Kanye West,Late Registration
+10/15/05,1,Gold Digger,Kanye West,Late Registration
+10/22/05,1,Gold Digger,Kanye West,Late Registration
+10/29/05,1,Gold Digger,Kanye West,Late Registration
+10/29/05,100,Heard 'Em Say,Kanye West,Late Registration
+11/5/05,1,Gold Digger,Kanye West,Late Registration
+11/5/05,67,Heard 'Em Say,Kanye West,Late Registration
+11/12/05,1,Gold Digger,Kanye West,Late Registration
+11/12/05,56,Heard 'Em Say,Kanye West,Late Registration
+11/19/05,1,Gold Digger,Kanye West,Late Registration
+11/19/05,47,Heard 'Em Say,Kanye West,Late Registration
+11/26/05,2,Gold Digger,Kanye West,Late Registration
+11/26/05,43,Heard 'Em Say,Kanye West,Late Registration
+12/3/05,2,Gold Digger,Kanye West,Late Registration
+12/3/05,38,Heard 'Em Say,Kanye West,Late Registration
+12/10/05,2,Gold Digger,Kanye West,Late Registration
+12/10/05,35,Heard 'Em Say,Kanye West,Late Registration
+12/17/05,3,Gold Digger,Kanye West,Late Registration
+12/17/05,26,Heard 'Em Say,Kanye West,Late Registration
+12/24/05,6,Gold Digger,Kanye West,Late Registration
+12/24/05,26,Heard 'Em Say,Kanye West,Late Registration
+12/31/05,7,Gold Digger,Kanye West,Late Registration
+12/31/05,28,Heard 'Em Say,Kanye West,Late Registration
+1/7/06,8,Gold Digger,Kanye West,Late Registration
+1/7/06,35,Heard 'Em Say,Kanye West,Late Registration
+1/14/06,4,Gold Digger,Kanye West,Late Registration
+1/14/06,40,Heard 'Em Say,Kanye West,Late Registration
+1/21/06,7,Gold Digger,Kanye West,Late Registration
+1/21/06,45,Heard 'Em Say,Kanye West,Late Registration
+1/28/06,12,Gold Digger,Kanye West,Late Registration
+1/28/06,58,Heard 'Em Say,Kanye West,Late Registration
+2/4/06,17,Gold Digger,Kanye West,Late Registration
+2/4/06,71,Heard 'Em Say,Kanye West,Late Registration
+2/11/06,22,Gold Digger,Kanye West,Late Registration
+2/11/06,91,Heard 'Em Say,Kanye West,Late Registration
+2/18/06,22,Gold Digger,Kanye West,Late Registration
+2/25/06,18,Gold Digger,Kanye West,Late Registration
+2/25/06,90,Touch The Sky,Kanye West,Late Registration
+3/4/06,21,Gold Digger,Kanye West,Late Registration
+3/4/06,70,Touch The Sky,Kanye West,Late Registration
+3/11/06,23,Gold Digger,Kanye West,Late Registration
+3/11/06,52,Touch The Sky,Kanye West,Late Registration
+3/18/06,29,Gold Digger,Kanye West,Late Registration
+3/18/06,47,Touch The Sky,Kanye West,Late Registration
+3/25/06,34,Gold Digger,Kanye West,Late Registration
+3/25/06,42,Touch The Sky,Kanye West,Late Registration
+4/1/06,39,Gold Digger,Kanye West,Late Registration
+4/1/06,47,Touch The Sky,Kanye West,Late Registration
+4/8/06,43,Gold Digger,Kanye West,Late Registration
+4/8/06,52,Touch The Sky,Kanye West,Late Registration
+4/15/06,44,Gold Digger,Kanye West,Late Registration
+4/15/06,69,Touch The Sky,Kanye West,Late Registration
+4/22/06,50,Gold Digger,Kanye West,Late Registration
+4/22/06,87,Touch The Sky,Kanye West,Late Registration
+8/5/06,97,Number One,Kanye West,In My Mind
+8/12/06,57,Number One,Kanye West,In My Mind
+8/19/06,88,Number One,Kanye West,In My Mind
+2/17/07,92,Wouldn't Get Far,Kanye West,None
+2/24/07,73,Wouldn't Get Far,Kanye West,None
+3/3/07,72,Wouldn't Get Far,Kanye West,None
+3/10/07,70,Wouldn't Get Far,Kanye West,None
+3/17/07,68,Wouldn't Get Far,Kanye West,None
+3/24/07,68,Wouldn't Get Far,Kanye West,None
+3/31/07,64,Wouldn't Get Far,Kanye West,None
+4/7/07,82,Wouldn't Get Far,Kanye West,None
+4/14/07,93,Wouldn't Get Far,Kanye West,None
+6/16/07,80,Can't Tell Me Nothing,Kanye West,Graduation
+6/23/07,96,Can't Tell Me Nothing,Kanye West,Graduation
+8/4/07,96,Can't Tell Me Nothing,Kanye West,Graduation
+8/11/07,47,Stronger,Kanye West,Graduation
+8/11/07,94,Can't Tell Me Nothing,Kanye West,Graduation
+8/18/07,6,Stronger,Kanye West,Graduation
+8/18/07,91,Can't Tell Me Nothing,Kanye West,Graduation
+8/25/07,6,Stronger,Kanye West,Graduation
+8/25/07,85,Can't Tell Me Nothing,Kanye West,Graduation
+9/1/07,5,Stronger,Kanye West,Graduation
+9/1/07,88,Can't Tell Me Nothing,Kanye West,Graduation
+9/8/07,3,Stronger,Kanye West,Graduation
+9/8/07,79,Can't Tell Me Nothing,Kanye West,Graduation
+9/15/07,2,Stronger,Kanye West,Graduation
+9/15/07,62,Can't Tell Me Nothing,Kanye West,Graduation
+9/22/07,2,Stronger,Kanye West,Graduation
+9/22/07,57,Can't Tell Me Nothing,Kanye West,Graduation
+9/29/07,1,Stronger,Kanye West,Graduation
+9/29/07,14,Good Life,Kanye West,Graduation
+9/29/07,41,Can't Tell Me Nothing,Kanye West,Graduation
+10/6/07,2,Stronger,Kanye West,Graduation
+10/6/07,13,Good Life,Kanye West,Graduation
+10/6/07,54,Can't Tell Me Nothing,Kanye West,Graduation
+10/13/07,2,Stronger,Kanye West,Graduation
+10/13/07,18,Good Life,Kanye West,Graduation
+10/13/07,72,Can't Tell Me Nothing,Kanye West,Graduation
+10/20/07,2,Stronger,Kanye West,Graduation
+10/20/07,10,Good Life,Kanye West,Graduation
+10/20/07,79,Can't Tell Me Nothing,Kanye West,Graduation
+10/27/07,2,Stronger,Kanye West,Graduation
+10/27/07,10,Good Life,Kanye West,Graduation
+10/27/07,85,Can't Tell Me Nothing,Kanye West,Graduation
+11/3/07,6,Stronger,Kanye West,Graduation
+11/3/07,8,Good Life,Kanye West,Graduation
+11/3/07,86,Can't Tell Me Nothing,Kanye West,Graduation
+11/10/07,6,Stronger,Kanye West,Graduation
+11/10/07,7,Good Life,Kanye West,Graduation
+11/10/07,88,Can't Tell Me Nothing,Kanye West,Graduation
+11/17/07,6,Stronger,Kanye West,Graduation
+11/17/07,8,Good Life,Kanye West,Graduation
+11/17/07,92,Can't Tell Me Nothing,Kanye West,Graduation
+11/24/07,7,Good Life,Kanye West,Graduation
+11/24/07,9,Stronger,Kanye West,Graduation
+11/24/07,97,Can't Tell Me Nothing,Kanye West,Graduation
+12/1/07,7,Good Life,Kanye West,Graduation
+12/1/07,10,Stronger,Kanye West,Graduation
+12/8/07,8,Good Life,Kanye West,Graduation
+12/8/07,13,Stronger,Kanye West,Graduation
+12/8/07,75,Flashing Lights,Kanye West,Graduation
+12/15/07,7,Good Life,Kanye West,Graduation
+12/15/07,13,Stronger,Kanye West,Graduation
+12/15/07,57,Flashing Lights,Kanye West,Graduation
+12/22/07,9,Good Life,Kanye West,Graduation
+12/22/07,13,Stronger,Kanye West,Graduation
+12/22/07,50,Flashing Lights,Kanye West,Graduation
+12/29/07,10,Good Life,Kanye West,Graduation
+12/29/07,17,Stronger,Kanye West,Graduation
+12/29/07,39,Flashing Lights,Kanye West,Graduation
+1/5/08,14,Good Life,Kanye West,Graduation
+1/5/08,20,Stronger,Kanye West,Graduation
+1/5/08,36,Flashing Lights,Kanye West,Graduation
+1/12/08,14,Stronger,Kanye West,Graduation
+1/12/08,16,Good Life,Kanye West,Graduation
+1/12/08,49,Flashing Lights,Kanye West,Graduation
+1/19/08,19,Good Life,Kanye West,Graduation
+1/19/08,22,Stronger,Kanye West,Graduation
+1/19/08,35,Flashing Lights,Kanye West,Graduation
+1/26/08,25,Good Life,Kanye West,Graduation
+1/26/08,30,Flashing Lights,Kanye West,Graduation
+1/26/08,34,Stronger,Kanye West,Graduation
+2/2/08,29,Flashing Lights,Kanye West,Graduation
+2/2/08,32,Good Life,Kanye West,Graduation
+2/2/08,38,Stronger,Kanye West,Graduation
+2/9/08,30,Flashing Lights,Kanye West,Graduation
+2/9/08,37,Good Life,Kanye West,Graduation
+2/9/08,46,Stronger,Kanye West,Graduation
+2/16/08,33,Flashing Lights,Kanye West,Graduation
+2/16/08,50,Good Life,Kanye West,Graduation
+2/23/08,36,Flashing Lights,Kanye West,Graduation
+3/1/08,33,Flashing Lights,Kanye West,Graduation
+3/8/08,38,Flashing Lights,Kanye West,Graduation
+3/15/08,37,Flashing Lights,Kanye West,Graduation
+3/22/08,46,Flashing Lights,Kanye West,Graduation
+3/29/08,54,Flashing Lights,Kanye West,Graduation
+4/5/08,62,Flashing Lights,Kanye West,Graduation
+4/12/08,62,Flashing Lights,Kanye West,Graduation
+4/19/08,64,Flashing Lights,Kanye West,Graduation
+5/3/08,98,American Boy,Kanye West,Shine
+5/10/08,93,American Boy,Kanye West,Shine
+5/17/08,71,American Boy,Kanye West,Shine
+5/24/08,64,American Boy,Kanye West,Shine
+5/31/08,63,American Boy,Kanye West,Shine
+6/7/08,65,American Boy,Kanye West,Shine
+6/7/08,96,Homecoming,Kanye West,Graduation
+6/14/08,54,American Boy,Kanye West,Shine
+6/14/08,83,Homecoming,Kanye West,Graduation
+6/21/08,36,Put On,Kanye West,The Recession
+6/21/08,52,American Boy,Kanye West,Shine
+6/21/08,71,Homecoming,Kanye West,Graduation
+6/28/08,35,American Boy,Kanye West,Shine
+6/28/08,48,Put On,Kanye West,The Recession
+6/28/08,69,Homecoming,Kanye West,Graduation
+7/5/08,37,American Boy,Kanye West,Shine
+7/5/08,58,Put On,Kanye West,The Recession
+7/5/08,73,Homecoming,Kanye West,Graduation
+7/12/08,41,American Boy,Kanye West,Shine
+7/12/08,47,Put On,Kanye West,The Recession
+7/12/08,78,Homecoming,Kanye West,Graduation
+7/19/08,40,American Boy,Kanye West,Shine
+7/19/08,42,Put On,Kanye West,The Recession
+7/19/08,100,Homecoming,Kanye West,Graduation
+7/26/08,31,American Boy,Kanye West,Shine
+7/26/08,35,Put On,Kanye West,The Recession
+8/2/08,26,American Boy,Kanye West,Shine
+8/2/08,28,Put On,Kanye West,The Recession
+8/9/08,16,American Boy,Kanye West,Shine
+8/9/08,24,Put On,Kanye West,The Recession
+8/16/08,12,American Boy,Kanye West,Shine
+8/16/08,22,Put On,Kanye West,The Recession
+8/23/08,12,American Boy,Kanye West,Shine
+8/23/08,18,Put On,Kanye West,The Recession
+8/30/08,11,American Boy,Kanye West,Shine
+8/30/08,13,Put On,Kanye West,The Recession
+9/6/08,12,Put On,Kanye West,The Recession
+9/6/08,37,American Boy,Kanye West,Shine
+9/13/08,12,Put On,Kanye West,The Recession
+9/13/08,57,American Boy,Kanye West,Shine
+9/20/08,18,Put On,Kanye West,The Recession
+9/20/08,53,American Boy,Kanye West,Shine
+9/27/08,5,Swagga Like Us,Kanye West,Paper Trail
+9/27/08,9,American Boy,Kanye West,Shine
+9/27/08,24,Put On,Kanye West,The Recession
+10/4/08,3,Love Lockdown,Kanye West,808s & Heartbreak
+10/4/08,10,American Boy,Kanye West,Shine
+10/4/08,22,Swagga Like Us,Kanye West,Paper Trail
+10/4/08,28,Put On,Kanye West,The Recession
+10/4/08,69,Go Hard,Kanye West,We Global
+10/11/08,3,Love Lockdown,Kanye West,808s & Heartbreak
+10/11/08,10,American Boy,Kanye West,Shine
+10/11/08,26,Swagga Like Us,Kanye West,Paper Trail
+10/11/08,33,Put On,Kanye West,The Recession
+10/18/08,15,Love Lockdown,Kanye West,808s & Heartbreak
+10/18/08,24,American Boy,Kanye West,Shine
+10/18/08,31,Swagga Like Us,Kanye West,Paper Trail
+10/18/08,45,Put On,Kanye West,The Recession
+10/25/08,12,Love Lockdown,Kanye West,808s & Heartbreak
+10/25/08,28,American Boy,Kanye West,Shine
+10/25/08,32,Swagga Like Us,Kanye West,Paper Trail
+10/25/08,51,Put On,Kanye West,The Recession
+11/1/08,12,Love Lockdown,Kanye West,808s & Heartbreak
+11/1/08,31,American Boy,Kanye West,Shine
+11/1/08,32,Swagga Like Us,Kanye West,Paper Trail
+11/1/08,53,Put On,Kanye West,The Recession
+11/8/08,12,Love Lockdown,Kanye West,808s & Heartbreak
+11/8/08,30,Swagga Like Us,Kanye West,Paper Trail
+11/8/08,35,American Boy,Kanye West,Shine
+11/15/08,14,Love Lockdown,Kanye West,808s & Heartbreak
+11/15/08,30,Swagga Like Us,Kanye West,Paper Trail
+11/15/08,40,American Boy,Kanye West,Shine
+11/22/08,4,Heartless,Kanye West,808s & Heartbreak
+11/22/08,13,Love Lockdown,Kanye West,808s & Heartbreak
+11/22/08,28,Swagga Like Us,Kanye West,Paper Trail
+11/22/08,48,American Boy,Kanye West,Shine
+11/29/08,9,Love Lockdown,Kanye West,808s & Heartbreak
+11/29/08,12,Heartless,Kanye West,808s & Heartbreak
+11/29/08,30,Swagga Like Us,Kanye West,Paper Trail
+12/6/08,6,Love Lockdown,Kanye West,808s & Heartbreak
+12/6/08,21,Heartless,Kanye West,808s & Heartbreak
+12/6/08,32,Swagga Like Us,Kanye West,Paper Trail
+12/13/08,13,Love Lockdown,Kanye West,808s & Heartbreak
+12/13/08,19,Heartless,Kanye West,808s & Heartbreak
+12/13/08,21,See You In My Nightmares,Kanye West,808s & Heartbreak
+12/13/08,37,Swagga Like Us,Kanye West,Paper Trail
+12/13/08,89,Amazing,Kanye West,808s & Heartbreak
+12/20/08,8,Love Lockdown,Kanye West,808s & Heartbreak
+12/20/08,16,Heartless,Kanye West,808s & Heartbreak
+12/20/08,42,Swagga Like Us,Kanye West,Paper Trail
+12/20/08,69,See You In My Nightmares,Kanye West,808s & Heartbreak
+12/27/08,7,Heartless,Kanye West,808s & Heartbreak
+12/27/08,10,Love Lockdown,Kanye West,808s & Heartbreak
+12/27/08,52,Swagga Like Us,Kanye West,Paper Trail
+12/27/08,98,See You In My Nightmares,Kanye West,808s & Heartbreak
+1/3/09,4,Heartless,Kanye West,808s & Heartbreak
+1/3/09,8,Love Lockdown,Kanye West,808s & Heartbreak
+1/3/09,51,Swagga Like Us,Kanye West,Paper Trail
+1/10/09,4,Heartless,Kanye West,808s & Heartbreak
+1/10/09,8,Love Lockdown,Kanye West,808s & Heartbreak
+1/10/09,47,Swagga Like Us,Kanye West,Paper Trail
+1/10/09,92,See You In My Nightmares,Kanye West,808s & Heartbreak
+1/17/09,5,Heartless,Kanye West,808s & Heartbreak
+1/17/09,10,Love Lockdown,Kanye West,808s & Heartbreak
+1/17/09,50,Swagga Like Us,Kanye West,Paper Trail
+1/24/09,3,Heartless,Kanye West,808s & Heartbreak
+1/24/09,12,Love Lockdown,Kanye West,808s & Heartbreak
+1/24/09,70,Swagga Like Us,Kanye West,Paper Trail
+1/24/09,100,Go Hard,Kanye West,We Global
+1/31/09,3,Heartless,Kanye West,808s & Heartbreak
+1/31/09,13,Love Lockdown,Kanye West,808s & Heartbreak
+1/31/09,80,Swagga Like Us,Kanye West,Paper Trail
+2/7/09,4,Heartless,Kanye West,808s & Heartbreak
+2/7/09,21,Love Lockdown,Kanye West,808s & Heartbreak
+2/7/09,100,Swagga Like Us,Kanye West,Paper Trail
+2/14/09,3,Heartless,Kanye West,808s & Heartbreak
+2/14/09,25,Love Lockdown,Kanye West,808s & Heartbreak
+2/21/09,2,Heartless,Kanye West,808s & Heartbreak
+2/21/09,33,Love Lockdown,Kanye West,808s & Heartbreak
+2/28/09,4,Heartless,Kanye West,808s & Heartbreak
+2/28/09,38,Love Lockdown,Kanye West,808s & Heartbreak
+3/7/09,3,Heartless,Kanye West,808s & Heartbreak
+3/7/09,42,Love Lockdown,Kanye West,808s & Heartbreak
+3/14/09,6,Heartless,Kanye West,808s & Heartbreak
+3/21/09,8,Heartless,Kanye West,808s & Heartbreak
+3/28/09,7,Heartless,Kanye West,808s & Heartbreak
+4/4/09,8,Heartless,Kanye West,808s & Heartbreak
+4/11/09,16,Heartless,Kanye West,808s & Heartbreak
+4/11/09,65,Knock You Down,Kanye West,In A Perfect World...
+4/18/09,19,Heartless,Kanye West,808s & Heartbreak
+4/18/09,54,Knock You Down,Kanye West,In A Perfect World...
+4/25/09,19,Heartless,Kanye West,808s & Heartbreak
+4/25/09,46,Knock You Down,Kanye West,In A Perfect World...
+5/2/09,32,Heartless,Kanye West,808s & Heartbreak
+5/2/09,39,Knock You Down,Kanye West,In A Perfect World...
+5/9/09,26,Knock You Down,Kanye West,In A Perfect World...
+5/9/09,33,Heartless,Kanye West,808s & Heartbreak
+5/16/09,22,Knock You Down,Kanye West,In A Perfect World...
+5/16/09,33,Heartless,Kanye West,808s & Heartbreak
+5/23/09,17,Knock You Down,Kanye West,In A Perfect World...
+5/23/09,45,Heartless,Kanye West,808s & Heartbreak
+5/23/09,81,Amazing,Kanye West,808s & Heartbreak
+5/30/09,14,Knock You Down,Kanye West,In A Perfect World...
+5/30/09,35,Heartless,Kanye West,808s & Heartbreak
+5/30/09,82,Amazing,Kanye West,808s & Heartbreak
+6/6/09,13,Knock You Down,Kanye West,In A Perfect World...
+6/6/09,48,Heartless,Kanye West,808s & Heartbreak
+6/6/09,99,Amazing,Kanye West,808s & Heartbreak
+6/13/09,7,Knock You Down,Kanye West,In A Perfect World...
+6/13/09,51,Heartless,Kanye West,808s & Heartbreak
+6/13/09,86,Amazing,Kanye West,808s & Heartbreak
+6/13/09,100,Walkin' On The Moon,Kanye West,Love Vs Money
+6/20/09,3,Knock You Down,Kanye West,In A Perfect World...
+6/20/09,93,Walkin' On The Moon,Kanye West,Love Vs Money
+6/27/09,3,Knock You Down,Kanye West,In A Perfect World...
+6/27/09,51,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+6/27/09,87,Walkin' On The Moon,Kanye West,Love Vs Money
+7/4/09,4,Knock You Down,Kanye West,In A Perfect World...
+7/4/09,80,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+7/4/09,92,Walkin' On The Moon,Kanye West,Love Vs Money
+7/11/09,4,Knock You Down,Kanye West,In A Perfect World...
+7/11/09,89,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+7/11/09,91,Walkin' On The Moon,Kanye West,Love Vs Money
+7/18/09,4,Knock You Down,Kanye West,In A Perfect World...
+7/18/09,87,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+7/18/09,100,Walkin' On The Moon,Kanye West,Love Vs Money
+7/25/09,4,Knock You Down,Kanye West,In A Perfect World...
+7/25/09,91,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+7/25/09,98,Walkin' On The Moon,Kanye West,Love Vs Money
+8/1/09,4,Knock You Down,Kanye West,In A Perfect World...
+8/1/09,75,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+8/1/09,100,Walkin' On The Moon,Kanye West,Love Vs Money
+8/8/09,3,Knock You Down,Kanye West,In A Perfect World...
+8/8/09,51,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+8/8/09,91,Walkin' On The Moon,Kanye West,Love Vs Money
+8/15/09,4,Knock You Down,Kanye West,In A Perfect World...
+8/15/09,50,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+8/22/09,4,Knock You Down,Kanye West,In A Perfect World...
+8/22/09,43,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+8/29/09,8,Knock You Down,Kanye West,In A Perfect World...
+8/29/09,47,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+9/5/09,8,Knock You Down,Kanye West,In A Perfect World...
+9/5/09,47,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+9/12/09,8,Knock You Down,Kanye West,In A Perfect World...
+9/12/09,51,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+9/19/09,11,Knock You Down,Kanye West,In A Perfect World...
+9/19/09,59,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+9/26/09,12,Knock You Down,Kanye West,In A Perfect World...
+9/26/09,68,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+10/3/09,15,Knock You Down,Kanye West,In A Perfect World...
+10/3/09,93,Make Her Say,Kanye West,Man On The Moon: The End Of Day
+10/10/09,19,Knock You Down,Kanye West,In A Perfect World...
+10/17/09,25,Knock You Down,Kanye West,In A Perfect World...
+10/24/09,36,Knock You Down,Kanye West,In A Perfect World...
+10/31/09,39,Knock You Down,Kanye West,In A Perfect World...
+11/7/09,47,Knock You Down,Kanye West,In A Perfect World...
+7/17/10,22,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+7/24/10,29,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+7/31/10,60,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+8/7/10,72,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+8/14/10,71,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+8/21/10,65,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+8/28/10,57,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+9/4/10,42,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+9/4/10,64,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+9/11/10,22,Erase Me,Kanye West,Man On The Moon Ii: The Legend Of Mr. Rager
+9/11/10,76,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+9/18/10,62,Erase Me,Kanye West,Man On The Moon Ii: The Legend Of Mr. Rager
+9/18/10,79,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+9/25/10,69,Erase Me,Kanye West,Man On The Moon Ii: The Legend Of Mr. Rager
+9/25/10,70,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+10/2/10,67,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+10/2/10,78,Erase Me,Kanye West,Man On The Moon Ii: The Legend Of Mr. Rager
+10/9/10,97,Erase Me,Kanye West,Man On The Moon Ii: The Legend Of Mr. Rager
+10/9/10,100,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+10/16/10,91,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+10/23/10,12,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+10/23/10,97,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+10/30/10,38,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+10/30/10,98,POWER,Kanye West,My Beautiful Dark Twisted Fantasy
+11/6/10,54,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+11/6/10,79,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+11/13/10,18,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+11/13/10,51,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+11/20/10,49,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+11/20/10,50,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+11/27/10,51,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+11/27/10,79,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+12/4/10,50,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+12/4/10,77,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+12/11/10,42,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+12/11/10,60,Dark Fantasy,Kanye West,My Beautiful Dark Twisted Fantasy
+12/11/10,92,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+12/18/10,52,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+12/18/10,98,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+12/25/10,73,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+12/25/10,93,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+1/1/11,84,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+1/8/11,76,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+1/8/11,100,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+1/15/11,75,Runaway,Kanye West,My Beautiful Dark Twisted Fantasy
+1/15/11,92,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+1/22/11,88,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+1/22/11,97,Monster,Kanye West,My Beautiful Dark Twisted Fantasy
+1/29/11,23,H*A*M,Kanye West,Watch The Throne
+1/29/11,74,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+2/5/11,49,H*A*M,Kanye West,Watch The Throne
+2/5/11,60,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+2/12/11,55,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+2/12/11,81,H*A*M,Kanye West,Watch The Throne
+2/19/11,58,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+2/19/11,86,H*A*M,Kanye West,Watch The Throne
+2/26/11,59,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+2/26/11,93,H*A*M,Kanye West,Watch The Throne
+3/5/11,28,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+3/5/11,54,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+3/5/11,93,H*A*M,Kanye West,Watch The Throne
+3/12/11,8,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+3/12/11,31,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+3/12/11,95,H*A*M,Kanye West,Watch The Throne
+3/19/11,8,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+3/19/11,29,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+3/26/11,3,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+3/26/11,28,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+4/2/11,2,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+4/2/11,25,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+4/9/11,1,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+4/9/11,25,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+4/16/11,1,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+4/16/11,26,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+4/23/11,1,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+4/23/11,23,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+4/30/11,2,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+4/30/11,19,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+5/7/11,1,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+5/7/11,20,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+5/14/11,1,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+5/14/11,18,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+5/21/11,2,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+5/21/11,20,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+5/28/11,2,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+5/28/11,23,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+6/4/11,2,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+6/4/11,27,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+6/11/11,3,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+6/11/11,32,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+6/18/11,3,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+6/18/11,32,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+6/25/11,4,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+6/25/11,38,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+7/2/11,5,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+7/2/11,47,All Of The Lights,Kanye West,My Beautiful Dark Twisted Fantasy
+7/9/11,7,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+7/16/11,7,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+7/23/11,10,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+7/30/11,12,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+8/6/11,14,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+8/6/11,47,Otis,Kanye West,Watch The Throne
+8/6/11,88,Marvin & Chardonnay,Kanye West,Finally Famous
+8/13/11,12,Otis,Kanye West,Watch The Throne
+8/13/11,20,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+8/13/11,77,Marvin & Chardonnay,Kanye West,Finally Famous
+8/20/11,20,Otis,Kanye West,Watch The Throne
+8/20/11,23,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+8/20/11,61,Marvin & Chardonnay,Kanye West,Finally Famous
+8/27/11,32,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+8/27/11,36,Otis,Kanye West,Watch The Throne
+8/27/11,44,Who Gon Stop Me,Kanye West,Watch The Throne
+8/27/11,56,Marvin & Chardonnay,Kanye West,Finally Famous
+8/27/11,75,Ni**as in Paris,Kanye West,Watch The Throne
+9/3/11,27,Otis,Kanye West,Watch The Throne
+9/3/11,37,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+9/3/11,53,Marvin & Chardonnay,Kanye West,Finally Famous
+9/3/11,79,Who Gon Stop Me,Kanye West,Watch The Throne
+9/3/11,82,Ni**as in Paris,Kanye West,Watch The Throne
+9/10/11,25,Otis,Kanye West,Watch The Throne
+9/10/11,42,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+9/10/11,46,Marvin & Chardonnay,Kanye West,Finally Famous
+9/10/11,78,Ni**as in Paris,Kanye West,Watch The Throne
+9/17/11,22,Otis,Kanye West,Watch The Throne
+9/17/11,47,E.T.,Kanye West,Katy Perry - Teenage Dream: The Complete Confection
+9/17/11,49,Marvin & Chardonnay,Kanye West,Finally Famous
+9/17/11,81,Ni**as in Paris,Kanye West,Watch The Throne
+9/24/11,26,Otis,Kanye West,Watch The Throne
+9/24/11,42,Marvin & Chardonnay,Kanye West,Finally Famous
+9/24/11,67,Ni**as in Paris,Kanye West,Watch The Throne
+10/1/11,33,Otis,Kanye West,Watch The Throne
+10/1/11,38,Marvin & Chardonnay,Kanye West,Finally Famous
+10/1/11,50,Ni**as in Paris,Kanye West,Watch The Throne
+10/8/11,32,Marvin & Chardonnay,Kanye West,Finally Famous
+10/8/11,40,Otis,Kanye West,Watch The Throne
+10/8/11,45,Ni**as in Paris,Kanye West,Watch The Throne
+10/15/11,35,Ni**as in Paris,Kanye West,Watch The Throne
+10/15/11,36,Marvin & Chardonnay,Kanye West,Finally Famous
+10/15/11,47,Otis,Kanye West,Watch The Throne
+10/22/11,32,Ni**as in Paris,Kanye West,Watch The Throne
+10/22/11,35,Marvin & Chardonnay,Kanye West,Finally Famous
+10/22/11,56,Otis,Kanye West,Watch The Throne
+10/29/11,27,Ni**as in Paris,Kanye West,Watch The Throne
+10/29/11,36,Marvin & Chardonnay,Kanye West,Finally Famous
+10/29/11,62,Otis,Kanye West,Watch The Throne
+11/5/11,21,Ni**as in Paris,Kanye West,Watch The Throne
+11/5/11,41,Marvin & Chardonnay,Kanye West,Finally Famous
+11/5/11,65,Otis,Kanye West,Watch The Throne
+11/12/11,17,Ni**as in Paris,Kanye West,Watch The Throne
+11/12/11,43,Marvin & Chardonnay,Kanye West,Finally Famous
+11/12/11,67,Otis,Kanye West,Watch The Throne
+11/19/11,16,Ni**as in Paris,Kanye West,Watch The Throne
+11/19/11,52,Marvin & Chardonnay,Kanye West,Finally Famous
+11/19/11,69,Otis,Kanye West,Watch The Throne
+11/26/11,17,Ni**as in Paris,Kanye West,Watch The Throne
+11/26/11,62,Marvin & Chardonnay,Kanye West,Finally Famous
+11/26/11,77,Otis,Kanye West,Watch The Throne
+12/3/11,17,Ni**as in Paris,Kanye West,Watch The Throne
+12/3/11,65,Marvin & Chardonnay,Kanye West,Finally Famous
+12/3/11,88,Otis,Kanye West,Watch The Throne
+12/10/11,15,Ni**as in Paris,Kanye West,Watch The Throne
+12/10/11,71,Marvin & Chardonnay,Kanye West,Finally Famous
+12/10/11,97,Otis,Kanye West,Watch The Throne
+12/17/11,8,Ni**as in Paris,Kanye West,Watch The Throne
+12/17/11,76,Marvin & Chardonnay,Kanye West,Finally Famous
+12/17/11,98,Otis,Kanye West,Watch The Throne
+12/24/11,6,Ni**as in Paris,Kanye West,Watch The Throne
+12/31/11,6,Ni**as in Paris,Kanye West,Watch The Throne
+1/7/12,5,Ni**as in Paris,Kanye West,Watch The Throne
+1/14/12,7,Ni**as in Paris,Kanye West,Watch The Throne
+1/21/12,7,Ni**as in Paris,Kanye West,Watch The Throne
+1/21/12,98,Gotta Have It,Kanye West,Watch The Throne
+1/28/12,7,Ni**as in Paris,Kanye West,Watch The Throne
+1/28/12,84,Gotta Have It,Kanye West,Watch The Throne
+2/4/12,9,Ni**as in Paris,Kanye West,Watch The Throne
+2/4/12,79,Gotta Have It,Kanye West,Watch The Throne
+2/4/12,100,No Church In The Wild,Kanye West,Watch The Throne
+2/11/12,11,Ni**as in Paris,Kanye West,Watch The Throne
+2/11/12,74,Gotta Have It,Kanye West,Watch The Throne
+2/11/12,86,No Church In The Wild,Kanye West,Watch The Throne
+2/18/12,11,Ni**as in Paris,Kanye West,Watch The Throne
+2/18/12,72,Gotta Have It,Kanye West,Watch The Throne
+2/18/12,96,No Church In The Wild,Kanye West,Watch The Throne
+2/25/12,20,Ni**as in Paris,Kanye West,Watch The Throne
+2/25/12,69,Gotta Have It,Kanye West,Watch The Throne
+2/25/12,72,No Church In The Wild,Kanye West,Watch The Throne
+3/3/12,24,Ni**as in Paris,Kanye West,Watch The Throne
+3/3/12,78,Gotta Have It,Kanye West,Watch The Throne
+3/3/12,98,No Church In The Wild,Kanye West,Watch The Throne
+3/10/12,25,Ni**as in Paris,Kanye West,Watch The Throne
+3/10/12,84,Gotta Have It,Kanye West,Watch The Throne
+3/17/12,30,Ni**as in Paris,Kanye West,Watch The Throne
+3/17/12,84,Gotta Have It,Kanye West,Watch The Throne
+3/24/12,23,Ni**as in Paris,Kanye West,Watch The Throne
+3/24/12,85,Gotta Have It,Kanye West,Watch The Throne
+3/31/12,26,Ni**as in Paris,Kanye West,Watch The Throne
+3/31/12,94,Gotta Have It,Kanye West,Watch The Throne
+4/7/12,28,Ni**as in Paris,Kanye West,Watch The Throne
+4/14/12,37,Ni**as in Paris,Kanye West,Watch The Throne
+4/21/12,45,Ni**as in Paris,Kanye West,Watch The Throne
+4/28/12,45,Ni**as in Paris,Kanye West,Watch The Throne
+5/5/12,86,Way Too Cold,Kanye West,Rap Instrumentals
+7/21/12,78,I Wish You Would,Kanye West,Kiss The Ring
+8/11/12,89,New God Flow,Kanye West,Kanye West Presents Good Music Cruel Summer
+8/11/12,91,Birthday Song,Kanye West,Based On A T.r.u. Story
+9/1/12,100,Birthday Song,Kanye West,Based On A T.r.u. Story
+9/8/12,91,Birthday Song,Kanye West,Based On A T.r.u. Story
+9/8/12,99,I Wish You Would,Kanye West,Kiss The Ring
+9/15/12,79,Birthday Song,Kanye West,Based On A T.r.u. Story
+9/22/12,70,Birthday Song,Kanye West,Based On A T.r.u. Story
+9/29/12,65,Birthday Song,Kanye West,Based On A T.r.u. Story
+10/6/12,57,Birthday Song,Kanye West,Based On A T.r.u. Story
+10/13/12,56,Birthday Song,Kanye West,Based On A T.r.u. Story
+10/20/12,56,Birthday Song,Kanye West,Based On A T.r.u. Story
+10/27/12,52,Birthday Song,Kanye West,Based On A T.r.u. Story
+11/3/12,49,Birthday Song,Kanye West,Based On A T.r.u. Story
+11/10/12,47,Birthday Song,Kanye West,Based On A T.r.u. Story
+11/17/12,48,Birthday Song,Kanye West,Based On A T.r.u. Story
+11/24/12,53,Birthday Song,Kanye West,Based On A T.r.u. Story
+12/1/12,55,Birthday Song,Kanye West,Based On A T.r.u. Story
+12/8/12,61,Birthday Song,Kanye West,Based On A T.r.u. Story
+12/15/12,60,Birthday Song,Kanye West,Based On A T.r.u. Story
+12/22/12,60,Birthday Song,Kanye West,Based On A T.r.u. Story
+12/29/12,62,Birthday Song,Kanye West,Based On A T.r.u. Story
+1/5/13,59,Birthday Song,Kanye West,Based On A T.r.u. Story
+7/6/13,56,New Slaves,Kanye West,Yeezus
+7/6/13,69,Black Skinhead,Kanye West,Yeezus
+7/6/13,91,Blood On The Leaves,Kanye West,Yeezus
+7/13/13,86,Black Skinhead,Kanye West,Yeezus
+7/13/13,90,New Slaves,Kanye West,Yeezus
+7/20/13,97,Black Skinhead,Kanye West,Yeezus
+7/27/13,92,Black Skinhead,Kanye West,Yeezus
+9/14/13,89,Blood On The Leaves,Kanye West,Yeezus
+10/19/13,18,Gone,Kanye West,Late Registration
+12/7/13,73,Bound 2,Kanye West,Yeezus
+12/14/13,12,Bound 2,Kanye West,Yeezus
+12/21/13,60,Bound 2,Kanye West,Yeezus
+12/28/13,76,Bound 2,Kanye West,Yeezus
+1/4/14,87,Bound 2,Kanye West,Yeezus
+1/11/14,99,Bound 2,Kanye West,Yeezus
+3/22/14,78,Sanctified,Kanye West,Mastermind
+5/10/14,100,I Won,Kanye West,Graduation
+5/31/14,100,I Won,Kanye West,Graduation
+6/14/14,98,I Won,Kanye West,Graduation
+1/17/15,35,Only One,Kanye West,I Am Kanye West
+1/24/15,54,Only One,Kanye West,I Am Kanye West
+1/31/15,85,Only One,Kanye West,I Am Kanye West
+2/7/15,54,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+2/14/15,15,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+2/14/15,68,Only One,Kanye West,I Am Kanye West
+2/21/15,6,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+2/21/15,69,Only One,Kanye West,I Am Kanye West
+2/28/15,4,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+2/28/15,45,Only One,Kanye West,I Am Kanye West
+3/7/15,6,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+3/7/15,74,Only One,Kanye West,I Am Kanye West
+3/14/15,5,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+3/14/15,80,All Your Fault,Kanye West,Dark Sky Paradise
+3/14/15,92,Only One,Kanye West,I Am Kanye West
+3/14/15,97,One Man Can Change The World,Kanye West,Dark Sky Paradise
+3/21/15,5,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+3/21/15,15,All Day,Kanye West,Karaoke Pro
+3/28/15,5,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+3/28/15,51,All Day,Kanye West,Karaoke Pro
+4/4/15,5,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+4/4/15,53,All Day,Kanye West,Karaoke Pro
+4/11/15,8,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+4/11/15,62,All Day,Kanye West,Karaoke Pro
+4/18/15,9,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+4/18/15,69,All Day,Kanye West,Karaoke Pro
+4/25/15,13,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+4/25/15,52,All Day,Kanye West,Karaoke Pro
+5/2/15,16,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+5/2/15,61,All Day,Kanye West,Karaoke Pro
+5/9/15,26,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+5/9/15,55,All Day,Kanye West,Karaoke Pro
+5/16/15,36,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+5/16/15,58,All Day,Kanye West,Karaoke Pro
+5/23/15,45,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+5/23/15,59,All Day,Kanye West,Karaoke Pro
+5/30/15,55,All Day,Kanye West,Karaoke Pro
+5/30/15,56,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+6/6/15,60,All Day,Kanye West,Karaoke Pro
+6/6/15,66,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+6/13/15,75,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+6/13/15,79,All Day,Kanye West,Karaoke Pro
+6/20/15,76,FourFiveSeconds,Kanye West,8-bit Versions Of Kanye West
+6/20/15,91,All Day,Kanye West,Karaoke Pro
+6/27/15,93,All Day,Kanye West,Karaoke Pro
+8/1/15,100,One Man Can Change The World,Kanye West,Dark Sky Paradise
+8/8/15,97,One Man Can Change The World,Kanye West,Dark Sky Paradise
+8/15/15,100,One Man Can Change The World,Kanye West,Dark Sky Paradise
+8/22/15,96,One Man Can Change The World,Kanye West,Dark Sky Paradise
+8/29/15,92,One Man Can Change The World,Kanye West,Dark Sky Paradise
+9/5/15,92,One Man Can Change The World,Kanye West,Dark Sky Paradise
+9/12/15,90,One Man Can Change The World,Kanye West,Dark Sky Paradise
+9/19/15,82,One Man Can Change The World,Kanye West,Dark Sky Paradise
+9/26/15,94,One Man Can Change The World,Kanye West,Dark Sky Paradise
+4/23/16,34,Famous,Kanye West,The Life Of Pablo
+4/23/16,37,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+4/23/16,54,Pt. 2,Kanye West,The Life Of Pablo
+4/23/16,67,Ultralight Beam,Kanye West,The Life Of Pablo
+4/23/16,71,Waves,Kanye West,The Life Of Pablo
+4/23/16,84,FML,Kanye West,The Life Of Pablo
+4/23/16,92,Real Friends,Kanye West,The Life Of Pablo
+4/23/16,99,Feedback,Kanye West,The Life Of Pablo
+4/30/16,49,Famous,Kanye West,The Life Of Pablo
+4/30/16,54,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+4/30/16,73,Pt. 2,Kanye West,The Life Of Pablo
+4/30/16,86,Waves,Kanye West,The Life Of Pablo
+4/30/16,90,Ultralight Beam,Kanye West,The Life Of Pablo
+5/7/16,62,Famous,Kanye West,The Life Of Pablo
+5/7/16,64,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+5/7/16,97,Pt. 2,Kanye West,The Life Of Pablo
+5/14/16,82,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+5/14/16,83,Famous,Kanye West,The Life Of Pablo
+5/21/16,95,Famous,Kanye West,The Life Of Pablo
+5/21/16,98,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+5/28/16,88,Famous,Kanye West,The Life Of Pablo
+5/28/16,94,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+6/4/16,92,THat Part,Kanye West,Blank Face Lp
+6/25/16,97,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+7/2/16,76,THat Part,Kanye West,Blank Face Lp
+7/2/16,97,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+7/9/16,69,THat Part,Kanye West,Blank Face Lp
+7/9/16,98,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+7/16/16,64,THat Part,Kanye West,Blank Face Lp
+7/16/16,71,Famous,Kanye West,The Life Of Pablo
+7/16/16,95,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+7/23/16,64,THat Part,Kanye West,Blank Face Lp
+7/23/16,75,Famous,Kanye West,The Life Of Pablo
+7/30/16,43,THat Part,Kanye West,Blank Face Lp
+7/30/16,88,Famous,Kanye West,The Life Of Pablo
+7/30/16,100,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+8/6/16,42,THat Part,Kanye West,Blank Face Lp
+8/6/16,71,Famous,Kanye West,The Life Of Pablo
+8/13/16,40,THat Part,Kanye West,Blank Face Lp
+8/13/16,74,Famous,Kanye West,The Life Of Pablo
+8/13/16,89,P**** Print,Kanye West,Everybody Looking
+8/13/16,94,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+8/20/16,51,THat Part,Kanye West,Blank Face Lp
+8/20/16,83,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+8/20/16,89,Famous,Kanye West,The Life Of Pablo
+8/27/16,51,THat Part,Kanye West,Blank Face Lp
+8/27/16,83,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+9/3/16,54,THat Part,Kanye West,Blank Face Lp
+9/3/16,74,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+9/10/16,56,THat Part,Kanye West,Blank Face Lp
+9/10/16,71,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+9/17/16,59,THat Part,Kanye West,Blank Face Lp
+9/17/16,69,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+9/17/16,90,Famous,Kanye West,The Life Of Pablo
+9/24/16,59,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+9/24/16,61,THat Part,Kanye West,Blank Face Lp
+9/24/16,98,Fade,Kanye West,The Life Of Pablo
+9/24/16,100,Famous,Kanye West,The Life Of Pablo
+10/1/16,47,Fade,Kanye West,The Life Of Pablo
+10/1/16,56,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+10/1/16,66,THat Part,Kanye West,Blank Face Lp
+10/8/16,56,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+10/8/16,62,Fade,Kanye West,The Life Of Pablo
+10/8/16,78,THat Part,Kanye West,Blank Face Lp
+10/15/16,57,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+10/15/16,58,Fade,Kanye West,The Life Of Pablo
+10/15/16,83,THat Part,Kanye West,Blank Face Lp
+10/22/16,54,Fade,Kanye West,The Life Of Pablo
+10/22/16,56,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+10/22/16,88,THat Part,Kanye West,Blank Face Lp
+10/29/16,60,Father Stretch My Hands Pt. 1,Kanye West,The Life Of Pablo
+10/29/16,64,Fade,Kanye West,The Life Of Pablo
+10/29/16,92,THat Part,Kanye West,Blank Face Lp
+11/5/16,64,Fade,Kanye West,The Life Of Pablo
+11/5/16,86,THat Part,Kanye West,Blank Face Lp
+11/12/16,65,Fade,Kanye West,The Life Of Pablo
+11/19/16,64,Fade,Kanye West,The Life Of Pablo
+11/26/16,67,Fade,Kanye West,The Life Of Pablo
+12/3/16,66,Fade,Kanye West,The Life Of Pablo
+12/10/16,71,Fade,Kanye West,The Life Of Pablo
+12/17/16,96,Fade,Kanye West,The Life Of Pablo
+4/8/17,54,Glow,Kanye West,More Life
+4/15/17,89,Glow,Kanye West,More Life
+5/12/18,85,Ye vs The People,Kanye West,None
+5/19/18,16,Watch,Kanye West,Watch The Throne
+5/26/18,42,Watch,Kanye West,Watch The Throne
+6/2/18,60,Watch,Kanye West,Watch The Throne
+6/9/18,75,What Would Meek Do?,Kanye West,Daytona
+6/9/18,84,Watch,Kanye West,Watch The Throne
+6/16/18,8,Yikes,Kanye West,Ye
+6/16/18,11,All Mine,Kanye West,Ye
+6/16/18,16,Ghost Town,Kanye West,Ye
+6/16/18,24,Wouldn't Leave,Kanye West,Ye
+6/16/18,27,Violent Crimes,Kanye West,Ye
+6/16/18,28,I Thought About Killing You,Kanye West,Ye
+6/16/18,36,No Mistakes,Kanye West,Ye
+6/16/18,87,Watch,Kanye West,Watch The Throne
+6/23/18,31,All Mine,Kanye West,Ye
+6/23/18,40,Yikes,Kanye West,Ye
+6/23/18,60,Ghost Town,Kanye West,Ye
+6/23/18,85,Violent Crimes,Kanye West,Ye
+6/23/18,92,Wouldn't Leave,Kanye West,Ye
+6/30/18,48,All Mine,Kanye West,Ye
+6/30/18,67,Yikes,Kanye West,Ye
+6/30/18,96,Cop Shot The Kid,Kanye West,Nasir
+7/7/18,54,All Mine,Kanye West,Ye
+7/7/18,77,Yikes,Kanye West,Ye
+7/14/18,83,All Mine,Kanye West,Ye
+7/14/18,92,Yikes,Kanye West,Ye
+7/21/18,85,All Mine,Kanye West,Ye
+7/28/18,77,All Mine,Kanye West,Ye
+8/4/18,91,All Mine,Kanye West,Ye
+8/11/18,96,All Mine,Kanye West,Ye
+9/22/18,6,I Love It,Kanye West,Harverd Dropout
+9/29/18,7,I Love It,Kanye West,Harverd Dropout
+10/6/18,9,I Love It,Kanye West,Harverd Dropout
+10/13/18,18,I Love It,Kanye West,Harverd Dropout
+10/20/18,17,I Love It,Kanye West,Harverd Dropout
+10/27/18,26,I Love It,Kanye West,Harverd Dropout
+11/3/18,35,I Love It,Kanye West,Harverd Dropout
+11/10/18,47,I Love It,Kanye West,Harverd Dropout
+11/17/18,60,I Love It,Kanye West,Harverd Dropout
+11/24/18,71,I Love It,Kanye West,Harverd Dropout
+12/1/18,75,I Love It,Kanye West,Harverd Dropout
+12/8/18,58,MAMA,Kanye West,Dummy Boy
+12/8/18,97,I Love It,Kanye West,Harverd Dropout
+12/15/18,43,MAMA,Kanye West,Dummy Boy
+12/22/18,62,One Minute,Kanye West,Skins
+12/22/18,75,MAMA,Kanye West,Dummy Boy
+12/29/18,100,MAMA,Kanye West,Dummy Boy
+2/2/19,71,Mixed Personalities,Kanye West,We All Shine
+2/9/19,73,Mixed Personalities,Kanye West,We All Shine
+2/16/19,86,Mixed Personalities,Kanye West,We All Shine
+2/23/19,93,Mixed Personalities,Kanye West,We All Shine
+3/2/19,60,Mixed Personalities,Kanye West,We All Shine
+3/9/19,56,Mixed Personalities,Kanye West,We All Shine
+3/16/19,50,Mixed Personalities,Kanye West,We All Shine
+3/23/19,46,Mixed Personalities,Kanye West,We All Shine
+3/30/19,43,Mixed Personalities,Kanye West,We All Shine
+4/6/19,42,Mixed Personalities,Kanye West,We All Shine
+4/13/19,54,Mixed Personalities,Kanye West,We All Shine
+4/20/19,56,Mixed Personalities,Kanye West,We All Shine
+4/27/19,59,Mixed Personalities,Kanye West,We All Shine
+5/4/19,63,Mixed Personalities,Kanye West,We All Shine
+5/11/19,76,Mixed Personalities,Kanye West,We All Shine
+5/18/19,78,Mixed Personalities,Kanye West,We All Shine
+5/25/19,82,Mixed Personalities,Kanye West,We All Shine
+6/8/19,98,Mixed Personalities,Kanye West,We All Shine
+11/9/19,7,Follow God,Kanye West,Jesus Is King
+11/9/19,17,Closed On Sunday,Kanye West,Jesus Is King
+11/9/19,19,Selah,Kanye West,Jesus Is King
+11/9/19,23,On God,Kanye West,Jesus Is King
+11/9/19,33,Everything We Need,Kanye West,Jesus Is King
+11/9/19,36,God Is,Kanye West,Jesus Is King
+11/9/19,37,Use This Gospel,Kanye West,Jesus Is King
+11/9/19,45,Every Hour,Kanye West,Jesus Is King
+11/9/19,51,Water,Kanye West,Jesus Is King
+11/9/19,60,Hands On,Kanye West,Jesus Is King
+11/9/19,63,Jesus Is Lord,Kanye West,Jesus Is King
+11/16/19,37,Follow God,Kanye West,Jesus Is King
+11/16/19,84,Closed On Sunday,Kanye West,Jesus Is King
+11/16/19,92,Selah,Kanye West,Jesus Is King
+11/16/19,96,On God,Kanye West,Jesus Is King
+11/23/19,38,Follow God,Kanye West,Jesus Is King
+11/30/19,52,Follow God,Kanye West,Jesus Is King
+12/7/19,79,Follow God,Kanye West,Jesus Is King
+12/14/19,91,Follow God,Kanye West,Jesus Is King
