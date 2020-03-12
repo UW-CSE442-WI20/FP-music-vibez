@@ -461,7 +461,7 @@ class HorizontalBarChart extends D3Component {
   // Returns a json object with the data for the seleted artist
   // up to but not including the ith entry
   getData(artist, step, years) {
-    console.log("getData called with", artist, step, years);
+    //console.log("getData called with", artist, step, years);
     if (!(artist in allData)) {
       return [];
     }
@@ -477,7 +477,7 @@ class HorizontalBarChart extends D3Component {
 
   // Returns a json object with the data for the seleted artist
   getAllData(artist) {
-    console.log("getAllData called with", artist);
+    //console.log("getAllData called with", artist);
     if (!(artist in allData)) {
       return [];
     }
@@ -516,7 +516,7 @@ class HorizontalBarChart extends D3Component {
     for (let i = 0; i < data.length; i++) {
       res.push(data[i][key]);
     }
-    console.log("extractData(" + key + ")", data, res);
+    //console.log("extractData(" + key + ")", data, res);
     return res;
   }
 }
