@@ -230,7 +230,7 @@
     [Step onEnterView:`queenCurStep = 12`]
         [YearComponent className:"year-class queen-bg-theme" year:"1985" /]
         [ContentComponent className:"content-class queen-bg-theme" desc:"Performed at Live aid in front of the biggest-ever TV audience" /]
-        [AlbumComponent className:"queen-theme" artistName:Queen albumArt:"static/images/Queen/Queen_live_aid.jpg.png"/]
+        [AlbumComponent className:"queen-theme" artistName:Queen albumArt:"static/images/Queen/Queen_live_aid.jpg"/]
     [/Step]
 
     [Step onEnterView:`queenCurStep = 13`]
