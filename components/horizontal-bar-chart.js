@@ -156,7 +156,7 @@ const allData = {
     {
       "album-name": "HIStory: Past, Present and Future, Book I",
       "release-date": "06/20/1995",
-      "worldwide-sales": 22000000,   
+      "worldwide-sales": 22000000,
       year: 1995
     },
     {
@@ -164,20 +164,92 @@ const allData = {
       "release-date": "10/30/2001",
       "worldwide-sales": 6000000,
       year: 2001
-
     },
     {
       "album-name": "Michael",
       "release-date": "06/25/2009",
       "worldwide-sales": 541000,
       year: 2009
-
     },
     {
       "album-name": "Xscape",
       "release-date": "12/10/2010",
       "worldwide-sales": 1700000,
       year: 2010
+    }
+  ],
+  beatles: [
+    {
+      "album-name": "Please Please Me",
+      "release-date": "03/22/1963",
+      "worldwide-sales": 1000000,
+      year: 1963
+    },
+    {
+      "album-name": "With the Beatles",
+      "release-date": "11/22/1963",
+      "worldwide-sales": 500000,
+      year: 1963
+    },
+    {
+      "album-name": "A Hard Day's Night",
+      "release-date": "07/10/1964",
+      "worldwide-sales": 4000000,
+      year: 1964
+    },
+    {
+      "album-name": "Beatles for Sale",
+      "release-date": "12/04/1964",
+      "worldwide-sales": 1000000,
+      year: 1964
+    },
+    {
+      "album-name": "Help!",
+      "release-date": "08/06/1965",
+      "worldwide-sales": 3000000,
+      year: 1965
+    },
+    {
+      "album-name": "Rubber Soul",
+      "release-date": "12/03/1965",
+      "worldwide-sales": 6000000,
+      year: 1965
+    },
+    {
+      "album-name": "Revolver",
+      "release-date": "08/05/1966",
+      "worldwide-sales": 5000000,
+      year: 1966
+    },
+    {
+      "album-name": "Sgt. Pepper's Lonely Hearts Club Band",
+      "release-date": "05/26/1967",
+      "worldwide-sales": 11000000,
+      year: 1967
+    },
+    {
+      "album-name": "The Beatles (White Album)",
+      "release-date": "11/22/1968",
+      "worldwide-sales": 24000000,
+      year: 1968
+    },
+    {
+      "album-name": "Yellow Submarine",
+      "release-date": "01/13/1969",
+      "worldwide-sales": 1000000,
+      year: 1969
+    },
+    {
+      "album-name": "Abbey Road",
+      "release-date": "09/26/1969",
+      "worldwide-sales": 12000000,
+      year: 1969
+    },
+    {
+      "album-name": "Let It Be",
+      "release-date": "05/08/1970",
+      "worldwide-sales": 4000000,
+      year: 1970
     }
   ]
 };
@@ -202,7 +274,7 @@ class HorizontalBarChart extends D3Component {
     this.getAlbumNames(this.getAllData(artist)).forEach(function(d) {
       albumToColorMap.set(d, colorScale(i));
       i += 1;
-    })
+    });
 
     this.svg = d3
       .select(node)
@@ -240,8 +312,8 @@ class HorizontalBarChart extends D3Component {
         return yScale(d["album-name"]);
       })
       .attr("height", yScale.bandwidth())
-      .attr("fill", function(d) { 
-        return albumToColorMap.get(d["album-name"])
+      .attr("fill", function(d) {
+        return albumToColorMap.get(d["album-name"]);
       });
 
     // Append the y-axis
@@ -306,8 +378,9 @@ class HorizontalBarChart extends D3Component {
       })
       .attr("y", function(d) {
         return yScale(d["album-name"]);
-      }).attr("fill", function(d) { 
-        return albumToColorMap.get(d["album-name"])
+      })
+      .attr("fill", function(d) {
+        return albumToColorMap.get(d["album-name"]);
       });
 
     this.svg
@@ -350,7 +423,7 @@ class HorizontalBarChart extends D3Component {
     }
 
     return res;
-  }  
+  }
 
   // Returns the maximum sales for the given data
   getMaxSales(data) {

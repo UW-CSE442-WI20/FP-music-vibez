@@ -10,7 +10,8 @@ class DescComponent extends React.PureComponent {
 
     return (
       <div {...props}>
-        <h3> {this.props.desc} </h3>
+        <p> {this.props.desc} </p>
+        <p className="date-class"> Released {this.props.date} </p>
       </div>
     );
   }

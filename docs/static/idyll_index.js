@@ -94,58 +94,6 @@ var ContentComponent = function (_React$PureComponent) {
 
 module.exports = ContentComponent;
 
-},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/date-component.js":[function(require,module,exports){
-"use strict";
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var React = require("react");
-
-var DateComponent = function (_React$PureComponent) {
-  _inherits(DateComponent, _React$PureComponent);
-
-  function DateComponent(props) {
-    _classCallCheck(this, DateComponent);
-
-    return _possibleConstructorReturn(this, (DateComponent.__proto__ || Object.getPrototypeOf(DateComponent)).call(this, props));
-  }
-
-  _createClass(DateComponent, [{
-    key: "render",
-    value: function render() {
-      var _props = this.props,
-          hasError = _props.hasError,
-          idyll = _props.idyll,
-          updateProps = _props.updateProps,
-          props = _objectWithoutProperties(_props, ["hasError", "idyll", "updateProps"]);
-
-      return React.createElement(
-        "div",
-        props,
-        React.createElement(
-          "h5",
-          null,
-          " Released ",
-          this.props.date,
-          " "
-        )
-      );
-    }
-  }]);
-
-  return DateComponent;
-}(React.PureComponent);
-
-module.exports = DateComponent;
-
 },{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/desc-component.js":[function(require,module,exports){
 "use strict";
 
@@ -183,10 +131,17 @@ var DescComponent = function (_React$PureComponent) {
         "div",
         props,
         React.createElement(
-          "h3",
+          "p",
           null,
           " ",
           this.props.desc,
+          " "
+        ),
+        React.createElement(
+          "p",
+          { className: "date-class" },
+          " Released ",
+          this.props.date,
           " "
         )
       );
@@ -349,18 +304,77 @@ var allData = {
     "release-date": "10/30/2001",
     "worldwide-sales": 6000000,
     year: 2001
-
   }, {
     "album-name": "Michael",
     "release-date": "06/25/2009",
     "worldwide-sales": 541000,
     year: 2009
-
   }, {
     "album-name": "Xscape",
     "release-date": "12/10/2010",
     "worldwide-sales": 1700000,
     year: 2010
+  }],
+  beatles: [{
+    "album-name": "Please Please Me",
+    "release-date": "03/22/1963",
+    "worldwide-sales": 1000000,
+    year: 1963
+  }, {
+    "album-name": "With the Beatles",
+    "release-date": "11/22/1963",
+    "worldwide-sales": 500000,
+    year: 1963
+  }, {
+    "album-name": "A Hard Day's Night",
+    "release-date": "07/10/1964",
+    "worldwide-sales": 4000000,
+    year: 1964
+  }, {
+    "album-name": "Beatles for Sale",
+    "release-date": "12/04/1964",
+    "worldwide-sales": 1000000,
+    year: 1964
+  }, {
+    "album-name": "Help!",
+    "release-date": "08/06/1965",
+    "worldwide-sales": 3000000,
+    year: 1965
+  }, {
+    "album-name": "Rubber Soul",
+    "release-date": "12/03/1965",
+    "worldwide-sales": 6000000,
+    year: 1965
+  }, {
+    "album-name": "Revolver",
+    "release-date": "08/05/1966",
+    "worldwide-sales": 5000000,
+    year: 1966
+  }, {
+    "album-name": "Sgt. Pepper's Lonely Hearts Club Band",
+    "release-date": "05/26/1967",
+    "worldwide-sales": 11000000,
+    year: 1967
+  }, {
+    "album-name": "The Beatles (White Album)",
+    "release-date": "11/22/1968",
+    "worldwide-sales": 24000000,
+    year: 1968
+  }, {
+    "album-name": "Yellow Submarine",
+    "release-date": "01/13/1969",
+    "worldwide-sales": 1000000,
+    year: 1969
+  }, {
+    "album-name": "Abbey Road",
+    "release-date": "09/26/1969",
+    "worldwide-sales": 12000000,
+    year: 1969
+  }, {
+    "album-name": "Let It Be",
+    "release-date": "05/08/1970",
+    "worldwide-sales": 4000000,
+    year: 1970
   }]
 };
 
@@ -636,9 +650,8 @@ var AlbumComponent = function (_React$Component) {
       return React.createElement(
         "div",
         props,
-        React.createElement("iframe", { src: this.props.url,
-          width: "275", height: "380",
-          frameborder: "0",
+        React.createElement("iframe", { src: this.props.url, height: "380",
+          frameBorder: "0",
           allowtransparency: "true",
           allow: "encrypted-media" })
       );
@@ -39445,39 +39458,7 @@ module.exports = {
     return input.replace(/\r\n/g, '\n').replace(/\r/g, '\n');
   }
 };
-},{}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-component-children/dist/cjs/index.js":[function(require,module,exports){
-'use strict';
-
-var React = require('react');
-
-var filterChildren = function filterChildren(children, f) {
-  if (children) {
-    return React.Children.toArray(children).filter(function (c) {
-      if (c && c.type && c.type.name && c.type.name.toLowerCase() === 'wrapper') {
-        return f(c.props.children[0]);
-      }
-      return f(c);
-    });
-  }
-  return children;
-};
-
-var mapChildren = function mapChildren(children, transform) {
-  if (children) {
-    return React.Children.map(children, function (c, i) {
-      if (c && c.type && c.type.name && c.type.name.toLowerCase() === 'wrapper') {
-        return React.cloneElement(c, {
-          children: mapChildren(c.props.children, transform)
-        });
-      }
-      return transform(c, i);
-    });
-  }
-  return children;
-};
-
-module.exports = { filterChildren: filterChildren, mapChildren: mapChildren };
-},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/action.js":[function(require,module,exports){
+},{}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/action.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -39548,10 +39529,8 @@ Action._idyll = {
 };
 
 exports.default = Action;
-},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/case.js":[function(require,module,exports){
+},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/conditional.js":[function(require,module,exports){
 'use strict';
-
-exports.__esModule = true;
 
 function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
 
@@ -39563,19 +39542,29 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 var React = require('react');
 
-var Case = function (_React$Component) {
-  _inherits(Case, _React$Component);
+var Conditional = function (_React$Component) {
+  _inherits(Conditional, _React$Component);
 
-  function Case() {
-    _classCallCheck(this, Case);
+  function Conditional() {
+    _classCallCheck(this, Conditional);
 
     return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
   }
 
-  Case.prototype.render = function render() {
+  Conditional.prototype.render = function render() {
     var _props = this.props,
         idyll = _props.idyll,
-        props = _objectWithoutProperties(_props, ['idyll']);
+        hasError = _props.hasError,
+        updateProps = _props.updateProps,
+        props = _objectWithoutProperties(_props, ['idyll', 'hasError', 'updateProps']);
+
+    if (!props.if) {
+      return React.createElement(
+        'div',
+        { style: { display: 'none' } },
+        props.children
+      );
+    }
 
     return React.createElement(
       'div',
@@ -39584,28 +39573,31 @@ var Case = function (_React$Component) {
     );
   };
 
-  return Case;
+  return Conditional;
 }(React.Component);
 
-Case._idyll = {
-  name: 'Case',
+Conditional._idyll = {
+  name: 'Conditional',
   tagType: 'open',
   children: ['Some text'],
   props: [{
-    name: 'test',
-    type: 'value',
-    example: '1',
-    description: 'A variable; if this is equal to the parent [Switch /] components value, the children for this case will be rendered, otherwise the default case will be rendered.'
+    name: 'if',
+    type: 'expression',
+    example: '`x < 10`',
+    description: 'An expression; if this evaluates to true, the children will be rendered, otherwise nothing will be drawn to the screen'
   }]
 };
-
-exports.default = Case;
-},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/default.js":[function(require,module,exports){
+module.exports = Conditional;
+},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/fixed.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
 
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -39613,40 +39605,32 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var React = require('react');
+var Fixed = function (_React$PureComponent) {
+  _inherits(Fixed, _React$PureComponent);
 
-var Default = function (_React$Component) {
-  _inherits(Default, _React$Component);
+  function Fixed() {
+    _classCallCheck(this, Fixed);
 
-  function Default() {
-    _classCallCheck(this, Default);
-
-    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
+    return _possibleConstructorReturn(this, _React$PureComponent.apply(this, arguments));
   }
 
-  Default.prototype.render = function render() {
-    var _props = this.props,
-        idyll = _props.idyll,
-        props = _objectWithoutProperties(_props, ['idyll']);
-
-    return React.createElement(
+  Fixed.prototype.render = function render() {
+    return _react2.default.createElement(
       'div',
-      null,
-      props.children
+      { style: { position: 'fixed' }, className: 'fixed' },
+      this.props.children
     );
   };
 
-  return Default;
-}(React.Component);
+  return Fixed;
+}(_react2.default.PureComponent);
 
-Default._idyll = {
-  name: 'Default',
-  tagType: 'open',
-  children: ['Some text'],
-  props: []
+Fixed._idyll = {
+  name: "Fixed",
+  tagType: "open"
 };
 
-exports.default = Default;
+exports.default = Fixed;
 },{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/generateHeaders.js":[function(require,module,exports){
 'use strict';
 
@@ -39690,47 +39674,6 @@ var GenerateHeaders = function GenerateHeaders(props) {
 };
 
 exports.default = GenerateHeaders;
-},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/graphic.js":[function(require,module,exports){
-"use strict";
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var React = require('react');
-
-var Graphic = function (_React$Component) {
-  _inherits(Graphic, _React$Component);
-
-  function Graphic() {
-    _classCallCheck(this, Graphic);
-
-    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
-  }
-
-  Graphic.prototype.render = function render() {
-    var _props = this.props,
-        idyll = _props.idyll,
-        updateProps = _props.updateProps,
-        hasError = _props.hasError,
-        props = _objectWithoutProperties(_props, ["idyll", "updateProps", "hasError"]);
-
-    return React.createElement("div", props);
-  };
-
-  return Graphic;
-}(React.Component);
-
-Graphic._idyll = {
-  name: "Graphic",
-  tagType: "open"
-};
-
-module.exports = Graphic;
 },{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h1.js":[function(require,module,exports){
 'use strict';
 
@@ -39771,6 +39714,46 @@ var H1 = function (_React$PureComponent) {
 }(_react2.default.PureComponent);
 
 exports.default = H1;
+},{"./generateHeaders":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/generateHeaders.js","react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h2.js":[function(require,module,exports){
+'use strict';
+
+exports.__esModule = true;
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = require('react');
+
+var _react2 = _interopRequireDefault(_react);
+
+var _generateHeaders = require('./generateHeaders');
+
+var _generateHeaders2 = _interopRequireDefault(_generateHeaders);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var H2 = function (_React$PureComponent) {
+  _inherits(H2, _React$PureComponent);
+
+  function H2() {
+    _classCallCheck(this, H2);
+
+    return _possibleConstructorReturn(this, _React$PureComponent.apply(this, arguments));
+  }
+
+  H2.prototype.render = function render() {
+    return _react2.default.createElement(_generateHeaders2.default, _extends({ size: '2' }, this.props));
+  };
+
+  return H2;
+}(_react2.default.PureComponent);
+
+exports.default = H2;
 },{"./generateHeaders":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/generateHeaders.js","react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/header.js":[function(require,module,exports){
 'use strict';
 
@@ -39942,245 +39925,7 @@ Header._idyll = {
 };
 
 exports.default = Header;
-},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/scroller.js":[function(require,module,exports){
-'use strict';
-
-exports.__esModule = true;
-
-var _textContainer = require('./text-container');
-
-var _textContainer2 = _interopRequireDefault(_textContainer);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var React = require('react');
-
-var _require = require('idyll-component-children'),
-    filterChildren = _require.filterChildren,
-    mapChildren = _require.mapChildren;
-
-var d3 = require('d3-selection');
-
-var styles = {
-  SCROLL_GRAPHIC: {
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 'auto',
-    height: '100vh',
-    width: '100%',
-    transform: 'translate3d(0, 0, 0)',
-    zIndex: -1
-  },
-
-  SCROLL_GRAPHIC_INNER: {
-    position: 'absolute',
-    // right: '1rem',
-    left: 0,
-    right: 0,
-    top: '50%',
-    transform: 'translateY(-50%)'
-  }
-};
-
-var id = 0;
-
-var Scroller = function (_React$Component) {
-  _inherits(Scroller, _React$Component);
-
-  function Scroller(props) {
-    _classCallCheck(this, Scroller);
-
-    var _this = _possibleConstructorReturn(this, _React$Component.call(this, props));
-
-    _this.id = id++;
-    _this.state = {
-      graphicHeight: 0,
-      graphicWidth: 0
-    };
-
-    _this.SCROLL_STEP_MAP = {};
-    _this.SCROLL_NAME_MAP = {};
-    return _this;
-  }
-
-  Scroller.prototype.componentDidMount = function componentDidMount() {
-    require('intersection-observer');
-    var scrollama = require('scrollama');
-    // instantiate the scrollama
-    var scroller = scrollama();
-    this.handleResize();
-
-    // setup the instance, pass callback functions
-    scroller.setup({
-      step: '#idyll-scroll-' + this.id + ' .idyll-step', // required
-      container: '#idyll-scroll-' + this.id, // required (for sticky)
-      graphic: '#idyll-scroll-' + this.id + ' .idyll-scroll-graphic', // required (for sticky)
-      progress: this.props.progress !== undefined ? true : false
-    }).onStepEnter(this.handleStepEnter.bind(this)).onStepProgress(this.handleStepProgress.bind(this))
-    // .onStepExit(handleStepExit)
-    .onContainerEnter(this.handleContainerEnter.bind(this));
-    //.onContainerExit(this.handleContainerExit.bind(this));
-
-    // setup resize event
-    window.addEventListener('resize', this.handleResize.bind(this));
-  };
-
-  Scroller.prototype.handleStepEnter = function handleStepEnter(_ref) {
-    var element = _ref.element,
-        index = _ref.index,
-        direction = _ref.direction;
-
-    this.SCROLL_STEP_MAP[index] && this.SCROLL_STEP_MAP[index]();
-    var update = { currentStep: index };
-    if (this.SCROLL_NAME_MAP[index]) {
-      update.currentState = this.SCROLL_NAME_MAP[index];
-    }
-    this.props.updateProps && this.props.updateProps(update);
-    if (index === Object.keys(this.SCROLL_STEP_MAP).length - 1) {
-      d3.select('body').style('overflow', 'auto');
-    }
-  };
-
-  Scroller.prototype.handleResize = function handleResize() {
-    this.setState({
-      graphicHeight: window.innerHeight + 'px',
-      graphicWidth: window.innerWidth + 'px'
-    });
-  };
-
-  Scroller.prototype.handleContainerEnter = function handleContainerEnter(response) {
-    if (this.props.disableScroll && (!this.props.currentStep || this.props.currentStep < Object.keys(this.SCROLL_STEP_MAP).length - 1)) {
-      d3.select('body').style('overflow', 'hidden');
-    }
-  };
-
-  Scroller.prototype.handleStepProgress = function handleStepProgress(response) {
-    var progress = response.progress;
-
-    var update = { progress: progress };
-    this.props.updateProps && this.props.updateProps(update);
-  };
-
-  Scroller.prototype.componentWillReceiveProps = function componentWillReceiveProps(nextProps) {
-    var _this2 = this;
-
-    if (nextProps.disableScroll && this.props.currentStep !== nextProps.currentStep) {
-      d3.selectAll('#idyll-scroll-' + this.id + ' .idyll-step').filter(function (d, i) {
-        return i === nextProps.currentStep;
-      }).node().scrollIntoView({ behavior: 'smooth' });
-    }
-    if (nextProps.disableScroll && this.props.currentState !== nextProps.currentState) {
-      d3.selectAll('#idyll-scroll-' + this.id + ' .idyll-step').filter(function (d, i) {
-        return nextProps.currentState === _this2.SCROLL_NAME_MAP[i];
-      }).node().scrollIntoView({ behavior: 'smooth' });
-    }
-    if (nextProps.disableScroll && (!nextProps.currentStep || nextProps.currentStep < Object.keys(this.SCROLL_STEP_MAP).length - 1)) {
-      d3.select('body').style('overflow', 'hidden');
-    }
-  };
-
-  Scroller.prototype.registerStep = function registerStep(elt, name, val) {
-    this.SCROLL_STEP_MAP[elt] = val;
-    this.SCROLL_NAME_MAP[elt] = name;
-  };
-
-  Scroller.prototype.render = function render() {
-    var _this3 = this;
-
-    var _props = this.props,
-        hasError = _props.hasError,
-        updateProps = _props.updateProps,
-        idyll = _props.idyll,
-        children = _props.children,
-        props = _objectWithoutProperties(_props, ['hasError', 'updateProps', 'idyll', 'children']);
-
-    var _state = this.state,
-        graphicHeight = _state.graphicHeight,
-        graphicWidth = _state.graphicWidth;
-
-
-    var graphicChildren = filterChildren(children, function (c) {
-      return c.type.name && c.type.name.toLowerCase() === 'graphic';
-    });
-
-    return React.createElement(
-      'div',
-      {
-        ref: function ref(_ref2) {
-          return _this3.ref = _ref2;
-        },
-        className: 'idyll-scroll',
-        id: 'idyll-scroll-' + this.id,
-        style: Object.assign({ position: 'relative' })
-      },
-      graphicChildren && graphicChildren.length ? React.createElement(
-        'div',
-        {
-          className: 'idyll-scroll-graphic',
-          style: Object.assign({ height: graphicHeight }, styles.SCROLL_GRAPHIC)
-        },
-        React.createElement(
-          'div',
-          {
-            style: Object.assign({ width: graphicWidth }, styles.SCROLL_GRAPHIC_INNER)
-          },
-          graphicChildren
-        )
-      ) : null,
-      React.createElement(
-        _textContainer2.default,
-        { idyll: idyll },
-        React.createElement(
-          'div',
-          { className: 'idyll-scroll-text' },
-          mapChildren(filterChildren(children, function (c) {
-            return !c.type.name || c.type.name.toLowerCase() === 'step';
-          }), function (c) {
-            return React.cloneElement(c, {
-              registerStep: _this3.registerStep.bind(_this3)
-            });
-          })
-        )
-      )
-    );
-  };
-
-  return Scroller;
-}(React.Component);
-
-Scroller._idyll = {
-  name: 'Scroller',
-  tagType: 'open',
-  children: ['\n  [Graphic] This graphic stays fixed in the background.[/Graphic]\n  [Step]This is the content for step 1[/Step]\n  [Step]This is the content for step 2[/Step]\n  [Step]This is the content for step 3[/Step]'],
-  props: [{
-    name: 'currentStep',
-    type: 'integer',
-    example: '0',
-    description: 'The index of the currently selected step.'
-  }, {
-    name: 'currentState',
-    type: 'object',
-    example: '`{}`',
-    description: 'The state value associated with the currently selected step. Note you must set the state property on the step components for this value to update.'
-  }, {
-    name: 'progress',
-    type: 'number',
-    example: '0',
-    description: 'The percent of completion (0-1) of the currently selected step'
-  }]
-};
-
-exports.default = Scroller;
-},{"./text-container":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/text-container.js","d3-selection":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/d3-selection/dist/d3-selection.js","idyll-component-children":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-component-children/dist/cjs/index.js","intersection-observer":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/intersection-observer/intersection-observer.js","react":"react","scrollama":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scrollama/build/scrollama.js"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/step.js":[function(require,module,exports){
+},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/step.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -40243,79 +39988,7 @@ Step._idyll = {
 };
 
 exports.default = Step;
-},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/switch.js":[function(require,module,exports){
-'use strict';
-
-exports.__esModule = true;
-
-function _objectWithoutProperties(obj, keys) { var target = {}; for (var i in obj) { if (keys.indexOf(i) >= 0) continue; if (!Object.prototype.hasOwnProperty.call(obj, i)) continue; target[i] = obj[i]; } return target; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var React = require('react');
-
-var _require = require('idyll-component-children'),
-    filterChildren = _require.filterChildren;
-
-var Switch = function (_React$Component) {
-  _inherits(Switch, _React$Component);
-
-  function Switch() {
-    _classCallCheck(this, Switch);
-
-    return _possibleConstructorReturn(this, _React$Component.apply(this, arguments));
-  }
-
-  Switch.prototype.render = function render() {
-    var _props = this.props,
-        idyll = _props.idyll,
-        hasError = _props.hasError,
-        updateProps = _props.updateProps,
-        value = _props.value,
-        children = _props.children,
-        props = _objectWithoutProperties(_props, ['idyll', 'hasError', 'updateProps', 'value', 'children']);
-
-    if (children) {
-      var matchCase = function matchCase(child) {
-        return child.type.name.toLowerCase() === 'case' && child.props.test === value;
-      };
-      var matchDefault = function matchDefault(child) {
-        return child.type.name.toLowerCase() === 'default';
-      };
-
-      var matchedCase = filterChildren(children, matchCase);
-      var defaultCase = filterChildren(children, matchDefault);
-
-      return React.createElement(
-        'div',
-        null,
-        matchedCase.length ? matchedCase : defaultCase
-      );
-    }
-    return '';
-  };
-
-  return Switch;
-}(React.Component);
-
-Switch._idyll = {
-  name: 'Switch',
-  tagType: 'open',
-  children: ['Case components'],
-  props: [{
-    name: 'value',
-    type: 'variable',
-    example: '1',
-    description: 'Value of the child prop to render.'
-  }]
-};
-
-exports.default = Switch;
-},{"idyll-component-children":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-component-children/dist/cjs/index.js","react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/text-container.js":[function(require,module,exports){
+},{"react":"react"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/text-container.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -42563,734 +42236,6 @@ if (typeof Object.create === 'function') {
     ctor.prototype.constructor = ctor
   }
 }
-
-},{}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/intersection-observer/intersection-observer.js":[function(require,module,exports){
-/**
- * Copyright 2016 Google Inc. All Rights Reserved.
- *
- * Licensed under the W3C SOFTWARE AND DOCUMENT NOTICE AND LICENSE.
- *
- *  https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document
- *
- */
-
-(function(window, document) {
-'use strict';
-
-
-// Exits early if all IntersectionObserver and IntersectionObserverEntry
-// features are natively supported.
-if ('IntersectionObserver' in window &&
-    'IntersectionObserverEntry' in window &&
-    'intersectionRatio' in window.IntersectionObserverEntry.prototype) {
-
-  // Minimal polyfill for Edge 15's lack of `isIntersecting`
-  // See: https://github.com/w3c/IntersectionObserver/issues/211
-  if (!('isIntersecting' in window.IntersectionObserverEntry.prototype)) {
-    Object.defineProperty(window.IntersectionObserverEntry.prototype,
-      'isIntersecting', {
-      get: function () {
-        return this.intersectionRatio > 0;
-      }
-    });
-  }
-  return;
-}
-
-
-/**
- * An IntersectionObserver registry. This registry exists to hold a strong
- * reference to IntersectionObserver instances currently observing a target
- * element. Without this registry, instances without another reference may be
- * garbage collected.
- */
-var registry = [];
-
-
-/**
- * Creates the global IntersectionObserverEntry constructor.
- * https://w3c.github.io/IntersectionObserver/#intersection-observer-entry
- * @param {Object} entry A dictionary of instance properties.
- * @constructor
- */
-function IntersectionObserverEntry(entry) {
-  this.time = entry.time;
-  this.target = entry.target;
-  this.rootBounds = entry.rootBounds;
-  this.boundingClientRect = entry.boundingClientRect;
-  this.intersectionRect = entry.intersectionRect || getEmptyRect();
-  this.isIntersecting = !!entry.intersectionRect;
-
-  // Calculates the intersection ratio.
-  var targetRect = this.boundingClientRect;
-  var targetArea = targetRect.width * targetRect.height;
-  var intersectionRect = this.intersectionRect;
-  var intersectionArea = intersectionRect.width * intersectionRect.height;
-
-  // Sets intersection ratio.
-  if (targetArea) {
-    // Round the intersection ratio to avoid floating point math issues:
-    // https://github.com/w3c/IntersectionObserver/issues/324
-    this.intersectionRatio = Number((intersectionArea / targetArea).toFixed(4));
-  } else {
-    // If area is zero and is intersecting, sets to 1, otherwise to 0
-    this.intersectionRatio = this.isIntersecting ? 1 : 0;
-  }
-}
-
-
-/**
- * Creates the global IntersectionObserver constructor.
- * https://w3c.github.io/IntersectionObserver/#intersection-observer-interface
- * @param {Function} callback The function to be invoked after intersection
- *     changes have queued. The function is not invoked if the queue has
- *     been emptied by calling the `takeRecords` method.
- * @param {Object=} opt_options Optional configuration options.
- * @constructor
- */
-function IntersectionObserver(callback, opt_options) {
-
-  var options = opt_options || {};
-
-  if (typeof callback != 'function') {
-    throw new Error('callback must be a function');
-  }
-
-  if (options.root && options.root.nodeType != 1) {
-    throw new Error('root must be an Element');
-  }
-
-  // Binds and throttles `this._checkForIntersections`.
-  this._checkForIntersections = throttle(
-      this._checkForIntersections.bind(this), this.THROTTLE_TIMEOUT);
-
-  // Private properties.
-  this._callback = callback;
-  this._observationTargets = [];
-  this._queuedEntries = [];
-  this._rootMarginValues = this._parseRootMargin(options.rootMargin);
-
-  // Public properties.
-  this.thresholds = this._initThresholds(options.threshold);
-  this.root = options.root || null;
-  this.rootMargin = this._rootMarginValues.map(function(margin) {
-    return margin.value + margin.unit;
-  }).join(' ');
-}
-
-
-/**
- * The minimum interval within which the document will be checked for
- * intersection changes.
- */
-IntersectionObserver.prototype.THROTTLE_TIMEOUT = 100;
-
-
-/**
- * The frequency in which the polyfill polls for intersection changes.
- * this can be updated on a per instance basis and must be set prior to
- * calling `observe` on the first target.
- */
-IntersectionObserver.prototype.POLL_INTERVAL = null;
-
-/**
- * Use a mutation observer on the root element
- * to detect intersection changes.
- */
-IntersectionObserver.prototype.USE_MUTATION_OBSERVER = true;
-
-
-/**
- * Starts observing a target element for intersection changes based on
- * the thresholds values.
- * @param {Element} target The DOM element to observe.
- */
-IntersectionObserver.prototype.observe = function(target) {
-  var isTargetAlreadyObserved = this._observationTargets.some(function(item) {
-    return item.element == target;
-  });
-
-  if (isTargetAlreadyObserved) {
-    return;
-  }
-
-  if (!(target && target.nodeType == 1)) {
-    throw new Error('target must be an Element');
-  }
-
-  this._registerInstance();
-  this._observationTargets.push({element: target, entry: null});
-  this._monitorIntersections();
-  this._checkForIntersections();
-};
-
-
-/**
- * Stops observing a target element for intersection changes.
- * @param {Element} target The DOM element to observe.
- */
-IntersectionObserver.prototype.unobserve = function(target) {
-  this._observationTargets =
-      this._observationTargets.filter(function(item) {
-
-    return item.element != target;
-  });
-  if (!this._observationTargets.length) {
-    this._unmonitorIntersections();
-    this._unregisterInstance();
-  }
-};
-
-
-/**
- * Stops observing all target elements for intersection changes.
- */
-IntersectionObserver.prototype.disconnect = function() {
-  this._observationTargets = [];
-  this._unmonitorIntersections();
-  this._unregisterInstance();
-};
-
-
-/**
- * Returns any queue entries that have not yet been reported to the
- * callback and clears the queue. This can be used in conjunction with the
- * callback to obtain the absolute most up-to-date intersection information.
- * @return {Array} The currently queued entries.
- */
-IntersectionObserver.prototype.takeRecords = function() {
-  var records = this._queuedEntries.slice();
-  this._queuedEntries = [];
-  return records;
-};
-
-
-/**
- * Accepts the threshold value from the user configuration object and
- * returns a sorted array of unique threshold values. If a value is not
- * between 0 and 1 and error is thrown.
- * @private
- * @param {Array|number=} opt_threshold An optional threshold value or
- *     a list of threshold values, defaulting to [0].
- * @return {Array} A sorted list of unique and valid threshold values.
- */
-IntersectionObserver.prototype._initThresholds = function(opt_threshold) {
-  var threshold = opt_threshold || [0];
-  if (!Array.isArray(threshold)) threshold = [threshold];
-
-  return threshold.sort().filter(function(t, i, a) {
-    if (typeof t != 'number' || isNaN(t) || t < 0 || t > 1) {
-      throw new Error('threshold must be a number between 0 and 1 inclusively');
-    }
-    return t !== a[i - 1];
-  });
-};
-
-
-/**
- * Accepts the rootMargin value from the user configuration object
- * and returns an array of the four margin values as an object containing
- * the value and unit properties. If any of the values are not properly
- * formatted or use a unit other than px or %, and error is thrown.
- * @private
- * @param {string=} opt_rootMargin An optional rootMargin value,
- *     defaulting to '0px'.
- * @return {Array<Object>} An array of margin objects with the keys
- *     value and unit.
- */
-IntersectionObserver.prototype._parseRootMargin = function(opt_rootMargin) {
-  var marginString = opt_rootMargin || '0px';
-  var margins = marginString.split(/\s+/).map(function(margin) {
-    var parts = /^(-?\d*\.?\d+)(px|%)$/.exec(margin);
-    if (!parts) {
-      throw new Error('rootMargin must be specified in pixels or percent');
-    }
-    return {value: parseFloat(parts[1]), unit: parts[2]};
-  });
-
-  // Handles shorthand.
-  margins[1] = margins[1] || margins[0];
-  margins[2] = margins[2] || margins[0];
-  margins[3] = margins[3] || margins[1];
-
-  return margins;
-};
-
-
-/**
- * Starts polling for intersection changes if the polling is not already
- * happening, and if the page's visibility state is visible.
- * @private
- */
-IntersectionObserver.prototype._monitorIntersections = function() {
-  if (!this._monitoringIntersections) {
-    this._monitoringIntersections = true;
-
-    // If a poll interval is set, use polling instead of listening to
-    // resize and scroll events or DOM mutations.
-    if (this.POLL_INTERVAL) {
-      this._monitoringInterval = setInterval(
-          this._checkForIntersections, this.POLL_INTERVAL);
-    }
-    else {
-      addEvent(window, 'resize', this._checkForIntersections, true);
-      addEvent(document, 'scroll', this._checkForIntersections, true);
-
-      if (this.USE_MUTATION_OBSERVER && 'MutationObserver' in window) {
-        this._domObserver = new MutationObserver(this._checkForIntersections);
-        this._domObserver.observe(document, {
-          attributes: true,
-          childList: true,
-          characterData: true,
-          subtree: true
-        });
-      }
-    }
-  }
-};
-
-
-/**
- * Stops polling for intersection changes.
- * @private
- */
-IntersectionObserver.prototype._unmonitorIntersections = function() {
-  if (this._monitoringIntersections) {
-    this._monitoringIntersections = false;
-
-    clearInterval(this._monitoringInterval);
-    this._monitoringInterval = null;
-
-    removeEvent(window, 'resize', this._checkForIntersections, true);
-    removeEvent(document, 'scroll', this._checkForIntersections, true);
-
-    if (this._domObserver) {
-      this._domObserver.disconnect();
-      this._domObserver = null;
-    }
-  }
-};
-
-
-/**
- * Scans each observation target for intersection changes and adds them
- * to the internal entries queue. If new entries are found, it
- * schedules the callback to be invoked.
- * @private
- */
-IntersectionObserver.prototype._checkForIntersections = function() {
-  var rootIsInDom = this._rootIsInDom();
-  var rootRect = rootIsInDom ? this._getRootRect() : getEmptyRect();
-
-  this._observationTargets.forEach(function(item) {
-    var target = item.element;
-    var targetRect = getBoundingClientRect(target);
-    var rootContainsTarget = this._rootContainsTarget(target);
-    var oldEntry = item.entry;
-    var intersectionRect = rootIsInDom && rootContainsTarget &&
-        this._computeTargetAndRootIntersection(target, rootRect);
-
-    var newEntry = item.entry = new IntersectionObserverEntry({
-      time: now(),
-      target: target,
-      boundingClientRect: targetRect,
-      rootBounds: rootRect,
-      intersectionRect: intersectionRect
-    });
-
-    if (!oldEntry) {
-      this._queuedEntries.push(newEntry);
-    } else if (rootIsInDom && rootContainsTarget) {
-      // If the new entry intersection ratio has crossed any of the
-      // thresholds, add a new entry.
-      if (this._hasCrossedThreshold(oldEntry, newEntry)) {
-        this._queuedEntries.push(newEntry);
-      }
-    } else {
-      // If the root is not in the DOM or target is not contained within
-      // root but the previous entry for this target had an intersection,
-      // add a new record indicating removal.
-      if (oldEntry && oldEntry.isIntersecting) {
-        this._queuedEntries.push(newEntry);
-      }
-    }
-  }, this);
-
-  if (this._queuedEntries.length) {
-    this._callback(this.takeRecords(), this);
-  }
-};
-
-
-/**
- * Accepts a target and root rect computes the intersection between then
- * following the algorithm in the spec.
- * TODO(philipwalton): at this time clip-path is not considered.
- * https://w3c.github.io/IntersectionObserver/#calculate-intersection-rect-algo
- * @param {Element} target The target DOM element
- * @param {Object} rootRect The bounding rect of the root after being
- *     expanded by the rootMargin value.
- * @return {?Object} The final intersection rect object or undefined if no
- *     intersection is found.
- * @private
- */
-IntersectionObserver.prototype._computeTargetAndRootIntersection =
-    function(target, rootRect) {
-
-  // If the element isn't displayed, an intersection can't happen.
-  if (window.getComputedStyle(target).display == 'none') return;
-
-  var targetRect = getBoundingClientRect(target);
-  var intersectionRect = targetRect;
-  var parent = getParentNode(target);
-  var atRoot = false;
-
-  while (!atRoot) {
-    var parentRect = null;
-    var parentComputedStyle = parent.nodeType == 1 ?
-        window.getComputedStyle(parent) : {};
-
-    // If the parent isn't displayed, an intersection can't happen.
-    if (parentComputedStyle.display == 'none') return;
-
-    if (parent == this.root || parent == document) {
-      atRoot = true;
-      parentRect = rootRect;
-    } else {
-      // If the element has a non-visible overflow, and it's not the <body>
-      // or <html> element, update the intersection rect.
-      // Note: <body> and <html> cannot be clipped to a rect that's not also
-      // the document rect, so no need to compute a new intersection.
-      if (parent != document.body &&
-          parent != document.documentElement &&
-          parentComputedStyle.overflow != 'visible') {
-        parentRect = getBoundingClientRect(parent);
-      }
-    }
-
-    // If either of the above conditionals set a new parentRect,
-    // calculate new intersection data.
-    if (parentRect) {
-      intersectionRect = computeRectIntersection(parentRect, intersectionRect);
-
-      if (!intersectionRect) break;
-    }
-    parent = getParentNode(parent);
-  }
-  return intersectionRect;
-};
-
-
-/**
- * Returns the root rect after being expanded by the rootMargin value.
- * @return {Object} The expanded root rect.
- * @private
- */
-IntersectionObserver.prototype._getRootRect = function() {
-  var rootRect;
-  if (this.root) {
-    rootRect = getBoundingClientRect(this.root);
-  } else {
-    // Use <html>/<body> instead of window since scroll bars affect size.
-    var html = document.documentElement;
-    var body = document.body;
-    rootRect = {
-      top: 0,
-      left: 0,
-      right: html.clientWidth || body.clientWidth,
-      width: html.clientWidth || body.clientWidth,
-      bottom: html.clientHeight || body.clientHeight,
-      height: html.clientHeight || body.clientHeight
-    };
-  }
-  return this._expandRectByRootMargin(rootRect);
-};
-
-
-/**
- * Accepts a rect and expands it by the rootMargin value.
- * @param {Object} rect The rect object to expand.
- * @return {Object} The expanded rect.
- * @private
- */
-IntersectionObserver.prototype._expandRectByRootMargin = function(rect) {
-  var margins = this._rootMarginValues.map(function(margin, i) {
-    return margin.unit == 'px' ? margin.value :
-        margin.value * (i % 2 ? rect.width : rect.height) / 100;
-  });
-  var newRect = {
-    top: rect.top - margins[0],
-    right: rect.right + margins[1],
-    bottom: rect.bottom + margins[2],
-    left: rect.left - margins[3]
-  };
-  newRect.width = newRect.right - newRect.left;
-  newRect.height = newRect.bottom - newRect.top;
-
-  return newRect;
-};
-
-
-/**
- * Accepts an old and new entry and returns true if at least one of the
- * threshold values has been crossed.
- * @param {?IntersectionObserverEntry} oldEntry The previous entry for a
- *    particular target element or null if no previous entry exists.
- * @param {IntersectionObserverEntry} newEntry The current entry for a
- *    particular target element.
- * @return {boolean} Returns true if a any threshold has been crossed.
- * @private
- */
-IntersectionObserver.prototype._hasCrossedThreshold =
-    function(oldEntry, newEntry) {
-
-  // To make comparing easier, an entry that has a ratio of 0
-  // but does not actually intersect is given a value of -1
-  var oldRatio = oldEntry && oldEntry.isIntersecting ?
-      oldEntry.intersectionRatio || 0 : -1;
-  var newRatio = newEntry.isIntersecting ?
-      newEntry.intersectionRatio || 0 : -1;
-
-  // Ignore unchanged ratios
-  if (oldRatio === newRatio) return;
-
-  for (var i = 0; i < this.thresholds.length; i++) {
-    var threshold = this.thresholds[i];
-
-    // Return true if an entry matches a threshold or if the new ratio
-    // and the old ratio are on the opposite sides of a threshold.
-    if (threshold == oldRatio || threshold == newRatio ||
-        threshold < oldRatio !== threshold < newRatio) {
-      return true;
-    }
-  }
-};
-
-
-/**
- * Returns whether or not the root element is an element and is in the DOM.
- * @return {boolean} True if the root element is an element and is in the DOM.
- * @private
- */
-IntersectionObserver.prototype._rootIsInDom = function() {
-  return !this.root || containsDeep(document, this.root);
-};
-
-
-/**
- * Returns whether or not the target element is a child of root.
- * @param {Element} target The target element to check.
- * @return {boolean} True if the target element is a child of root.
- * @private
- */
-IntersectionObserver.prototype._rootContainsTarget = function(target) {
-  return containsDeep(this.root || document, target);
-};
-
-
-/**
- * Adds the instance to the global IntersectionObserver registry if it isn't
- * already present.
- * @private
- */
-IntersectionObserver.prototype._registerInstance = function() {
-  if (registry.indexOf(this) < 0) {
-    registry.push(this);
-  }
-};
-
-
-/**
- * Removes the instance from the global IntersectionObserver registry.
- * @private
- */
-IntersectionObserver.prototype._unregisterInstance = function() {
-  var index = registry.indexOf(this);
-  if (index != -1) registry.splice(index, 1);
-};
-
-
-/**
- * Returns the result of the performance.now() method or null in browsers
- * that don't support the API.
- * @return {number} The elapsed time since the page was requested.
- */
-function now() {
-  return window.performance && performance.now && performance.now();
-}
-
-
-/**
- * Throttles a function and delays its execution, so it's only called at most
- * once within a given time period.
- * @param {Function} fn The function to throttle.
- * @param {number} timeout The amount of time that must pass before the
- *     function can be called again.
- * @return {Function} The throttled function.
- */
-function throttle(fn, timeout) {
-  var timer = null;
-  return function () {
-    if (!timer) {
-      timer = setTimeout(function() {
-        fn();
-        timer = null;
-      }, timeout);
-    }
-  };
-}
-
-
-/**
- * Adds an event handler to a DOM node ensuring cross-browser compatibility.
- * @param {Node} node The DOM node to add the event handler to.
- * @param {string} event The event name.
- * @param {Function} fn The event handler to add.
- * @param {boolean} opt_useCapture Optionally adds the even to the capture
- *     phase. Note: this only works in modern browsers.
- */
-function addEvent(node, event, fn, opt_useCapture) {
-  if (typeof node.addEventListener == 'function') {
-    node.addEventListener(event, fn, opt_useCapture || false);
-  }
-  else if (typeof node.attachEvent == 'function') {
-    node.attachEvent('on' + event, fn);
-  }
-}
-
-
-/**
- * Removes a previously added event handler from a DOM node.
- * @param {Node} node The DOM node to remove the event handler from.
- * @param {string} event The event name.
- * @param {Function} fn The event handler to remove.
- * @param {boolean} opt_useCapture If the event handler was added with this
- *     flag set to true, it should be set to true here in order to remove it.
- */
-function removeEvent(node, event, fn, opt_useCapture) {
-  if (typeof node.removeEventListener == 'function') {
-    node.removeEventListener(event, fn, opt_useCapture || false);
-  }
-  else if (typeof node.detatchEvent == 'function') {
-    node.detatchEvent('on' + event, fn);
-  }
-}
-
-
-/**
- * Returns the intersection between two rect objects.
- * @param {Object} rect1 The first rect.
- * @param {Object} rect2 The second rect.
- * @return {?Object} The intersection rect or undefined if no intersection
- *     is found.
- */
-function computeRectIntersection(rect1, rect2) {
-  var top = Math.max(rect1.top, rect2.top);
-  var bottom = Math.min(rect1.bottom, rect2.bottom);
-  var left = Math.max(rect1.left, rect2.left);
-  var right = Math.min(rect1.right, rect2.right);
-  var width = right - left;
-  var height = bottom - top;
-
-  return (width >= 0 && height >= 0) && {
-    top: top,
-    bottom: bottom,
-    left: left,
-    right: right,
-    width: width,
-    height: height
-  };
-}
-
-
-/**
- * Shims the native getBoundingClientRect for compatibility with older IE.
- * @param {Element} el The element whose bounding rect to get.
- * @return {Object} The (possibly shimmed) rect of the element.
- */
-function getBoundingClientRect(el) {
-  var rect;
-
-  try {
-    rect = el.getBoundingClientRect();
-  } catch (err) {
-    // Ignore Windows 7 IE11 "Unspecified error"
-    // https://github.com/w3c/IntersectionObserver/pull/205
-  }
-
-  if (!rect) return getEmptyRect();
-
-  // Older IE
-  if (!(rect.width && rect.height)) {
-    rect = {
-      top: rect.top,
-      right: rect.right,
-      bottom: rect.bottom,
-      left: rect.left,
-      width: rect.right - rect.left,
-      height: rect.bottom - rect.top
-    };
-  }
-  return rect;
-}
-
-
-/**
- * Returns an empty rect object. An empty rect is returned when an element
- * is not in the DOM.
- * @return {Object} The empty rect.
- */
-function getEmptyRect() {
-  return {
-    top: 0,
-    bottom: 0,
-    left: 0,
-    right: 0,
-    width: 0,
-    height: 0
-  };
-}
-
-/**
- * Checks to see if a parent element contains a child element (including inside
- * shadow DOM).
- * @param {Node} parent The parent element.
- * @param {Node} child The child element.
- * @return {boolean} True if the parent node contains the child node.
- */
-function containsDeep(parent, child) {
-  var node = child;
-  while (node) {
-    if (node == parent) return true;
-
-    node = getParentNode(node);
-  }
-  return false;
-}
-
-
-/**
- * Gets the parent node of an element or its host element if the parent node
- * is a shadow root.
- * @param {Node} node The node whose parent to get.
- * @return {Node|null} The parent node or null if no parent exists.
- */
-function getParentNode(node) {
-  var parent = node.parentNode;
-
-  if (parent && parent.nodeType == 11 && parent.host) {
-    // If the parent is a shadow root, return the host element.
-    return parent.host;
-  }
-  return parent;
-}
-
-
-// Exposes the constructors globally.
-window.IntersectionObserver = IntersectionObserver;
-window.IntersectionObserverEntry = IntersectionObserverEntry;
-
-}(window, document));
 
 },{}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/is-buffer/index.js":[function(require,module,exports){
 /*!
@@ -82551,787 +81496,7 @@ if ("development" === 'production') {
   module.exports = require('./cjs/scheduler-tracing.development.js');
 }
 
-},{"./cjs/scheduler-tracing.development.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scheduler/cjs/scheduler-tracing.development.js","./cjs/scheduler-tracing.production.min.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scheduler/cjs/scheduler-tracing.production.min.js"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scrollama/build/scrollama.js":[function(require,module,exports){
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
-	typeof define === 'function' && define.amd ? define(factory) :
-	(global.scrollama = factory());
-}(this, (function () { 'use strict';
-
-// DOM helper functions
-
-// private
-function selectionToArray(selection) {
-  var len = selection.length;
-  var result = [];
-  for (var i = 0; i < len; i += 1) {
-    result.push(selection[i]);
-  }
-  return result;
-}
-
-// public
-function select(selector) {
-  if (selector instanceof Element) { return selector; }
-  else if (typeof selector === 'string')
-    { return document.querySelector(selector); }
-  return null;
-}
-
-function selectAll(selector, parent) {
-  if ( parent === void 0 ) parent = document;
-
-  if (typeof selector === 'string') {
-    return selectionToArray(parent.querySelectorAll(selector));
-  } else if (selector instanceof Element) {
-    return selectionToArray([selector]);
-  } else if (selector instanceof NodeList) {
-    return selectionToArray(selector);
-  } else if (selector instanceof Array) {
-    return selector;
-  }
-  return [];
-}
-
-function getStepId(ref) {
-  var id = ref.id;
-  var i = ref.i;
-
-  return ("scrollama__debug-step--" + id + "-" + i);
-}
-
-function getOffsetId(ref) {
-  var id = ref.id;
-
-  return ("scrollama__debug-offset--" + id);
-}
-
-// SETUP
-
-function setupOffset(ref) {
-  var id = ref.id;
-  var offsetVal = ref.offsetVal;
-  var stepClass = ref.stepClass;
-
-  var el = document.createElement('div');
-  el.setAttribute('id', getOffsetId({ id: id }));
-  el.setAttribute('class', 'scrollama__debug-offset');
-
-  el.style.position = 'fixed';
-  el.style.left = '0';
-  el.style.width = '100%';
-  el.style.height = '0px';
-  el.style.borderTop = '2px dashed black';
-  el.style.zIndex = '9999';
-
-  var text = document.createElement('p');
-  text.innerText = "\"." + stepClass + "\" trigger: " + offsetVal;
-  text.style.fontSize = '12px';
-  text.style.fontFamily = 'monospace';
-  text.style.color = 'black';
-  text.style.margin = '0';
-  text.style.padding = '6px';
-  el.appendChild(text);
-  document.body.appendChild(el);
-}
-
-function setup(ref) {
-  var id = ref.id;
-  var offsetVal = ref.offsetVal;
-  var stepEl = ref.stepEl;
-
-  var stepClass = stepEl[0].getAttribute('class');
-  setupOffset({ id: id, offsetVal: offsetVal, stepClass: stepClass });
-}
-
-// UPDATE
-function updateOffset(ref) {
-  var id = ref.id;
-  var offsetMargin = ref.offsetMargin;
-  var offsetVal = ref.offsetVal;
-
-  var idVal = getOffsetId({ id: id });
-  var el = document.querySelector(("#" + idVal));
-  el.style.top = offsetMargin + "px";
-}
-
-function update(ref) {
-  var id = ref.id;
-  var stepOffsetHeight = ref.stepOffsetHeight;
-  var offsetMargin = ref.offsetMargin;
-  var offsetVal = ref.offsetVal;
-
-  updateOffset({ id: id, offsetMargin: offsetMargin });
-}
-
-function notifyStep(ref) {
-  var id = ref.id;
-  var index = ref.index;
-  var state = ref.state;
-
-  var idVal = getStepId({ id: id, i: index });
-  var elA = document.querySelector(("#" + idVal + "_above"));
-  var elB = document.querySelector(("#" + idVal + "_below"));
-  var display = state === 'enter' ? 'block' : 'none';
-
-  if (elA) { elA.style.display = display; }
-  if (elB) { elB.style.display = display; }
-}
-
-function scrollama() {
-  var ZERO_MOE = 1; // zero with some rounding margin of error
-  var callback = {};
-  var io = {};
-
-  var containerEl = null;
-  var graphicEl = null;
-  var stepEl = null;
-
-  var id = null;
-  var offsetVal = 0;
-  var offsetMargin = 0;
-  var vh = 0;
-  var ph = 0;
-  var stepOffsetHeight = null;
-  var stepOffsetTop = null;
-  var bboxGraphic = null;
-
-  var isReady = false;
-  var isEnabled = false;
-  var debugMode = false;
-  var progressMode = false;
-  var progressThreshold = 0;
-  var preserveOrder = false;
-  var triggerOnce = false;
-
-  var stepStates = null;
-  var containerState = null;
-  var previousYOffset = -1;
-  var direction = null;
-
-  var exclude = [];
-
-  // HELPERS
-  function generateId() {
-    var a = 'abcdefghijklmnopqrstuv';
-    var l = a.length;
-    var t = new Date().getTime();
-    var r = [0, 0, 0].map(function (d) { return a[Math.floor(Math.random() * l)]; }).join('');
-    return ("" + r + t);
-  }
-
-  //www.gomakethings.com/how-to-get-an-elements-distance-from-the-top-of-the-page-with-vanilla-javascript/
-  function getOffsetTop(el) {
-    // Set our distance placeholder
-    var distance = 0;
-
-    // Loop up the DOM
-    if (el.offsetParent) {
-      do {
-        distance += el.offsetTop;
-        el = el.offsetParent;
-      } while (el);
-    }
-
-    // Return our distance
-    return distance < 0 ? 0 : distance;
-  }
-
-  function getPageHeight() {
-    var body = document.body;
-    var html = document.documentElement;
-
-    return Math.max(
-      body.scrollHeight,
-      body.offsetHeight,
-      html.clientHeight,
-      html.scrollHeight,
-      html.offsetHeight
-    );
-  }
-
-  function getIndex(element) {
-    return +element.getAttribute('data-scrollama-index');
-  }
-
-  function updateDirection() {
-    if (window.pageYOffset > previousYOffset) { direction = 'down'; }
-    else if (window.pageYOffset < previousYOffset) { direction = 'up'; }
-    previousYOffset = window.pageYOffset;
-  }
-
-  function handleResize() {
-    vh = window.innerHeight;
-    ph = getPageHeight();
-
-    bboxGraphic = graphicEl ? graphicEl.getBoundingClientRect() : null;
-
-    offsetMargin = offsetVal * vh;
-
-    stepOffsetHeight = stepEl ? stepEl.map(function (el) { return el.offsetHeight; }) : [];
-
-    stepOffsetTop = stepEl ? stepEl.map(getOffsetTop) : [];
-
-    if (isEnabled && isReady) { updateIO(); }
-
-    if (debugMode)
-      { update({ id: id, stepOffsetHeight: stepOffsetHeight, offsetMargin: offsetMargin, offsetVal: offsetVal }); }
-  }
-
-  function handleEnable(enable) {
-    if (enable && !isEnabled) {
-      if (isReady) { updateIO(); }
-      isEnabled = true;
-    } else if (!enable) {
-      if (io.top) { io.top.disconnect(); }
-      if (io.bottom) { io.bottom.disconnect(); }
-      if (io.stepAbove) { io.stepAbove.forEach(function (d) { return d.disconnect(); }); }
-      if (io.stepBelow) { io.stepBelow.forEach(function (d) { return d.disconnect(); }); }
-      if (io.stepProgress) { io.stepProgress.forEach(function (d) { return d.disconnect(); }); }
-      if (io.viewportAbove) { io.viewportAbove.forEach(function (d) { return d.disconnect(); }); }
-      if (io.viewportBelow) { io.viewportBelow.forEach(function (d) { return d.disconnect(); }); }
-      isEnabled = false;
-    }
-  }
-
-  function createThreshold(height) {
-    var count = Math.ceil(height / progressThreshold);
-    var t = [];
-    var ratio = 1 / count;
-    for (var i = 0; i < count; i++) {
-      t.push(i * ratio);
-    }
-    return t;
-  }
-
-  // NOTIFY CALLBACKS
-  function notifyOthers(index, location) {
-    if (location === 'above') {
-      // check if steps above/below were skipped and should be notified first
-      for (var i = 0; i < index; i++) {
-        var ss = stepStates[i];
-        if (ss.state === 'enter') { notifyStepExit(stepEl[i], 'down'); }
-        if (ss.direction === 'up') {
-          notifyStepEnter(stepEl[i], 'down', false);
-          notifyStepExit(stepEl[i], 'down');
-        }
-      }
-    } else if (location === 'below') {
-      for (var i$1 = stepStates.length - 1; i$1 > index; i$1--) {
-        var ss$1 = stepStates[i$1];
-        if (ss$1.state === 'enter') {
-          notifyStepExit(stepEl[i$1], 'up');
-        }
-        if (ss$1.direction === 'down') {
-          notifyStepEnter(stepEl[i$1], 'up', false);
-          notifyStepExit(stepEl[i$1], 'up');
-        }
-      }
-    }
-  }
-
-  function notifyStepEnter(element, direction, check) {
-    if ( check === void 0 ) check = true;
-
-    var index = getIndex(element);
-    var resp = { element: element, index: index, direction: direction };
-
-    // store most recent trigger
-    stepStates[index].direction = direction;
-    stepStates[index].state = 'enter';
-
-    if (preserveOrder && check && direction === 'down')
-      { notifyOthers(index, 'above'); }
-
-    if (preserveOrder && check && direction === 'up')
-      { notifyOthers(index, 'below'); }
-
-    if (
-      callback.stepEnter &&
-      typeof callback.stepEnter === 'function' &&
-      !exclude[index]
-    ) {
-      callback.stepEnter(resp, stepStates);
-      if (debugMode) { notifyStep({ id: id, index: index, state: 'enter' }); }
-      if (triggerOnce) { exclude[index] = true; }
-    }
-
-    if (progressMode) {
-      if (direction === 'down') { notifyStepProgress(element, 0); }
-      else { notifyStepProgress(element, 1); }
-    }
-  }
-
-  function notifyStepExit(element, direction) {
-    var index = getIndex(element);
-    var resp = { element: element, index: index, direction: direction };
-
-    // store most recent trigger
-    stepStates[index].direction = direction;
-    stepStates[index].state = 'exit';
-
-    if (progressMode) {
-      if (direction === 'down') { notifyStepProgress(element, 1); }
-      else { notifyStepProgress(element, 0); }
-    }
-
-    if (callback.stepExit && typeof callback.stepExit === 'function') {
-      callback.stepExit(resp, stepStates);
-      if (debugMode) { notifyStep({ id: id, index: index, state: 'exit' }); }
-    }
-  }
-
-  function notifyStepProgress(element, progress) {
-    var index = getIndex(element);
-    var resp = { element: element, index: index, progress: progress };
-    if (callback.stepProgress && typeof callback.stepProgress === 'function')
-      { callback.stepProgress(resp); }
-  }
-
-  function notifyContainerEnter() {
-    var resp = { direction: direction };
-    containerState.direction = direction;
-    containerState.state = 'enter';
-    if (
-      callback.containerEnter &&
-      typeof callback.containerEnter === 'function'
-    )
-      { callback.containerEnter(resp); }
-  }
-
-  function notifyContainerExit() {
-    var resp = { direction: direction };
-    containerState.direction = direction;
-    containerState.state = 'exit';
-    if (callback.containerExit && typeof callback.containerExit === 'function')
-      { callback.containerExit(resp); }
-  }
-
-  // OBSERVER - INTERSECT HANDLING
-
-  // if TOP edge of step crosses threshold,
-  // bottom must be > 0 which means it is on "screen" (shifted by offset)
-  function intersectStepAbove(entries) {
-    updateDirection();
-    entries.forEach(function (entry) {
-      var isIntersecting = entry.isIntersecting;
-      var boundingClientRect = entry.boundingClientRect;
-      var target = entry.target;
-
-      // bottom is how far bottom edge of el is from top of viewport
-      var bottom = boundingClientRect.bottom;
-      var height = boundingClientRect.height;
-      var bottomAdjusted = bottom - offsetMargin;
-      var index = getIndex(target);
-      var ss = stepStates[index];
-
-      if (bottomAdjusted >= -ZERO_MOE) {
-        if (isIntersecting && direction === 'down' && ss.state !== 'enter')
-          { notifyStepEnter(target, direction); }
-        else if (!isIntersecting && direction === 'up' && ss.state === 'enter')
-          { notifyStepExit(target, direction); }
-        else if (
-          !isIntersecting &&
-          bottomAdjusted >= height &&
-          direction === 'down' &&
-          ss.state === 'enter'
-        ) {
-          notifyStepExit(target, direction);
-        }
-      }
-    });
-  }
-
-  function intersectStepBelow(entries) {
-    updateDirection();
-    entries.forEach(function (entry) {
-      var isIntersecting = entry.isIntersecting;
-      var boundingClientRect = entry.boundingClientRect;
-      var target = entry.target;
-
-      var bottom = boundingClientRect.bottom;
-      var height = boundingClientRect.height;
-      var bottomAdjusted = bottom - offsetMargin;
-      var index = getIndex(target);
-      var ss = stepStates[index];
-
-      if (
-        bottomAdjusted >= -ZERO_MOE &&
-        bottomAdjusted < height &&
-        isIntersecting &&
-        direction === 'up' &&
-        ss.state !== 'enter'
-      ) {
-        notifyStepEnter(target, direction);
-      } else if (
-        bottomAdjusted <= ZERO_MOE &&
-        !isIntersecting &&
-        direction === 'down' &&
-        ss.state === 'enter'
-      ) {
-        notifyStepExit(target, direction);
-      }
-    });
-  }
-
-  /*
-	if there is a scroll event where a step never intersects (therefore
-	skipping an enter/exit trigger), use this fallback to detect if it is
-	in view
-	*/
-  function intersectViewportAbove(entries) {
-    updateDirection();
-    entries.forEach(function (entry) {
-      var isIntersecting = entry.isIntersecting;
-      var target = entry.target;
-      var index = getIndex(target);
-      var ss = stepStates[index];
-      if (
-        isIntersecting &&
-        direction === 'down' &&
-        ss.state !== 'enter' &&
-        ss.direction !== 'down'
-      ) {
-        notifyStepEnter(target, 'down');
-        notifyStepExit(target, 'down');
-      }
-    });
-  }
-
-  function intersectViewportBelow(entries) {
-    updateDirection();
-    entries.forEach(function (entry) {
-      var isIntersecting = entry.isIntersecting;
-      var target = entry.target;
-      var index = getIndex(target);
-      var ss = stepStates[index];
-      if (
-        isIntersecting &&
-        direction === 'up' &&
-        ss.state !== 'enter' &&
-        ss.direction !== 'up'
-      ) {
-        notifyStepEnter(target, 'up');
-        notifyStepExit(target, 'up');
-      }
-    });
-  }
-
-  function intersectStepProgress(entries) {
-    updateDirection();
-    entries.forEach(
-      function (ref) {
-        var isIntersecting = ref.isIntersecting;
-        var intersectionRatio = ref.intersectionRatio;
-        var boundingClientRect = ref.boundingClientRect;
-        var target = ref.target;
-
-        var bottom = boundingClientRect.bottom;
-        var bottomAdjusted = bottom - offsetMargin;
-
-        if (isIntersecting && bottomAdjusted >= -ZERO_MOE) {
-          notifyStepProgress(target, +intersectionRatio.toFixed(3));
-        }
-      }
-    );
-  }
-
-  function intersectTop(entries) {
-    updateDirection();
-    var ref = entries[0];
-    var isIntersecting = ref.isIntersecting;
-    var boundingClientRect = ref.boundingClientRect;
-    var top = boundingClientRect.top;
-    var bottom = boundingClientRect.bottom;
-
-    if (bottom > -ZERO_MOE) {
-      if (isIntersecting) { notifyContainerEnter(direction); }
-      else if (containerState.state === 'enter') { notifyContainerExit(direction); }
-    }
-  }
-
-  function intersectBottom(entries) {
-    updateDirection();
-    var ref = entries[0];
-    var isIntersecting = ref.isIntersecting;
-    var boundingClientRect = ref.boundingClientRect;
-    var top = boundingClientRect.top;
-
-    if (top < ZERO_MOE) {
-      if (isIntersecting) { notifyContainerEnter(direction); }
-      else if (containerState.state === 'enter') { notifyContainerExit(direction); }
-    }
-  }
-
-  // OBSERVER - CREATION
-
-  function updateTopIO() {
-    if (io.top) { io.top.unobserve(containerEl); }
-
-    var options = {
-      root: null,
-      rootMargin: (vh + "px 0px -" + vh + "px 0px"),
-      threshold: 0
-    };
-
-    io.top = new IntersectionObserver(intersectTop, options);
-    io.top.observe(containerEl);
-  }
-
-  function updateBottomIO() {
-    if (io.bottom) { io.bottom.unobserve(containerEl); }
-    var options = {
-      root: null,
-      rootMargin: ("-" + (bboxGraphic.height) + "px 0px " + (bboxGraphic.height) + "px 0px"),
-      threshold: 0
-    };
-
-    io.bottom = new IntersectionObserver(intersectBottom, options);
-    io.bottom.observe(containerEl);
-  }
-
-  // top edge
-  function updateStepAboveIO() {
-    if (io.stepAbove) { io.stepAbove.forEach(function (d) { return d.disconnect(); }); }
-
-    io.stepAbove = stepEl.map(function (el, i) {
-      var marginTop = stepOffsetHeight[i];
-      var marginBottom = -vh + offsetMargin;
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-
-      var options = {
-        root: null,
-        rootMargin: rootMargin,
-        threshold: 0
-      };
-
-      var obs = new IntersectionObserver(intersectStepAbove, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  // bottom edge
-  function updateStepBelowIO() {
-    if (io.stepBelow) { io.stepBelow.forEach(function (d) { return d.disconnect(); }); }
-
-    io.stepBelow = stepEl.map(function (el, i) {
-      var marginTop = -offsetMargin;
-      var marginBottom = ph - vh + stepOffsetHeight[i] + offsetMargin;
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-
-      var options = {
-        root: null,
-        rootMargin: rootMargin,
-        threshold: 0
-      };
-
-      var obs = new IntersectionObserver(intersectStepBelow, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  // jump into viewport
-  function updateViewportAboveIO() {
-    if (io.viewportAbove) { io.viewportAbove.forEach(function (d) { return d.disconnect(); }); }
-    io.viewportAbove = stepEl.map(function (el, i) {
-      var marginTop = stepOffsetTop[i];
-      var marginBottom = -(vh - offsetMargin + stepOffsetHeight[i]);
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-      var options = {
-        root: null,
-        rootMargin: rootMargin,
-        threshold: 0
-      };
-
-      var obs = new IntersectionObserver(intersectViewportAbove, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  function updateViewportBelowIO() {
-    if (io.viewportBelow) { io.viewportBelow.forEach(function (d) { return d.disconnect(); }); }
-    io.viewportBelow = stepEl.map(function (el, i) {
-      var marginTop = -(offsetMargin + stepOffsetHeight[i]);
-      var marginBottom =
-        ph - stepOffsetTop[i] - stepOffsetHeight[i] - offsetMargin;
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-      var options = {
-        root: null,
-        rootMargin: rootMargin,
-        threshold: 0
-      };
-
-      var obs = new IntersectionObserver(intersectViewportBelow, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  // progress progress tracker
-  function updateStepProgressIO() {
-    if (io.stepProgress) { io.stepProgress.forEach(function (d) { return d.disconnect(); }); }
-
-    io.stepProgress = stepEl.map(function (el, i) {
-      var marginTop = stepOffsetHeight[i] - offsetMargin;
-      var marginBottom = -vh + offsetMargin;
-      var rootMargin = marginTop + "px 0px " + marginBottom + "px 0px";
-
-      var threshold = createThreshold(stepOffsetHeight[i]);
-      var options = {
-        root: null,
-        rootMargin: rootMargin,
-        threshold: threshold
-      };
-
-      var obs = new IntersectionObserver(intersectStepProgress, options);
-      obs.observe(el);
-      return obs;
-    });
-  }
-
-  function updateIO() {
-    updateViewportAboveIO();
-    updateViewportBelowIO();
-    updateStepAboveIO();
-    updateStepBelowIO();
-
-    if (progressMode) { updateStepProgressIO(); }
-
-    if (containerEl && graphicEl) {
-      updateTopIO();
-      updateBottomIO();
-    }
-  }
-
-  // SETUP FUNCTIONS
-
-  function indexSteps() {
-    stepEl.forEach(function (el, i) { return el.setAttribute('data-scrollama-index', i); });
-  }
-
-  function setupStates() {
-    stepStates = stepEl.map(function () { return ({
-      direction: null,
-      state: null
-    }); });
-
-    containerState = { direction: null, state: null };
-  }
-
-  function addDebug() {
-    if (debugMode) { setup({ id: id, stepEl: stepEl, offsetVal: offsetVal }); }
-  }
-
-  var S = {};
-
-  S.setup = function (ref) {
-    var container = ref.container;
-    var graphic = ref.graphic;
-    var step = ref.step;
-    var offset = ref.offset; if ( offset === void 0 ) offset = 0.5;
-    var progress = ref.progress; if ( progress === void 0 ) progress = false;
-    var threshold = ref.threshold; if ( threshold === void 0 ) threshold = 4;
-    var debug = ref.debug; if ( debug === void 0 ) debug = false;
-    var order = ref.order; if ( order === void 0 ) order = true;
-    var once = ref.once; if ( once === void 0 ) once = false;
-
-    id = generateId();
-    // elements
-    stepEl = selectAll(step);
-    containerEl = container ? select(container) : null;
-    graphicEl = graphic ? select(graphic) : null;
-
-    // error if no step selected
-    if (!stepEl.length) {
-      console.error('scrollama error: no step elements');
-      return S;
-    }
-
-    // options
-    debugMode = debug;
-    progressMode = progress;
-    preserveOrder = order;
-    triggerOnce = once;
-
-    S.offsetTrigger(offset);
-    progressThreshold = Math.max(1, +threshold);
-
-    isReady = true;
-
-    // customize
-    addDebug();
-    indexSteps();
-    setupStates();
-    handleResize();
-    handleEnable(true);
-    return S;
-  };
-
-  S.resize = function () {
-    handleResize();
-    return S;
-  };
-
-  S.enable = function () {
-    handleEnable(true);
-    return S;
-  };
-
-  S.disable = function () {
-    handleEnable(false);
-    return S;
-  };
-
-  S.destroy = function () {
-    handleEnable(false);
-    Object.keys(callback).forEach(function (c) { return (callback[c] = null); });
-    Object.keys(io).forEach(function (i) { return (io[i] = null); });
-  };
-
-  S.offsetTrigger = function(x) {
-    if (x && !isNaN(x)) {
-      offsetVal = Math.min(Math.max(0, x), 1);
-      return S;
-    }
-    return offsetVal;
-  };
-
-  S.onStepEnter = function (cb) {
-    callback.stepEnter = cb;
-    return S;
-  };
-
-  S.onStepExit = function (cb) {
-    callback.stepExit = cb;
-    return S;
-  };
-
-  S.onStepProgress = function (cb) {
-    callback.stepProgress = cb;
-    return S;
-  };
-
-  S.onContainerEnter = function (cb) {
-    callback.containerEnter = cb;
-    return S;
-  };
-
-  S.onContainerExit = function (cb) {
-    callback.containerExit = cb;
-    return S;
-  };
-
-  return S;
-}
-
-return scrollama;
-
-})));
-
-},{}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scrollmonitor/scrollMonitor.js":[function(require,module,exports){
+},{"./cjs/scheduler-tracing.development.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scheduler/cjs/scheduler-tracing.development.js","./cjs/scheduler-tracing.production.min.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scheduler/cjs/scheduler-tracing.production.min.js"}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scrollmonitor/scrollMonitor.js":[function(require,module,exports){
 !function(t,e){"object"==typeof exports&&"object"==typeof module?module.exports=e():"function"==typeof define&&define.amd?define("scrollMonitor",[],e):"object"==typeof exports?exports.scrollMonitor=e():t.scrollMonitor=e()}(this,function(){return function(t){function e(o){if(i[o])return i[o].exports;var s=i[o]={exports:{},id:o,loaded:!1};return t[o].call(s.exports,s,s.exports,e),s.loaded=!0,s.exports}var i={};return e.m=t,e.c=i,e.p="",e(0)}([function(t,e,i){"use strict";var o=i(1),s=o.isInBrowser,n=i(2),r=new n(s?document.body:null);r.setStateFromDOM(null),r.listenToDOM(),s&&(window.scrollMonitor=r),t.exports=r},function(t,e){"use strict";e.VISIBILITYCHANGE="visibilityChange",e.ENTERVIEWPORT="enterViewport",e.FULLYENTERVIEWPORT="fullyEnterViewport",e.EXITVIEWPORT="exitViewport",e.PARTIALLYEXITVIEWPORT="partiallyExitViewport",e.LOCATIONCHANGE="locationChange",e.STATECHANGE="stateChange",e.eventTypes=[e.VISIBILITYCHANGE,e.ENTERVIEWPORT,e.FULLYENTERVIEWPORT,e.EXITVIEWPORT,e.PARTIALLYEXITVIEWPORT,e.LOCATIONCHANGE,e.STATECHANGE],e.isOnServer="undefined"==typeof window,e.isInBrowser=!e.isOnServer,e.defaultOffsets={top:0,bottom:0}},function(t,e,i){"use strict";function o(t,e){if(!(t instanceof e))throw new TypeError("Cannot call a class as a function")}function s(t){return c?0:t===document.body?window.innerHeight||document.documentElement.clientHeight:t.clientHeight}function n(t){return c?0:t===document.body?Math.max(document.body.scrollHeight,document.documentElement.scrollHeight,document.body.offsetHeight,document.documentElement.offsetHeight,document.documentElement.clientHeight):t.scrollHeight}function r(t){return c?0:t===document.body?window.pageYOffset||document.documentElement&&document.documentElement.scrollTop||document.body.scrollTop:t.scrollTop}var h=i(1),c=h.isOnServer,a=h.isInBrowser,l=h.eventTypes,p=i(3),u=!1;if(a)try{var w=Object.defineProperty({},"passive",{get:function(){u=!0}});window.addEventListener("test",null,w)}catch(t){}var d=!!u&&{capture:!1,passive:!0},f=function(){function t(e,i){function h(){if(a.viewportTop=r(e),a.viewportBottom=a.viewportTop+a.viewportHeight,a.documentHeight=n(e),a.documentHeight!==p){for(u=a.watchers.length;u--;)a.watchers[u].recalculateLocation();p=a.documentHeight}}function c(){for(w=a.watchers.length;w--;)a.watchers[w].update();for(w=a.watchers.length;w--;)a.watchers[w].triggerCallbacks()}o(this,t);var a=this;this.item=e,this.watchers=[],this.viewportTop=null,this.viewportBottom=null,this.documentHeight=n(e),this.viewportHeight=s(e),this.DOMListener=function(){t.prototype.DOMListener.apply(a,arguments)},this.eventTypes=l,i&&(this.containerWatcher=i.create(e));var p,u,w;this.update=function(){h(),c()},this.recalculateLocations=function(){this.documentHeight=0,this.update()}}return t.prototype.listenToDOM=function(){a&&(window.addEventListener?(this.item===document.body?window.addEventListener("scroll",this.DOMListener,d):this.item.addEventListener("scroll",this.DOMListener,d),window.addEventListener("resize",this.DOMListener)):(this.item===document.body?window.attachEvent("onscroll",this.DOMListener):this.item.attachEvent("onscroll",this.DOMListener),window.attachEvent("onresize",this.DOMListener)),this.destroy=function(){window.addEventListener?(this.item===document.body?(window.removeEventListener("scroll",this.DOMListener,d),this.containerWatcher.destroy()):this.item.removeEventListener("scroll",this.DOMListener,d),window.removeEventListener("resize",this.DOMListener)):(this.item===document.body?(window.detachEvent("onscroll",this.DOMListener),this.containerWatcher.destroy()):this.item.detachEvent("onscroll",this.DOMListener),window.detachEvent("onresize",this.DOMListener))})},t.prototype.destroy=function(){},t.prototype.DOMListener=function(t){this.setStateFromDOM(t)},t.prototype.setStateFromDOM=function(t){var e=r(this.item),i=s(this.item),o=n(this.item);this.setState(e,i,o,t)},t.prototype.setState=function(t,e,i,o){var s=e!==this.viewportHeight||i!==this.contentHeight;if(this.latestEvent=o,this.viewportTop=t,this.viewportHeight=e,this.viewportBottom=t+e,this.contentHeight=i,s)for(var n=this.watchers.length;n--;)this.watchers[n].recalculateLocation();this.updateAndTriggerWatchers(o)},t.prototype.updateAndTriggerWatchers=function(t){for(var e=this.watchers.length;e--;)this.watchers[e].update();for(e=this.watchers.length;e--;)this.watchers[e].triggerCallbacks(t)},t.prototype.createCustomContainer=function(){return new t},t.prototype.createContainer=function(e){"string"==typeof e?e=document.querySelector(e):e&&e.length>0&&(e=e[0]);var i=new t(e,this);return i.setStateFromDOM(),i.listenToDOM(),i},t.prototype.create=function(t,e){"string"==typeof t?t=document.querySelector(t):t&&t.length>0&&(t=t[0]);var i=new p(this,t,e);return this.watchers.push(i),i},t.prototype.beget=function(t,e){return this.create(t,e)},t}();t.exports=f},function(t,e,i){"use strict";function o(t,e,i){function o(t,e){if(0!==t.length)for(E=t.length;E--;)y=t[E],y.callback.call(s,e,s),y.isOne&&t.splice(E,1)}var s=this;this.watchItem=e,this.container=t,i?i===+i?this.offsets={top:i,bottom:i}:this.offsets={top:i.top||w.top,bottom:i.bottom||w.bottom}:this.offsets=w,this.callbacks={};for(var d=0,f=u.length;d<f;d++)s.callbacks[u[d]]=[];this.locked=!1;var m,v,b,I,E,y;this.triggerCallbacks=function(t){switch(this.isInViewport&&!m&&o(this.callbacks[r],t),this.isFullyInViewport&&!v&&o(this.callbacks[h],t),this.isAboveViewport!==b&&this.isBelowViewport!==I&&(o(this.callbacks[n],t),v||this.isFullyInViewport||(o(this.callbacks[h],t),o(this.callbacks[a],t)),m||this.isInViewport||(o(this.callbacks[r],t),o(this.callbacks[c],t))),!this.isFullyInViewport&&v&&o(this.callbacks[a],t),!this.isInViewport&&m&&o(this.callbacks[c],t),this.isInViewport!==m&&o(this.callbacks[n],t),!0){case m!==this.isInViewport:case v!==this.isFullyInViewport:case b!==this.isAboveViewport:case I!==this.isBelowViewport:o(this.callbacks[p],t)}m=this.isInViewport,v=this.isFullyInViewport,b=this.isAboveViewport,I=this.isBelowViewport},this.recalculateLocation=function(){if(!this.locked){var t=this.top,e=this.bottom;if(this.watchItem.nodeName){var i=this.watchItem.style.display;"none"===i&&(this.watchItem.style.display="");for(var s=0,n=this.container;n.containerWatcher;)s+=n.containerWatcher.top-n.containerWatcher.container.viewportTop,n=n.containerWatcher.container;var r=this.watchItem.getBoundingClientRect();this.top=r.top+this.container.viewportTop-s,this.bottom=r.bottom+this.container.viewportTop-s,"none"===i&&(this.watchItem.style.display=i)}else this.watchItem===+this.watchItem?this.watchItem>0?this.top=this.bottom=this.watchItem:this.top=this.bottom=this.container.documentHeight-this.watchItem:(this.top=this.watchItem.top,this.bottom=this.watchItem.bottom);this.top-=this.offsets.top,this.bottom+=this.offsets.bottom,this.height=this.bottom-this.top,void 0===t&&void 0===e||this.top===t&&this.bottom===e||o(this.callbacks[l],null)}},this.recalculateLocation(),this.update(),m=this.isInViewport,v=this.isFullyInViewport,b=this.isAboveViewport,I=this.isBelowViewport}var s=i(1),n=s.VISIBILITYCHANGE,r=s.ENTERVIEWPORT,h=s.FULLYENTERVIEWPORT,c=s.EXITVIEWPORT,a=s.PARTIALLYEXITVIEWPORT,l=s.LOCATIONCHANGE,p=s.STATECHANGE,u=s.eventTypes,w=s.defaultOffsets;o.prototype={on:function(t,e,i){switch(!0){case t===n&&!this.isInViewport&&this.isAboveViewport:case t===r&&this.isInViewport:case t===h&&this.isFullyInViewport:case t===c&&this.isAboveViewport&&!this.isInViewport:case t===a&&this.isInViewport&&this.isAboveViewport:if(e.call(this,this.container.latestEvent,this),i)return}if(!this.callbacks[t])throw new Error("Tried to add a scroll monitor listener of type "+t+". Your options are: "+u.join(", "));this.callbacks[t].push({callback:e,isOne:i||!1})},off:function(t,e){if(!this.callbacks[t])throw new Error("Tried to remove a scroll monitor listener of type "+t+". Your options are: "+u.join(", "));for(var i,o=0;i=this.callbacks[t][o];o++)if(i.callback===e){this.callbacks[t].splice(o,1);break}},one:function(t,e){this.on(t,e,!0)},recalculateSize:function(){this.height=this.watchItem.offsetHeight+this.offsets.top+this.offsets.bottom,this.bottom=this.top+this.height},update:function(){this.isAboveViewport=this.top<this.container.viewportTop,this.isBelowViewport=this.bottom>this.container.viewportBottom,this.isInViewport=this.top<this.container.viewportBottom&&this.bottom>this.container.viewportTop,this.isFullyInViewport=this.top>=this.container.viewportTop&&this.bottom<=this.container.viewportBottom||this.isAboveViewport&&this.isBelowViewport},destroy:function(){var t=this.container.watchers.indexOf(this),e=this;this.container.watchers.splice(t,1);for(var i=0,o=u.length;i<o;i++)e.callbacks[u[i]].length=0},lock:function(){this.locked=!0},unlock:function(){this.locked=!1}};for(var d=function(t){return function(e,i){this.on.call(this,t,e,i)}},f=0,m=u.length;f<m;f++){var v=u[f];o.prototype[v]=d(v)}t.exports=o}])});
 
 },{}],"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/scrollparent/scrollparent.js":[function(require,module,exports){
@@ -85440,7 +83605,7 @@ function config (name) {
 },{}],"__IDYLL_AST__":[function(require,module,exports){
 "use strict";
 
-module.exports = { "id": 0, "type": "component", "name": "div", "children": [{ "id": 2, "type": "var", "properties": { "name": { "type": "value", "value": "title" }, "value": { "type": "value", "value": "Pop Trajectories" } } }, { "id": 3, "type": "var", "properties": { "name": { "type": "value", "value": "subtitle" }, "value": { "type": "value", "value": "Exploring the careers of iconic musicians" } } }, { "id": 4, "type": "var", "properties": { "name": { "type": "value", "value": "artist" }, "value": { "type": "value", "value": "start" } } }, { "id": 5, "type": "var", "properties": { "name": { "type": "value", "value": "showChart" }, "value": { "type": "value", "value": false } } }, { "id": 6, "type": "var", "properties": { "name": { "type": "value", "value": "The-Beatles" }, "value": { "type": "value", "value": "The Beatles" } } }, { "id": 7, "type": "var", "properties": { "name": { "type": "value", "value": "The-Beatles-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/the-beatles.jpg" } } }, { "id": 8, "type": "var", "properties": { "name": { "type": "value", "value": "Queen" }, "value": { "type": "value", "value": "Queen" } } }, { "id": 9, "type": "var", "properties": { "name": { "type": "value", "value": "Queen-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/queen.jpg" } } }, { "id": 10, "type": "var", "properties": { "name": { "type": "value", "value": "Michael-Jackson" }, "value": { "type": "value", "value": "Michael Jackson" } } }, { "id": 11, "type": "var", "properties": { "name": { "type": "value", "value": "Michael-Jackson-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/michael-jackson.jpg" } } }, { "id": 12, "type": "var", "properties": { "name": { "type": "value", "value": "Kanye-West" }, "value": { "type": "value", "value": "Kanye West" } } }, { "id": 13, "type": "var", "properties": { "name": { "type": "value", "value": "Kanye-West-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/kanye-west.jpg" } } }, { "id": 14, "type": "var", "properties": { "name": { "type": "value", "value": "Lady-Gaga" }, "value": { "type": "value", "value": "Lady Gaga" } } }, { "id": 15, "type": "var", "properties": { "name": { "type": "value", "value": "Lady-Gaga-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/lady-gaga.jpg" } } }, { "id": 16, "type": "var", "properties": { "name": { "type": "value", "value": "currStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 17, "type": "var", "properties": { "name": { "type": "value", "value": "gagaAlbums" }, "value": { "type": "expression", "value": "[\"The Fame\",   \"The Fame Monster\", \"The Remix\",  \"Born this Way\", \"Born This Way: The Remix\", \"A Very Gaga Holiday\", \"ARTPOP\",     \"Cheek to Cheek\", \"Joanne\",     \"A Star Is Born\", \"Chromatica\"]" } } }, { "id": 18, "type": "var", "properties": { "name": { "type": "value", "value": "gagaAllDates" }, "value": { "type": "expression", "value": "[ \"10/28/2008\", \"11/18/2009\",       \"03/03/2010\", \"05/23/2011\",    \"11/18/2011\",               \"11/22/2011\",          \"11/11/2013\", \"09/23/2014\",     \"10/21/2016\", \"10/5/2018\",      \"04/10/2020\"]" } } }, { "id": 19, "type": "var", "properties": { "name": { "type": "value", "value": "gagaStepDates" }, "value": { "type": "expression", "value": "[ \"10/28/2008\", \"03/03/2010\", \"11/22/2011\", \"11/11/2013\", \"09/23/2014\",\"10/21/2016\", \"10/5/2018\",\"04/10/2020\"]" } } }, { "id": 20, "type": "var", "properties": { "name": { "type": "value", "value": "gagaYears" }, "value": { "type": "expression", "value": "[ \"2009\",\"2010\",\"2011\",\"2013\",\"2014\", \"2016\",\"2018\",\"2020\"]" } } }, { "id": 21, "type": "var", "properties": { "name": { "type": "value", "value": "gagaAlbums" }, "value": { "type": "expression", "value": "[\"The Fame Monster\", \"Born This Way\", \"Artpop\", \"Cheek to Cheek\", \"Joanne\", \"A Star Is Born Soundtrack\", \"Chromatica\"]" } } }, { "id": 22, "type": "var", "properties": { "name": { "type": "value", "value": "gagaCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 23, "type": "var", "properties": { "name": { "type": "value", "value": "queenYears" }, "value": { "type": "expression", "value": "[\"01/01/1970\", \"01/01/1971\", \"01/01/1972\", \"01/01/1973\", \"01/01/1974\", \"01/01/1975\", \"01/01/1976\", \"01/01/1977\", \"01/01/1978\", \"01/01/1979\", \"01/01/1980\", \"01/01/1981\", \"01/01/1982\", \"01/01/1983\", \"01/01/1984\", \"01/01/1985\", \"01/01/1986\", \"01/01/1987\", \"01/01/1988\", \"01/01/1989\", \"01/01/1990\", \"01/01/1991\", \"01/01/1992\", \"01/01/1993\", \"01/01/1994\", \"01/01/1995\"]" } } }, { "id": 24, "type": "var", "properties": { "name": { "type": "value", "value": "queenStepYears" }, "value": { "type": "expression", "value": "[\"1970\", \"1971\", \"1972\", \"1973\", \"1974\", \"1975\", \"1976\", \"1977\", \"1978\", \"1979\", \"1980\", \"1981\", \"1982\", \"1983\", \"1984\", \"1985\", \"1986\", \"1987\", \"1988\", \"1989\", \"01/01/1990\", \"1991\", \"1992\", \"1993\", \"1994\", \"1995\"]" } } }, { "id": 25, "type": "var", "properties": { "name": { "type": "value", "value": "queenAlbums" }, "value": { "type": "expression", "value": "[\"Queen\", \"Queen II\", \"Sheer Heart Attack\", \"A Night At The Opera\", \"A Day At The Races\", \"News Of The World\", \"Jazz\", \"The Game\", \"Flash Gordon\", \"Hot Space\"]" } } }, { "id": 26, "type": "var", "properties": { "name": { "type": "value", "value": "queenCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 27, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesDates" }, "value": { "type": "expression", "value": "[\"03/22/1963\", \"09/22/1963\", \"07/10/1964\", \n                                         \"12/04/1964\", \"08/06/1965\", \"12/03/1965\", \n                                         \"08/05/1966\", \"05/26/1967\", \"11/22/1968\", \n                                         \"09/26/1969\", \"01/13/1969\", \"05/08/1970\" ]" } } }, { "id": 28, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesStepYears" }, "value": { "type": "expression", "value": "[\"1963\", \"1964\", \"1965\", \"1966\", \"1967\", \"1968\", \"1969\", \"1970\" ]" } } }, { "id": 29, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesAlbums" }, "value": { "type": "expression", "value": "[\"Please Please Me\", \"With The Beatles\", \"A Hard Day's Night\", \"Beatles For Sale\", \"Help!\", \"Rubber Soul\", \"Revolver\", \"Sgt. Pepper's Lonely Hearts and Club Band\", \"The Beatles\", \"Abbey Road\", \"Yellow Submarine\", \"Let It Be\"]" } } }, { "id": 30, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 31, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeDates" }, "value": { "type": "expression", "value": "[\"02/10/2004\", \"01/01/2005\", \"01/01/2007\", \"01/01/2008\", \"01/01/2010\", \"01/01/2013\", \"01/01/2016\", \"01/01/2018\", \"01/01/2019\"]" } } }, { "id": 32, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeStepYears" }, "value": { "type": "expression", "value": "[\"2004\", \"2005\", \"2007\", \"2008\", \"2010\", \"2013\", \"2016\", \"2018\", \"2019\"]" } } }, { "id": 33, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeAlbums" }, "value": { "type": "expression", "value": "[\"The College Dropout\", \"Late Registration\", \"Graduation\", \"808s & Heartbreak\", \"My Beautiful Dark Twisted Fantasy\", \"Yeezus\", \"The Life Of Pablo\", \"Ye\", \"Jesus Is King\"]" } } }, { "id": 34, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 35, "type": "var", "properties": { "name": { "type": "value", "value": "michaelDates" }, "value": { "type": "expression", "value": "[\"10/01/1971\", \"01/24/1972\", \"04/13/1973\", \"01/16/1975\", \"08/10/1979\", \"11/30/1982\", \"03/25/1983\", \"09/01/1987\", \"10/26/1991\", \"06/20/1995\", \"10/30/2001\", \"06/25/2009\", \"12/10/2010\", \"05/09/2014\"]" } } }, { "id": 36, "type": "var", "properties": { "name": { "type": "value", "value": "michaelAlbums" }, "value": { "type": "expression", "value": "[\"Got To Be There\", \"Ben\", \"Music and Me\", \"Forever, Michael\", \"Off The Wall\", \"Thriller 25 Super Deluxe Edition\", \"Bad 25th Anniversary\", \"Dangerous\", \"HIStory - PAST, PRESENT AND FUTURE\", \"Invincible\", \"Michael\", \"Xscape\"]" } } }, { "id": 37, "type": "var", "properties": { "name": { "type": "value", "value": "michaelYears" }, "value": { "type": "expression", "value": "[\"1972\", \"1973\", \"1975\", \"1979\", \"1982\", \"1983\", \"1987\", \"1991\", \"1995\", \"2001\", \"2009\", \"2010\", \"2014\"]" } } }, { "id": 38, "type": "var", "properties": { "name": { "type": "value", "value": "michaelCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 39, "type": "component", "name": "TextContainer", "children": [{ "id": 40, "type": "meta", "properties": { "title": { "type": "value", "value": "Pop Trajectories" }, "description": { "type": "value", "value": "Exploring the careers of iconic musicians" } } }] }, { "id": 41, "type": "component", "name": "div", "properties": { "id": { "type": "value", "value": "landing-page" }, "className": { "type": "value", "value": "fullWidth" } }, "children": [{ "id": 42, "type": "component", "name": "Header", "properties": { "title": { "type": "variable", "value": "title" }, "subtitle": { "type": "variable", "value": "subtitle" } }, "children": [] }, { "id": 43, "type": "component", "name": "div", "properties": { "class": { "type": "value", "value": "flex-box" } }, "children": [{ "id": 44, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "beatles-theme" }, "onClick": { "type": "expression", "value": "artist = \"beatles\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 45, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "The-Beatles" }, "iconicImage": { "type": "variable", "value": "The-Beatles-Photo" } }, "children": [] }] }, { "id": 46, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "queen-theme" }, "onClick": { "type": "expression", "value": "artist = \"queen\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 47, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Queen" }, "iconicImage": { "type": "variable", "value": "Queen-Photo" } }, "children": [] }] }, { "id": 48, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "michael-theme" }, "onClick": { "type": "expression", "value": "artist = \"michael\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 49, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Michael-Jackson" }, "iconicImage": { "type": "variable", "value": "Michael-Jackson-Photo" } }, "children": [] }] }, { "id": 50, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "kanye-theme" }, "onClick": { "type": "expression", "value": "artist = \"kanye\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 51, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Kanye-West" }, "iconicImage": { "type": "variable", "value": "Kanye-West-Photo" } }, "children": [] }] }, { "id": 52, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "gaga-theme" }, "onClick": { "type": "expression", "value": "artist = \"gaga\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 53, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Lady-Gaga" }, "iconicImage": { "type": "variable", "value": "Lady-Gaga-Photo" } }, "children": [] }] }] }] }, { "id": 54, "type": "component", "name": "TextContainer", "children": [{ "id": 55, "type": "component", "name": "Switch", "properties": { "value": { "type": "variable", "value": "artist" } }, "children": [{ "id": 56, "type": "component", "name": "Case", "properties": { "test": { "type": "value", "value": "gaga" } }, "children": [{ "id": 57, "type": "component", "name": "h1", "children": [{ "id": 58, "type": "textnode", "value": "The Trajectory of Lady Gaga" }] }, { "id": 59, "type": "component", "name": "Scroller", "properties": { "currentStep": { "type": "variable", "value": "gagaCurStep" } }, "children": [{ "id": 60, "type": "component", "name": "Graphic", "children": [{ "id": 61, "type": "component", "name": "SalesChart", "properties": { "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/lady-gaga-weekly-charts.csv" }, "years": { "type": "expression", "value": "gagaStepDates.slice(0, gagaCurStep + 2)" }, "name": { "type": "value", "value": "Lady Gaga" }, "albums": { "type": "variable", "value": "gagaAlbums" } }, "children": [] }, { "id": 62, "type": "component", "name": "HorizontalBarChart", "properties": { "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "gagaCurStep" }, "years": { "type": "variable", "value": "gagaYears" } }, "children": [] }] }, { "id": 63, "type": "component", "name": "Step", "children": [{ "id": 64, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2008 and 2009" } }, "children": [] }, { "id": 65, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "The Fame" } }, "children": [] }, { "id": 66, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/the-fame.jpg" } }, "children": [] }, { "id": 67, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "August 19, 2008" } }, "children": [] }, { "id": 68, "type": "component", "name": "p", "children": [{ "id": 69, "type": "textnode", "value": "Lady Gaga released The Fame in 2008. She later rereleased it as “The Fame Monster” in 2009.\n                Sales for these albums are grouped together." }] }, { "id": 70, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "The Fame Monster" } }, "children": [] }, { "id": 71, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/the-fame-monster.jpg" } }, "children": [] }, { "id": 72, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 18, 2009" } }, "children": [] }, { "id": 73, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/58WSd6SDPOcbnnJ2tq0Ph8" } }, "children": [] }] }, { "id": 74, "type": "component", "name": "Step", "children": [{ "id": 75, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2010" } }, "children": [] }, { "id": 76, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "The Remix" } }, "children": [] }, { "id": 77, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/the-remix.jpg" } }, "children": [] }, { "id": 78, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "March 3, 2010" } }, "children": [] }, { "id": 79, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/75t7ssOFr9Xic5Gx73WZYv" } }, "children": [] }] }, { "id": 80, "type": "component", "name": "Step", "children": [{ "id": 81, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2011" } }, "children": [] }, { "id": 82, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "Born This Way" } }, "children": [] }, { "id": 83, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/born-this-way.jpg" } }, "children": [] }, { "id": 84, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "May 23, 2011" } }, "children": [] }, { "id": 85, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5maeycU97NHBgwRr2h2A4O" } }, "children": [] }, { "id": 86, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "Born This Way: The Remix" } }, "children": [] }, { "id": 87, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/born-this-way-remix.jpg" } }, "children": [] }, { "id": 88, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 18, 2011" } }, "children": [] }, { "id": 89, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/38Ur5vOXFNPWHZv4umkqwU" } }, "children": [] }, { "id": 90, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "A Very Gaga Holiday" } }, "children": [] }, { "id": 91, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/a-very-gaga-holiday.jpg" } }, "children": [] }, { "id": 92, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 22, 2011" } }, "children": [] }, { "id": 93, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0PbOMnMLse2JVIDSBq28Nj" } }, "children": [] }] }, { "id": 94, "type": "component", "name": "Step", "children": [{ "id": 95, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2013" } }, "children": [] }, { "id": 96, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "ARTPOP" } }, "children": [] }, { "id": 97, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/artpop.jpg" } }, "children": [] }, { "id": 98, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 11, 2013" } }, "children": [] }, { "id": 99, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2eRJUtI7nXrQ5uYQ7tzTo9" } }, "children": [] }] }, { "id": 100, "type": "component", "name": "Step", "children": [{ "id": 101, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2014" } }, "children": [] }, { "id": 102, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "Cheek to Cheek" } }, "children": [] }, { "id": 103, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/cheek-to-cheek.jpg" } }, "children": [] }, { "id": 104, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "September 23, 2014" } }, "children": [] }, { "id": 105, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2VX9rp6NAC19TQN4IgkmYu" } }, "children": [] }] }, { "id": 106, "type": "component", "name": "Step", "children": [{ "id": 107, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2016" } }, "children": [] }, { "id": 108, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "Joanne" } }, "children": [] }, { "id": 109, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/joanne.jpg" } }, "children": [] }, { "id": 110, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "October 21, 2016" } }, "children": [] }, { "id": 111, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2ZUwFxlWo0gwTsvZ6L4Meh" } }, "children": [] }] }, { "id": 112, "type": "component", "name": "Step", "children": [{ "id": 113, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2018" } }, "children": [] }, { "id": 114, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "A Star is Born" } }, "children": [] }, { "id": 115, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/a-star-is-born.jpg" } }, "children": [] }, { "id": 116, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "October 5, 2018" } }, "children": [] }, { "id": 117, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4sLtOBOzn4s3GDUv3c5oJD" } }, "children": [] }] }, { "id": 118, "type": "component", "name": "Step", "children": [{ "id": 119, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2020" } }, "children": [] }, { "id": 120, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "desc": { "type": "value", "value": "Chromatica" } }, "children": [] }, { "id": 121, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/stupid-love.jpg" } }, "children": [] }, { "id": 122, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class gaga-bg-theme" }, "date": { "type": "value", "value": "April 10, 2020" } }, "children": [] }, { "id": 123, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2HDW1EX8IBI3jqobswAfrZ?highlight=spotify:track:2kJu14V7hbZw3I4K8L8SXb" } }, "children": [] }] }] }] }, { "id": 124, "type": "component", "name": "Case", "properties": { "test": { "type": "value", "value": "queen" } }, "children": [{ "id": 125, "type": "component", "name": "h1", "children": [{ "id": 126, "type": "textnode", "value": "The Trajectory of Queen" }] }, { "id": 127, "type": "component", "name": "Scroller", "properties": { "currentStep": { "type": "variable", "value": "queenCurStep" } }, "children": [{ "id": 128, "type": "component", "name": "Graphic", "children": [{ "id": 129, "type": "component", "name": "SalesChart", "properties": { "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/queen-weekly-charts.csv" }, "years": { "type": "expression", "value": "queenYears.slice(0, queenCurStep + 2)" }, "name": { "type": "value", "value": "Queen" }, "albums": { "type": "variable", "value": "queenAlbums" } }, "children": [] }, { "id": 130, "type": "component", "name": "HorizontalBarChart", "properties": { "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "queenCurStep" }, "years": { "type": "variable", "value": "queenStepYears" } }, "children": [] }] }, { "id": 131, "type": "component", "name": "Step", "children": [{ "id": 132, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1970" } }, "children": [] }, { "id": 133, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "The band formed" } }, "children": [] }, { "id": 134, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen-logo.png" } }, "children": [] }] }, { "id": 135, "type": "component", "name": "Step", "children": [{ "id": 136, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1971" } }, "children": [] }, { "id": 137, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "John Deacon joined the band" } }, "children": [] }, { "id": 138, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "The band recorded their first songs" } }, "children": [] }, { "id": 139, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen-1971.jpg" } }, "children": [] }] }, { "id": 140, "type": "component", "name": "Step", "children": [{ "id": 141, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1972" } }, "children": [] }, { "id": 142, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Signed under a record label" } }, "children": [] }, { "id": 143, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen-logo.png" } }, "children": [] }] }, { "id": 144, "type": "component", "name": "Step", "children": [{ "id": 145, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1973" } }, "children": [] }, { "id": 146, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class queen-bg-theme" }, "desc": { "type": "value", "value": "Queen" } }, "children": [] }, { "id": 147, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen.png" } }, "children": [] }, { "id": 148, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class queen-bg-theme" }, "date": { "type": "value", "value": "July 13, 1973" } }, "children": [] }, { "id": 149, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4Rt2K7fDnKnZFZiPu23M0S" } }, "children": [] }] }, { "id": 150, "type": "component", "name": "Step", "children": [{ "id": 151, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1974" } }, "children": [] }, { "id": 152, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen_II.jpg" } }, "children": [] }, { "id": 153, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0A2Wy6wDNLs6SPhX57tswJ" } }, "children": [] }, { "id": 154, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Sheer_Heart_Attack.png" } }, "children": [] }, { "id": 155, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4yO8TpSaJtUKkkjmsA4VXf" } }, "children": [] }] }, { "id": 156, "type": "component", "name": "Step", "children": [{ "id": 157, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1975" } }, "children": [] }, { "id": 158, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/A_Night_At_The_Opera.png" } }, "children": [] }, { "id": 159, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3KCJzwKOdBxDu6TKaFPqM9" } }, "children": [] }] }, { "id": 160, "type": "component", "name": "Step", "children": [{ "id": 161, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1976" } }, "children": [] }, { "id": 162, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/A_Day_at_the_Races.jpg" } }, "children": [] }, { "id": 163, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3f45rzbU4dYQBTV9v5RFBB" } }, "children": [] }] }, { "id": 164, "type": "component", "name": "Step", "children": [{ "id": 165, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1977" } }, "children": [] }, { "id": 166, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/News_Of_The_World.png" } }, "children": [] }, { "id": 167, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3TKTjR4E3LAMfRsPeRsNhT" } }, "children": [] }] }, { "id": 168, "type": "component", "name": "Step", "children": [{ "id": 169, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1978" } }, "children": [] }, { "id": 170, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Jazz.png" } }, "children": [] }, { "id": 171, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5X3rA8To5GDOeIWdQyMEcE" } }, "children": [] }] }, { "id": 172, "type": "component", "name": "Step", "children": [{ "id": 173, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1979" } }, "children": [] }] }, { "id": 174, "type": "component", "name": "Step", "children": [{ "id": 175, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1980" } }, "children": [] }, { "id": 176, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/The_Game.png" } }, "children": [] }, { "id": 177, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1h0j80HhdzIMsUGUFiVkqa" } }, "children": [] }, { "id": 178, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Flash_Gordon.png" } }, "children": [] }, { "id": 179, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2SS9qutxzz0XZf4zmoQVdx" } }, "children": [] }] }, { "id": 180, "type": "component", "name": "Step", "children": [{ "id": 181, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1981" } }, "children": [] }] }, { "id": 182, "type": "component", "name": "Step", "children": [{ "id": 183, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1982" } }, "children": [] }, { "id": 184, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Hot_Space.png" } }, "children": [] }, { "id": 185, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0fZCqpTHYq2k89uG6pPTYE" } }, "children": [] }] }, { "id": 186, "type": "component", "name": "Step", "children": [{ "id": 187, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1983" } }, "children": [] }] }, { "id": 188, "type": "component", "name": "Step", "children": [{ "id": 189, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1984" } }, "children": [] }, { "id": 190, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/The_Works.png" } }, "children": [] }, { "id": 191, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0FbnXAGmgmWBmNthZSgm43" } }, "children": [] }] }, { "id": 192, "type": "component", "name": "Step", "children": [{ "id": 193, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1985" } }, "children": [] }, { "id": 194, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Performed at Live aid in front of the biggest-ever TV audience" } }, "children": [] }, { "id": 195, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen_live_aid.jpg.png" } }, "children": [] }] }, { "id": 196, "type": "component", "name": "Step", "children": [{ "id": 197, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1986" } }, "children": [] }, { "id": 198, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/A_Kind_Of_Magic.png" } }, "children": [] }, { "id": 199, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/34xBXeJgmQrn1wQvhyVCsw" } }, "children": [] }] }, { "id": 200, "type": "component", "name": "Step", "children": [{ "id": 201, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1987" } }, "children": [] }, { "id": 202, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Mercury was diagnosed as HIV positive" } }, "children": [] }] }, { "id": 203, "type": "component", "name": "Step", "children": [{ "id": 204, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1988" } }, "children": [] }] }, { "id": 205, "type": "component", "name": "Step", "children": [{ "id": 206, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1989" } }, "children": [] }, { "id": 207, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/The_Miracle.png" } }, "children": [] }, { "id": 208, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1v5l2sZRE5Rweew5PoNFP9" } }, "children": [] }] }, { "id": 209, "type": "component", "name": "Step", "children": [{ "id": 210, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1990" } }, "children": [] }] }, { "id": 211, "type": "component", "name": "Step", "children": [{ "id": 212, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1991" } }, "children": [] }, { "id": 213, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Innuendo.png" } }, "children": [] }, { "id": 214, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5yAM3CcaXF6DPRJW3oL6Ya" } }, "children": [] }, { "id": 215, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "On 23 November 1991, in a prepared statement made on his deathbed, Mercury confirmed that he had AIDS" } }, "children": [] }, { "id": 216, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Within 24 hours of the statement, he died of bronchial pneumonia, which was brought on as a complication of AIDS" } }, "children": [] }] }, { "id": 217, "type": "component", "name": "Step", "children": [{ "id": 218, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1992" } }, "children": [] }] }, { "id": 219, "type": "component", "name": "Step", "children": [{ "id": 220, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1993" } }, "children": [] }] }, { "id": 221, "type": "component", "name": "Step", "children": [{ "id": 222, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1994" } }, "children": [] }] }, { "id": 223, "type": "component", "name": "Step", "children": [{ "id": 224, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1995" } }, "children": [] }, { "id": 225, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Madeinheaven.jpg" } }, "children": [] }, { "id": 226, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2SFIh6siY4KYBNPHAV7xaI" } }, "children": [] }] }] }] }, { "id": 227, "type": "component", "name": "Case", "properties": { "test": { "type": "value", "value": "beatles" } }, "children": [{ "id": 228, "type": "component", "name": "h1", "children": [{ "id": 229, "type": "textnode", "value": "The Trajectory of The Beatles" }] }, { "id": 230, "type": "component", "name": "Scroller", "properties": { "currentStep": { "type": "variable", "value": "beatlesCurStep" } }, "children": [{ "id": 231, "type": "component", "name": "Graphic", "children": [{ "id": 232, "type": "component", "name": "SalesChart", "properties": { "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/the-beatles-weekly-charts.csv" }, "years": { "type": "expression", "value": "beatlesDates.slice(0, beatlesCurStep + 2)" }, "name": { "type": "value", "value": "The Beatles" }, "albums": { "type": "variable", "value": "beatlesAlbums" } }, "children": [] }, { "id": 233, "type": "component", "name": "HorizontalBarChart", "properties": { "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "beatlesCurStep" }, "years": { "type": "variable", "value": "beatlesStepYears" } }, "children": [] }] }, { "id": 234, "type": "component", "name": "p", "children": [{ "id": 235, "type": "component", "name": "Step", "children": [{ "id": 236, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1963" } }, "children": [] }, { "id": 237, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "desc": { "type": "value", "value": "Please Please Me" } }, "children": [] }, { "id": 238, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/PleasePleaseMe.jpg" } }, "children": [] }, { "id": 239, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class beatles-bg-theme" }, "date": { "type": "value", "value": "March 22, 1963" } }, "children": [] }, { "id": 240, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3KzAvEXcqJKBF97HrXwlgf" } }, "children": [] }] }, { "id": 241, "type": "textnode", "value": "    " }, { "id": 242, "type": "component", "name": "Step", "children": [{ "id": 243, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1963" } }, "children": [] }, { "id": 244, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "desc": { "type": "value", "value": "With The Beatles" } }, "children": [] }, { "id": 245, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/WithTheBeatles.jpg" } }, "children": [] }, { "id": 246, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class beatles-bg-theme" }, "date": { "type": "value", "value": "September 22, 1963" } }, "children": [] }, { "id": 247, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1aYdiJk6XKeHWGO3FzHHTr" } }, "children": [] }] }] }, { "id": 248, "type": "component", "name": "Step", "children": [{ "id": 249, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1964" } }, "children": [] }, { "id": 250, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "July 10, 1964" } }, "children": [] }, { "id": 251, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/AHardDaysNight.jpg" } }, "children": [] }, { "id": 252, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/6wCttLq0ADzkPgtRnUihLV”" } }, "children": [] }] }, { "id": 253, "type": "component", "name": "Step", "children": [{ "id": 254, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1964" } }, "children": [] }, { "id": 255, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "December 4, 1964" } }, "children": [] }, { "id": 256, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/BeatlesforSale.jpg" } }, "children": [] }, { "id": 257, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1vANZV20H5B4Fk6yf7Ot9a" } }, "children": [] }] }, { "id": 258, "type": "component", "name": "Step", "children": [{ "id": 259, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1965" } }, "children": [] }, { "id": 260, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "August 6, 1965" } }, "children": [] }, { "id": 261, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/Help!.jpg" } }, "children": [] }, { "id": 262, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0PT5m6hwPRrpBwIHVnvbFX" } }, "children": [] }] }, { "id": 263, "type": "component", "name": "Step", "children": [{ "id": 264, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1965" } }, "children": [] }, { "id": 265, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "December 3, 1965" } }, "children": [] }, { "id": 266, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/RubberSoul.jpg" } }, "children": [] }, { "id": 267, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/50o7kf2wLwVmOTVYJOTplm" } }, "children": [] }] }, { "id": 268, "type": "component", "name": "Step", "children": [{ "id": 269, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1966" } }, "children": [] }, { "id": 270, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "August 5, 1966" } }, "children": [] }, { "id": 271, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/Revolver.jpg" } }, "children": [] }, { "id": 272, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3PRoXYsngSwjEQWR5PsHWR" } }, "children": [] }] }, { "id": 273, "type": "component", "name": "Step", "children": [{ "id": 274, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1967" } }, "children": [] }, { "id": 275, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "May 26, 1967" } }, "children": [] }, { "id": 276, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" } }, "children": [] }, { "id": 277, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/6QaVfG1pHYl1z15ZxkvVDW" } }, "children": [] }] }, { "id": 278, "type": "component", "name": "Step", "children": [{ "id": 279, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1968" } }, "children": [] }, { "id": 280, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "November 22, 1968" } }, "children": [] }, { "id": 281, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/WhiteAlbum.jpg" } }, "children": [] }, { "id": 282, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1klALx0u4AavZNEvC4LrTL" } }, "children": [] }] }, { "id": 283, "type": "component", "name": "Step", "children": [{ "id": 284, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1969" } }, "children": [] }, { "id": 285, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "September 26, 1969" } }, "children": [] }, { "id": 286, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/AbbeyRoad.jpg" } }, "children": [] }, { "id": 287, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0ETFjACtuP2ADo6LFhL6HN" } }, "children": [] }] }, { "id": 288, "type": "component", "name": "Step", "children": [{ "id": 289, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1969" } }, "children": [] }, { "id": 290, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "January 13, 1969" } }, "children": [] }, { "id": 291, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/YellowSubmarine.jpg" } }, "children": [] }, { "id": 292, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0XRZpF083HqgygM0v1hQyE" } }, "children": [] }] }, { "id": 293, "type": "component", "name": "Step", "children": [{ "id": 294, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "value", "value": "1970" } }, "children": [] }, { "id": 295, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class" }, "date": { "type": "value", "value": "May 8, 1970" } }, "children": [] }, { "id": 296, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/LetItBe.jpg" } }, "children": [] }, { "id": 297, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0jTGHV5xqHPvEcwL8f6YU5" } }, "children": [] }] }] }] }, { "id": 298, "type": "component", "name": "Case", "properties": { "test": { "type": "value", "value": "kanye" } }, "children": [{ "id": 299, "type": "component", "name": "h1", "children": [{ "id": 300, "type": "textnode", "value": "The Trajectory of Kanye West" }] }, { "id": 301, "type": "component", "name": "Scroller", "properties": { "currentStep": { "type": "variable", "value": "kanyeCurStep" } }, "children": [{ "id": 302, "type": "component", "name": "Graphic", "children": [{ "id": 303, "type": "component", "name": "SalesChart", "properties": { "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/kanye-west-weekly-charts.csv" }, "years": { "type": "expression", "value": "kanyeDates.slice(0, kanyeCurStep + 2)" }, "name": { "type": "value", "value": "Kanye West" }, "albums": { "type": "variable", "value": "kanyeAlbums" } }, "children": [] }, { "id": 304, "type": "component", "name": "HorizontalBarChart", "properties": { "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "kanyeCurStep" }, "years": { "type": "variable", "value": "kanyeStepYears" } }, "children": [] }] }, { "id": 305, "type": "component", "name": "Step", "children": [{ "id": 306, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2004" } }, "children": [] }, { "id": 307, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class kanye-bg-theme" }, "desc": { "type": "value", "value": "The College Dropout" } }, "children": [] }, { "id": 308, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/the-college-dropout.jpg" } }, "children": [] }, { "id": 309, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class kanye-bg-theme" }, "date": { "type": "value", "value": "February 10, 2004" } }, "children": [] }, { "id": 310, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4Uv86qWpGTxf7fU7lG5X6F" } }, "children": [] }] }, { "id": 311, "type": "component", "name": "Step", "children": [{ "id": 312, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2005" } }, "children": [] }, { "id": 313, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/late-registration.jpg" } }, "children": [] }, { "id": 314, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5ll74bqtkcXlKE7wwkMq4g" } }, "children": [] }] }, { "id": 315, "type": "component", "name": "Step", "children": [{ "id": 316, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2007" } }, "children": [] }, { "id": 317, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/graduation.jpg" } }, "children": [] }, { "id": 318, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5fPglEDz9YEwRgbLRvhCZy" } }, "children": [] }] }, { "id": 319, "type": "component", "name": "Step", "children": [{ "id": 320, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2008" } }, "children": [] }, { "id": 321, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/808s-and-heartbreak.jpg" } }, "children": [] }, { "id": 322, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3WFTGIO6E3Xh4paEOBY9OU" } }, "children": [] }] }, { "id": 323, "type": "component", "name": "Step", "children": [{ "id": 324, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2010" } }, "children": [] }, { "id": 325, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/my-beautiful-dark-twisted-fantasy.jpg" } }, "children": [] }, { "id": 326, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/20r762YmB5HeofjMCiPMLv" } }, "children": [] }] }, { "id": 327, "type": "component", "name": "Step", "children": [{ "id": 328, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2013" } }, "children": [] }, { "id": 329, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/yeezus.jpg" } }, "children": [] }, { "id": 330, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/7D2NdGvBHIavgLhmcwhluK" } }, "children": [] }] }, { "id": 331, "type": "component", "name": "Step", "children": [{ "id": 332, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2016" } }, "children": [] }, { "id": 333, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/the-life-of-pablo.jpg" } }, "children": [] }, { "id": 334, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/7gsWAHLeT0w7es6FofOXk1" } }, "children": [] }] }, { "id": 335, "type": "component", "name": "Step", "children": [{ "id": 336, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2018" } }, "children": [] }, { "id": 337, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/ye.jpg" } }, "children": [] }, { "id": 338, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2Ek1q2haOnxVqhvVKqMvJe" } }, "children": [] }] }, { "id": 339, "type": "component", "name": "Step", "children": [{ "id": 340, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2019" } }, "children": [] }, { "id": 341, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/jesus-is-king.jpg" } }, "children": [] }, { "id": 342, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0FgZKfoU2Br5sHOfvZKTI9" } }, "children": [] }] }] }] }, { "id": 343, "type": "component", "name": "Case", "properties": { "test": { "type": "value", "value": "michael" } }, "children": [{ "id": 344, "type": "component", "name": "h1", "children": [{ "id": 345, "type": "textnode", "value": "The Trajectory of Michael Jackson" }] }, { "id": 346, "type": "component", "name": "Scroller", "properties": { "currentStep": { "type": "variable", "value": "michaelCurStep" } }, "children": [{ "id": 347, "type": "component", "name": "Graphic", "children": [{ "id": 348, "type": "component", "name": "SalesChart", "properties": { "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/michael-jackson-weekly-charts.csv" }, "years": { "type": "expression", "value": "michaelDates.slice(0, michaelCurStep + 2)" }, "name": { "type": "value", "value": "Michael Jackson" }, "albums": { "type": "variable", "value": "michaelAlbums" } }, "children": [] }, { "id": 349, "type": "component", "name": "HorizontalBarChart", "properties": { "artist": { "type": "value", "value": "michael" }, "step": { "type": "variable", "value": "michaelCurStep" }, "years": { "type": "variable", "value": "michaelYears" } }, "children": [] }] }, { "id": 350, "type": "component", "name": "Step", "children": [{ "id": 351, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1972" } }, "children": [] }, { "id": 352, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class michael-bg-theme" }, "desc": { "type": "value", "value": "Got To Be There" } }, "children": [] }, { "id": 353, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/got-to-be-there.jpg" } }, "children": [] }, { "id": 354, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class michael-bg-theme" }, "date": { "type": "value", "value": "January 24, 1972" } }, "children": [] }, { "id": 355, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5cKwhK6ChXbJE77TKnOx30" } }, "children": [] }, { "id": 356, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class michael-bg-theme" }, "desc": { "type": "value", "value": "Ben" } }, "children": [] }, { "id": 357, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/ben.jpg" } }, "children": [] }, { "id": 358, "type": "component", "name": "DateComponent", "properties": { "className": { "type": "value", "value": "date-class michael-bg-theme" }, "date": { "type": "value", "value": "August 4, 1972" } }, "children": [] }, { "id": 359, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3xo2soey9XEBI5DlmT4KlQ" } }, "children": [] }] }, { "id": 360, "type": "component", "name": "Step", "children": [{ "id": 361, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1973" } }, "children": [] }, { "id": 362, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/music-and-me.jpg" } }, "children": [] }, { "id": 363, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/19vhLDr0Fw8Lja1I8xVV09" } }, "children": [] }] }, { "id": 364, "type": "component", "name": "Step", "children": [{ "id": 365, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1975" } }, "children": [] }, { "id": 366, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/forever-michael.jpeg" } }, "children": [] }, { "id": 367, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/6leeBdAohG7zhybC3Cmu8W" } }, "children": [] }] }, { "id": 368, "type": "component", "name": "Step", "children": [{ "id": 369, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1979" } }, "children": [] }, { "id": 370, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/off-the-wall.jpg" } }, "children": [] }, { "id": 371, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2ZytN2cY4Zjrr9ukb2rqTP" } }, "children": [] }] }, { "id": 372, "type": "component", "name": "Step", "children": [{ "id": 373, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1982" } }, "children": [] }, { "id": 374, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/thriller.png" } }, "children": [] }, { "id": 375, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2X8UOIkZQdcz2Hi5Ynt2uk" } }, "children": [] }] }, { "id": 376, "type": "component", "name": "Step", "children": [{ "id": 377, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1983" } }, "children": [] }, { "id": 378, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class michael-bg-theme" }, "desc": { "type": "value", "value": "First Moonwalk" } }, "children": [] }] }, { "id": 379, "type": "component", "name": "Step", "children": [{ "id": 380, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1987" } }, "children": [] }, { "id": 381, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/bad.png" } }, "children": [] }, { "id": 382, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/24TAupSNVWSAHL0R7n71vm" } }, "children": [] }] }, { "id": 383, "type": "component", "name": "Step", "children": [{ "id": 384, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1991" } }, "children": [] }, { "id": 385, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/dangerous.jpg" } }, "children": [] }, { "id": 386, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0oX4SealMgNXrvRDhqqOKg" } }, "children": [] }] }, { "id": 387, "type": "component", "name": "Step", "children": [{ "id": 388, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1995" } }, "children": [] }, { "id": 389, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/HIStory.jpg" } }, "children": [] }, { "id": 390, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3OBhnTLrvkoEEETjFA3Qfk" } }, "children": [] }] }, { "id": 391, "type": "component", "name": "Step", "children": [{ "id": 392, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2001" } }, "children": [] }, { "id": 393, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/invincible.jpg" } }, "children": [] }, { "id": 394, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/52E4RP7XDzalpIrOgSTgiQ" } }, "children": [] }] }, { "id": 395, "type": "component", "name": "Step", "children": [{ "id": 396, "type": "component", "name": "p", "children": [{ "id": 397, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2009" } }, "children": [] }, { "id": 398, "type": "textnode", "value": " " }, { "id": 399, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class michael-bg-theme" }, "desc": { "type": "value", "value": "died (age 50)" } }, "children": [] }] }] }, { "id": 400, "type": "component", "name": "Step", "children": [{ "id": 401, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2010" } }, "children": [] }, { "id": 402, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/michael.jpg" } }, "children": [] }, { "id": 403, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0yYWeLqonFk11pmb0RiMbP" } }, "children": [] }] }, { "id": 404, "type": "component", "name": "Step", "children": [{ "id": 405, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2014" } }, "children": [] }, { "id": 406, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/xscape.png" } }, "children": [] }, { "id": 407, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/7pomP86PUhoJpY3fsC0WDQ" } }, "children": [] }] }] }] }, { "id": 408, "type": "component", "name": "Default", "children": [] }] }] }] };
+module.exports = { "id": 0, "type": "component", "name": "div", "children": [{ "id": 2, "type": "var", "properties": { "name": { "type": "value", "value": "title" }, "value": { "type": "value", "value": "Pop Trajectories" } } }, { "id": 3, "type": "var", "properties": { "name": { "type": "value", "value": "subtitle" }, "value": { "type": "value", "value": "Exploring the careers of iconic musicians" } } }, { "id": 4, "type": "var", "properties": { "name": { "type": "value", "value": "showCharts" }, "value": { "type": "value", "value": false } } }, { "id": 5, "type": "var", "properties": { "name": { "type": "value", "value": "artist" }, "value": { "type": "value", "value": "default" } } }, { "id": 6, "type": "var", "properties": { "name": { "type": "value", "value": "The-Beatles" }, "value": { "type": "value", "value": "The Beatles" } } }, { "id": 7, "type": "var", "properties": { "name": { "type": "value", "value": "The-Beatles-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/the-beatles.jpg" } } }, { "id": 8, "type": "var", "properties": { "name": { "type": "value", "value": "Queen" }, "value": { "type": "value", "value": "Queen" } } }, { "id": 9, "type": "var", "properties": { "name": { "type": "value", "value": "Queen-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/queen.jpg" } } }, { "id": 10, "type": "var", "properties": { "name": { "type": "value", "value": "Michael-Jackson" }, "value": { "type": "value", "value": "Michael Jackson" } } }, { "id": 11, "type": "var", "properties": { "name": { "type": "value", "value": "Michael-Jackson-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/michael-jackson.jpg" } } }, { "id": 12, "type": "var", "properties": { "name": { "type": "value", "value": "Kanye-West" }, "value": { "type": "value", "value": "Kanye West" } } }, { "id": 13, "type": "var", "properties": { "name": { "type": "value", "value": "Kanye-West-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/kanye-west.jpg" } } }, { "id": 14, "type": "var", "properties": { "name": { "type": "value", "value": "Lady-Gaga" }, "value": { "type": "value", "value": "Lady Gaga" } } }, { "id": 15, "type": "var", "properties": { "name": { "type": "value", "value": "Lady-Gaga-Photo" }, "value": { "type": "value", "value": "./static/images/iconic-photos/lady-gaga.jpg" } } }, { "id": 16, "type": "var", "properties": { "name": { "type": "value", "value": "gagaAlbums" }, "value": { "type": "expression", "value": "[\"The Fame\",   \"The Fame Monster\", \"The Remix\",  \"Born this Way\", \"Born This Way: The Remix\", \"A Very Gaga Holiday\", \"ARTPOP\",     \"Cheek to Cheek\", \"Joanne\",     \"A Star Is Born\", \"Chromatica\"]" } } }, { "id": 17, "type": "var", "properties": { "name": { "type": "value", "value": "gagaAllDates" }, "value": { "type": "expression", "value": "[ \"10/28/2008\", \"11/18/2009\",       \"03/03/2010\", \"05/23/2011\",    \"11/18/2011\",               \"11/22/2011\",          \"11/11/2013\", \"09/23/2014\",     \"10/21/2016\", \"10/5/2018\",      \"04/10/2020\"]" } } }, { "id": 18, "type": "var", "properties": { "name": { "type": "value", "value": "gagaStepDates" }, "value": { "type": "expression", "value": "[ \"10/28/2008\", \"03/03/2010\", \"11/22/2011\", \"11/11/2013\", \"09/23/2014\",\"10/21/2016\", \"10/5/2018\",\"04/10/2020\"]" } } }, { "id": 19, "type": "var", "properties": { "name": { "type": "value", "value": "gagaYears" }, "value": { "type": "expression", "value": "[ \"2009\",\"2010\",\"2011\",\"2013\",\"2014\", \"2016\",\"2018\",\"2020\"]" } } }, { "id": 20, "type": "var", "properties": { "name": { "type": "value", "value": "gagaAlbums" }, "value": { "type": "expression", "value": "[\"The Fame Monster\", \"Born This Way\", \"Artpop\", \"Cheek to Cheek\", \"Joanne\", \"A Star Is Born Soundtrack\", \"Chromatica\"]" } } }, { "id": 21, "type": "var", "properties": { "name": { "type": "value", "value": "gagaCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 22, "type": "var", "properties": { "name": { "type": "value", "value": "queenYears" }, "value": { "type": "expression", "value": "[\"01/01/1970\", \"01/01/1971\", \"01/01/1972\", \"01/01/1973\", \"01/01/1974\", \"01/01/1975\", \"01/01/1976\", \"01/01/1977\", \"01/01/1978\", \"01/01/1979\", \"01/01/1980\", \"01/01/1981\", \"01/01/1982\", \"01/01/1983\", \"01/01/1984\", \"01/01/1985\", \"01/01/1986\", \"01/01/1987\", \"01/01/1988\", \"01/01/1989\", \"01/01/1990\", \"01/01/1991\", \"01/01/1992\", \"01/01/1993\", \"01/01/1994\", \"01/01/1995\"]" } } }, { "id": 23, "type": "var", "properties": { "name": { "type": "value", "value": "queenStepYears" }, "value": { "type": "expression", "value": "[\"1970\", \"1971\", \"1972\", \"1973\", \"1974\", \"1975\", \"1976\", \"1977\", \"1978\", \"1980\", \"1982\", \"1984\", \"1985\", \"1986\", \"1987\", \"1989\", \"1990\", \"1991\", \"1995\"]" } } }, { "id": 24, "type": "var", "properties": { "name": { "type": "value", "value": "queenAlbums" }, "value": { "type": "expression", "value": "[\"Queen\", \"Queen II\", \"Sheer Heart Attack\", \"A Night At The Opera\", \"A Day At The Races\", \"News Of The World\", \"Jazz\", \"The Game\", \"Flash Gordon\", \"Hot Space\"]" } } }, { "id": 25, "type": "var", "properties": { "name": { "type": "value", "value": "queenCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 26, "type": "var", "properties": { "name": { "type": "value", "value": "michaelDates" }, "value": { "type": "expression", "value": "[\"10/01/1971\", \"01/24/1972\", \"04/13/1973\", \"01/16/1975\", \"08/10/1979\", \"11/30/1982\", \"03/25/1983\", \"09/01/1987\", \"10/26/1991\", \"06/20/1995\", \"10/30/2001\", \"06/25/2009\", \"12/10/2010\", \"05/09/2014\"]" } } }, { "id": 27, "type": "var", "properties": { "name": { "type": "value", "value": "michaelAlbums" }, "value": { "type": "expression", "value": "[\"Got To Be There\", \"Ben\", \"Music and Me\", \"Forever, Michael\", \"Off The Wall\", \"Thriller 25 Super Deluxe Edition\", \"Bad 25th Anniversary\", \"Dangerous\", \"HIStory - PAST, PRESENT AND FUTURE\", \"Invincible\", \"Michael\", \"Xscape\"]" } } }, { "id": 28, "type": "var", "properties": { "name": { "type": "value", "value": "michaelYears" }, "value": { "type": "expression", "value": "[\"1972\", \"1973\", \"1975\", \"1979\", \"1982\", \"1983\", \"1987\", \"1991\", \"1995\", \"2001\", \"2009\", \"2010\", \"2014\"]" } } }, { "id": 29, "type": "var", "properties": { "name": { "type": "value", "value": "michaelCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 30, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesDates" }, "value": { "type": "expression", "value": "[\"03/22/1963\", \"09/22/1963\", \"07/10/1964\", \n                                         \"12/04/1964\", \"08/06/1965\", \"12/03/1965\", \n                                         \"08/05/1966\", \"05/26/1967\", \"11/22/1968\", \n                                         \"09/26/1969\", \"01/13/1969\", \"05/08/1970\" ]" } } }, { "id": 31, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesStepYears" }, "value": { "type": "expression", "value": "[\"1963\", \"1964\", \"1965\", \"1966\", \"1967\", \"1968\", \"1969\", \"1970\" ]" } } }, { "id": 32, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesAlbums" }, "value": { "type": "expression", "value": "[\"Please Please Me\", \"With The Beatles\", \"A Hard Day's Night\", \"Beatles For Sale\", \"Help!\", \"Rubber Soul\", \"Revolver\", \"Sgt. Pepper's Lonely Hearts and Club Band\", \"The Beatles\", \"Abbey Road\", \"Yellow Submarine\", \"Let It Be\"]" } } }, { "id": 33, "type": "var", "properties": { "name": { "type": "value", "value": "beatlesCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 34, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeDates" }, "value": { "type": "expression", "value": "[\"02/10/2004\", \"01/01/2005\", \"01/01/2007\", \"01/01/2008\", \"01/01/2010\", \"01/01/2013\", \"01/01/2016\", \"01/01/2018\", \"01/01/2019\"]" } } }, { "id": 35, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeStepYears" }, "value": { "type": "expression", "value": "[\"2004\", \"2005\", \"2007\", \"2008\", \"2010\", \"2013\", \"2016\", \"2018\", \"2019\"]" } } }, { "id": 36, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeAlbums" }, "value": { "type": "expression", "value": "[\"The College Dropout\", \"Late Registration\", \"Graduation\", \"808s & Heartbreak\", \"My Beautiful Dark Twisted Fantasy\", \"Yeezus\", \"The Life Of Pablo\", \"Ye\", \"Jesus Is King\"]" } } }, { "id": 37, "type": "var", "properties": { "name": { "type": "value", "value": "kanyeCurStep" }, "value": { "type": "value", "value": 0 } } }, { "id": 38, "type": "component", "name": "TextContainer", "children": [{ "id": 39, "type": "meta", "properties": { "title": { "type": "value", "value": "Pop Trajectories" }, "description": { "type": "value", "value": "Exploring the careers of iconic musicians" } } }] }, { "id": 40, "type": "component", "name": "div", "properties": { "id": { "type": "value", "value": "landing-page" }, "onEnterView": { "type": "expression", "value": "showCharts = false" }, "onExitViewFully": { "type": "expression", "value": "showCharts = true" }, "className": { "type": "value", "value": "fullWidth" } }, "children": [{ "id": 41, "type": "component", "name": "Header", "properties": { "title": { "type": "variable", "value": "title" }, "subtitle": { "type": "variable", "value": "subtitle" } }, "children": [] }, { "id": 42, "type": "component", "name": "div", "properties": { "class": { "type": "value", "value": "flex-box" } }, "children": [{ "id": 43, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "beatles-theme" }, "onClick": { "type": "expression", "value": "artist = \"beatles\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 44, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "The-Beatles" }, "iconicImage": { "type": "variable", "value": "The-Beatles-Photo" } }, "children": [] }] }, { "id": 45, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "queen-theme" }, "onClick": { "type": "expression", "value": "artist = \"queen\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 46, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Queen" }, "iconicImage": { "type": "variable", "value": "Queen-Photo" } }, "children": [] }] }, { "id": 47, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "michael-theme" }, "onClick": { "type": "expression", "value": "artist = \"michael\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 48, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Michael-Jackson" }, "iconicImage": { "type": "variable", "value": "Michael-Jackson-Photo" } }, "children": [] }] }, { "id": 49, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "kanye-theme" }, "onClick": { "type": "expression", "value": "artist = \"kanye\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 50, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Kanye-West" }, "iconicImage": { "type": "variable", "value": "Kanye-West-Photo" } }, "children": [] }] }, { "id": 51, "type": "component", "name": "action", "properties": { "class": { "type": "value", "value": "gaga-theme" }, "onClick": { "type": "expression", "value": "artist = \"gaga\"; setTimeout(function () {window.scrollTo({ top: window.innerHeight, behavior: 'smooth' })}, 250)" } }, "children": [{ "id": 52, "type": "component", "name": "ImgComponent", "properties": { "artistName": { "type": "variable", "value": "Lady-Gaga" }, "iconicImage": { "type": "variable", "value": "Lady-Gaga-Photo" } }, "children": [] }] }] }] }, { "id": 53, "type": "component", "name": "TextContainer", "children": [{ "id": 54, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "artist == \"gaga\"" } }, "children": [{ "id": 55, "type": "component", "name": "h1", "children": [{ "id": 56, "type": "textnode", "value": "The Trajectory of Lady Gaga" }] }, { "id": 57, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "showCharts" } }, "children": [{ "id": 58, "type": "component", "name": "Fixed", "children": [{ "id": 59, "type": "component", "name": "SalesChart", "properties": { "className": { "type": "value", "value": "charts" }, "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/lady-gaga-weekly-charts.csv" }, "years": { "type": "expression", "value": "gagaStepDates.slice(0, gagaCurStep + 2)" }, "name": { "type": "value", "value": "Lady Gaga" }, "albums": { "type": "variable", "value": "gagaAlbums" } }, "children": [] }, { "id": 60, "type": "component", "name": "HorizontalBarChart", "properties": { "className": { "type": "value", "value": "charts" }, "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "gagaCurStep" }, "years": { "type": "variable", "value": "gagaYears" } }, "children": [] }] }] }, { "id": 61, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 0" } }, "children": [{ "id": 62, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2008" } }, "children": [] }, { "id": 63, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "August 19, 2008" }, "desc": { "type": "value", "value": "The Fame" } }, "children": [] }, { "id": 64, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/the-fame.jpg" } }, "children": [] }, { "id": 65, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class gaga-bg-theme" }, "desc": { "type": "value", "value": "Lady Gaga released The Fame in 2008. She later rereleased it as 'The Fame Monster' in 2009. Sales for these albums are grouped together." } }, "children": [] }, { "id": 66, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2009" } }, "children": [] }, { "id": 67, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 18, 2009" }, "desc": { "type": "value", "value": "The Fame Monster" } }, "children": [] }, { "id": 68, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/the-fame-monster.jpg" } }, "children": [] }, { "id": 69, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/58WSd6SDPOcbnnJ2tq0Ph8" } }, "children": [] }] }, { "id": 70, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 1" } }, "children": [{ "id": 71, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2010" } }, "children": [] }, { "id": 72, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "March 3, 2010" }, "desc": { "type": "value", "value": "The Remix" } }, "children": [] }, { "id": 73, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/the-remix.jpg" } }, "children": [] }, { "id": 74, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/75t7ssOFr9Xic5Gx73WZYv" } }, "children": [] }] }, { "id": 75, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 2" } }, "children": [{ "id": 76, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2011" } }, "children": [] }, { "id": 77, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "May 23, 2011" }, "desc": { "type": "value", "value": "Born This Way" } }, "children": [] }, { "id": 78, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/born-this-way.jpg" } }, "children": [] }, { "id": 79, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5maeycU97NHBgwRr2h2A4O" } }, "children": [] }, { "id": 80, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 18, 2011" }, "desc": { "type": "value", "value": "Born This Way: The Remix" } }, "children": [] }, { "id": 81, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/born-this-way-remix.jpg" } }, "children": [] }, { "id": 82, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/38Ur5vOXFNPWHZv4umkqwU" } }, "children": [] }, { "id": 83, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 22, 2011" }, "desc": { "type": "value", "value": "A Very Gaga Holiday" } }, "children": [] }, { "id": 84, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/a-very-gaga-holiday.jpg" } }, "children": [] }, { "id": 85, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0PbOMnMLse2JVIDSBq28Nj" } }, "children": [] }] }, { "id": 86, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 3" } }, "children": [{ "id": 87, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2013" } }, "children": [] }, { "id": 88, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "November 11, 2013" }, "desc": { "type": "value", "value": "ARTPOP" } }, "children": [] }, { "id": 89, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/artpop.jpg" } }, "children": [] }, { "id": 90, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2eRJUtI7nXrQ5uYQ7tzTo9" } }, "children": [] }] }, { "id": 91, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 4" } }, "children": [{ "id": 92, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2014" } }, "children": [] }, { "id": 93, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "September 23, 2014" }, "desc": { "type": "value", "value": "Cheek to Cheek" } }, "children": [] }, { "id": 94, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/cheek-to-cheek.jpg" } }, "children": [] }, { "id": 95, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2VX9rp6NAC19TQN4IgkmYu" } }, "children": [] }] }, { "id": 96, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 5" } }, "children": [{ "id": 97, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2016" } }, "children": [] }, { "id": 98, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "October 21, 2016" }, "desc": { "type": "value", "value": "Joanne" } }, "children": [] }, { "id": 99, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/joanne.jpg" } }, "children": [] }, { "id": 100, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2ZUwFxlWo0gwTsvZ6L4Meh" } }, "children": [] }] }, { "id": 101, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 6" } }, "children": [{ "id": 102, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2018" } }, "children": [] }, { "id": 103, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "October 5, 2018" }, "desc": { "type": "value", "value": "A Star is Born" } }, "children": [] }, { "id": 104, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/a-star-is-born.jpg" } }, "children": [] }, { "id": 105, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4sLtOBOzn4s3GDUv3c5oJD" } }, "children": [] }] }, { "id": 106, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "gagaCurStep = 7" } }, "children": [{ "id": 107, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class gaga-bg-theme" }, "year": { "type": "value", "value": "2020" } }, "children": [] }, { "id": 108, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class gaga-bg-theme" }, "date": { "type": "value", "value": "April 10, 2020" }, "desc": { "type": "value", "value": "Chromatica" } }, "children": [] }, { "id": 109, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "gaga-theme" }, "artistName": { "type": "variable", "value": "Lady-Gaga" }, "albumArt": { "type": "value", "value": "static/images/lady-gaga/stupid-love.jpg" } }, "children": [] }, { "id": 110, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2HDW1EX8IBI3jqobswAfrZ?highlight=spotify:track:2kJu14V7hbZw3I4K8L8SXb" } }, "children": [] }] }] }, { "id": 111, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "artist == \"queen\"" } }, "children": [{ "id": 112, "type": "component", "name": "h1", "children": [{ "id": 113, "type": "textnode", "value": "The Trajectory of Queen" }] }, { "id": 114, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "showCharts" } }, "children": [{ "id": 115, "type": "component", "name": "Fixed", "children": [{ "id": 116, "type": "component", "name": "SalesChart", "properties": { "className": { "type": "value", "value": "charts" }, "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/queen-weekly-charts.csv" }, "years": { "type": "expression", "value": "queenYears.slice(0, queenCurStep + 2)" }, "name": { "type": "value", "value": "Queen" }, "albums": { "type": "variable", "value": "queenAlbums" } }, "children": [] }, { "id": 117, "type": "component", "name": "HorizontalBarChart", "properties": { "className": { "type": "value", "value": "charts" }, "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "queenCurStep" }, "years": { "type": "variable", "value": "queenStepYears" } }, "children": [] }] }] }, { "id": 118, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 0" } }, "children": [{ "id": 119, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1970" } }, "children": [] }, { "id": 120, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "The band formed" } }, "children": [] }, { "id": 121, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen-logo.png" } }, "children": [] }] }, { "id": 122, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 1" } }, "children": [{ "id": 123, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1971" } }, "children": [] }, { "id": 124, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "John Deacon joined the band" } }, "children": [] }, { "id": 125, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "The band recorded their first songs" } }, "children": [] }] }, { "id": 126, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 2" } }, "children": [{ "id": 127, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1972" } }, "children": [] }, { "id": 128, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Signed under a record label" } }, "children": [] }, { "id": 129, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen-logo.png" } }, "children": [] }] }, { "id": 130, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 3" } }, "children": [{ "id": 131, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1973" } }, "children": [] }, { "id": 132, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class queen-bg-theme" }, "date": { "type": "value", "value": "July 13, 1973" }, "desc": { "type": "value", "value": "Queen" } }, "children": [] }, { "id": 133, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen.png" } }, "children": [] }, { "id": 134, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4Rt2K7fDnKnZFZiPu23M0S" } }, "children": [] }] }, { "id": 135, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 4" } }, "children": [{ "id": 136, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1974" } }, "children": [] }, { "id": 137, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen_II.jpg" } }, "children": [] }, { "id": 138, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0A2Wy6wDNLs6SPhX57tswJ" } }, "children": [] }, { "id": 139, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Sheer_Heart_Attack.png" } }, "children": [] }, { "id": 140, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4yO8TpSaJtUKkkjmsA4VXf" } }, "children": [] }] }, { "id": 141, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 5" } }, "children": [{ "id": 142, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1975" } }, "children": [] }, { "id": 143, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/A_Night_At_The_Opera.png" } }, "children": [] }, { "id": 144, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3KCJzwKOdBxDu6TKaFPqM9" } }, "children": [] }] }, { "id": 145, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 6" } }, "children": [{ "id": 146, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1976" } }, "children": [] }, { "id": 147, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/A_Day_at_the_Races.jpg" } }, "children": [] }, { "id": 148, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3f45rzbU4dYQBTV9v5RFBB" } }, "children": [] }] }, { "id": 149, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 7" } }, "children": [{ "id": 150, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1977" } }, "children": [] }, { "id": 151, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/News_Of_The_World.png" } }, "children": [] }, { "id": 152, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3TKTjR4E3LAMfRsPeRsNhT" } }, "children": [] }] }, { "id": 153, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 8" } }, "children": [{ "id": 154, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1978" } }, "children": [] }, { "id": 155, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Jazz.png" } }, "children": [] }, { "id": 156, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5X3rA8To5GDOeIWdQyMEcE" } }, "children": [] }] }, { "id": 157, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 9" } }, "children": [{ "id": 158, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1980" } }, "children": [] }, { "id": 159, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/The_Game.png" } }, "children": [] }, { "id": 160, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1h0j80HhdzIMsUGUFiVkqa" } }, "children": [] }, { "id": 161, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Flash_Gordon.png" } }, "children": [] }, { "id": 162, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2SS9qutxzz0XZf4zmoQVdx" } }, "children": [] }] }, { "id": 163, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 10" } }, "children": [{ "id": 164, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1982" } }, "children": [] }, { "id": 165, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Hot_Space.png" } }, "children": [] }, { "id": 166, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0fZCqpTHYq2k89uG6pPTYE" } }, "children": [] }] }, { "id": 167, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 11" } }, "children": [{ "id": 168, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1984" } }, "children": [] }, { "id": 169, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/The_Works.png" } }, "children": [] }, { "id": 170, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0FbnXAGmgmWBmNthZSgm43" } }, "children": [] }] }, { "id": 171, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 12" } }, "children": [{ "id": 172, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1985" } }, "children": [] }, { "id": 173, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Performed at Live aid in front of the biggest-ever TV audience" } }, "children": [] }, { "id": 174, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Queen_live_aid.jpg" } }, "children": [] }] }, { "id": 175, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 13" } }, "children": [{ "id": 176, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1986" } }, "children": [] }, { "id": 177, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/A_Kind_Of_Magic.png" } }, "children": [] }, { "id": 178, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/34xBXeJgmQrn1wQvhyVCsw" } }, "children": [] }] }, { "id": 179, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 14" } }, "children": [{ "id": 180, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1987" } }, "children": [] }, { "id": 181, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Mercury was diagnosed as HIV positive" } }, "children": [] }] }, { "id": 182, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 15" } }, "children": [{ "id": 183, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1989" } }, "children": [] }, { "id": 184, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/The_Miracle.png" } }, "children": [] }, { "id": 185, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1v5l2sZRE5Rweew5PoNFP9" } }, "children": [] }] }, { "id": 186, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 16" } }, "children": [{ "id": 187, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1991" } }, "children": [] }, { "id": 188, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Innuendo.png" } }, "children": [] }, { "id": 189, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5yAM3CcaXF6DPRJW3oL6Ya" } }, "children": [] }, { "id": 190, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "On 23 November 1991, in a prepared statement made on his deathbed, Mercury confirmed that he had AIDS" } }, "children": [] }, { "id": 191, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class queen-bg-theme" }, "desc": { "type": "value", "value": "Within 24 hours of the statement, he died of bronchial pneumonia, which was brought on as a complication of AIDS" } }, "children": [] }] }, { "id": 192, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "queenCurStep = 17" } }, "children": [{ "id": 193, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class queen-bg-theme" }, "year": { "type": "value", "value": "1995" } }, "children": [] }, { "id": 194, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "queen-theme" }, "artistName": { "type": "variable", "value": "Queen" }, "albumArt": { "type": "value", "value": "static/images/Queen/Madeinheaven.jpg" } }, "children": [] }, { "id": 195, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2SFIh6siY4KYBNPHAV7xaI" } }, "children": [] }] }] }, { "id": 196, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "artist == \"michael\"" } }, "children": [{ "id": 197, "type": "component", "name": "h1", "children": [{ "id": 198, "type": "textnode", "value": "The Trajectory of Michael Jackson" }] }, { "id": 199, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "showCharts" } }, "children": [{ "id": 200, "type": "component", "name": "Fixed", "children": [{ "id": 201, "type": "component", "name": "SalesChart", "properties": { "className": { "type": "value", "value": "charts" }, "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/michael-jackson-weekly-charts.csv" }, "years": { "type": "expression", "value": "michaelDates.slice(0, michaelCurStep + 2)" }, "name": { "type": "value", "value": "Michael Jackson" }, "albums": { "type": "variable", "value": "michaelAlbums" } }, "children": [] }, { "id": 202, "type": "component", "name": "HorizontalBarChart", "properties": { "className": { "type": "value", "value": "charts" }, "artist": { "type": "value", "value": "michael" }, "step": { "type": "variable", "value": "michaelCurStep" }, "years": { "type": "variable", "value": "michaelYears" } }, "children": [] }] }] }, { "id": 203, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 0" } }, "children": [{ "id": 204, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1972" } }, "children": [] }, { "id": 205, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class michael-bg-theme" }, "date": { "type": "value", "value": "January 24, 1972" }, "desc": { "type": "value", "value": "Got To Be There" } }, "children": [] }, { "id": 206, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/got-to-be-there.jpg" } }, "children": [] }, { "id": 207, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5cKwhK6ChXbJE77TKnOx30" } }, "children": [] }, { "id": 208, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class michael-bg-theme" }, "date": { "type": "value", "value": "August 4, 1972" }, "desc": { "type": "value", "value": "Ben" } }, "children": [] }, { "id": 209, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/ben.jpg" } }, "children": [] }, { "id": 210, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3xo2soey9XEBI5DlmT4KlQ" } }, "children": [] }] }, { "id": 211, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 1" } }, "children": [{ "id": 212, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1973" } }, "children": [] }, { "id": 213, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/music-and-me.jpg" } }, "children": [] }, { "id": 214, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/19vhLDr0Fw8Lja1I8xVV09" } }, "children": [] }] }, { "id": 215, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 2" } }, "children": [{ "id": 216, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1975" } }, "children": [] }, { "id": 217, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/forever-michael.jpeg" } }, "children": [] }, { "id": 218, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/6leeBdAohG7zhybC3Cmu8W" } }, "children": [] }] }, { "id": 219, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 3" } }, "children": [{ "id": 220, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1979" } }, "children": [] }, { "id": 221, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/off-the-wall.jpg" } }, "children": [] }, { "id": 222, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2ZytN2cY4Zjrr9ukb2rqTP" } }, "children": [] }] }, { "id": 223, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 4" } }, "children": [{ "id": 224, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1982" } }, "children": [] }, { "id": 225, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/thriller.png" } }, "children": [] }, { "id": 226, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2X8UOIkZQdcz2Hi5Ynt2uk" } }, "children": [] }] }, { "id": 227, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 5" } }, "children": [{ "id": 228, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1983" } }, "children": [] }, { "id": 229, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class michael-bg-theme" }, "desc": { "type": "value", "value": "First Moonwalk" } }, "children": [] }] }, { "id": 230, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 6" } }, "children": [{ "id": 231, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1987" } }, "children": [] }, { "id": 232, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/bad.png" } }, "children": [] }, { "id": 233, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/24TAupSNVWSAHL0R7n71vm" } }, "children": [] }] }, { "id": 234, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 7" } }, "children": [{ "id": 235, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1991" } }, "children": [] }, { "id": 236, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/dangerous.jpg" } }, "children": [] }, { "id": 237, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0oX4SealMgNXrvRDhqqOKg" } }, "children": [] }] }, { "id": 238, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 8" } }, "children": [{ "id": 239, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "1995" } }, "children": [] }, { "id": 240, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/HIStory.jpg" } }, "children": [] }, { "id": 241, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3OBhnTLrvkoEEETjFA3Qfk" } }, "children": [] }] }, { "id": 242, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 9" } }, "children": [{ "id": 243, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2001" } }, "children": [] }, { "id": 244, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/invincible.jpg" } }, "children": [] }, { "id": 245, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/52E4RP7XDzalpIrOgSTgiQ" } }, "children": [] }] }, { "id": 246, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 10" } }, "children": [{ "id": 247, "type": "component", "name": "p", "children": [{ "id": 248, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2009" } }, "children": [] }, { "id": 249, "type": "textnode", "value": " " }, { "id": 250, "type": "component", "name": "ContentComponent", "properties": { "className": { "type": "value", "value": "content-class michael-bg-theme" }, "desc": { "type": "value", "value": "died (age 50)" } }, "children": [] }] }] }, { "id": 251, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 11" } }, "children": [{ "id": 252, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2010" } }, "children": [] }, { "id": 253, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/michael.jpg" } }, "children": [] }, { "id": 254, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0yYWeLqonFk11pmb0RiMbP" } }, "children": [] }] }, { "id": 255, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "michaelCurStep = 12" } }, "children": [{ "id": 256, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class michael-bg-theme" }, "year": { "type": "value", "value": "2014" } }, "children": [] }, { "id": 257, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "michael-theme" }, "artistName": { "type": "variable", "value": "Michael-Jackson" }, "albumArt": { "type": "value", "value": "static/images/michael-jackson/xscape.png" } }, "children": [] }, { "id": 258, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/7pomP86PUhoJpY3fsC0WDQ" } }, "children": [] }] }] }, { "id": 259, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "artist == \"beatles\"" } }, "children": [{ "id": 260, "type": "component", "name": "h2", "children": [{ "id": 261, "type": "textnode", "value": "The Trajectory of The Beatles" }] }, { "id": 262, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "showCharts" } }, "children": [{ "id": 263, "type": "component", "name": "Fixed", "children": [{ "id": 264, "type": "component", "name": "SalesChart", "properties": { "className": { "type": "value", "value": "charts" }, "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/the-beatles-weekly-charts.csv" }, "years": { "type": "expression", "value": "beatlesDates.slice(0, beatlesCurStep + 2)" }, "name": { "type": "value", "value": "The Beatles" }, "albums": { "type": "variable", "value": "beatlesAlbums" } }, "children": [] }, { "id": 265, "type": "component", "name": "HorizontalBarChart", "properties": { "className": { "type": "value", "value": "charts" }, "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "beatlesCurStep" }, "years": { "type": "variable", "value": "beatlesStepYears" } }, "children": [] }] }] }, { "id": 266, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 0" } }, "children": [{ "id": 267, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 268, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "March 22, 1963" }, "desc": { "type": "value", "value": "Please Please Me" } }, "children": [] }, { "id": 269, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/PleasePleaseMe.jpg" } }, "children": [] }, { "id": 270, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3KzAvEXcqJKBF97HrXwlgf" } }, "children": [] }, { "id": 271, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "September 22, 1963" }, "desc": { "type": "value", "value": "With The Beatles" } }, "children": [] }, { "id": 272, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/WithTheBeatles.jpg" } }, "children": [] }, { "id": 273, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1aYdiJk6XKeHWGO3FzHHTr" } }, "children": [] }] }, { "id": 274, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 1" } }, "children": [{ "id": 275, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 276, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "July 10, 1964" }, "desc": { "type": "value", "value": "A Hard Day's Night" } }, "children": [] }, { "id": 277, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/AHardDaysNight.jpg" } }, "children": [] }, { "id": 278, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/6wCttLq0ADzkPgtRnUihLV”" } }, "children": [] }, { "id": 279, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "December 4, 1964" }, "desc": { "type": "value", "value": "Beatles for Sale" } }, "children": [] }, { "id": 280, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/BeatlesforSale.jpg" } }, "children": [] }, { "id": 281, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1vANZV20H5B4Fk6yf7Ot9a" } }, "children": [] }] }, { "id": 282, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 2" } }, "children": [{ "id": 283, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 284, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "August 6, 1965" }, "desc": { "type": "value", "value": "Help!" } }, "children": [] }, { "id": 285, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/Help!.jpg" } }, "children": [] }, { "id": 286, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0PT5m6hwPRrpBwIHVnvbFX" } }, "children": [] }, { "id": 287, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "December 3, 1965" }, "desc": { "type": "value", "value": "Rubber Soul" } }, "children": [] }, { "id": 288, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/RubberSoul.jpg" } }, "children": [] }, { "id": 289, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/50o7kf2wLwVmOTVYJOTplm" } }, "children": [] }] }, { "id": 290, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 3" } }, "children": [{ "id": 291, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 292, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "August 5, 1966" }, "desc": { "type": "value", "value": "Revolver" } }, "children": [] }, { "id": 293, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/Revolver.jpg" } }, "children": [] }, { "id": 294, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3PRoXYsngSwjEQWR5PsHWR" } }, "children": [] }] }, { "id": 295, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 4" } }, "children": [{ "id": 296, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 297, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "May 26, 1967" }, "desc": { "type": "value", "value": "Sgt. Pepper's Lonely Hearts and Club Band" } }, "children": [] }, { "id": 298, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/SgtPeppersLonelyHeartsClubBand.jpg" } }, "children": [] }, { "id": 299, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/6QaVfG1pHYl1z15ZxkvVDW" } }, "children": [] }] }, { "id": 300, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 5" } }, "children": [{ "id": 301, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 302, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "November 22, 1968" }, "desc": { "type": "value", "value": "The Beatles" } }, "children": [] }, { "id": 303, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/WhiteAlbum.jpg" } }, "children": [] }, { "id": 304, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/1klALx0u4AavZNEvC4LrTL" } }, "children": [] }] }, { "id": 305, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 6" } }, "children": [{ "id": 306, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 307, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "September 26, 1969" }, "desc": { "type": "value", "value": "Abbey Road" } }, "children": [] }, { "id": 308, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/AbbeyRoad.jpg" } }, "children": [] }, { "id": 309, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0ETFjACtuP2ADo6LFhL6HN" } }, "children": [] }, { "id": 310, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "January 13, 1969" }, "desc": { "type": "value", "value": "Yellow Submarine" } }, "children": [] }, { "id": 311, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/YellowSubmarine.jpg" } }, "children": [] }, { "id": 312, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0XRZpF083HqgygM0v1hQyE" } }, "children": [] }] }, { "id": 313, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "beatlesCurStep = 7" } }, "children": [{ "id": 314, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class beatles-bg-theme" }, "year": { "type": "expression", "value": "beatlesStepYears[beatlesCurStep]" } }, "children": [] }, { "id": 315, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class beatles-bg-theme" }, "date": { "type": "value", "value": "May 8, 1970" }, "desc": { "type": "value", "value": "Let It Be" } }, "children": [] }, { "id": 316, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "beatles-theme" }, "artistName": { "type": "variable", "value": "The-Beatles" }, "albumArt": { "type": "value", "value": "static/images/beatles/LetItBe.jpg" } }, "children": [] }, { "id": 317, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0jTGHV5xqHPvEcwL8f6YU5" } }, "children": [] }] }] }, { "id": 318, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "artist == \"kanye\"" } }, "children": [{ "id": 319, "type": "component", "name": "h1", "children": [{ "id": 320, "type": "textnode", "value": "The Trajectory of Kanye West" }] }, { "id": 321, "type": "component", "name": "Conditional", "properties": { "if": { "type": "expression", "value": "showCharts" } }, "children": [{ "id": 322, "type": "component", "name": "Fixed", "children": [{ "id": 323, "type": "component", "name": "SalesChart", "properties": { "className": { "type": "value", "value": "charts" }, "value": { "type": "variable", "value": "myData" }, "src": { "type": "value", "value": "./static/weekly-charts/kanye-west-weekly-charts.csv" }, "years": { "type": "expression", "value": "kanyeDates.slice(0, kanyeCurStep + 2)" }, "name": { "type": "value", "value": "Kanye West" }, "albums": { "type": "variable", "value": "kanyeAlbums" } }, "children": [] }, { "id": 324, "type": "component", "name": "HorizontalBarChart", "properties": { "className": { "type": "value", "value": "charts" }, "artist": { "type": "variable", "value": "artist" }, "step": { "type": "variable", "value": "kanyeCurStep" }, "years": { "type": "variable", "value": "kanyeStepYears" } }, "children": [] }] }] }, { "id": 325, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 0" } }, "children": [{ "id": 326, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2004" } }, "children": [] }, { "id": 327, "type": "component", "name": "DescComponent", "properties": { "className": { "type": "value", "value": "desc-class kanye-bg-theme" }, "date": { "type": "value", "value": "February 10, 2004" }, "desc": { "type": "value", "value": "The College Dropout" } }, "children": [] }, { "id": 328, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/the-college-dropout.jpg" } }, "children": [] }, { "id": 329, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/4Uv86qWpGTxf7fU7lG5X6F" } }, "children": [] }] }, { "id": 330, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 1" } }, "children": [{ "id": 331, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2005" } }, "children": [] }, { "id": 332, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/late-registration.jpg" } }, "children": [] }, { "id": 333, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5ll74bqtkcXlKE7wwkMq4g" } }, "children": [] }] }, { "id": 334, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 2" } }, "children": [{ "id": 335, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2007" } }, "children": [] }, { "id": 336, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/graduation.jpg" } }, "children": [] }, { "id": 337, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/5fPglEDz9YEwRgbLRvhCZy" } }, "children": [] }] }, { "id": 338, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 3" } }, "children": [{ "id": 339, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2008" } }, "children": [] }, { "id": 340, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/808s-and-heartbreak.jpg" } }, "children": [] }, { "id": 341, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/3WFTGIO6E3Xh4paEOBY9OU" } }, "children": [] }] }, { "id": 342, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 4" } }, "children": [{ "id": 343, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2010" } }, "children": [] }, { "id": 344, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/my-beautiful-dark-twisted-fantasy.jpg" } }, "children": [] }, { "id": 345, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/20r762YmB5HeofjMCiPMLv" } }, "children": [] }] }, { "id": 346, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 5" } }, "children": [{ "id": 347, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2013" } }, "children": [] }, { "id": 348, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/yeezus.jpg" } }, "children": [] }, { "id": 349, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/7D2NdGvBHIavgLhmcwhluK" } }, "children": [] }] }, { "id": 350, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 6" } }, "children": [{ "id": 351, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2016" } }, "children": [] }, { "id": 352, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/the-life-of-pablo.jpg" } }, "children": [] }, { "id": 353, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/7gsWAHLeT0w7es6FofOXk1" } }, "children": [] }] }, { "id": 354, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 7" } }, "children": [{ "id": 355, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2018" } }, "children": [] }, { "id": 356, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/ye.jpg" } }, "children": [] }, { "id": 357, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/2Ek1q2haOnxVqhvVKqMvJe" } }, "children": [] }] }, { "id": 358, "type": "component", "name": "Step", "properties": { "onEnterView": { "type": "expression", "value": "kanyeCurStep = 8" } }, "children": [{ "id": 359, "type": "component", "name": "YearComponent", "properties": { "className": { "type": "value", "value": "year-class kanye-bg-theme" }, "year": { "type": "value", "value": "2019" } }, "children": [] }, { "id": 360, "type": "component", "name": "AlbumComponent", "properties": { "className": { "type": "value", "value": "kanye-theme" }, "artistName": { "type": "variable", "value": "Kanye-West" }, "albumArt": { "type": "value", "value": "static/images/kanye-west/jesus-is-king.jpg" } }, "children": [] }, { "id": 361, "type": "component", "name": "PlaylistComponent", "properties": { "className": { "type": "value", "value": "playlist-class" }, "url": { "type": "value", "value": "https://open.spotify.com/embed/album/0FgZKfoU2Br5sHOfvZKTI9" } }, "children": [] }] }] }] }] };
 
 },{}],"__IDYLL_COMPONENTS__":[function(require,module,exports){
 'use strict';
@@ -85453,21 +83618,18 @@ module.exports = {
 	'h1': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h1.js'),
 	'sales-chart': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/sales-chart.js'),
 	'horizontal-bar-chart': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/horizontal-bar-chart.js'),
-	'graphic': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/graphic.js'),
+	'fixed': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/fixed.js'),
+	'conditional': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/conditional.js'),
 	'year-component': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/year-component.js'),
 	'desc-component': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/desc-component.js'),
 	'album-component': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/album-component.js'),
-	'date-component': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/date-component.js'),
+	'content-component': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/content-component.js'),
 	'playlist-component': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/playlist-component.js'),
 	'step': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/step.js'),
-	'scroller': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/scroller.js'),
-	'case': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/case.js'),
-	'content-component': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/content-component.js'),
-	'default': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/default.js'),
-	'switch': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/switch.js')
+	'h2': require('/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h2.js')
 };
 
-},{"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/album-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/album-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/content-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/content-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/date-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/date-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/desc-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/desc-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/horizontal-bar-chart.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/horizontal-bar-chart.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/img-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/img-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/playlist-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/playlist-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/sales-chart.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/sales-chart.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/year-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/year-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/action.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/action.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/case.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/case.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/default.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/default.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/graphic.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/graphic.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h1.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h1.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/header.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/header.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/scroller.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/scroller.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/step.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/step.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/switch.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/switch.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/text-container.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/text-container.js"}],"__IDYLL_CONTEXT__":[function(require,module,exports){
+},{"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/album-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/album-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/content-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/content-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/desc-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/desc-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/horizontal-bar-chart.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/horizontal-bar-chart.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/img-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/img-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/playlist-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/playlist-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/sales-chart.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/sales-chart.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/year-component.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/components/year-component.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/action.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/action.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/conditional.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/conditional.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/fixed.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/fixed.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h1.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h1.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h2.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/h2.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/header.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/header.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/step.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/step.js","/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/text-container.js":"/Users/aeronlangford/Documents/UniversityOfWashington/CSE442/GroupProjects/FP-music-vibez/node_modules/idyll-components/dist/cjs/text-container.js"}],"__IDYLL_CONTEXT__":[function(require,module,exports){
 
 module.exports = function () {
 
