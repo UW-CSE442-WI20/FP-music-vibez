@@ -188,6 +188,7 @@ p {
   margin-top: 0px;
   border-width: 0px;
   border-left: 6px solid var(--black);
+  text-align: center;
 }
 
 .idyll-scroll {
