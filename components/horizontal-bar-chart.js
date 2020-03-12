@@ -294,7 +294,7 @@ const allData = {
   ]
 };
 
-const margin = { top: 30, right: 40, bottom: 40, left: 120 };
+const margin = { top: 30, right: 40, bottom: 40, left: 190 };
 const width = 600;
 const height = 300;
 
@@ -386,10 +386,7 @@ class HorizontalBarChart extends D3Component {
     // Append the chart title
     this.svg
       .append("text")
-      .attr(
-        "transform",
-        "translate(" + width / 2 + " ," + (0 + margin.top) + ")"
-      )
+      .attr("transform", "translate(" + width / 2 + " ," + 0 + ")")
       .style("text-anchor", "middle")
       .text("Album Sales");
 
