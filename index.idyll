@@ -293,6 +293,7 @@
 
     [Step onEnterView:`michaelCurStep = 1`]
         [YearComponent className:"year-class michael-bg-theme" year:"1973" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"April 13, 1973" desc:"Music & Me" /]
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/music-and-me.jpg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/19vhLDr0Fw8Lja1I8xVV09" /]
 
@@ -300,6 +301,7 @@
 
     [Step onEnterView:`michaelCurStep = 2`]
         [YearComponent className:"year-class michael-bg-theme" year:"1975" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"January 16, 1975" desc:"Forever, Michael" /]
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/forever-michael.jpeg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/6leeBdAohG7zhybC3Cmu8W" /]
 
@@ -307,6 +309,7 @@
 
     [Step onEnterView:`michaelCurStep = 3`]
         [YearComponent className:"year-class michael-bg-theme" year:"1979" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"August 10, 1979" desc:"Off The Wall" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/off-the-wall.jpg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/2ZytN2cY4Zjrr9ukb2rqTP" /]
 
@@ -314,6 +317,7 @@
 
     [Step onEnterView:`michaelCurStep = 4`]
         [YearComponent className:"year-class michael-bg-theme" year:"1982" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"November 30, 1982" desc:"Thriller" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/thriller.png"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/2X8UOIkZQdcz2Hi5Ynt2uk" /]
 
@@ -326,41 +330,47 @@
 
     [Step onEnterView:`michaelCurStep = 6`]
         [YearComponent className:"year-class michael-bg-theme" year:"1987" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"September 1, 1987" desc:"Bad" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/bad.png"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/24TAupSNVWSAHL0R7n71vm" /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 7`]
         [YearComponent className:"year-class michael-bg-theme" year:"1991" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"November 26, 1991" desc:"Dangerous" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/dangerous.jpg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/0oX4SealMgNXrvRDhqqOKg" /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 8`]
         [YearComponent className:"year-class michael-bg-theme" year:"1995" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"June 20, 1995" desc:"HIStory: Past, Present and Future, Book I" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/HIStory.jpg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/3OBhnTLrvkoEEETjFA3Qfk" /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 9`]
         [YearComponent className:"year-class michael-bg-theme" year:"2001" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"October 30, 2001" desc:"Invincible" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/invincible.jpg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/52E4RP7XDzalpIrOgSTgiQ" /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 10`]
         [YearComponent className:"year-class michael-bg-theme" year:"2009" /] 
-        [ContentComponent className:"content-class michael-bg-theme" desc:"died (age 50)" /]
+        [ContentComponent className:"content-class michael-bg-theme" desc:"Michael Jackson died at age 50" /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 11`]
         [YearComponent className:"year-class michael-bg-theme" year:"2010" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"December 10, 2010" desc:"Michael" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/michael.jpg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/0yYWeLqonFk11pmb0RiMbP" /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 12`]
         [YearComponent className:"year-class michael-bg-theme" year:"2014" /]
+        [DescComponent className:"desc-class michael-bg-theme" date:"May 9, 2014" desc:"Xscape" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/xscape.png"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/7pomP86PUhoJpY3fsC0WDQ" /]
     [/Step]

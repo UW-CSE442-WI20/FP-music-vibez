@@ -12,8 +12,6 @@ var xScale, yScale;
 var dotRadius = 2;
 var dotColor = "#696969";
 
-//var filteredData = [];
-
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 800 - margin.left - margin.right;
 const height = 300 - margin.top - margin.bottom;
@@ -25,19 +23,13 @@ class SalesChart extends D3Component {
 
   initialize(node, props) {
 
-    //console.log(this.props.albums);
     // create color scale
     var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     var i = 0;
-   // console.log("creating map..");
     this.props.albums.forEach(function(d) {
-      //console.log(d);
-     // console.log(colorScale(i));
       albumToColorMap.set(d, colorScale(i));
       i += 1;
-     // console.log(albumToColorMap.get(d));
     })
-
 
     fetch(props.src)
         .then((response) => {
@@ -153,12 +145,12 @@ class SalesChart extends D3Component {
         var data = d3.csvParse(text);
         var filterStart = Date.parse(props.years[0]);
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
-        console.log("start ", props.years[0]);
-        console.log("end ", props.years[props.years.length - 1]);
+        //console.log("start ", props.years[0]);
+        //console.log("end ", props.years[props.years.length - 1]);
 
         var yearDiff = (new Date(filterEnd)).getFullYear() - (new Date(filterStart)).getFullYear();
         if (yearDiff > 6) {
-          console.log("year diff too large", yearDiff);
+          //console.log("year diff too large", yearDiff);
           filterStart = (new Date(filterEnd)).setFullYear((new Date(filterEnd)).getFullYear() - 5)
         }
 
@@ -170,8 +162,6 @@ class SalesChart extends D3Component {
           } 
         });
 
-        //var maxYear = d3.max(props.years, d => Date.parse(d)); 
-        //var minYear = d3.min(props.years, d => Date.parse(d));
         xScale = d3.scaleLinear()
             .domain([filterStart, filterEnd])
             //.domain([minYear, maxYear])
@@ -184,13 +174,10 @@ class SalesChart extends D3Component {
           .domain([100, 1])
           .range([ height, 0]); 
 
-        //console.log("FILTERED DATA", filteredData);
-
         var circles = this.svg.selectAll("circle")
                         .data(filteredData);
 
-          circles.exit().remove();
-
+        circles.exit().remove();
 
         circles.enter()
           .append("circle")
@@ -204,12 +191,9 @@ class SalesChart extends D3Component {
             this.handleMouseOut(d, i, nodes);
           }).style("fill", 
             function(d) { 
-              //console.log("filling", d['Song Title'], d.Album)
               if (albumToColorMap.get(d.Album) != null) { 
-             //   console.log("color is", albumToColorMap.get(d.Album));
                 return albumToColorMap.get(d.Album)}
               else {
-              //  console.log("no color", albumToColorMap.get(d.Album))
                 return "#000"
               }
           });
@@ -221,12 +205,9 @@ class SalesChart extends D3Component {
           .attr("cy", function (d) { return yScale(d.Rank); } )
           .style("fill", 
             function(d) { 
-              //console.log("filling", d['Song Title'], d.Album)
               if (albumToColorMap.get(d.Album) != null) { 
-             //   console.log("color is", albumToColorMap.get(d.Album));
                 return albumToColorMap.get(d.Album)}
               else {
-              //  console.log("no color", albumToColorMap.get(d.Album))
                 return "#000"
               }
           });
