@@ -133,6 +133,12 @@
         [AlbumComponent className:"gaga-theme" artistName:Lady-Gaga albumArt:"static/images/lady-gaga/stupid-love.jpg"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/2HDW1EX8IBI3jqobswAfrZ?highlight=spotify:track:2kJu14V7hbZw3I4K8L8SXb" /]
     [/Step]
+
+    [Step]
+        [action]
+            [ReturnBtnComponent className:"year-class gaga-bg-theme" onClick:`window.scrollTo({ top: 0, behavior: 'smooth' })` /]
+        [/action]
+    [/Step]
 [/Conditional]
 
 [Conditional if:`artist == "queen"`]
@@ -267,6 +273,12 @@
         [DescComponent className:"desc-class queen-bg-theme" date:"November 6, 1995" desc:"Made in Heaven" /]
         [AlbumComponent className:"queen-theme" artistName:Queen albumArt:"static/images/Queen/Madeinheaven.jpg"/]
     [/Step]
+
+    [Step]
+        [action]
+            [ReturnBtnComponent className:"year-class queen-bg-theme" onClick:`window.scrollTo({ top: 0, behavior: 'smooth' })` /]
+        [/action]
+    [/Step]
 [/Conditional]
 
 [Conditional if:`artist == "michael"`]
@@ -379,6 +391,12 @@
         [DescComponent className:"desc-class michael-bg-theme" date:"May 9, 2014" desc:"Xscape" /]       
         [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/xscape.png"/]
         [PlaylistComponent className:"playlist-class" url:"https://open.spotify.com/embed/album/7pomP86PUhoJpY3fsC0WDQ" /]
+    [/Step]
+
+    [Step]
+        [action]
+            [ReturnBtnComponent className:"year-class michael-bg-theme" onClick:`window.scrollTo({ top: 0, behavior: 'smooth' })` /]
+        [/action]
     [/Step]
 [/Conditional]
 
@@ -510,7 +528,7 @@
 
     [Step]
         [action]
-            [ReturnBtnComponent className:"year-class beatles-bg-theme" /]
+            [ReturnBtnComponent className:"year-class beatles-bg-theme" onClick:`window.scrollTo({ top: 0, behavior: 'smooth' })` /]
         [/action]
     [/Step]
 [/Conditional]
@@ -594,6 +612,12 @@
         [YearComponent className:"year-class kanye-bg-theme" year:"2019" /]
         [DescComponent className:"desc-class kanye-bg-theme" date:"October 25, 2019" desc:"Jesus is King" /]
         [AlbumComponent className:"kanye-theme" artistName:Kanye-West albumArt:"static/images/kanye-west/jesus-is-king.jpg" /]
+    [/Step]
+
+    [Step]
+        [action]
+            [ReturnBtnComponent className:"year-class kanye-bg-theme" onClick:`window.scrollTo({ top: 0, behavior: 'smooth' })` /]
+        [/action]
     [/Step]
 [/Conditional]
 

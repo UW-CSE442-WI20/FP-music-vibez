@@ -145,7 +145,7 @@ const allData = {
     {
       "album-name": "Forever, Michael",
       "release-date": "01/16/1975",
-      "worldwide-sales": null,
+      "worldwide-sales": 1000000,
       year: 1975,
       color: "rgb(225, 113, 73)"
     },
