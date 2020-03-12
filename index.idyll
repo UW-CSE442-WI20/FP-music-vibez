@@ -157,7 +157,6 @@
         [YearComponent className:"year-class queen-bg-theme" year:"1971" /]
         [ContentComponent className:"content-class queen-bg-theme" desc:"John Deacon joined the band" /]
         [ContentComponent className:"content-class queen-bg-theme" desc:"The band recorded their first songs" /]
-        [AlbumComponent className:"queen-theme" artistName:Queen albumArt:"static/images/Queen/Queen-1971.jpg"/]
     [/Step]
 
     [Step onEnterView:`queenCurStep = 2`]

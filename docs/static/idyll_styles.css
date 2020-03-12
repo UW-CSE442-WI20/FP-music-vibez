@@ -1289,7 +1289,8 @@ p {
 }
 
 .charts {
-  margin-right: 100%;
+  /* margin-right: 100%; */
+  background: transparent;
 }
 
 .playlist-class {
