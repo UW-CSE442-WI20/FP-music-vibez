@@ -126,7 +126,7 @@ const allData = {
       "release-date": "01/24/1972",
       "worldwide-sales": null,
       year: 1972,
-      color: "rgb(91, 63, 52)"
+      color: "rgb(119, 129, 92)"
     },
     {
       "album-name": "Ben",
@@ -147,21 +147,21 @@ const allData = {
       "release-date": "01/16/1975",
       "worldwide-sales": null,
       year: 1975,
-      color: "rgb(15, 13, 15)"
+      color: "rgb(225, 113, 73)"
     },
     {
       "album-name": "Off the Wall",
       "release-date": "08/10/1979",
       "worldwide-sales": 20000000,
       year: 1979,
-      color: "rgb(66, 51, 40)"
+      color: "rgb(183, 65, 14)"
     },
     {
       "album-name": "Thriller",
       "release-date": "11/30/1982",
       "worldwide-sales": 66000000,
       year: 1982,
-      color: "rgb(124, 125, 119)"
+      color: "rgb(255, 0, 0)"
     },
     {
       "album-name": "Bad",
@@ -175,14 +175,14 @@ const allData = {
       "release-date": "11/26/1991",
       "worldwide-sales": 32000000,
       year: 1991,
-      color: "rgb(77, 63, 54)"
+      color: "rgb(00, 255, 255)"
     },
     {
       "album-name": "HIStory: Past, Present and Future, Book I",
       "release-date": "06/20/1995",
       "worldwide-sales": 22000000,
       year: 1995,
-      color: "rgb(24, 19, 23)"
+      color: "rgb(69, 69, 69)"
     },
     {
       "album-name": "Invincible",
@@ -196,7 +196,7 @@ const allData = {
       "release-date": "06/25/2009",
       "worldwide-sales": 541000,
       year: 2009,
-      color: "rgb(32, 23, 26)"
+      color: "rgb(12, 12, 54)"
     },
     {
       "album-name": "Xscape",

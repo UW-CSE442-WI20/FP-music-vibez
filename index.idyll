@@ -275,7 +275,7 @@
     [var name:"michaelDates" value:`["10/01/1971", "01/24/1972", "04/13/1973", "01/16/1975", "08/10/1979", "11/30/1982", "03/25/1983", "09/01/1987", "10/26/1991", "06/20/1995", "10/30/2001", "06/25/2009", "12/10/2010", "05/09/2014"]` /]
     [var name:"michaelAlbums" value:`["Got To Be There", "Ben", "Music and Me", "Forever, Michael", "Off The Wall", "Thriller 25 Super Deluxe Edition", "Bad 25th Anniversary", "Dangerous", "HIStory - PAST, PRESENT AND FUTURE", "Invincible", "Michael", "Xscape"]` /]
     [var name:"michaelYears" value:`["1972", "1973", "1975", "1979", "1982", "1983", "1987", "1991", "1995", "2001", "2009", "2010", "2014"]` /]
-    [var name:"michaelAlbumColors" value:`["rgb(91, 63, 52)", "rgb(93, 81, 58)", "rgb(0, 81, 58)", "rgb(15, 13, 15)", "rgb(66, 51, 40)", "rgb(124, 135, 119)", "rgb(165, 135, 119)", "rgb(165, 164, 163)", "rgb(77, 63, 54)", "rgb(24, 19, 23)", "rgb(137, 129, 140)", "rgb(32, 23, 26)", "rgb(158, 144, 54)"]` /]
+    [var name:"michaelAlbumColors" value:`["rgb(119, 129, 92)", "rgb(93, 81, 58)", "rgb(0, 81, 68)", "rgb(183, 65, 14)", "rgb(255, 0, 0)", "rgb(165, 164, 163)", "rgb(0, 255, 255)", "rgb(69, 69, 69)", "rgb(127, 139, 140)", "rgb(12, 12, 52)", "rgb(158, 144, 54)"]` /]
 
     [var name:"michaelCurStep" value:0 /]
 
