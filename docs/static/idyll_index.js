@@ -296,56 +296,71 @@ var allData = {
   }, {
     "album-name": "Jesus Is King",
     "release-date": "10/25/2019",
-    "worldwide-sales": "300000"
+    "worldwide-sales": "300000",
+    year: 2019
   }],
   michael: [{
     "album-name": "Got To Be There",
     "release-date": "01/24/1972",
-    "worldwide-sales": null
+    "worldwide-sales": null,
+    year: 1972
   }, {
     "album-name": "Ben",
     "release-date": "08/04/1972",
-    "worldwide-sales": null
+    "worldwide-sales": null,
+    year: 1972
   }, {
     "album-name": "Music & Me",
     "release-date": "04/13/1973",
-    "worldwide-sales": null
+    "worldwide-sales": null,
+    year: 1973
   }, {
     "album-name": "Forever, Michael",
     "release-date": "01/16/1975",
-    "worldwide-sales": null
+    "worldwide-sales": null,
+    year: 1975
   }, {
     "album-name": "Off the Wall",
     "release-date": "08/10/1979",
-    "worldwide-sales": 20000000
+    "worldwide-sales": 20000000,
+    year: 1979
   }, {
     "album-name": "Thriller",
     "release-date": "11/30/1982",
-    "worldwide-sales": 66000000
+    "worldwide-sales": 66000000,
+    year: 1982
   }, {
     "album-name": "Bad",
     "release-date": "09/01/1987",
-    "worldwide-sales": 35000000
+    "worldwide-sales": 35000000,
+    year: 1987
   }, {
     "album-name": "Dangerous",
     "release-date": "11/26/1991",
-    "worldwide-sales": 32000000
+    "worldwide-sales": 32000000,
+    year: 1991
   }, {
     "album-name": "HIStory: Past, Present and Future, Book I",
     "release-date": "06/20/1995",
-    "worldwide-sales": 22000000
+    "worldwide-sales": 22000000,
+    year: 1995
   }, {
     "album-name": "Invincible",
     "release-date": "10/30/2001",
-    "worldwide-sales": 6000000
+    "worldwide-sales": 6000000,
+    year: 2001
+
   }, {
     "album-name": "Michael",
     "release-date": "06/25/2009",
-    "worldwide-sales": 541000
+    "worldwide-sales": 541000,
+    year: 2009
+
   }, {
     "album-name": "Xscape",
     "release-date": "12/10/2010",
-    "worldwide-sales": 1700000
+    "worldwide-sales": 1700000,
+    year: 2010
   }]
 };
 
@@ -377,14 +392,12 @@ var HorizontalBarChart = function (_D3Component) {
       var data = this.getData(artist, step, years);
 
       // create color scale
-      //console.log(this.getAlbumNames(data));
       var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
       var i = 0;
       this.getAlbumNames(this.getAllData(artist)).forEach(function (d) {
         albumToColorMap.set(d, colorScale(i));
         i += 1;
       });
-      //console.log(albumToColorMap);
 
       this.svg = d3.select(node).append("svg").attr("width", width + margin.left + margin.right).attr("height", height + margin.top + margin.bottom).append("g").attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
@@ -662,6 +675,8 @@ var xScale, yScale;
 var dotRadius = 2;
 var dotColor = "#696969";
 
+//var filteredData = [];
+
 var margin = { top: 30, right: 40, bottom: 20, left: 50 };
 var width = 800 - margin.left - margin.right;
 var height = 300 - margin.top - margin.bottom;
@@ -682,13 +697,17 @@ var SalesChart = function (_D3Component) {
     value: function initialize(node, props) {
       var _this2 = this;
 
-      console.log(this.props.albums);
+      //console.log(this.props.albums);
       // create color scale
       var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
       var i = 0;
+      // console.log("creating map..");
       this.props.albums.forEach(function (d) {
+        //console.log(d);
+        // console.log(colorScale(i));
         albumToColorMap.set(d, colorScale(i));
         i += 1;
+        // console.log(albumToColorMap.get(d));
       });
 
       fetch(props.src).then(function (response) {
@@ -721,11 +740,8 @@ var SalesChart = function (_D3Component) {
         var minYear = d3.min(props.years, function (d) {
           return Date.parse(d);
         });
-        if (new Date(maxYear).getFullYear() - new Date(minYear).getFullYear() < 5) {
-          _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%b %Y")));
-        } else {
-          _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%Y")));
-        }
+
+        _this2.svg.append("g").attr("class", "x-axis").attr("transform", "translate(0," + height + ")").call(d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%b %Y")));
 
         // X axis label
         _this2.svg.append("text").attr("transform", "translate(" + width / 2 + " ," + (height + margin.top) + ")").style("text-anchor", "middle").text("Time");
@@ -745,6 +761,7 @@ var SalesChart = function (_D3Component) {
         // initialize tooltip 
         tooltipDiv = d3.select("body").append("div").attr("class", "tooltip").style("opacity", 0);
 
+        console.log("FILTERED DATA", filteredData);
         // add dots
         var dots = _this2.svg.append('g').selectAll("dot").data(filteredData).enter().append("circle").attr("cx", function (d) {
           return xScale(d.Year);
@@ -774,6 +791,13 @@ var SalesChart = function (_D3Component) {
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
         console.log("start ", props.years[0]);
         console.log("end ", props.years[props.years.length - 1]);
+
+        var yearDiff = new Date(filterEnd).getFullYear() - new Date(filterStart).getFullYear();
+        if (yearDiff > 6) {
+          console.log("year diff too large", yearDiff);
+          filterStart = new Date(filterEnd).setFullYear(new Date(filterEnd).getFullYear() - 5);
+        }
+
         var filteredData = [];
         data.forEach(function (d) {
           d.Year = Date.parse(d.Year);
@@ -782,38 +806,55 @@ var SalesChart = function (_D3Component) {
           }
         });
 
-        var maxYear = d3.max(props.years, function (d) {
-          return Date.parse(d);
-        });
-        var minYear = d3.min(props.years, function (d) {
-          return Date.parse(d);
-        });
-        xScale = d3.scaleLinear().domain([minYear, maxYear]).range([0, width]);
-        var xAxis;
-        if (new Date(maxYear).getFullYear() - new Date(minYear).getFullYear() < 5) {
-          xAxis = d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%b %Y"));
-        } else {
-          xAxis = d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%Y"));
-        }
-        _this3.svg.select(".x-axis").transition().duration(500).call(xAxis);
+        //var maxYear = d3.max(props.years, d => Date.parse(d)); 
+        //var minYear = d3.min(props.years, d => Date.parse(d));
+        xScale = d3.scaleLinear().domain([filterStart, filterEnd])
+        //.domain([minYear, maxYear])
+        .range([0, width]);
+        var xAxis = d3.axisBottom(xScale).ticks(5).tickFormat(d3.timeFormat("%b %Y"));
+        _this3.svg.select(".x-axis").transition().duration(700).call(xAxis);
 
         yScale = d3.scaleLinear().domain([100, 1]).range([height, 0]);
 
-        _this3.svg.selectAll(".singles-circles").data(filteredData).enter().append("circle").attr("class", "singles-circles").style("fill", dotColor).attr("r", dotRadius).attr("class", "singles-circles").style("fill", function (d) {
-          return albumToColorMap.get(d.Album);
+        //console.log("FILTERED DATA", filteredData);
+
+        var circles = _this3.svg.selectAll("circle").data(filteredData);
+
+        circles.exit().remove();
+
+        circles.enter().append("circle").attr("r", dotRadius).attr("cx", function (d) {
+          return xScale(d.Year);
+        }).attr("cy", function (d) {
+          return yScale(d.Rank);
         }).on('mouseenter', function (d, i, nodes) {
           _this3.handleMouseEnter(d, i, nodes);
         }).on('mouseout', function (d, i, nodes) {
           _this3.handleMouseOut(d, i, nodes);
-        });;
+        }).style("fill", function (d) {
+          //console.log("filling", d['Song Title'], d.Album)
+          if (albumToColorMap.get(d.Album) != null) {
+            //   console.log("color is", albumToColorMap.get(d.Album));
+            return albumToColorMap.get(d.Album);
+          } else {
+            //  console.log("no color", albumToColorMap.get(d.Album))
+            return "#000";
+          }
+        });
 
-        _this3.svg.selectAll(".singles-circles").transition().duration(500).attr("cx", function (d) {
+        circles.transition().duration(700).attr("r", dotRadius).attr("cx", function (d) {
           return xScale(d.Year);
         }).attr("cy", function (d) {
           return yScale(d.Rank);
+        }).style("fill", function (d) {
+          //console.log("filling", d['Song Title'], d.Album)
+          if (albumToColorMap.get(d.Album) != null) {
+            //   console.log("color is", albumToColorMap.get(d.Album));
+            return albumToColorMap.get(d.Album);
+          } else {
+            //  console.log("no color", albumToColorMap.get(d.Album))
+            return "#000";
+          }
         });
-
-        _this3.svg.selectAll(".singles-circles").data(filteredData).exit().remove();
 
         return _this3.svg.node();
       });

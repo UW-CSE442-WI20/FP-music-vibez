@@ -12,6 +12,8 @@ var xScale, yScale;
 var dotRadius = 2;
 var dotColor = "#696969";
 
+//var filteredData = [];
+
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 800 - margin.left - margin.right;
 const height = 300 - margin.top - margin.bottom;
@@ -23,13 +25,17 @@ class SalesChart extends D3Component {
 
   initialize(node, props) {
 
-    console.log(this.props.albums);
+    //console.log(this.props.albums);
     // create color scale
     var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     var i = 0;
+   // console.log("creating map..");
     this.props.albums.forEach(function(d) {
+      //console.log(d);
+     // console.log(colorScale(i));
       albumToColorMap.set(d, colorScale(i));
       i += 1;
+     // console.log(albumToColorMap.get(d));
     })
 
 
@@ -65,21 +71,13 @@ class SalesChart extends D3Component {
 
         var maxYear = d3.max(props.years, d => Date.parse(d)); 
         var minYear = d3.min(props.years, d => Date.parse(d));
-        if ((new Date(maxYear).getFullYear() - new Date(minYear).getFullYear()) < 5) {
-                  this.svg.append("g")
-          .attr("class", "x-axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(xScale)
-            .ticks(5)
-            .tickFormat(d3.timeFormat("%b %Y")));
-        } else {
-          this.svg.append("g")
-          .attr("class", "x-axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(xScale)
-            .ticks(5)
-            .tickFormat(d3.timeFormat("%Y")));
-        }
+      
+        this.svg.append("g")
+        .attr("class", "x-axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xScale)
+          .ticks(5)
+          .tickFormat(d3.timeFormat("%b %Y")));
 
         // X axis label
         this.svg.append("text")             
@@ -120,6 +118,7 @@ class SalesChart extends D3Component {
           .attr("class", "tooltip")       
           .style("opacity", 0);
 
+        console.log("FILTERED DATA", filteredData);
         // add dots
         var dots = this.svg.append('g')
           .selectAll("dot")
@@ -156,6 +155,13 @@ class SalesChart extends D3Component {
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
         console.log("start ", props.years[0]);
         console.log("end ", props.years[props.years.length - 1]);
+
+        var yearDiff = (new Date(filterEnd)).getFullYear() - (new Date(filterStart)).getFullYear();
+        if (yearDiff > 6) {
+          console.log("year diff too large", yearDiff);
+          filterStart = (new Date(filterEnd)).setFullYear((new Date(filterEnd)).getFullYear() - 5)
+        }
+
         var filteredData = [];
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
@@ -164,55 +170,67 @@ class SalesChart extends D3Component {
           } 
         });
 
-        var maxYear = d3.max(props.years, d => Date.parse(d)); 
-        var minYear = d3.min(props.years, d => Date.parse(d));
+        //var maxYear = d3.max(props.years, d => Date.parse(d)); 
+        //var minYear = d3.min(props.years, d => Date.parse(d));
         xScale = d3.scaleLinear()
-            .domain([minYear, maxYear])
+            .domain([filterStart, filterEnd])
+            //.domain([minYear, maxYear])
             .range([ 0, width ]);
-        var xAxis; 
-        if ((new Date(maxYear).getFullYear() - new Date(minYear).getFullYear()) < 5) {
-          xAxis = d3.axisBottom(xScale).ticks(5)
+        var xAxis = d3.axisBottom(xScale).ticks(5)
             .tickFormat(d3.timeFormat("%b %Y"));
-        } else {
-          xAxis = d3.axisBottom(xScale).ticks(5)
-            .tickFormat(d3.timeFormat("%Y"));
-        }
-        this.svg.select(".x-axis").transition().duration(500).call(xAxis);
+        this.svg.select(".x-axis").transition().duration(700).call(xAxis);
 
         yScale = d3.scaleLinear()
           .domain([100, 1])
           .range([ height, 0]); 
 
-        this.svg
-          .selectAll(".singles-circles")
-          .data(filteredData)
-          .enter()
-          .append("circle")
-          .attr("class", "singles-circles")
-          .style("fill", dotColor)
-          .attr("r", dotRadius)
-            .attr("class", "singles-circles")
-            .style("fill", function(d) { 
-              return albumToColorMap.get(d.Album) })
-            .on('mouseenter', (d, i, nodes) => {
-              this.handleMouseEnter(d, i, nodes);
-            })
-            .on('mouseout', (d, i, nodes) => {
-              this.handleMouseOut(d, i, nodes);
-            });;
+        //console.log("FILTERED DATA", filteredData);
 
-        this.svg
-          .selectAll(".singles-circles")
-          .transition()
-          .duration(500)
+        var circles = this.svg.selectAll("circle")
+                        .data(filteredData);
+
+          circles.exit().remove();
+
+
+        circles.enter()
+          .append("circle")
+          .attr("r", dotRadius)
           .attr("cx", function (d) { return xScale(d.Year); } )
-          .attr("cy", function (d) { return yScale(d.Rank); } );
- 
-        this.svg
-          .selectAll(".singles-circles")
-          .data(filteredData)
-          .exit()
-          .remove();
+          .attr("cy", function (d) { return yScale(d.Rank); } )
+          .on('mouseenter', (d, i, nodes) => {
+            this.handleMouseEnter(d, i, nodes);
+          })
+          .on('mouseout', (d, i, nodes) => {
+            this.handleMouseOut(d, i, nodes);
+          }).style("fill", 
+            function(d) { 
+              //console.log("filling", d['Song Title'], d.Album)
+              if (albumToColorMap.get(d.Album) != null) { 
+             //   console.log("color is", albumToColorMap.get(d.Album));
+                return albumToColorMap.get(d.Album)}
+              else {
+              //  console.log("no color", albumToColorMap.get(d.Album))
+                return "#000"
+              }
+          });
+
+        circles.transition()
+          .duration(700)
+          .attr("r", dotRadius)
+          .attr("cx", function (d) { return xScale(d.Year); } )
+          .attr("cy", function (d) { return yScale(d.Rank); } )
+          .style("fill", 
+            function(d) { 
+              //console.log("filling", d['Song Title'], d.Album)
+              if (albumToColorMap.get(d.Album) != null) { 
+             //   console.log("color is", albumToColorMap.get(d.Album));
+                return albumToColorMap.get(d.Album)}
+              else {
+              //  console.log("no color", albumToColorMap.get(d.Album))
+                return "#000"
+              }
+          });
+
 
         return this.svg.node();
 
