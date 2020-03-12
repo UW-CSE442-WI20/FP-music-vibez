@@ -11,7 +11,7 @@ class AlbumComponent extends React.Component {
     return (
       <div {...props}>
         <iframe src={this.props.url} height="380" 
-                frameborder="0" 
+                frameBorder="0" 
                 allowtransparency="true" 
                 allow="encrypted-media"></iframe>
       </div>
