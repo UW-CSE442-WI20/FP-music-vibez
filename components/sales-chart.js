@@ -170,7 +170,7 @@ class SalesChart extends D3Component {
             .range([ 0, width ]);
         var xAxis = d3.axisBottom(xScale).ticks(5)
             .tickFormat(d3.timeFormat("%b %Y"));
-        this.svg.select(".x-axis").transition().duration(700).call(xAxis);
+        this.svg.select(".x-axis").transition().duration(1500).call(xAxis);
 
         yScale = d3.scaleLinear()
           .domain([100, 1])
@@ -179,29 +179,43 @@ class SalesChart extends D3Component {
         var circles = this.svg.selectAll("circle")
                         .data(filteredData);
 
-        circles.exit().remove();
+        circles.exit()
+                .transition()
+                .delay(function(d,i){return(i*3)})
+                .duration(500)
+                .attr("r", 0)
+                .remove();
 
-        circles.enter()
+        var enterDots = circles.enter()
           .append("circle")
-          .attr("r", dotRadius)
+          .attr("r", 0)
           .attr("cx", function (d) { return xScale(d.Year); } )
-          .attr("cy", function (d) { return yScale(d.Rank); } )
-          .on('mouseenter', (d, i, nodes) => {
+          
+        enterDots.transition()
+                .delay(function(d,i){return(i*3)})
+                .duration(1500)
+                .attr("cy", function (d) { return yScale(d.Rank); } )
+                .attr("r", dotRadius)
+                .style("fill", 
+                  function(d) { 
+                    if (albumToColorMap.get(d.Album) != null) { 
+                      return albumToColorMap.get(d.Album)}
+                    else {
+                      return "#000"
+                    }
+                });
+
+        enterDots.on('mouseenter', (d, i, nodes) => {
             this.handleMouseEnter(d, i, nodes);
           })
           .on('mouseout', (d, i, nodes) => {
             this.handleMouseOut(d, i, nodes);
-          }).style("fill", 
-            function(d) { 
-              if (albumToColorMap.get(d.Album) != null) { 
-                return albumToColorMap.get(d.Album)}
-              else {
-                return "#000"
-              }
           });
 
         circles.transition()
-          .duration(700)
+          //.duration(700)
+          .delay(function(d,i){return(i*3)})
+          .duration(2000)
           .attr("r", dotRadius)
           .attr("cx", function (d) { return xScale(d.Year); } )
           .attr("cy", function (d) { return yScale(d.Rank); } )
