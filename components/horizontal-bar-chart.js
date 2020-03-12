@@ -226,7 +226,7 @@ const allData = {
       "release-date": "07/10/1964",
       "worldwide-sales": 4000000,
       year: 1964,
-      color:"rgb(44, 64, 93)"
+      color: "rgb(44, 64, 93)"
     },
     {
       "album-name": "Beatles for Sale",
@@ -294,7 +294,7 @@ const allData = {
   ]
 };
 
-const margin = { top: 30, right: 40, bottom: 20, left: 100 };
+const margin = { top: 30, right: 40, bottom: 40, left: 190 };
 const width = 600;
 const height = 300;
 
@@ -357,7 +357,7 @@ class HorizontalBarChart extends D3Component {
       })
       .attr("height", yScale.bandwidth())
       .attr("fill", function(d) {
-        d["color"]
+        d["color"];
       });
 
     // Append the y-axis
@@ -371,7 +371,24 @@ class HorizontalBarChart extends D3Component {
       .append("g")
       .attr("class", "x-axis")
       .attr("transform", "translate(0," + height + ")")
-      .call(d3.axisBottom(xScale));
+      .call(d3.axisBottom(xScale).ticks(5));
+
+    // Append the x-axis label
+    this.svg
+      .append("text")
+      .attr(
+        "transform",
+        "translate(" + width / 2 + " ," + (height + margin.bottom) + ")"
+      )
+      .style("text-anchor", "middle")
+      .text("Total Confirmed Worldwide Album Sales");
+
+    // Append the chart title
+    this.svg
+      .append("text")
+      .attr("transform", "translate(" + width / 2 + " ," + 0 + ")")
+      .style("text-anchor", "middle")
+      .text("Album Sales");
 
     return this.svg.node();
   }
@@ -398,7 +415,7 @@ class HorizontalBarChart extends D3Component {
       .scaleLinear()
       .domain([0, this.getMaxSales(data)])
       .range([0, width]);
-    var xAxis = d3.axisBottom(xScale);
+    var xAxis = d3.axisBottom(xScale).ticks(5);
     this.svg
       .select(".x-axis")
       .transition()
@@ -441,7 +458,7 @@ class HorizontalBarChart extends D3Component {
   // Returns a json object with the data for the seleted artist
   // up to but not including the ith entry
   getData(artist, step, years) {
-    console.log("getData called with", artist, step, years);
+    //console.log("getData called with", artist, step, years);
     if (!(artist in allData)) {
       return [];
     }
@@ -457,7 +474,7 @@ class HorizontalBarChart extends D3Component {
 
   // Returns a json object with the data for the seleted artist
   getAllData(artist) {
-    console.log("getAllData called with", artist);
+    //console.log("getAllData called with", artist);
     if (!(artist in allData)) {
       return [];
     }
@@ -496,7 +513,7 @@ class HorizontalBarChart extends D3Component {
     for (let i = 0; i < data.length; i++) {
       res.push(data[i][key]);
     }
-    console.log("extractData(" + key + ")", data, res);
+    //console.log("extractData(" + key + ")", data, res);
     return res;
   }
 }
