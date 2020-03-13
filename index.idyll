@@ -642,7 +642,8 @@
 
     [Step onEnterView:`michaelCurStep = 5`]
         [YearComponent className:"year-class michael-bg-theme" year:"1983" /]
-        [ContentComponent className:"content-class michael-bg-theme" desc:"First Moonwalk" /]
+        [ContentComponent className:"content-class michael-bg-theme" desc:"The first Moonwalk occurred during Jackson's performance of 
+        'Billie Jean' broadcast on May 16, 1983." /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 6`]
@@ -711,7 +712,7 @@
 
     [Step onEnterView:`michaelCurStep = 10`]
         [YearComponent className:"year-class michael-bg-theme" year:"2009" /] 
-        [ContentComponent className:"content-class michael-bg-theme" desc:"Michael Jackson died at age 50" /]
+        [ContentComponent className:"content-class michael-bg-theme" desc:"Michael Jackson died of cardiac arrest on June 25, 2009 at the age 50. His physician was later convicted of involuntary manslaughter." /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 11`]
