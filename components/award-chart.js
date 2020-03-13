@@ -44,35 +44,37 @@ class AwardChart extends D3Component {
 
         this.svg.append("text")
           .attr("x", (width / 2) + 30)             
-          .attr("y", (margin.top / 2))
+          .attr("y", (margin.top / 2)+10)
           .attr("text-anchor", "middle")  
           .style("font-size", "16px") 
           .text(props.name + "Awards They Received Over Time"); 
 
         this.svg.append('g')
-          .append("path")
+          .append("circle")
           .attr("class", "example1")
-          .attr('d', awar_svg)
-          .attr("transform", "translate(" + (20) + "," + (margin.top+20) + ")")
+          .attr("cx", 20)
+          .attr("cy", (margin.top+20))
+          .attr("r", 10)
           .attr("fill", "red");
         
         this.svg.append("text")
           .attr("x", 20)             
-          .attr("y", (margin.top+70))
+          .attr("y", (margin.top+45))
           .attr("text-anchor", "middle")  
           .style("font-size", "16px") 
           .text("Won"); 
           
         this.svg.append('g')
-          .append("path")
-          .attr("class", "example2")
-          .attr('d', awar_svg)
-          .attr("transform", "translate(" + (90) + "," + (margin.top+20) + ")")
+          .append("circle")
+          .attr("class", "example1")
+          .attr("cx", 90)
+          .attr("cy", (margin.top+20))
+          .attr("r", 10)
           .attr("fill", "black");
 
           this.svg.append("text")
           .attr("x", 90)             
-          .attr("y", (margin.top+70))
+          .attr("y", (margin.top+45))
           .attr("text-anchor", "middle")  
           .style("font-size", "16px") 
           .text("Nominated");  
@@ -90,7 +92,7 @@ class AwardChart extends D3Component {
           .attr('d', awar_svg)
           .attr("transform", function(d) { 
             if(d.Number <= 25) {
-              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+110) + ")" ;
+              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+90) + ")" ;
             } else if (d.Number > 25 && d.Number <= 50) {
               return "translate(" + (((d.Number-26)*30)+10) + "," + (margin.top+180) + ")" ;
             } else {
@@ -136,11 +138,11 @@ class AwardChart extends D3Component {
           .attr('d', awar_svg)
           .attr("transform", function(d) { 
             if(d.Number <= 25) {
-              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+110) + ")" ;
+              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+80) + ")" ;
             } else if (d.Number > 25 && d.Number <= 51) {
-              return "translate(" + (((d.Number-26)*30)+10) + "," + (margin.top+180) + ")" ;
+              return "translate(" + (((d.Number-26)*30)+10) + "," + (margin.top+150) + ")" ;
             } else {
-              return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+250) + ")" ;
+              return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+220) + ")" ;
             }
           })
           .attr("fill", function(d) {if(d.Result === "Won"){return "red";}else{return "black";}})
