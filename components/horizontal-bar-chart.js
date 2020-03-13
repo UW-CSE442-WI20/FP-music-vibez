@@ -61,63 +61,63 @@ const allData = {
       "release-date": "02/10/2004",
       "worldwide-sales": "4000000",
       year: 2004,
-      color: "rgb(135, 76, 10)"
+      color: "rgb(255,215,0)"
     },
     {
       "album-name": "Late Registration",
       "release-date": "08/30/2005",
       "worldwide-sales": "3100000",
       year: 2005,
-      color: "rgb(22, 15, 11)"
+      color: "rgb(135, 76, 10)"
     },
     {
       "album-name": "Graduation",
       "release-date": "09/11/2007",
       "worldwide-sales": "2700000",
       year: 2007,
-      color: "rgb(118, 48, 92)"
+      color: "rgb(144, 2, 141)"
     },
     {
       "album-name": "808s & Heartbreak",
       "release-date": "11/24/2008",
       "worldwide-sales": "1700000",
       year: 2008,
-      color: "rgb(147, 156, 155)"
+      color: "rgb(191, 207, 207)"
     },
     {
       "album-name": "My Beautiful Dark Twisted Fantasy",
       "release-date": "11/22/2010",
       "worldwide-sales": "2000000",
       year: 2010,
-      color: "rgb(190, 0, 26)"
+      color: "rgb(255, 0, 38)"
     },
     {
       "album-name": "Yeezus",
       "release-date": "06/18/2013",
       "worldwide-sales": "1000000",
       year: 2013,
-      color: "rgb(89, 19, 24)"
+      color: "rgb(0,231,231)"
     },
     {
       "album-name": "The Life Of Pablo",
       "release-date": "02/14/2016",
       "worldwide-sales": "2000000",
       year: 2016,
-      color: "rgb(174, 91, 50)"
+      color: "rgb(242,121,0)"
     },
     {
       "album-name": "Ye",
       "release-date": "06/01/2018",
       "worldwide-sales": "500000",
       year: 2018,
-      color: "rgb(145, 145, 143)"
+      color: "rgb(57,255,20)"
     },
     {
       "album-name": "Jesus Is King",
       "release-date": "10/25/2019",
       "worldwide-sales": "300000",
       year: 2019,
-      color: "rgb(37, 0, 136)"
+      color: "rgb(20,57,255)"
     }
   ],
   michael: [

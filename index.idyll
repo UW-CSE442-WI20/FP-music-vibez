@@ -967,7 +967,7 @@
     [var name:"kanyeDates" value:`["02/10/2004", "01/01/2005", "01/01/2007", "01/01/2008", "01/01/2010", "01/01/2013", "01/01/2016", "01/01/2018", "01/01/2019"]` /]
     [var name:"kanyeStepYears" value:`["2004", "2005", "2007", "2008", "2010", "2013", "2016", "2018", "2019"]` /]
     [var name:"kanyeAlbums" value:`["The College Dropout", "Late Registration", "Graduation", "808s & Heartbreak", "My Beautiful Dark Twisted Fantasy", "Yeezus", "The Life Of Pablo", "Ye", "Jesus Is King"]` /]
-    [var name:"kanyeAlbumColors" value:`["rgb(135, 76, 10)", "rgb(22, 15, 11)", "rgb(118, 48, 92)", "rgb(147, 156, 155)", "rgb(190, 0, 26)", "rgb(89, 19, 24)", "rgb(174, 91, 50)", "rgb(145, 145, 143)", "rgb(37, 0, 136)"]` /]
+    [var name:"kanyeAlbumColors" value:`["rgb(255,215,0)", "rgb(135, 76, 10)", "rgb(144, 2, 141)", "rgb(191, 207, 207)", "rgb(255, 0, 38)", "rgb(0,231,231)", "rgb(242,121,0)", "rgb(57,255,20)", "rgb(20,57,255)"]` /]
 
     #The Trajectory of Kanye West
     [var name:"kanyeCurStep" value:0 /]
