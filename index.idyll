@@ -61,6 +61,7 @@
         [Fixed]
             [SalesChart className:"charts" value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga" albums:gagaAlbums colors:gagaAlbumColors /]
             [HorizontalBarChart className:"charts" artist:artist step:gagaCurStep years:gagaYears /]
+            [AwardChart value:myData src:"./static/awards/gaga-awards.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga"/]
         [/Fixed]
     [/Conditional]
 
@@ -246,6 +247,7 @@
         [Fixed]
             [SalesChart className:"charts" value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen" albums:queenAlbums colors:queenAlbumColors/]
             [HorizontalBarChart className:"charts" artist:artist step:queenCurStep years:queenStepYears/]
+            [AwardChart value:myData src:"./static/awards/queen_awards.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
         [/Fixed]
     [/Conditional]
 
@@ -541,6 +543,7 @@
         [Fixed]
                 [SalesChart className:"charts" value:myData src:"./static/weekly-charts/michael-jackson-weekly-charts.csv" years:`michaelDates.slice(0, michaelCurStep + 2)` name:"Michael Jackson" albums:michaelAlbums colors:michaelAlbumColors /]
                 [HorizontalBarChart className:"charts" artist:"michael" step:michaelCurStep years:michaelYears /]
+                [AwardChart value:myData src:"./static/awards/mj-awards.csv" years:`michaelDates.slice(0, michaelCurStep + 2)` name:"Michael Jackson"/]
         [/Fixed]
     [/Conditional]
 
@@ -773,6 +776,7 @@
             step:beatlesCurStep 
             years:beatlesStepYears
             colors:beatlesAlbumColors/]
+        [AwardChart value:myData src:"./static/awards/beatles-awards.csv" years:`beatlesDates.slice(0, beatlesCurStep + 2)` name:"The Beatles"/]
     [/Fixed]
     [/Conditional]
 
@@ -975,6 +979,7 @@
         [Fixed]
             [SalesChart className:"charts" value:myData src:"./static/weekly-charts/kanye-west-weekly-charts.csv" years:`kanyeDates.slice(0, kanyeCurStep + 2)` name:"Kanye West" albums:kanyeAlbums colors:kanyeAlbumColors /]
             [HorizontalBarChart className:"charts" artist:artist step:kanyeCurStep years:kanyeStepYears /]
+            [AwardChart value:myData src:"./static/awards/kanye-awards.csv" years:`kanyeDates.slice(0, kanyeCurStep + 2)` name:"Kanye West"/]
         [/Fixed]
     [/Conditional]
 

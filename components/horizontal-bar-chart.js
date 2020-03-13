@@ -291,6 +291,113 @@ const allData = {
       year: 1970,
       color: "rgb(225, 27, 34)"
     }
+  ],
+  queen: [
+    {
+      "album-name": "Queen",
+      "release-date": "07/13/1973",
+      "worldwide-sales": 600000,
+      year: 1973,
+      color: "rgb(255, 140, 0)"
+    },
+    {
+      "album-name": "Queen II",
+      "release-date": "03/08/1974",
+      "worldwide-sales": 800000,
+      year: 1974,
+      color: "rgb(145, 145, 145)"
+    },
+    {
+      "album-name": "Sheer Heart Attack",
+      "release-date": "11/08/1974",
+      "worldwide-sales": 4200000,
+      year: 1974,
+      color: "rgb(44, 64, 93)"
+    },
+    {
+      "album-name": "A Night At The Opera",
+      "release-date": "11/21/1975",
+      "worldwide-sales": 4200000,
+      year: 1975,
+      color: "rgb(13, 25, 18)"
+    },
+    {
+      "album-name": "A Day at the Races",
+      "release-date": "12/10/1976",
+      "worldwide-sales": 1500000,
+      year: 1976,
+      color: "rgb(37, 0, 136)"
+    },
+    {
+      "album-name": "News of the World",
+      "release-date": "10/28/1977",
+      "worldwide-sales": 5500000,
+      year: 1977,
+      color: "rgb(152, 97, 54)"
+    },
+    {
+      "album-name": "Jazz",
+      "release-date": "11/10/1978",
+      "worldwide-sales": 1600000,
+      year: 1978,
+      color: "rgb(69, 69, 69)"
+    },
+    {
+      "album-name": "The Game",
+      "release-date": "06/30/1980",
+      "worldwide-sales": 4500000,
+      year: 1980,
+      color: "rgb(66, 54, 48)"
+    },
+    {
+      "album-name": "Flash Gordon",
+      "release-date": "12/08/1980",
+      "worldwide-sales": 400000,
+      year: 1980,
+      color: "rgb(119, 129, 92)"
+    },
+    {
+      "album-name": "Hot Space",
+      "release-date": "05/21/1982",
+      "worldwide-sales": 600000,
+      year: 1982,
+      color: "rgb(34, 50, 49)"
+    },
+    {
+      "album-name": "The Works",
+      "release-date": "02/27/1984",
+      "worldwide-sales": 1500000,
+      year: 1984,
+      color: "rgb(169, 139, 24)"
+    },
+    {
+      "album-name": "A Kind of Magic",
+      "release-date": "06/02/1986",
+      "worldwide-sales": 2200000,
+      year: 1986,
+      color: "rgb(158, 123, 108)"
+    },
+    {
+      "album-name": "The Miracle",
+      "release-date": "05/22/1989",
+      "worldwide-sales": 1500000,
+      year: 1989,
+      color: "rgb(127, 139, 140)"
+    },
+    {
+      "album-name": "Innuendo",
+      "release-date": "02/05/1991",
+      "worldwide-sales": 2500000,
+      year: 1991,
+      color: "rgb(12, 12, 54)"
+    },
+    {
+      "album-name": "Made in Heaven",
+      "release-date": "11/06/1995",
+      "worldwide-sales": 5500000,
+      year: 1991,
+      color: "rgb(99, 8, 134)"
+    }
   ]
 };
 
@@ -311,7 +418,6 @@ class HorizontalBarChart extends D3Component {
     // create color scale
     /*var colorScale = this.props.colors;
           console.log("COLORRRRRRRRRR"colorScale)
-
     //var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     var i = 0;
     this.getAlbumNames(this.getAllData(artist)).forEach(function(d) {
