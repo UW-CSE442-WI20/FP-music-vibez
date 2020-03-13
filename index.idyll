@@ -51,7 +51,7 @@
     [var name:"gagaStepDates" value:`[ "10/28/2008", "03/03/2010", "11/22/2011", "11/11/2013", "09/23/2014","10/21/2016", "10/5/2018","04/10/2020"]`/]
     [var name:"gagaYears" value:`[ "2009","2010","2011","2013","2014", "2016","2018","2020"]`/]
     [var name:"gagaAlbums" value:`["The Fame Monster", "Born This Way", "Artpop", "Cheek to Cheek", "Joanne", "A Star Is Born Soundtrack", "Chromatica"]` /]
-    [var name:"gagaAlbumColors" value:`["rgb(41, 41, 41)", "rgb(143, 134, 127)", "rgb(140, 137, 138)", "rgb(25, 25, 26)", "rgb(144, 96, 54)", "rgb(145, 134, 127)", "rgb(143, 96, 78)", "rgb(136, 147, 158)", "rgb(152, 148, 142)", "rgb(173, 99, 135)"]` /]
+    [var name:"gagaAlbumColors" value:`["rgb(169,169,169)", "rgb(105,105,105)", "rgb(0,0,165)", "rgb(210,180,140)", "rgb(255,182,193)", "rgb(255,215,0)", "rgb(255,20,147)"]` /]
 
 
     #The Trajectory of Lady Gaga

@@ -9,49 +9,49 @@ const allData = {
       "release-date": "10/28/2008",
       "worldwide-sales": 15000000,
       year: 2008,
-      color: "rgb(41, 41, 41)"
+      color: "rgb(169,169,169)"
     },
     {
       "album-name": "Born This Way",
       "release-date": "05/23/2011",
       "worldwide-sales": 6000000,
       year: 2011,
-      color: "rgb(143, 134, 127)"
+      color: "rgb(105,105,105)"
     },
     {
       "album-name": "ARTPOP",
       "release-date": "11/11/2013",
       "worldwide-sales": 2500000,
       year: 2013,
-      color: "rgb(140, 137, 138)"
+      color: "rgb(0,0,165)"
     },
     {
       "album-name": "Cheek to Cheek",
       "release-date": "09/23/2014",
       "worldwide-sales": 1000000,
       year: 2014,
-      color: "rgb(25, 25, 26)"
+      color: "rgb(210,180,140)"
     },
     {
       "album-name": "Joanne",
       "release-date": "10/21/2016",
       "worldwide-sales": 1000000,
       year: 2016,
-      color: "rgb(144, 96, 54)"
+      color: "rgb(255,182,193)"
     },
     {
       "album-name": "A Star Is Born",
       "release-date": "10/5/2018",
       "worldwide-sales": 1148000,
       year: 2018,
-      color: "rgb(143, 96, 78)"
+      color: "rgb(255,215,0)"
     },
     {
       "album-name": "Chromatica",
       "release-date": "04/10/2020",
       "worldwide-sales": 0,
       year: 2020,
-      color: "rgb(136, 147, 158)"
+      color: "rgb(255,20,147)"
     }
   ],
 
