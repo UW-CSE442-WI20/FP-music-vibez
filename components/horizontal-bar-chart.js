@@ -488,13 +488,15 @@ class HorizontalBarChart extends D3Component {
         "translate(" + width / 2 + " ," + (height + margin.bottom) + ")"
       )
       .style("text-anchor", "middle")
-      .text("Total Confirmed Worldwide Album Sales");
+      .style("font-size", "12px") 
+      .text("Total Worldwide Album Sales");
 
     // Append the chart title
     this.svg
       .append("text")
       .attr("transform", "translate(" + width / 2 + " ," + 0 + ")")
       .style("text-anchor", "middle")
+      .style("font-size", "16px") 
       .text("Album Sales");
 
     return this.svg.node();

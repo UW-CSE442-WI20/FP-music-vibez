@@ -79,6 +79,7 @@ class SalesChart extends D3Component {
                 "translate(" + (width / 2) + " ," + 
                                (height + margin.top) + ")")
           .style("text-anchor", "middle")
+          .style("font-size", "12px") 
           .text("Time");
 
         // add Y axis
@@ -97,6 +98,7 @@ class SalesChart extends D3Component {
           .attr("x",0 - (height / 2))
           .attr("dy", "1em")
           .style("text-anchor", "middle")
+          .style("font-size", "12px") 
           .text("Rank");   
 
         // add title

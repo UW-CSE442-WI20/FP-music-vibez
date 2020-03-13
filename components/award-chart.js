@@ -11,6 +11,10 @@ var tooltipDiv;
 var yScale;
 var xScale;
 
+const gold = "#FFD700";
+const silver = "#c0c0c0";
+
+
 const awar_svg = "M13.6-13.6h-6.4c2.4-1.6 4.8-4 4.8-7.2 0-4.8-3.2-8-8-8-4.8 0-8 3.2-8 8 0 3.2 1.6 5.6 4.8 7.2h-6.4c-3.2 0-5.6 2.4-5.6 4.8v15.2c0 2.4 2.4 4.8 4.8 4.8h1.6c0 0 0 .8 0 .8v15.2c0 2.4 1.6 4.8 2.4 4.8h10.4c1.6 0 2.4-2.4 2.4-4.8v-14.4c0 0 0-.8 0-.8h1.6c2.4 0 4.8-2.4 4.8-4.8v-16c1.6-2.4-.8-4.8-3.2-4.8z";
 
 class AwardChart extends D3Component {
@@ -40,47 +44,47 @@ class AwardChart extends D3Component {
         .attr("width", width + margin.left + margin.right - 10)
         .attr("height", height + margin.top + margin.bottom + 20);
 
-        // find a better place for this 
-        /*this.svg.append("text")
+        // title
+        this.svg.append("text")
           .attr("x", (width / 2) + 30)             
           .attr("y", (margin.top / 2)+10)
           .attr("text-anchor", "middle")  
           .style("font-size", "16px") 
           .attr("class", "awards-title")
-          .text("Awards " + props.name + " Received By " + (new Date(filterEnd).toLocaleDateString())); 
-*/
+          .text("Grammys " + props.name + " Received By " + (new Date(filterEnd).getFullYear())); 
 
         // legend -- find better place 
-        /*this.svg.append('g')
+
+        // won legend
+        this.svg.append('g')
           .append("circle")
           .attr("class", "example1")
-          .attr("cx", 20)
-          .attr("cy", (margin.top+20))
+          .attr("cx", (width / 2) + 200)
+          .attr("cy", (margin.top) - 10)
           .attr("r", 5)
-          .attr("fill", "red");
-        
+          .attr("fill", gold);
         this.svg.append("text")
-          .attr("x", 20)             
-          .attr("y", (margin.top+45))
+          .attr("x", (width / 2) + 230)             
+          .attr("y", (margin.top + 5) - 10)
           .attr("text-anchor", "middle")  
           .style("font-size", "12px") 
           .text("Won"); 
           
+        // nominated legend
         this.svg.append('g')
           .append("circle")
           .attr("class", "example1")
-          .attr("cx", 90)
-          .attr("cy", (margin.top+20))
+          .attr("cx", (width / 2) + 260)
+          .attr("cy", (margin.top) - 10)
           .attr("r", 5)
-          .attr("fill", "black");
-
-          this.svg.append("text")
-          .attr("x", 90)             
-          .attr("y", (margin.top+45))
+          .attr("fill", silver);
+        this.svg.append("text")
+          .attr("x", (width / 2) + 300)             
+          .attr("y", (margin.top + 5) - 10)
           .attr("text-anchor", "middle")  
           .style("font-size", "12px") 
           .text("Nominated");  
-         */ 
+         
         tooltipDiv = d3.select("body").append("div") 
           .attr("class", "tooltip")       
           .style("opacity", 0);
@@ -109,17 +113,11 @@ class AwardChart extends D3Component {
             } else {
               return (margin.top+80) ;
             } } )
-          /*.attr("transform", function(d) { 
-            if(d.Number <= 25) {
-              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+80) + ")" ;
-            } else if (d.Number > 25 && d.Number <= 51) {
-              return "translate(" + (((d.Number-26)*30)+10) + "," + (margin.top+150) + ")" ;
-            } else {
-              return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+220) + ")" ;
-            }
-          })*/
-          .attr("fill", function(d) {if(d.Result === "Won"){return "red";}else{return "black";}})
-          .on('mouseenter', (d, i, nodes) => {
+          .attr("fill", function(d) {
+            if(d.Result === "Won")
+              {return gold;}
+            else{return silver;}
+          }).on('mouseenter', (d, i, nodes) => {
             this.handleMouseEnter(d, i, nodes);
           })
           .on('mouseout', (d, i, nodes) => {
@@ -148,10 +146,17 @@ class AwardChart extends D3Component {
         });
 
         
-        this.svg
+        var selectedDots = this.svg
           .selectAll(".awards")
-          .data(filteredData)
-          .enter()
+          .data(filteredData);
+
+        selectedDots.exit().transition()
+                .delay(function(d,i){return(i*3)})
+                .duration(400)
+                .attr("r", 0)
+                .remove();
+
+        var enterDots = selectedDots.enter()
           .append("circle")
           .attr("class", "awards")
           //.attr('d', awar_svg)
@@ -170,39 +175,34 @@ class AwardChart extends D3Component {
             } else {
               return (margin.top+80) ;
             } } )
+          .attr("r", 0);
+
+        enterDots.transition()
+          .delay(function(d,i){return(i*3)})
+          .duration(400)
           .attr("r", 5)
-          /*.attr("transform", function(d) { 
-            if(d.Number <= 25) {
-              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+80) + ")" ;
-            } else if (d.Number > 25 && d.Number <= 51) {
-              return "translate(" + (((d.Number-26)*30)+10) + "," + (margin.top+150) + ")" ;
-            } else {
-              return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+220) + ")" ;
-            }
-          })*/
-          .attr("fill", function(d) {if(d.Result === "Won"){return "red";}else{return "black";}})
-          .on('mouseenter', (d, i, nodes) => {
+          .style("fill", function(d) {
+            if(d.Result === "Won")
+              {return gold;}
+            else{return silver;}
+          });
+
+        enterDots.on('mouseenter', (d, i, nodes) => {
             this.handleMouseEnter(d, i, nodes);
           })
           .on('mouseout', (d, i, nodes) => {
             this.handleMouseOut(d, i, nodes);
           });
 
-        this.svg
+        /*this.svg
           .selectAll(".awards")
           .transition()
-          .duration(500);
+          .duration(500);*/
  
-        this.svg
-          .selectAll(".awards")
-          .data(filteredData)
-          .exit()
-          .remove();
 
 
-        // find a better place for this 
-        //this.svg.select(".awards-title")
-        //        .text("Awards " + props.name + " Received By " + (new Date(filterEnd).toLocaleDateString())); 
+        this.svg.select(".awards-title")
+                .text("Grammys " + props.name + " Received By " + (new Date(filterEnd).getFullYear())); 
 
         return this.svg.node();
 
@@ -223,10 +223,10 @@ class AwardChart extends D3Component {
                 .style("opacity", .95);
     
     tooltipDiv.html("<b>" + d['Award'] +  "</b><br/>Year: " 
-    + (curr.getFullYear()) + "<br/>Nominee:"  + d.Nominee + "<br/>"
+    + (curr.getFullYear()) + "<br/>Nominee: "  + d.Nominee + "<br/>"
     + d.Result)  
         .style("left", (d3.event.pageX - 7) + "px")   
-        .style("top", (d3.event.pageY + 50) + "px")
+        .style("top", (d3.event.pageY - 37) + "px")
         .style("display", "inline-block");  
 
   }
@@ -234,7 +234,7 @@ class AwardChart extends D3Component {
   handleMouseOut(d, i, nodes) {
     d3.select(nodes[i])
     .attr('fill', (d) => {
-      if(d.Result === "Won"){return "red";}else{return "black";}
+      if(d.Result === "Won"){return gold;}else{return silver;}
     }); 
 
     tooltipDiv.transition()    
