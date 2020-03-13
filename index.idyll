@@ -62,6 +62,7 @@
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga" /]
                 [HorizontalBarChart artist:artist step:gagaCurStep years:gagaYears/]
+                [AwardChart value:myData src:"./static/awards/gaga-awards.csv" years:`gagaYears.slice(0, gagaCurStep + 2)` name:"Lady Gaga"/]
             [/Graphic]
 
             [Step ]
@@ -154,23 +155,7 @@
         [Scroller currentStep:queenCurStep]
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
-                [HorizontalBarChart artist:artist step:queenCurStep years:queenStepYears/]
-                [IdyllVegaLite data:awards spec:`{
-                    mark: "line",
-                    encoding: {
-                        x: {
-                        field: "time",
-                        type: "temporal",
-                        axis: {title: "Year", format:"%Y"}
-                        },
-                        y: {
-                        field: "value",
-                        type: "quantitative",
-                        axis: {title: "Water level"},
-                        scale: { domain: [100, 700] }
-                        }
-                    }
-                }` /]
+                [AwardChart value:myData src:"./static/awards/queen_awards.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
             [/Graphic]
             [Step]
                 [YearComponent className:"year-class queen-bg-theme" year:"1970" /]
@@ -438,6 +423,7 @@
             [Graphic]
                 [SalesChart value:myData src:"./static/weekly-charts/kanye-west-weekly-charts.csv" years:`kanyeDates.slice(0, kanyeCurStep + 2)` name:"Kanye West" /]
                 [HorizontalBarChart artist:artist step:kanyeCurStep years:kanyeStepYears /]
+                [AwardChart value:myData src:"./static/awards/kanye-awards.csv" years:`kanyeDates.slice(0, kanyeCurStep + 2)` name:"Kanye West"/]
             [/Graphic]
 
             [Step]
