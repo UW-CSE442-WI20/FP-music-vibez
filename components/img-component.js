@@ -10,7 +10,7 @@ class ImgComponent extends React.Component {
 
     return (
       <div {...props} className="img-component">
-        <img src={this.props.iconicImage} alt="Artist" class="img-button" />
+        <img src={this.props.iconicImage} alt="Artist" className="img-button" />
         <h4 id="artist-label">{this.props.artistName}</h4>
       </div>
     );

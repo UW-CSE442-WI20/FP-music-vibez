@@ -1,6 +1,7 @@
 const React = require("react");
 const D3Component = require("idyll-d3-component");
 const d3 = require("d3");
+const chromatic = require("d3-scale-chromatic");
 
 //var data = []; 
 //var dots;
@@ -15,10 +16,22 @@ const margin = { top: 30, right: 40, bottom: 20, left: 50 };
 const width = 800 - margin.left - margin.right;
 const height = 300 - margin.top - margin.bottom;
 
+var albumToColorMap = new Map();
+
 class SalesChart extends D3Component {
 
 
   initialize(node, props) {
+
+    // create color scale
+    var colorScale = this.props.colors;
+    //var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
+    var i = 0;
+    this.props.albums.forEach(function(d) {
+      console.log(colorScale[i])
+      albumToColorMap.set(d, colorScale[i]);
+      i += 1;
+    })
 
     fetch(props.src)
         .then((response) => {
@@ -52,21 +65,13 @@ class SalesChart extends D3Component {
 
         var maxYear = d3.max(props.years, d => Date.parse(d)); 
         var minYear = d3.min(props.years, d => Date.parse(d));
-        if ((new Date(maxYear).getFullYear() - new Date(minYear).getFullYear()) < 5) {
-                  this.svg.append("g")
-          .attr("class", "x-axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(xScale)
-            .ticks(5)
-            .tickFormat(d3.timeFormat("%b %Y")));
-        } else {
-          this.svg.append("g")
-          .attr("class", "x-axis")
-          .attr("transform", "translate(0," + height + ")")
-          .call(d3.axisBottom(xScale)
-            .ticks(5)
-            .tickFormat(d3.timeFormat("%Y")));
-        }
+      
+        this.svg.append("g")
+        .attr("class", "x-axis")
+        .attr("transform", "translate(0," + height + ")")
+        .call(d3.axisBottom(xScale)
+          .ticks(5)
+          .tickFormat(d3.timeFormat("%b %Y")));
 
         // X axis label
         this.svg.append("text")             
@@ -107,6 +112,7 @@ class SalesChart extends D3Component {
           .attr("class", "tooltip")       
           .style("opacity", 0);
 
+        console.log("FILTERED DATA", filteredData);
         // add dots
         var dots = this.svg.append('g')
           .selectAll("dot")
@@ -117,7 +123,8 @@ class SalesChart extends D3Component {
             .attr("cy", function (d) { return yScale(d.Rank); } )
             .attr("r", dotRadius)
             .attr("class", "singles-circles")
-            .style("fill", dotColor)
+            .style("fill", function(d) { 
+              return albumToColorMap.get(d.Album) })
             .on('mouseenter', (d, i, nodes) => {
               this.handleMouseEnter(d, i, nodes);
             })
@@ -140,8 +147,15 @@ class SalesChart extends D3Component {
         var data = d3.csvParse(text);
         var filterStart = Date.parse(props.years[0]);
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
-        console.log("start ", props.years[0]);
-        console.log("end ", props.years[props.years.length - 1]);
+        //console.log("start ", props.years[0]);
+        //console.log("end ", props.years[props.years.length - 1]);
+
+        var yearDiff = (new Date(filterEnd)).getFullYear() - (new Date(filterStart)).getFullYear();
+        if (yearDiff > 6) {
+          //console.log("year diff too large", yearDiff);
+          filterStart = (new Date(filterEnd)).setFullYear((new Date(filterEnd)).getFullYear() - 5)
+        }
+
         var filteredData = [];
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
@@ -150,54 +164,70 @@ class SalesChart extends D3Component {
           } 
         });
 
-        var maxYear = d3.max(props.years, d => Date.parse(d)); 
-        var minYear = d3.min(props.years, d => Date.parse(d));
         xScale = d3.scaleLinear()
-            .domain([minYear, maxYear])
+            .domain([filterStart, filterEnd])
+            //.domain([minYear, maxYear])
             .range([ 0, width ]);
-        var xAxis; 
-        if ((new Date(maxYear).getFullYear() - new Date(minYear).getFullYear()) < 5) {
-          xAxis = d3.axisBottom(xScale).ticks(5)
+        var xAxis = d3.axisBottom(xScale).ticks(5)
             .tickFormat(d3.timeFormat("%b %Y"));
-        } else {
-          xAxis = d3.axisBottom(xScale).ticks(5)
-            .tickFormat(d3.timeFormat("%Y"));
-        }
-        this.svg.select(".x-axis").transition().duration(500).call(xAxis);
+        this.svg.select(".x-axis").transition().duration(1500).call(xAxis);
 
         yScale = d3.scaleLinear()
           .domain([100, 1])
           .range([ height, 0]); 
 
-        this.svg
-          .selectAll(".singles-circles")
-          .data(filteredData)
-          .enter()
-          .append("circle")
-          .attr("class", "singles-circles")
-          .style("fill", dotColor)
-          .attr("r", dotRadius)
-            .attr("class", "singles-circles")
-            .style("fill", dotColor)
-            .on('mouseenter', (d, i, nodes) => {
-              this.handleMouseEnter(d, i, nodes);
-            })
-            .on('mouseout', (d, i, nodes) => {
-              this.handleMouseOut(d, i, nodes);
-            });;
+        var circles = this.svg.selectAll("circle")
+                        .data(filteredData);
 
-        this.svg
-          .selectAll(".singles-circles")
-          .transition()
-          .duration(500)
+        circles.exit()
+                .transition()
+                .delay(function(d,i){return(i*3)})
+                .duration(500)
+                .attr("r", 0)
+                .remove();
+
+        var enterDots = circles.enter()
+          .append("circle")
+          .attr("r", 0)
           .attr("cx", function (d) { return xScale(d.Year); } )
-          .attr("cy", function (d) { return yScale(d.Rank); } );
- 
-        this.svg
-          .selectAll(".singles-circles")
-          .data(filteredData)
-          .exit()
-          .remove();
+          
+        enterDots.transition()
+                .delay(function(d,i){return(i*3)})
+                .duration(1500)
+                .attr("cy", function (d) { return yScale(d.Rank); } )
+                .attr("r", dotRadius)
+                .style("fill", 
+                  function(d) { 
+                    if (albumToColorMap.get(d.Album) != null) { 
+                      return albumToColorMap.get(d.Album)}
+                    else {
+                      return "#000"
+                    }
+                });
+
+        enterDots.on('mouseenter', (d, i, nodes) => {
+            this.handleMouseEnter(d, i, nodes);
+          })
+          .on('mouseout', (d, i, nodes) => {
+            this.handleMouseOut(d, i, nodes);
+          });
+
+        circles.transition()
+          //.duration(700)
+          .delay(function(d,i){return(i*3)})
+          .duration(2000)
+          .attr("r", dotRadius)
+          .attr("cx", function (d) { return xScale(d.Year); } )
+          .attr("cy", function (d) { return yScale(d.Rank); } )
+          .style("fill", 
+            function(d) { 
+              if (albumToColorMap.get(d.Album) != null) { 
+                return albumToColorMap.get(d.Album)}
+              else {
+                return "#000"
+              }
+          });
+
 
         return this.svg.node();
 
@@ -211,8 +241,9 @@ class SalesChart extends D3Component {
       return dotRadius * 2.5;
     });
 
+
     var resizedData = this.resizeSongPoints(nodes, d['Song Title'], 2.5);
-    this.connectSongPoints(resizedData);
+    this.connectSongPoints(resizedData, d.Album);
 
     tooltipDiv.transition()    
                 .duration(100)    
@@ -256,15 +287,22 @@ class SalesChart extends D3Component {
 
   }
 
-  connectSongPoints(songData) {
+  connectSongPoints(songData, album) {
     var line = d3.line()
         .x(function(d, i) { return xScale(d.Year); }) 
         .y(function(d) { return yScale(d.Rank); });
+
+        console.log(albumToColorMap.get(album));
 
     this.svg.append("path")
       .datum(songData) 
       .attr("class", "line")  
       .attr("d", line)
+      .style("fill", "none")
+      .style("stroke", function(d) { if (albumToColorMap.get(album) != null)
+              { return albumToColorMap.get(album)}
+              else {return "#000"}})
+      .style("stroke-width", 3)
       .lower();
 
   }
