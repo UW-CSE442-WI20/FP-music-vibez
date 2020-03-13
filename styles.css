@@ -118,7 +118,7 @@ h2.dek {
   margin-left: 20px;
   text-align: center;
   font-weight: bold;
-  max-width: 21vw;
+  max-width: 400px;
   border-radius: 25px;
   font-size: large;
 }
@@ -130,24 +130,13 @@ p {
 .content-class {
   margin-left: 20px;
   text-align: center;
-  max-width: 21vw;
+  max-width: 400px;
   margin-top: 10px;
   border-radius: 25px;
   padding-top: 10px;
   padding-right: 10px;
   padding-bottom: 5px;
   padding-left: 10px;
-}
-
-.charts {
-  /* margin-right: 100%; */
-  background: transparent;
-}
-
-.playlist-class {
-  margin-top: 1vh;
-  margin-left: 20px;
-  padding-bottom: 2vh;
 }
 
 .year-class {
@@ -162,10 +151,14 @@ p {
 }
 
 .arrow {
-  border: solid black;
+  border: solid;
   border-width: 0 5px 5px 0;
   display: inline-block;
   padding: 5px;
+}
+
+.rtn-btn:hover {
+  transform: scale(1.2);
 }
 
 .up {
@@ -262,7 +255,7 @@ div.tooltip {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 1s;
+  transition: transform 1.3s;
   transform-style: preserve-3d;
 }
 
