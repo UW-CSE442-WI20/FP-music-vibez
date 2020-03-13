@@ -26,8 +26,6 @@ class AwardChart extends D3Component {
         var filterStart = Date.parse(props.years[0]);
         var filterEnd = Date.parse(props.years[props.years.length - 1]);
         var filteredData = [];
-        console.log(props.years);
-
 
         data.forEach(function(d) {
           d.Year = Date.parse(d.Year);
@@ -92,11 +90,11 @@ class AwardChart extends D3Component {
           .attr('d', awar_svg)
           .attr("transform", function(d) { 
             if(d.Number <= 25) {
-              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+90) + ")" ;
-            } else if (d.Number > 25 && d.Number <= 50) {
-              return "translate(" + (((d.Number-26)*30)+10) + "," + (margin.top+180) + ")" ;
+              return "translate(" + ((d.Number*30)+10) + "," + (margin.top+80) + ")" ;
+            } else if (d.Number > 25 && d.Number <= 51) {
+              return "translate(" + (((d.Number-26)*30)+10) + "," + (margin.top+150) + ")" ;
             } else {
-              return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+250) + ")" ;
+              return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+220) + ")" ;
             }
           })
           .attr("fill", function(d) {if(d.Result === "Won"){return "red";}else{return "black";}})

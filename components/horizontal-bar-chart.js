@@ -219,11 +219,7 @@ const allData = {
       "release-date": "11/22/1963",
       "worldwide-sales": 500000,
       year: 1963,
-<<<<<<< HEAD
-      color: "rgb(165, 164, 163)"
-=======
       color: "rgb(105,105,105)"
->>>>>>> 2a12d120fbe40af4cb4768ed8c2a75ab005a55f4
     },
     {
       "album-name": "A Hard Day's Night",
@@ -422,7 +418,6 @@ class HorizontalBarChart extends D3Component {
     // create color scale
     /*var colorScale = this.props.colors;
           console.log("COLORRRRRRRRRR"colorScale)
-
     //var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     var i = 0;
     this.getAlbumNames(this.getAllData(artist)).forEach(function(d) {
