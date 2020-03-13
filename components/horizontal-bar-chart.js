@@ -124,28 +124,28 @@ const allData = {
     {
       "album-name": "Got To Be There",
       "release-date": "01/24/1972",
-      "worldwide-sales": null,
+      "worldwide-sales": 3200000,
       year: 1972,
       color: "rgb(119, 129, 92)"
     },
     {
       "album-name": "Ben",
       "release-date": "08/04/1972",
-      "worldwide-sales": null,
+      "worldwide-sales": 5000000,
       year: 1972,
       color: "rgb(93, 81, 58)"
     },
     {
       "album-name": "Music & Me",
       "release-date": "04/13/1973",
-      "worldwide-sales": null,
+      "worldwide-sales": 2000000,
       year: 1973,
       color: "rgb(0, 81, 68)"
     },
     {
       "album-name": "Forever, Michael",
       "release-date": "01/16/1975",
-      "worldwide-sales": null,
+      "worldwide-sales": 1000000,
       year: 1975,
       color: "rgb(225, 113, 73)"
     },
