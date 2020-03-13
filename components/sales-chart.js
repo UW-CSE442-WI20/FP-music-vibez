@@ -144,6 +144,9 @@ class SalesChart extends D3Component {
         .then((response) => {
         return response.text();
       }).then((text) => {
+        d3.select("path.line").remove();
+
+
         var data = d3.csvParse(text);
         var filterStart = Date.parse(props.years[0]);
         var filterEnd = Date.parse(props.years[props.years.length - 1]);

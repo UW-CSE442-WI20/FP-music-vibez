@@ -206,9 +206,7 @@ class AwardChart extends D3Component {
 
   handleMouseEnter(d, i, nodes) {
     d3.select(nodes[i])
-    .attr('fill', (d) => {
-      return darkGray;
-    }).attr('r', (d) => {
+    .attr('r', (d) => {
       return dotRadius * 1.75;
     }); 
 
@@ -217,7 +215,7 @@ class AwardChart extends D3Component {
     tooltipDiv.transition()    
                 .duration(100)
                 .style("opacity", 0.95);
-                
+
     tooltipDiv.style("z-index", 30000); 
     
     tooltipDiv.html("<b>" + d['Award'] +  "</b><br/>Year: " 
@@ -231,9 +229,7 @@ class AwardChart extends D3Component {
 
   handleMouseOut(d, i, nodes) {
     d3.select(nodes[i])
-    .attr('fill', (d) => {
-      if(d.Result === "Won"){return gold;}else{return silver;}
-    }).attr('r', (d) => {
+    .attr('r', (d) => {
       return dotRadius;
     }); 
 
