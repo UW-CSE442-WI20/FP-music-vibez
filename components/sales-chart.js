@@ -13,8 +13,8 @@ var dotRadius = 2;
 var dotColor = "#696969";
 
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
-const width = 800 - margin.left - margin.right;
-const height = 300 - margin.top - margin.bottom;
+const width = 700 - margin.left - margin.right;
+const height = 250 - margin.top - margin.bottom;
 
 var albumToColorMap = new Map();
 
@@ -28,7 +28,7 @@ class SalesChart extends D3Component {
     //var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     var i = 0;
     this.props.albums.forEach(function(d) {
-      console.log(colorScale[i])
+      //console.log(colorScale[i])
       albumToColorMap.set(d, colorScale[i]);
       i += 1;
     })
@@ -112,7 +112,7 @@ class SalesChart extends D3Component {
           .attr("class", "tooltip")       
           .style("opacity", 0);
 
-        console.log("FILTERED DATA", filteredData);
+        //console.log("FILTERED DATA", filteredData);
         // add dots
         var dots = this.svg.append('g')
           .selectAll("dot")
@@ -136,8 +136,6 @@ class SalesChart extends D3Component {
       })
   
   }
-
-
 
   update(props) {
       fetch(props.src)
@@ -292,7 +290,7 @@ class SalesChart extends D3Component {
         .x(function(d, i) { return xScale(d.Year); }) 
         .y(function(d) { return yScale(d.Rank); });
 
-        console.log(albumToColorMap.get(album));
+        //console.log(albumToColorMap.get(album));
 
     this.svg.append("path")
       .datum(songData) 

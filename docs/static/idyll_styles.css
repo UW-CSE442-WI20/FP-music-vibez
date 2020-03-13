@@ -1341,7 +1341,7 @@ p {
 }
 
 .idyll-scroll-text .idyll-step {
-  max-width: 45vw;
+  max-width: 40vw;
   top: -210vh;
   position: relative;
   border-style: none;
@@ -1350,9 +1350,15 @@ p {
 }
 
 .idyll-scroll-graphic {
-	max-width: 45vw !important;
+	max-width: 60vw !important;
  	left: 300px !important;
  	z-index: 1 !important;
+}
+
+.fixed {
+  max-width: 40vw !important;
+  left: 50vw !important;
+  z-index: 1 !important;  
 }
 
 div.tooltip {	
@@ -1424,4 +1430,8 @@ div.tooltip {
   background-color: white;
   color: var(--black);
   transform: rotateY(180deg);
+}
+
+.bar-chart {
+  overflow: visible !important;
 }

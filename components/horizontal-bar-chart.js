@@ -298,112 +298,112 @@ const allData = {
       "release-date": "07/13/1973",
       "worldwide-sales": 600000,
       year: 1973,
-      color: "rgb(255, 140, 0)"
+      color: "rgb(139,0,139)"
     },
     {
       "album-name": "Queen II",
       "release-date": "03/08/1974",
       "worldwide-sales": 800000,
       year: 1974,
-      color: "rgb(145, 145, 145)"
+      color: "rgb(105,105,105)"
     },
     {
       "album-name": "Sheer Heart Attack",
       "release-date": "11/08/1974",
       "worldwide-sales": 4200000,
       year: 1974,
-      color: "rgb(44, 64, 93)"
+      color: "rgb(255, 0, 38)"
     },
     {
       "album-name": "A Night At The Opera",
       "release-date": "11/21/1975",
       "worldwide-sales": 4200000,
       year: 1975,
-      color: "rgb(13, 25, 18)"
+      color: "rgb(255,182,193)"
     },
     {
       "album-name": "A Day at the Races",
       "release-date": "12/10/1976",
       "worldwide-sales": 1500000,
       year: 1976,
-      color: "rgb(37, 0, 136)"
+      color: "rgb(135,206,250)"
     },
     {
       "album-name": "News of the World",
       "release-date": "10/28/1977",
       "worldwide-sales": 5500000,
       year: 1977,
-      color: "rgb(152, 97, 54)"
+      color: "rgb(79,121,66)"
     },
     {
       "album-name": "Jazz",
       "release-date": "11/10/1978",
       "worldwide-sales": 1600000,
       year: 1978,
-      color: "rgb(69, 69, 69)"
+      color: "rgb(255,20,147)"
     },
     {
       "album-name": "The Game",
       "release-date": "06/30/1980",
       "worldwide-sales": 4500000,
       year: 1980,
-      color: "rgb(66, 54, 48)"
+      color: "rgb(177, 198, 191)"
     },
     {
       "album-name": "Flash Gordon",
       "release-date": "12/08/1980",
       "worldwide-sales": 400000,
       year: 1980,
-      color: "rgb(119, 129, 92)"
+      color: "rgb(255, 221, 0)"
     },
     {
       "album-name": "Hot Space",
       "release-date": "05/21/1982",
       "worldwide-sales": 600000,
       year: 1982,
-      color: "rgb(34, 50, 49)"
+      color: "rgb(78, 0, 126)"
     },
     {
       "album-name": "The Works",
       "release-date": "02/27/1984",
       "worldwide-sales": 1500000,
       year: 1984,
-      color: "rgb(169, 139, 24)"
+      color: "rgb(135, 76, 10)"
     },
     {
       "album-name": "A Kind of Magic",
       "release-date": "06/02/1986",
       "worldwide-sales": 2200000,
       year: 1986,
-      color: "rgb(158, 123, 108)"
+      color: "rgb(255,140,0)"
     },
     {
       "album-name": "The Miracle",
       "release-date": "05/22/1989",
       "worldwide-sales": 1500000,
       year: 1989,
-      color: "rgb(127, 139, 140)"
+      color: "rgb(0, 131, 126)"
     },
     {
       "album-name": "Innuendo",
       "release-date": "02/05/1991",
       "worldwide-sales": 2500000,
       year: 1991,
-      color: "rgb(12, 12, 54)"
+      color: "rgb(31,199,0)"
     },
     {
       "album-name": "Made in Heaven",
       "release-date": "11/06/1995",
       "worldwide-sales": 5500000,
       year: 1991,
-      color: "rgb(99, 8, 134)"
+      color: "rgb(0, 82, 173)"
     }
   ]
 };
 
-const margin = { top: 30, right: 40, bottom: 40, left: 190 };
+const margin = { top: 30, right: 40, bottom: 40, left: 50 };
 const width = 600;
-const height = 300;
+const height = 250;
 
 var yScale;
 var xScale;
@@ -429,6 +429,7 @@ class HorizontalBarChart extends D3Component {
     this.svg = d3
       .select(node)
       .append("svg")
+      .attr("class", "bar-chart")
       .attr("width", width + margin.left + margin.right)
       .attr("height", height + margin.top + margin.bottom)
       .append("g")

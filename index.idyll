@@ -58,7 +58,7 @@
     [var name:"gagaCurStep" value:0 /]
 
     [Conditional if:`showCharts`]
-        [Fixed]
+        [Fixed class:"fixed-graphics"]
             [SalesChart className:"charts" value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga" albums:gagaAlbums colors:gagaAlbumColors /]
             [HorizontalBarChart className:"charts" artist:artist step:gagaCurStep years:gagaYears /]
             [AwardChart value:myData src:"./static/awards/gaga-awards.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga"/]

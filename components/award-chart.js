@@ -3,8 +3,8 @@ const D3Component = require("idyll-d3-component");
 const d3 = require("d3");
 
 const margin = { top: 30, right: 40, bottom: 20, left: 50 };
-const width = 800 - margin.left - margin.right;
-const height = 300 - margin.top - margin.bottom;
+const width = 600 - margin.left - margin.right;
+const height = 100 - margin.top - margin.bottom;
 
 var tooltipDiv; 
 
@@ -40,26 +40,30 @@ class AwardChart extends D3Component {
         .attr("width", width + margin.left + margin.right - 10)
         .attr("height", height + margin.top + margin.bottom + 20);
 
-        this.svg.append("text")
+        // find a better place for this 
+        /*this.svg.append("text")
           .attr("x", (width / 2) + 30)             
           .attr("y", (margin.top / 2)+10)
           .attr("text-anchor", "middle")  
           .style("font-size", "16px") 
-          .text(props.name + "Awards They Received Over Time"); 
+          .attr("class", "awards-title")
+          .text("Awards " + props.name + " Received By " + (new Date(filterEnd).toLocaleDateString())); 
+*/
 
-        this.svg.append('g')
+        // legend -- find better place 
+        /*this.svg.append('g')
           .append("circle")
           .attr("class", "example1")
           .attr("cx", 20)
           .attr("cy", (margin.top+20))
-          .attr("r", 10)
+          .attr("r", 5)
           .attr("fill", "red");
         
         this.svg.append("text")
           .attr("x", 20)             
           .attr("y", (margin.top+45))
           .attr("text-anchor", "middle")  
-          .style("font-size", "16px") 
+          .style("font-size", "12px") 
           .text("Won"); 
           
         this.svg.append('g')
@@ -67,28 +71,45 @@ class AwardChart extends D3Component {
           .attr("class", "example1")
           .attr("cx", 90)
           .attr("cy", (margin.top+20))
-          .attr("r", 10)
+          .attr("r", 5)
           .attr("fill", "black");
 
           this.svg.append("text")
           .attr("x", 90)             
           .attr("y", (margin.top+45))
           .attr("text-anchor", "middle")  
-          .style("font-size", "16px") 
+          .style("font-size", "12px") 
           .text("Nominated");  
-          
+         */ 
         tooltipDiv = d3.select("body").append("div") 
           .attr("class", "tooltip")       
           .style("opacity", 0);
+
 
         var all_awards = this.svg.append('g')
           .selectAll(".awards")
           .data(filteredData)
           .enter()
-          .append("path")
+          //.append("path")
+          .append("circle")
           .attr("class", "awards")
-          .attr('d', awar_svg)
-          .attr("transform", function(d) { 
+          //.attr('d', awar_svg)
+          .attr("cx", function (d) {  
+            if(d.Number <= 25) {
+              return (d.Number*30)+10 ;
+            } else if (d.Number > 25 && d.Number <= 51) {
+              return ((d.Number-26)*30)+10 ;
+            } else {
+              return ((d.Number-52)*30)+10;
+            } } )
+          .attr("cy", function (d) { if(d.Number <= 25) {
+              return (margin.top+20) ;
+            } else if (d.Number > 25 && d.Number <= 51) {
+              return (margin.top+50) ;
+            } else {
+              return (margin.top+80) ;
+            } } )
+          /*.attr("transform", function(d) { 
             if(d.Number <= 25) {
               return "translate(" + ((d.Number*30)+10) + "," + (margin.top+80) + ")" ;
             } else if (d.Number > 25 && d.Number <= 51) {
@@ -96,7 +117,7 @@ class AwardChart extends D3Component {
             } else {
               return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+220) + ")" ;
             }
-          })
+          })*/
           .attr("fill", function(d) {if(d.Result === "Won"){return "red";}else{return "black";}})
           .on('mouseenter', (d, i, nodes) => {
             this.handleMouseEnter(d, i, nodes);
@@ -131,10 +152,26 @@ class AwardChart extends D3Component {
           .selectAll(".awards")
           .data(filteredData)
           .enter()
-          .append("path")
+          .append("circle")
           .attr("class", "awards")
-          .attr('d', awar_svg)
-          .attr("transform", function(d) { 
+          //.attr('d', awar_svg)
+          .attr("cx", function (d) { 
+            if(d.Number <= 25) {
+              return (d.Number*30)+10 ;
+            } else if (d.Number > 25 && d.Number <= 51) {
+              return ((d.Number-26)*30)+10 ;
+            } else {
+              return ((d.Number-52)*30)+10;
+            } } )
+          .attr("cy", function (d) { if(d.Number <= 25) {
+              return (margin.top+20) ;
+            } else if (d.Number > 25 && d.Number <= 51) {
+              return (margin.top+50) ;
+            } else {
+              return (margin.top+80) ;
+            } } )
+          .attr("r", 5)
+          /*.attr("transform", function(d) { 
             if(d.Number <= 25) {
               return "translate(" + ((d.Number*30)+10) + "," + (margin.top+80) + ")" ;
             } else if (d.Number > 25 && d.Number <= 51) {
@@ -142,7 +179,7 @@ class AwardChart extends D3Component {
             } else {
               return "translate(" + (((d.Number-52)*30)+10) + "," + (margin.top+220) + ")" ;
             }
-          })
+          })*/
           .attr("fill", function(d) {if(d.Result === "Won"){return "red";}else{return "black";}})
           .on('mouseenter', (d, i, nodes) => {
             this.handleMouseEnter(d, i, nodes);
@@ -161,6 +198,11 @@ class AwardChart extends D3Component {
           .data(filteredData)
           .exit()
           .remove();
+
+
+        // find a better place for this 
+        //this.svg.select(".awards-title")
+        //        .text("Awards " + props.name + " Received By " + (new Date(filterEnd).toLocaleDateString())); 
 
         return this.svg.node();
 
