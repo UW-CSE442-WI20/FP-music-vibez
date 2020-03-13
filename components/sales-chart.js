@@ -28,7 +28,6 @@ class SalesChart extends D3Component {
     //var colorScale = d3.scaleOrdinal(d3.schemeCategory10);
     var i = 0;
     this.props.albums.forEach(function(d) {
-      //console.log(colorScale[i])
       albumToColorMap.set(d, colorScale[i]);
       i += 1;
     })
@@ -107,7 +106,7 @@ class SalesChart extends D3Component {
           .attr("y", 0 - (margin.top / 2))
           .attr("text-anchor", "middle")  
           .style("font-size", "16px") 
-          .text(props.name + "'s Singles Rank through Time"); 
+          .text(props.name + "'s Billboard 100 Rankings"); 
 
         // initialize tooltip 
         tooltipDiv = d3.select("body").append("div") 
@@ -116,7 +115,7 @@ class SalesChart extends D3Component {
 
         //console.log("FILTERED DATA", filteredData);
         // add dots
-        var dots = this.svg.append('g')
+       /* var dots = this.svg.append('g')
           .selectAll("dot")
           .data(filteredData)
           .enter()
@@ -132,7 +131,35 @@ class SalesChart extends D3Component {
             })
             .on('mouseout', (d, i, nodes) => {
               this.handleMouseOut(d, i, nodes);
-            });
+            });*/
+
+        var dots = this.svg.append('g')
+          .selectAll("dot")
+          .data(filteredData)
+          .append("circle")
+          .attr("r", 0)
+          .attr("cx", function (d) { return xScale(d.Year); } )
+          
+        dots.transition()
+          .delay(function(d,i){return(i*3)})
+          .duration(1500)
+          .attr("cy", function (d) { return yScale(d.Rank); } )
+          .attr("r", dotRadius)
+          .style("fill", 
+            function(d) { 
+              if (albumToColorMap.get(d.Album) != null) { 
+                return albumToColorMap.get(d.Album)}
+              else {
+                return "#000"
+              }
+          });
+
+        dots.on('mouseenter', (d, i, nodes) => {
+            this.handleMouseEnter(d, i, nodes);
+          })
+          .on('mouseout', (d, i, nodes) => {
+            this.handleMouseOut(d, i, nodes);
+          });
 
         return this.svg.node();
       })
@@ -298,17 +325,20 @@ class SalesChart extends D3Component {
 
         //console.log(albumToColorMap.get(album));
 
+    //console.log("in connect method");
     this.svg.append("path")
       .datum(songData) 
       .attr("class", "line")  
       .attr("d", line)
       .style("fill", "none")
-      .style("stroke", function(d) { if (albumToColorMap.get(album) != null)
-              { return albumToColorMap.get(album)}
-              else {return "#000"}})
-      .style("stroke-width", 3)
+      .style("stroke", function(d) { 
+        if (albumToColorMap.get(album) != null) { 
+          return albumToColorMap.get(album)
+        } else {return "#000"}
+      }).style("stroke-width", 3)
       .lower();
 
+    //console.log("here's that line", d3.select("path.line"));
   }
 
 }
