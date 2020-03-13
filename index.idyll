@@ -1,5 +1,5 @@
 [var name:"title" value:"Pop Trajectories" /]
-[var name:"subtitle" value:"Exploring the careers of iconic musicians" /]
+[var name:"subtitle" value:"Explore the careers of iconic musicians and the trajectory of their albums. To start, select an artist. Then progress down the timeline of their career, interacting with visualizations and album art as you go." /]
 
 [meta title:"Pop Trajectories" description:"Exploring the careers of iconic musicians" /]
 [var name:"showCharts" value:false /]

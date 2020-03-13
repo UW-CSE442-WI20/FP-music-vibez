@@ -55,8 +55,6 @@ class AwardChart extends D3Component {
           .attr("class", "awards-title")
           .text("Grammys " + props.name + " Received By " + (new Date(filterEnd).getFullYear())); 
 
-        // legend -- find better place 
-
         // won legend
         this.svg.append('g')
           .append("circle")
