@@ -9,49 +9,49 @@ const allData = {
       "release-date": "10/28/2008",
       "worldwide-sales": 15000000,
       year: 2008,
-      color: "rgb(41, 41, 41)"
+      color: "rgb(169,169,169)"
     },
     {
       "album-name": "Born This Way",
       "release-date": "05/23/2011",
       "worldwide-sales": 6000000,
       year: 2011,
-      color: "rgb(143, 134, 127)"
+      color: "rgb(105,105,105)"
     },
     {
       "album-name": "ARTPOP",
       "release-date": "11/11/2013",
       "worldwide-sales": 2500000,
       year: 2013,
-      color: "rgb(140, 137, 138)"
+      color: "rgb(0,0,165)"
     },
     {
       "album-name": "Cheek to Cheek",
       "release-date": "09/23/2014",
       "worldwide-sales": 1000000,
       year: 2014,
-      color: "rgb(25, 25, 26)"
+      color: "rgb(210,180,140)"
     },
     {
       "album-name": "Joanne",
       "release-date": "10/21/2016",
       "worldwide-sales": 1000000,
       year: 2016,
-      color: "rgb(144, 96, 54)"
+      color: "rgb(255,182,193)"
     },
     {
       "album-name": "A Star Is Born",
       "release-date": "10/5/2018",
       "worldwide-sales": 1148000,
       year: 2018,
-      color: "rgb(143, 96, 78)"
+      color: "rgb(255,215,0)"
     },
     {
       "album-name": "Chromatica",
       "release-date": "04/10/2020",
       "worldwide-sales": 0,
       year: 2020,
-      color: "rgb(136, 147, 158)"
+      color: "rgb(255,20,147)"
     }
   ],
 
@@ -61,63 +61,63 @@ const allData = {
       "release-date": "02/10/2004",
       "worldwide-sales": "4000000",
       year: 2004,
-      color: "rgb(135, 76, 10)"
+      color: "rgb(255,215,0)"
     },
     {
       "album-name": "Late Registration",
       "release-date": "08/30/2005",
       "worldwide-sales": "3100000",
       year: 2005,
-      color: "rgb(22, 15, 11)"
+      color: "rgb(135, 76, 10)"
     },
     {
       "album-name": "Graduation",
       "release-date": "09/11/2007",
       "worldwide-sales": "2700000",
       year: 2007,
-      color: "rgb(118, 48, 92)"
+      color: "rgb(144, 2, 141)"
     },
     {
       "album-name": "808s & Heartbreak",
       "release-date": "11/24/2008",
       "worldwide-sales": "1700000",
       year: 2008,
-      color: "rgb(147, 156, 155)"
+      color: "rgb(191, 207, 207)"
     },
     {
       "album-name": "My Beautiful Dark Twisted Fantasy",
       "release-date": "11/22/2010",
       "worldwide-sales": "2000000",
       year: 2010,
-      color: "rgb(190, 0, 26)"
+      color: "rgb(255, 0, 38)"
     },
     {
       "album-name": "Yeezus",
       "release-date": "06/18/2013",
       "worldwide-sales": "1000000",
       year: 2013,
-      color: "rgb(89, 19, 24)"
+      color: "rgb(0,231,231)"
     },
     {
       "album-name": "The Life Of Pablo",
       "release-date": "02/14/2016",
       "worldwide-sales": "2000000",
       year: 2016,
-      color: "rgb(174, 91, 50)"
+      color: "rgb(242,121,0)"
     },
     {
       "album-name": "Ye",
       "release-date": "06/01/2018",
       "worldwide-sales": "500000",
       year: 2018,
-      color: "rgb(145, 145, 143)"
+      color: "rgb(57,255,20)"
     },
     {
       "album-name": "Jesus Is King",
       "release-date": "10/25/2019",
       "worldwide-sales": "300000",
       year: 2019,
-      color: "rgb(37, 0, 136)"
+      color: "rgb(20,57,255)"
     }
   ],
   michael: [
@@ -126,35 +126,35 @@ const allData = {
       "release-date": "01/24/1972",
       "worldwide-sales": 3200000,
       year: 1972,
-      color: "rgb(119, 129, 92)"
+      color: "rgb(79,121,66)"
     },
     {
       "album-name": "Ben",
       "release-date": "08/04/1972",
       "worldwide-sales": 5000000,
       year: 1972,
-      color: "rgb(93, 81, 58)"
+      color: "rgb(135, 76, 10)"
     },
     {
       "album-name": "Music & Me",
       "release-date": "04/13/1973",
       "worldwide-sales": 2000000,
       year: 1973,
-      color: "rgb(0, 81, 68)"
+      color: "rgb(0, 122, 87)"
     },
     {
       "album-name": "Forever, Michael",
       "release-date": "01/16/1975",
       "worldwide-sales": 1000000,
       year: 1975,
-      color: "rgb(225, 113, 73)"
+      color: "rgb(204,85,0)"
     },
     {
       "album-name": "Off the Wall",
       "release-date": "08/10/1979",
       "worldwide-sales": 20000000,
       year: 1979,
-      color: "rgb(183, 65, 14)"
+      color: "rgb(0,191,255)"
     },
     {
       "album-name": "Thriller",
@@ -168,42 +168,42 @@ const allData = {
       "release-date": "09/01/1987",
       "worldwide-sales": 35000000,
       year: 1987,
-      color: "rgb(165, 164, 163)"
+      color: "rgb(105,105,105)"
     },
     {
       "album-name": "Dangerous",
       "release-date": "11/26/1991",
       "worldwide-sales": 32000000,
       year: 1991,
-      color: "rgb(00, 255, 255)"
+      color: "rgb(0, 82, 173)"
     },
     {
       "album-name": "HIStory: Past, Present and Future, Book I",
       "release-date": "06/20/1995",
       "worldwide-sales": 22000000,
       year: 1995,
-      color: "rgb(69, 69, 69)"
+      color: "rgb(165,0,0)"
     },
     {
       "album-name": "Invincible",
       "release-date": "10/30/2001",
       "worldwide-sales": 6000000,
       year: 2001,
-      color: "rgb(127, 139, 140)"
+      color: "rgb(177, 198, 191)"
     },
     {
       "album-name": "Michael",
       "release-date": "06/25/2009",
       "worldwide-sales": 541000,
       year: 2009,
-      color: "rgb(12, 12, 54)"
+      color: "rgb(255,174,66)"
     },
     {
       "album-name": "Xscape",
       "release-date": "12/10/2010",
       "worldwide-sales": 1700000,
       year: 2010,
-      color: "rgb(158, 144, 54)"
+      color: "rgb(0,0,128)"
     }
   ],
   beatles: [
@@ -212,84 +212,88 @@ const allData = {
       "release-date": "03/22/1963",
       "worldwide-sales": 1000000,
       year: 1963,
-      color: "rgb(149,149, 141)"
+      color: "rgb(247, 255, 45)"
     },
     {
       "album-name": "With the Beatles",
       "release-date": "11/22/1963",
       "worldwide-sales": 500000,
       year: 1963,
+<<<<<<< HEAD
       color: "rgb(165, 164, 163)"
+=======
+      color: "rgb(105,105,105)"
+>>>>>>> 2a12d120fbe40af4cb4768ed8c2a75ab005a55f4
     },
     {
       "album-name": "A Hard Day's Night",
       "release-date": "07/10/1964",
       "worldwide-sales": 4000000,
       year: 1964,
-      color: "rgb(44, 64, 93)"
+      color: "rgb(0,0,255)"
     },
     {
       "album-name": "Beatles for Sale",
       "release-date": "12/04/1964",
       "worldwide-sales": 1000000,
       year: 1964,
-      color: "rgb(13, 25, 18)"
+      color: "rgb(210,180,140)"
     },
     {
       "album-name": "Help!",
       "release-date": "08/06/1965",
       "worldwide-sales": 3000000,
       year: 1965,
-      color: "rgb(170, 171, 171)"
+      color: "rgb(0,0,128)"
     },
     {
       "album-name": "Rubber Soul",
       "release-date": "12/03/1965",
       "worldwide-sales": 6000000,
       year: 1965,
-      color: "rgb(152, 97, 54)"
+      color: "rgb(216, 81, 0)"
     },
     {
       "album-name": "Revolver",
       "release-date": "08/05/1966",
       "worldwide-sales": 5000000,
       year: 1966,
-      color: "rgb(132, 132, 132)"
+      color: "rgb(169,169,169)"
     },
     {
       "album-name": "Sgt. Pepper's Lonely Hearts Club Band",
       "release-date": "05/26/1967",
       "worldwide-sales": 11000000,
       year: 1967,
-      color: "rgb(66, 54, 48)"
+      color: "rgb(0,191,255)"
     },
     {
       "album-name": "The Beatles (White Album)",
       "release-date": "11/22/1968",
       "worldwide-sales": 24000000,
       year: 1968,
-      color: "rgb(164, 164, 164)"
+      color: "rgb(220,220,220)"
     },
     {
       "album-name": "Yellow Submarine",
       "release-date": "01/13/1969",
       "worldwide-sales": 1000000,
       year: 1969,
-      color: "rgb(34, 50, 49)"
+      color: "rgb(255,174,66)"
     },
     {
       "album-name": "Abbey Road",
       "release-date": "09/26/1969",
       "worldwide-sales": 12000000,
       year: 1969,
-      color: "rgb(169, 139, 24)"
+      color: "rgb(51,103,57)"
     },
     {
       "album-name": "Let It Be",
       "release-date": "05/08/1970",
       "worldwide-sales": 4000000,
       year: 1970,
-      color: "rgb(158, 123, 108)"
+      color: "rgb(225, 27, 34)"
     }
   ],
   queen: [
