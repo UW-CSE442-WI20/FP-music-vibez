@@ -247,7 +247,8 @@ class SalesChart extends D3Component {
 
     tooltipDiv.transition()    
                 .duration(100)    
-                .style("opacity", .95); 
+                .style("opacity", .95);
+    tooltipDiv.style("z-index", 30000); 
 
     tooltipDiv.html("<b>" + d['Song Title'] +  "</b><br/>Date: " 
      + (new Date(d.Year).toLocaleDateString()) + "<br/>Rank: #"  + d.Rank)  

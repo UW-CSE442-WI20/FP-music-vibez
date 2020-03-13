@@ -11,11 +11,13 @@ var tooltipDiv;
 var yScale;
 var xScale;
 
+var dotRadius = 5;
+
 const gold = "#FFD700";
 const silver = "#c0c0c0";
+const darkGray = "#696969";
 
-
-const awar_svg = "M13.6-13.6h-6.4c2.4-1.6 4.8-4 4.8-7.2 0-4.8-3.2-8-8-8-4.8 0-8 3.2-8 8 0 3.2 1.6 5.6 4.8 7.2h-6.4c-3.2 0-5.6 2.4-5.6 4.8v15.2c0 2.4 2.4 4.8 4.8 4.8h1.6c0 0 0 .8 0 .8v15.2c0 2.4 1.6 4.8 2.4 4.8h10.4c1.6 0 2.4-2.4 2.4-4.8v-14.4c0 0 0-.8 0-.8h1.6c2.4 0 4.8-2.4 4.8-4.8v-16c1.6-2.4-.8-4.8-3.2-4.8z";
+//const awar_svg = "M13.6-13.6h-6.4c2.4-1.6 4.8-4 4.8-7.2 0-4.8-3.2-8-8-8-4.8 0-8 3.2-8 8 0 3.2 1.6 5.6 4.8 7.2h-6.4c-3.2 0-5.6 2.4-5.6 4.8v15.2c0 2.4 2.4 4.8 4.8 4.8h1.6c0 0 0 .8 0 .8v15.2c0 2.4 1.6 4.8 2.4 4.8h10.4c1.6 0 2.4-2.4 2.4-4.8v-14.4c0 0 0-.8 0-.8h1.6c2.4 0 4.8-2.4 4.8-4.8v-16c1.6-2.4-.8-4.8-3.2-4.8z";
 
 class AwardChart extends D3Component {
   initialize(node, props) {
@@ -61,7 +63,7 @@ class AwardChart extends D3Component {
           .attr("class", "example1")
           .attr("cx", (width / 2) + 200)
           .attr("cy", (margin.top) - 10)
-          .attr("r", 5)
+          .attr("r", dotRadius)
           .attr("fill", gold);
         this.svg.append("text")
           .attr("x", (width / 2) + 230)             
@@ -76,7 +78,7 @@ class AwardChart extends D3Component {
           .attr("class", "example1")
           .attr("cx", (width / 2) + 260)
           .attr("cy", (margin.top) - 10)
-          .attr("r", 5)
+          .attr("r", dotRadius)
           .attr("fill", silver);
         this.svg.append("text")
           .attr("x", (width / 2) + 300)             
@@ -88,7 +90,6 @@ class AwardChart extends D3Component {
         tooltipDiv = d3.select("body").append("div") 
           .attr("class", "tooltip")       
           .style("opacity", 0);
-
 
         var all_awards = this.svg.append('g')
           .selectAll(".awards")
@@ -180,7 +181,7 @@ class AwardChart extends D3Component {
         enterDots.transition()
           .delay(function(d,i){return(i*3)})
           .duration(400)
-          .attr("r", 5)
+          .attr("r", dotRadius)
           .style("fill", function(d) {
             if(d.Result === "Won")
               {return gold;}
@@ -194,13 +195,6 @@ class AwardChart extends D3Component {
             this.handleMouseOut(d, i, nodes);
           });
 
-        /*this.svg
-          .selectAll(".awards")
-          .transition()
-          .duration(500);*/
- 
-
-
         this.svg.select(".awards-title")
                 .text("Grammys " + props.name + " Received By " + (new Date(filterEnd).getFullYear())); 
 
@@ -213,20 +207,24 @@ class AwardChart extends D3Component {
   handleMouseEnter(d, i, nodes) {
     d3.select(nodes[i])
     .attr('fill', (d) => {
-      return "grey";
+      return darkGray;
+    }).attr('r', (d) => {
+      return dotRadius * 1.75;
     }); 
 
     var curr = new Date(d.Year);
 
     tooltipDiv.transition()    
-                .duration(100)    
-                .style("opacity", .95);
+                .duration(100)
+                .style("opacity", 0.95);
+                
+    tooltipDiv.style("z-index", 30000); 
     
     tooltipDiv.html("<b>" + d['Award'] +  "</b><br/>Year: " 
     + (curr.getFullYear()) + "<br/>Nominee: "  + d.Nominee + "<br/>"
     + d.Result)  
         .style("left", (d3.event.pageX - 7) + "px")   
-        .style("top", (d3.event.pageY - 37) + "px")
+        .style("top", (d3.event.pageY - 50) + "px")
         .style("display", "inline-block");  
 
   }
@@ -235,6 +233,8 @@ class AwardChart extends D3Component {
     d3.select(nodes[i])
     .attr('fill', (d) => {
       if(d.Result === "Won"){return gold;}else{return silver;}
+    }).attr('r', (d) => {
+      return dotRadius;
     }); 
 
     tooltipDiv.transition()    
@@ -258,7 +258,5 @@ class AwardChart extends D3Component {
 
   }
 }
-
-
 
 module.exports = AwardChart;
