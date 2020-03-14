@@ -782,7 +782,7 @@
     [/Conditional]
 
     [Step onEnterView:`beatlesCurStep = 0`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1963" /]
         [DescComponent className:"desc-class beatles-bg-theme" date:"March 22, 1963" desc:"Please Please Me" /]
         [div className:"flip-card"]
             [div className:"flip-card-inner"]
@@ -813,7 +813,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 1`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1964" /]
         [ContentComponent className:"content-class beatles-bg-theme" desc:"February 9, 1964 -- The Beatles appear on The Ed Sullivan Show with 73 million people watching."/]
         [br/]
         [DescComponent className:"desc-class beatles-bg-theme" date:"July 10, 1964" desc:"A Hard Day's Night" /]
@@ -846,7 +846,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 2`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1965" /]
         [DescComponent className:"desc-class beatles-bg-theme" date:"August 6, 1965" desc:"Help!"/]
         [div className:"flip-card"]
             [div className:"flip-card-inner"]
@@ -877,7 +877,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 3`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1966" /]
         [ContentComponent className:"content-class beatles-bg-theme" desc:"March 1966 -- A London newspaper quotes John Lennon as saying '...We're more popular than Jesus now...'"/]
         [br/]
         [ContentComponent className:"content-class beatles-bg-theme" desc:"Later the quote is published in US magazines sparking outrage, primarily in the Southern United States."/]
@@ -897,7 +897,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 4`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1967" /]
         [DescComponent className:"desc-class beatles-bg-theme" date:"May 26, 1967" desc:"Sgt. Pepper's Lonely Hearts and Club Band"/]
         [div className:"flip-card"]
             [div className:"flip-card-inner"]
@@ -915,7 +915,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 5`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1968" /]
         [DescComponent className:"desc-class beatles-bg-theme" date:"November 22, 1968" desc:"The Beatles (White Album)"/]
         [div className:"flip-card"]
             [div className:"flip-card-inner"]
@@ -933,7 +933,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 6`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1969" /]
         [DescComponent className:"desc-class beatles-bg-theme" date:"January 13, 1969" desc:"Yellow Submarine"/]
         [div className:"flip-card"]
             [div className:"flip-card-inner"]
@@ -964,7 +964,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 7`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1970" /]
         [DescComponent className:"desc-class beatles-bg-theme" date:"May 8, 1970" desc:"Let It Be"/]
         [div className:"flip-card"]
             [div className:"flip-card-inner"]
@@ -982,7 +982,7 @@
     [/Step]
 
     [Step onEnterView:`beatlesCurStep = 8`]
-        [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
+        [YearComponent className:"year-class beatles-bg-theme" year:"1980" /]
         [ContentComponent className:"content-class beatles-bg-theme" desc:"December 8, 1980 -- John Lennon is murdered in New York City."/]
     [/Step]
 
