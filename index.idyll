@@ -1,5 +1,5 @@
 [var name:"title" value:"Pop Trajectories" /]
-[var name:"subtitle" value:"Exploring the careers of iconic musicians" /]
+[var name:"subtitle" value:"Explore the careers of iconic musicians and the trajectory of their albums. To start, select an artist. Then progress down the timeline of their career, interacting with visualizations and album art as you go." /]
 
 [meta title:"Pop Trajectories" description:"Exploring the careers of iconic musicians" /]
 [var name:"showCharts" value:false /]
@@ -58,7 +58,7 @@
     [var name:"gagaCurStep" value:0 /]
 
     [Conditional if:`showCharts`]
-        [Fixed]
+        [Fixed class:"fixed-graphics"]
             [SalesChart className:"charts" value:myData src:"./static/weekly-charts/lady-gaga-weekly-charts.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga" albums:gagaAlbums colors:gagaAlbumColors /]
             [HorizontalBarChart className:"charts" artist:artist step:gagaCurStep years:gagaYears /]
             [AwardChart value:myData src:"./static/awards/gaga-awards.csv" years:`gagaStepDates.slice(0, gagaCurStep + 2)` name:"Lady Gaga"/]
@@ -236,8 +236,8 @@
 
 [Conditional if:`artist == "queen"`]
     #The Trajectory of Queen
-    [var name:"queenYears" value:`["01/01/1970", "01/01/1971", "01/01/1972", "01/01/1973", "01/01/1974", "01/01/1975", "01/01/1976", "01/01/1977", "01/01/1978", "01/01/1979", "01/01/1980", "01/01/1981", "01/01/1982", "01/01/1983", "01/01/1984", "01/01/1985", "01/01/1986", "01/01/1987", "01/01/1988", "01/01/1989", "01/01/1990", "01/01/1991", "01/01/1992", "01/01/1993", "01/01/1994", "01/01/1995"]` /]
-    [var name:"queenStepYears" value:`["1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1980", "1982", "1984", "1985", "1986", "1987", "1989", "1990", "1991", "1995"]` /]
+    [var name:"queenYears" value:`["01/01/1970", "01/01/1971", "01/01/1972", "01/01/1973", "01/01/1974", "01/01/1975", "01/01/1976", "01/01/1977", "01/01/1978", "01/01/1980", "01/01/1982", "01/01/1984", "01/01/1985", "01/01/1986", "01/01/1987", "01/01/1989", "01/01/1991", "01/01/1995"]` /]
+    [var name:"queenStepYears" value:`["1970", "1971", "1972", "1973", "1974", "1975", "1976", "1977", "1978", "1980", "1982", "1984", "1985", "1986", "1987", "1989", "1991", "1995"]` /]
     [var name:"queenAlbums" value:`["Queen", "Queen II", "Sheer Heart Attack", "A Night At The Opera", "A Day At The Races", "News Of The World", "Jazz", "The Game", "Flash Gordon", "Hot Space"]` /]
     [var name:"queenCurStep" value:0 /]
     [var name:"queenAlbumColors" value:`["rgb(139,0,139)", "rgb(105,105,105)", "rgb(255, 0, 38)", "rgb(255,182,193)", "rgb(135,206,250)", "rgb(79,121,66)", "rgb(255,20,147)", "rgb(177, 198, 191)", "rgb(255, 221, 0)", "rgb(78, 0, 126)", "rgb(135, 76, 10)", "rgb(255,140,0)", "rgb(0, 131, 126)", "rgb(31,199,0)", "rgb(0, 82, 173)"]` /]
@@ -247,7 +247,7 @@
         [Fixed]
             [SalesChart className:"charts" value:myData src:"./static/weekly-charts/queen-weekly-charts.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen" albums:queenAlbums colors:queenAlbumColors/]
             [HorizontalBarChart className:"charts" artist:artist step:queenCurStep years:queenStepYears/]
-            [AwardChart value:myData src:"./static/awards/queen_awards.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen"/]
+            [AwardChart value:myData src:"./static/awards/queen_awards.csv" years:`queenYears.slice(0, queenCurStep + 2)` name:"Queen" /]
         [/Fixed]
     [/Conditional]
 
@@ -642,7 +642,8 @@
 
     [Step onEnterView:`michaelCurStep = 5`]
         [YearComponent className:"year-class michael-bg-theme" year:"1983" /]
-        [ContentComponent className:"content-class michael-bg-theme" desc:"First Moonwalk" /]
+        [ContentComponent className:"content-class michael-bg-theme" desc:"The first Moonwalk occurred during Jackson's performance of 
+        'Billie Jean' broadcast on May 16, 1983." /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 6`]
@@ -711,7 +712,7 @@
 
     [Step onEnterView:`michaelCurStep = 10`]
         [YearComponent className:"year-class michael-bg-theme" year:"2009" /] 
-        [ContentComponent className:"content-class michael-bg-theme" desc:"Michael Jackson died at age 50" /]
+        [ContentComponent className:"content-class michael-bg-theme" desc:"Michael Jackson died of cardiac arrest on June 25, 2009 at the age 50. His physician was later convicted of involuntary manslaughter." /]
     [/Step]
 
     [Step onEnterView:`michaelCurStep = 11`]
@@ -917,19 +918,6 @@
 
     [Step onEnterView:`beatlesCurStep = 6`]
         [YearComponent className:"year-class beatles-bg-theme" year:`beatlesStepYears[beatlesCurStep]` /]
-        [DescComponent className:"desc-class beatles-bg-theme" date:"September 26, 1969" desc:"Abbey Road"/]
-        [div className:"flip-card"]
-            [div className:"flip-card-inner"]
-                [div className:"flip-card-front"]
-                    [AlbumComponent className:"beatles-theme" artistName:The-Beatles albumArt:"static/images/beatles/AbbeyRoad.jpg" /]
-                [/div]
-                [div className:"flip-card-back"]
-                    [data name:"abr" source:"albums/abbey-road.csv" /]
-                    [Table className:"album" data:abr defaultPageSize:7 /]
-                [/div]
-            [/div]
-        [/div]
-        [br/]
         [DescComponent className:"desc-class beatles-bg-theme" date:"January 13, 1969" desc:"Yellow Submarine"/]
         [div className:"flip-card"]
             [div className:"flip-card-inner"]
@@ -939,6 +927,19 @@
                 [div className:"flip-card-back"]
                     [data name:"ysu" source:"albums/yellow-submarine.csv" /]
                     [Table className:"album" data:ysu defaultPageSize:7 /]
+                [/div]
+            [/div]
+        [/div]
+        [br/]
+        [DescComponent className:"desc-class beatles-bg-theme" date:"September 26, 1969" desc:"Abbey Road"/]
+        [div className:"flip-card"]
+            [div className:"flip-card-inner"]
+                [div className:"flip-card-front"]
+                    [AlbumComponent className:"beatles-theme" artistName:The-Beatles albumArt:"static/images/beatles/AbbeyRoad.jpg" /]
+                [/div]
+                [div className:"flip-card-back"]
+                    [data name:"abr" source:"albums/abbey-road.csv" /]
+                    [Table className:"album" data:abr defaultPageSize:7 /]
                 [/div]
             [/div]
         [/div]

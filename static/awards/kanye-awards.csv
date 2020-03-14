@@ -1,69 +1,63 @@
-"Number","Year","Type","Nominee","Award","Result"
-"0","01/01/2005","Artist","Kanye West","Best New Artist","Nominated"
-"1","01/01/2005","Song","Jesus Walks","Song of the Year","Nominated"
-"2","01/01/2005","Song","Jesus Walks","Best Rap Song","Won"
-"3","01/01/2005","Album","The College Dropout","Best Rap Album","Won"
-"4","01/01/2005","Album","The Diary of Alicia Keys","Album of the Year","Nominated"
-"5","01/01/2005","Album","The College Dropout","Album of the Year","Nominated"
-"6","01/01/2005","Song","Through the Wire","Best Rap Solo Performance","Nominated"
-"7","01/01/2005","Song","You Don't Know My Name","Best R&B Song","Won"
-"8","01/01/2006","Song","Unbreakable","Best R&B Song","Nominated"
-"9","01/01/2006","Song","Diamonds","Best Rap Song","Won"
-"10","01/01/2006","Song","Gold Digger","Record of the Year","Nominated"
-"11","01/01/2006","Song","Gold Digger","Best Rap Solo Performance","Won"
-"12","01/01/2006","Album","Late Registration","Best Rap Album","Won"
-"13","01/01/2006","Album","Late Registration","Album of the Year","Nominated"
-"14","01/01/2006","Album","The Emancipation of Mimi","Album of the Year","Nominated"
-"15","01/01/2008","Album","Graduation","Best Rap Album","Won"
-"16","01/01/2008","Song","Better Tahn I've Ever Been","Best Rap Performance by Duo or Group","Nominated"
-"17","01/01/2008","Song","Southside","Best Rap Performance by Duo or Group","Won"
-"18","01/01/2008","Song","Stronger","Best Rap Solo Performance","Won"
-"19","01/01/2008","Song","Can't Tell Me Nothing","Best Rap Song","Nominated"
-"20","01/01/2008","Song","Good Life","Best Rap Song","Won"
-"21","01/01/2008","Song","Good Life","Best Rap/Sung Collaboration","Nominated"
-"22","01/01/2009","Song","American Boy","Best Rap/Sung Collaboration","Won"
-"23","01/01/2009","Song","Swagga like US","Best Rap Song","Nominated"
-"24","01/01/2009","Song","Swagga like US","Best Rap Performance by Duo or Group","Won"
-"25","01/01/2009","Song","Put On","Best Rap Performance by Duo or Group","Nominated"
-"26","01/01/2010","Song","Amazing","Best Rap Performance by Duo or Group","Nominated"
-"27","01/01/2010","Song","Make Her Say","Best Rap Performance by Duo or Group","Nominated"
-"28","01/01/2010","Song","Ego","Best Rap/Sung Collaboration","Nominated"
-"29","01/01/2010","Song","Knock You Down","Best Rap/Sung Collaboration","Nominated"
-"30","01/01/2010","Song","Run This Town","Best Rap/Sung Collaboration","Won"
-"31","01/01/2010","Song","Run This Town","Best Rap Song","Won"
-"32","01/01/2011","Song","Power","Best Rap Solo Performance","Nominated"
-"33","01/01/2012","Album","Watch the Throne","Best Rap Album","Nominated"
-"34","01/01/2012","Album","My Beautiful Dark Twisted Fantasy","Best Rap Album","Won"
-"35","01/01/2012","Song","All of the Lights","Song of the Year","Nominated"
-"36","01/01/2012","Song","All of the Lights","Best Rap/Sung Collaboration","Won"
-"37","01/01/2012","Song","All of the Lights","Best Rap Song","Won"
-"38","01/01/2012","Song","Otis","Best Rap Song","Nominated"
-"39","01/01/2012","Song","Otis","Best Rap Performance","Won"
-"40","01/01/2013","Song","Niggas in Paris","Best Rap Performance","Won"
-"41","01/01/2013","Song","Niggas in Paris","Best Rap Song","Won"
-"42","01/01/2013","Song","Mercy","Best Rap Song","Nominated"
-"43","01/01/2013","Song","Mercy","Best Rap Performance","Nominated"
-"44","01/01/2013","Song","No Church in the Wild","Best Rap/Sung Collaboration","Won"
-"45","01/01/2013","Song","No Church in the Wild","Best Short Form Music Video","Nominated"
-"46","01/01/2014","Song","New Slaves","Best Rap Song","Nominated"
-"47","01/01/2014","Album","Yeezus","Best Rap Album","Nominated"
-"48","01/01/2015","Song","Bound 2","Best Rap/Sung Collaboration","Nominated"
-"49","01/01/2015","Song","Bound 2","Best Rap Song","Nominated"
-"50","01/01/2016","Song","All Day","Best Rap Song","Nominated"
-"51","01/01/2016","Song","All Day","Best Rap Performance","Nominated"
-"52","01/01/2016","Song","One Man Can Change the World","Best Rap/Sung Collaboration","Nominated"
-"53","01/01/2016","Album","Beauty Behing the Madness","Album of the Year","Nominated"
-"54","01/01/2017","Album","Views","Album of the Year","Nominated"
-"55","01/01/2017","Song","That Part","Best Rap Performance","Nominated"
-"56","01/01/2017","Song","Pop Style","Best Rap Performance","Nominated"
-"57","01/01/2017","Song","Famous","Best Rap Song","Nominated"
-"58","01/01/2017","Song","Famous","Best Rap/Sung Performance","Nominated"
-"59","01/01/2017","Song","Ultralight Beam","Best Rap/Sung Performance","Nominated"
-"60","01/01/2017","Song","Ultralight Beam","Best Rap Song","Nominated"
-"61","01/01/2017","Album","Life of Pablo","Best Rap Album","Nominated"
-"61","01/01/2019","Artist","Kanye West","Producer of the Year, Non-Classical","Nominated"
-
-
-
-
-
+Number,Year,Type,Nominee,Award,Result
+0,1/1/05,Artist,Kanye West,Best New Artist,Nominated
+1,1/1/05,Song,Jesus Walks,Song of the Year,Nominated
+2,1/1/05,Song,Jesus Walks,Best Rap Song,Won
+3,1/1/05,Album,The College Dropout,Best Rap Album,Won
+4,1/1/05,Album,The College Dropout,Album of the Year,Nominated
+5,1/1/05,Song,Through the Wire,Best Rap Solo Performance,Nominated
+6,1/1/05,Song,You Don't Know My Name,Best R&B Song,Won
+7,1/1/06,Song,Unbreakable,Best R&B Song,Nominated
+8,1/1/06,Song,Diamonds,Best Rap Song,Won
+9,1/1/06,Song,Gold Digger,Record of the Year,Nominated
+10,1/1/06,Song,Gold Digger,Best Rap Solo Performance,Won
+11,1/1/06,Album,Late Registration,Best Rap Album,Won
+12,1/1/06,Album,Late Registration,Album of the Year,Nominated
+13,1/1/06,Album,The Emancipation of Mimi,Album of the Year,Nominated
+14,1/1/08,Album,Graduation,Best Rap Album,Won
+15,1/1/08,Song,Better Tahn I've Ever Been,Best Rap Performance by Duo or Group,Nominated
+16,1/1/08,Song,Southside,Best Rap Performance by Duo or Group,Won
+17,1/1/08,Song,Stronger,Best Rap Solo Performance,Won
+18,1/1/08,Song,Can't Tell Me Nothing,Best Rap Song,Nominated
+19,1/1/08,Song,Good Life,Best Rap Song,Won
+20,1/1/08,Song,Good Life,Best Rap/Sung Collaboration,Nominated
+21,1/1/09,Song,American Boy,Best Rap/Sung Collaboration,Won
+22,1/1/09,Song,Swagga like US,Best Rap Song,Nominated
+23,1/1/09,Song,Swagga like US,Best Rap Performance by Duo or Group,Won
+24,1/1/09,Song,Put On,Best Rap Performance by Duo or Group,Nominated
+25,1/1/10,Song,Amazing,Best Rap Performance by Duo or Group,Nominated
+26,1/1/10,Song,Make Her Say,Best Rap Performance by Duo or Group,Nominated
+27,1/1/10,Song,Ego,Best Rap/Sung Collaboration,Nominated
+28,1/1/10,Song,Knock You Down,Best Rap/Sung Collaboration,Nominated
+29,1/1/10,Song,Run This Town,Best Rap/Sung Collaboration,Won
+30,1/1/10,Song,Run This Town,Best Rap Song,Won
+31,1/1/11,Song,Power,Best Rap Solo Performance,Nominated
+32,1/1/12,Album,Watch the Throne,Best Rap Album,Nominated
+33,1/1/12,Album,My Beautiful Dark Twisted Fantasy,Best Rap Album,Won
+34,1/1/12,Song,All of the Lights,Song of the Year,Nominated
+35,1/1/12,Song,All of the Lights,Best Rap/Sung Collaboration,Won
+36,1/1/12,Song,All of the Lights,Best Rap Song,Won
+37,1/1/12,Song,Otis,Best Rap Song,Nominated
+38,1/1/12,Song,Otis,Best Rap Performance,Won
+39,1/1/13,Song,Niggas in Paris,Best Rap Performance,Won
+40,1/1/13,Song,Niggas in Paris,Best Rap Song,Won
+41,1/1/13,Song,Mercy,Best Rap Song,Nominated
+42,1/1/13,Song,Mercy,Best Rap Performance,Nominated
+43,1/1/13,Song,No Church in the Wild,Best Rap/Sung Collaboration,Won
+44,1/1/13,Song,No Church in the Wild,Best Short Form Music Video,Nominated
+45,1/1/14,Song,New Slaves,Best Rap Song,Nominated
+46,1/1/14,Album,Yeezus,Best Rap Album,Nominated
+47,1/1/15,Song,Bound 2,Best Rap/Sung Collaboration,Nominated
+48,1/1/15,Song,Bound 2,Best Rap Song,Nominated
+49,1/1/16,Song,All Day,Best Rap Song,Nominated
+50,1/1/16,Song,All Day,Best Rap Performance,Nominated
+51,1/1/16,Song,One Man Can Change the World,Best Rap/Sung Collaboration,Nominated
+52,1/1/16,Album,Beauty Behing the Madness,Album of the Year,Nominated
+53,1/1/17,Album,Views,Album of the Year,Nominated
+54,1/1/17,Song,That Part,Best Rap Performance,Nominated
+55,1/1/17,Song,Pop Style,Best Rap Performance,Nominated
+56,1/1/17,Song,Famous,Best Rap Song,Nominated
+57,1/1/17,Song,Famous,Best Rap/Sung Performance,Nominated
+58,1/1/17,Song,Ultralight Beam,Best Rap/Sung Performance,Nominated
+59,1/1/17,Song,Ultralight Beam,Best Rap Song,Nominated
+60,1/1/17,Album,Life of Pablo,Best Rap Album,Nominated
+61,1/1/19,Artist,Kanye West,"Producer of the Year, Non-Classical",Nominated
