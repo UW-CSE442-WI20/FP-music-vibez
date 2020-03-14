@@ -687,7 +687,7 @@
                     [AlbumComponent className:"michael-theme" artistName:Michael-Jackson albumArt:"static/images/michael-jackson/HIStory.jpg"/]
                 [/div]
                 [div className:"flip-card-back"]
-                    [data name:"his" source:"albums/michael-HIStory.csv" /]
+                    [data name:"his" source:"albums/michael-history.csv" /]
                     [Table className:"album" data:his defaultPageSize:7 /]
                 [/div]
             [/div]
